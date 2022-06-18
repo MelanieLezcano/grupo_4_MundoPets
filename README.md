@@ -39,8 +39,10 @@ Somos una empresa dedicada a la nutrición y ventade alimentos para mascotas.Te 
 Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas.Brindamos  asesoramiento para elegir la mejor opcion según las necesidades de  tu mascota;nuestra meta es ofrecerles lo mejor en cuanto calidad y precio.
 En Mundo Pets tenemos amplia variedad de productos y contamos con el mejor precio del mercado.    
 
-------------
-##PUblico dirigido
+
+## Publico Dirigido
+
+
 Pensando  en nuestros amigos de cuatro patas,nuestra página va dirigido a todos aquellos quienes quieran brindan la mejor opcion de balanceados para sus mascotas.
 
 ------------
