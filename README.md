@@ -40,6 +40,10 @@ Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas.Brindamos  as
 En Mundo Pets tenemos amplia variedad de productos y contamos con el mejor precio del mercado.    
 
 ------------
+##PUblico dirigido
+Pensando  en nuestros amigos de cuatro patas,nuestra página va dirigido a todos aquellos quienes quieran brindan la mejor opcion de balanceados para sus mascotas.
+
+------------
 
 ## Sitios que tomamos de referencia:
 - https://petfood.com.ar/  
