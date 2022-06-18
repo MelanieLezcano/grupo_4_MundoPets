@@ -3,6 +3,13 @@
 
 
 ![logo mundo pets](https://user-images.githubusercontent.com/106325676/174436852-eef49c9a-554c-4858-937e-efdf15562050.jpeg)
+------------
+## Contenido: 
+
+- Integrantes
+-  Quienes somos
+-  A quién nos dirigimos
+-  Páginas de referencia
 
 ------------
 ## INTEGRANTES:
