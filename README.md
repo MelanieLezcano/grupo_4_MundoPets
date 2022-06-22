@@ -2,6 +2,14 @@
 [logo]
 
 
+![logo mundo pets](https://user-images.githubusercontent.com/106325676/174436852-eef49c9a-554c-4858-937e-efdf15562050.jpeg)
+------------
+## Contenido: 
+
+- Integrantes
+-  Quienes somos
+-  A quién nos dirigimos
+-  Páginas de referencia
 
 ------------
 ## INTEGRANTES:
@@ -37,6 +45,12 @@ Pensando en ellos
 Somos una empresa dedicada a la nutrición y ventade alimentos para mascotas.Te ofrecemos las mejores marcas de balanceado para perros y gatos,según investigaciones de marketing realizados en base a lo que busca las personas para sus mascotas.
 Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas.Brindamos  asesoramiento para elegir la mejor opcion según las necesidades de  tu mascota;nuestra meta es ofrecerles lo mejor en cuanto calidad y precio.
 En Mundo Pets tenemos amplia variedad de productos y contamos con el mejor precio del mercado.    
+
+
+## Publico Dirigido
+
+
+Pensando  en nuestros amigos de cuatro patas,nuestra página va dirigido a todos aquellos quienes quieran brindan la mejor opcion de balanceados para sus mascotas.
 
 ------------
 
