@@ -5,7 +5,7 @@
 
 ------------
 ## INTEGRANTES:
-- - 
+
 ###  Fernando Borquez
 
 - 32 años.
@@ -41,8 +41,8 @@ En Mundo Pets tenemos amplia variedad de productos y contamos con el mejor preci
 ------------
 
 ## Sitios que tomamos de referencia:
-- https://petfood.com.ar/  
-Colores,estructura de la pagina
+- https://petfood.com.ar/
+ Colores,estructura de la pagina
 - https://petfoodsaladillo.com.ar/
 Presentacion de marcas seleccionadas
 - https://www.royalcanin.com/ar
