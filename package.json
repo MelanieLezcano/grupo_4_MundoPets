@@ -1,0 +1,23 @@
+{
+  "name": "grupo_4_mundopets",
+  "version": "1.0.0",
+  "description": "[logo]",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelanieLezcano/grupo_4_MundoPets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelanieLezcano/grupo_4_MundoPets/issues"
+  },
+  "homepage": "https://github.com/MelanieLezcano/grupo_4_MundoPets#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
