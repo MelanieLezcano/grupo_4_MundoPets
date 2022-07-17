@@ -1,2 +1,13 @@
+:root{
 /* Fuente a utilizar */
 @import url();
+
+/*colores*/
+--azulOscuro:#1f66b2;
+--azulMedio:#1c7eed;
+--azulClaro:#88b6db;
+--amarillo:#fddf65;
+--naranja:#f0a52a;
+--blanco:#dcebf0;
+--blancoAzulado:#f3f4f6;
+}
