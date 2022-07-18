@@ -1,13 +1,23 @@
-:root{
-/* Fuente a utilizar */
-@import url();
+@import url('https: //fonts.googleapis.com/css2? family= Baloo+Tammudu+2:wght@400;500 & family= Mukta & display=swap');
 
-/*colores*/
---azulOscuro:#1f66b2;
---azulMedio:#1c7eed;
---azulClaro:#88b6db;
---amarillo:#fddf65;
---naranja:#f0a52a;
---blanco:#dcebf0;
---blancoAzulado:#f3f4f6;
+:root{
+
+    /* Fuentes */
+    --fuenteTitulos:'Baloo Tammudu 2';
+    --fuenteSubtitulos:'Mukta';
+
+    /* Colores */
+    --colorAmarillo: #fddf65;
+    --colorNaranja: #f0a52a;
+    --colorHueso: #f3f4f6;
+    --colorGris: #dcebf0;
+    --colorAzulFrancia: #1c7eed;
+    --colorAzulMarino: #1f66b2;
+    --colorCeleste: #88b6db;
+
+    /*tamaños tipográficos*/
+    --cuerpoDeTexto: 12px;
+    --titulares: 24px;
+    --precios: 18px;
+
 }
