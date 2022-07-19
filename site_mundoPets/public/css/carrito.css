@@ -1,9 +1,47 @@
-.carrito main section{
-    
-}
-
-body{
+.carrito{
     background-image: url(/img/fondoPaws.png);
     background-attachment: fixed;
     background-size: 180%;
+}
+
+body{
+ font-family: 'mukta';
 } 
+
+a{
+    color: #1c7eed;
+    text-decoration: none;
+
+    position: absolute;
+    width: 88px;
+    height: 55px;
+    left: 70px;
+    top: 55px;
+    
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.carrito .uno{
+    color: #1f66b2;
+    padding-left: 10%;
+}
+
+.carrito img{
+    height: 90px;
+    width: 60px;
+    object-fit: contain;
+   }
+
+.carrito .colorAzulMarino{
+    color: #1f66b2;
+}
+
+.carrito .colorHueso{
+    color: #f3f4f6;
+}
+
+.carrito .naranja{
+    color: #f0a52a;
+}
