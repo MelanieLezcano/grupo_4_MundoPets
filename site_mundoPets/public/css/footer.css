@@ -1,0 +1,64 @@
+.home footer{
+    margin-top: 10px;
+    width: 100%;
+    background-size:100%;
+    background-color: var(--colorAzulFrancia);
+    flex-grow: 1;
+    margin:auto
+}
+.home .pie{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.home .pie article{
+    width: 14%;
+    
+}
+.home  .contactanos{
+    width: 50%;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+}
+.home .gatito{
+    width: 14%;
+}
+.home  .gatito img{
+    
+    width: 100%;
+  
+
+}
+.home  .maps{
+    width: 10%;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+
+}
+.home .whatsapp{
+    width: 10%;
+    text-align: center;
+    flex-grow: 1;
+}
+.home .whatsapp i{
+    /* background-color: green; */
+    color: white;
+    text-align: center;
+}
+.home .pie p{
+    background-color: var(--colorNaranja);
+    color: var(--colorAzulMarino);
+    padding:10px;
+    text-align: center;
+    font-family: var(--fuenteSubtitulos);
+}
+.home .pie h4{
+    font-family: var(--fuenteSubtitulos);
+    text-align: center;
+}
