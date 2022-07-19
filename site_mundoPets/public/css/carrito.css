@@ -5,20 +5,29 @@
 }
 
 body{
-    font-family: 'Mukta';
+    font-family: var(--fuenteSubtitulos);
     margin-left: 10px;
 } 
 
+.carrito img{ 
+    height: 110px;
+    width: 80px;
+    object-fit: contain;
+   }
+
+.carrito .olUno{
+    padding-left: 0;
+}
+
 a{
-    display: block;
     color: #1c7eed;
     text-decoration: none;
 
-    position: absolute;
     width: 88px;
     height: 10%;
-    left: 23%;
-    top: 70px;
+    margin-left: 2%;
+    margin-top: 5px;
+    
     
     font-weight: 500;
     font-size: 13px;
@@ -47,39 +56,33 @@ a{
         font-size: 16px;
         }
 
-.carrito img{
-    height: 110px;
-    width: 80px;
-    object-fit: contain;
-   }
 
 .carrito .sCuatro{
-    position: absolute;
     color: #1c7eed;
     text-decoration: none;
 
-    position: absolute;
+/*     position: absolute;
     margin-right: 20%;
     margin-left: 27%;
-    top: 85px;
+    margin-top: 45px;
     
     font-weight: 500;
     font-size: 17px;
-    line-height: 16px;
+    line-height: 16px; */
 }
 
 .carrito .sCinco{
-    position: absolute;
+/*     position: absolute; */
     color: #1c7eed;
     text-decoration: none;
 
-    position: absolute;
+/*     position: absolute;
     margin-left: 62%;
-    top: 85px;
+    margin-top: 45px;
     
     font-weight: 500;
     font-size: 17px;
-    line-height: 16px;
+    line-height: 16px; */
 }
 
 .carrito .colorHueso{
