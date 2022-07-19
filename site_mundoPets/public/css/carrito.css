@@ -1,3 +1,9 @@
 .carrito main section{
     
 }
+
+body{
+    background-image: url(/img/fondoPaws.png);
+    background-attachment: fixed;
+    background-size: 180%;
+} 

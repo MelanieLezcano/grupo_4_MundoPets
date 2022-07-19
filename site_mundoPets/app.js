@@ -13,6 +13,7 @@ app.get ('/carrito',(req,res) => {res.sendFile (path.join (__dirname, './views/c
 app.get ('/detalle',(req,res) => {res.sendFile (path.join (__dirname, './views/detalle.html'))});
 app.get ('/register',(req,res) => {res.sendFile (path.join (__dirname, './views/register.html'))});
 app.get ('/login',(req,res) => {res.sendFile (path.join (__dirname, './views/login.html'))});
+app.get ('*',(req,res) => {res.sendFile (path.join (__dirname, './views/404.html'))});
 
 app.listen (port,() => console.log("servidor levantado")
 );
