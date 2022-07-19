@@ -4,7 +4,7 @@
     background-size: 180%;
 }
 
-body{
+.carrito body{
     font-family: var(--fuenteSubtitulos);
     margin-left: 10px;
 } 
@@ -19,7 +19,7 @@ body{
     padding-left: 0;
 }
 
-a{
+.carrito a{
     color: #1c7eed;
     text-decoration: none;
 
