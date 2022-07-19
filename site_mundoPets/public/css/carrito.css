@@ -5,37 +5,81 @@
 }
 
 body{
- font-family: 'mukta';
+    font-family: 'Mukta';
+    margin-left: 10px;
 } 
 
 a{
+    display: block;
     color: #1c7eed;
     text-decoration: none;
 
     position: absolute;
     width: 88px;
-    height: 55px;
-    left: 70px;
-    top: 55px;
+    height: 10%;
+    left: 23%;
+    top: 70px;
     
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
 }
 
-.carrito .uno{
+.carrito .aUno{
     color: #1f66b2;
-    padding-left: 10%;
 }
 
+.carrito .sUno{
+    top: 13px;
+    margin-right: 26%;
+    margin-left: 5%;
+    
+    font-weight: 500;
+    font-size: 16px;
+    }
+
+    .carrito .sDos{
+        top: 13px;
+        margin-right: 20%;
+        margin-left: 2%;
+        
+        font-weight: 500;
+        font-size: 16px;
+        }
+
 .carrito img{
-    height: 90px;
-    width: 60px;
+    height: 110px;
+    width: 80px;
     object-fit: contain;
    }
 
-.carrito .colorAzulMarino{
-    color: #1f66b2;
+.carrito .sCuatro{
+    position: absolute;
+    color: #1c7eed;
+    text-decoration: none;
+
+    position: absolute;
+    margin-right: 20%;
+    margin-left: 27%;
+    top: 85px;
+    
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 16px;
+}
+
+.carrito .sCinco{
+    position: absolute;
+    color: #1c7eed;
+    text-decoration: none;
+
+    position: absolute;
+    margin-left: 62%;
+    top: 85px;
+    
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 16px;
 }
 
 .carrito .colorHueso{
