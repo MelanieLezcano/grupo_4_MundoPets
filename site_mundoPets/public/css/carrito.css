@@ -1,15 +1,17 @@
+
+
 .carrito{
     background-image: url(/img/fondoPaws.png);
     background-attachment: fixed;
     background-size: 180%;
-}
 
-.carrito body{
     font-family: var(--fuenteSubtitulos);
     margin-left: 10px;
-} 
+}
 
-.carrito img{ 
+
+
+.carrito img{
     height: 110px;
     width: 80px;
     object-fit: contain;
@@ -20,7 +22,7 @@
 }
 
 .carrito a{
-    color: #1c7eed;
+    color: var(--colorAzulFrancia);
     text-decoration: none;
 
     width: 88px;
