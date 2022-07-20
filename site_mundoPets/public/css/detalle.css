@@ -1,0 +1,49 @@
+.detalle .header{
+    background-image: url(/img/imagen_para_header.jpg); 
+    background-size: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: cover;
+  
+   
+}
+.detalle .header{
+    display: flex;
+
+}
+.detalle .logo{
+   border-radius: 50%; 
+   width: 10%;
+   padding: 2px 0 2px;
+   text-align: left;
+}
+.detalle  .logo img{
+    border-radius: 50%;
+    width: 50px;
+}
+.detalle .top{
+    text-align: right;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(127, 164, 243, 0.452);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+
+}
+.detalle  h2{
+    font-family: var(--fuenteTitulos);
+    font-size: large;
+    text-align: center;
+    background-color: rgba(127, 164, 243, 0.452);
+    padding: 5px;
+}
+.detalle .carrito, .detalle .user, .detalle .menu{
+    color:var(--colorHueso);
+}
+.detalle .buscador{
+    color:var(--colorHueso)
+}
