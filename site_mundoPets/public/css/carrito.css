@@ -37,7 +37,7 @@
 }
 
 .carrito .aUno{
-    color: #1f66b2;
+    color: var(--colorAzulMarino);
 }
 
 .carrito .sUno{
@@ -60,7 +60,7 @@
 
 
 .carrito .sCuatro{
-    color: #1c7eed;
+    color: var(--colorAzulFrancia);
     text-decoration: none;
 
 /*     position: absolute;
@@ -75,7 +75,7 @@
 
 .carrito .sCinco{
 /*     position: absolute; */
-    color: #1c7eed;
+    color: var(--colorAzulFrancia);
     text-decoration: none;
 
 /*     position: absolute;
@@ -87,10 +87,66 @@
     line-height: 16px; */
 }
 
-.carrito .colorHueso{
-    color: #f3f4f6;
+.carrito .sSeis{
+    color: var(--colorNaranja);
 }
 
-.carrito .naranja{
-    color: #f0a52a;
+.carrito .sSiete{
+    color: var(--colorNaranja);
+    font-size: 17px;
+}
+
+.carrito .sOcho{
+    color: var(--colorHueso);
+    font-size: 17px;
+    font-weight: 600;
+    
+    background-color: var(--colorAzulFrancia);
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+.carrito .dUno{
+    color: var(--colorHueso);
+}
+
+.carrito .sNueve{
+    color: var(--colorAzulFrancia);
+}
+
+.carrito .sDiez{
+    color: var(--colorAzulFrancia);
+}
+
+.carrito .sOnce{
+    color: var(--colorAzulFrancia);
+    font-weight: 600;
+}
+
+.carrito .sDoce{
+    color: var(--colorAzulFrancia);
+}
+
+.carrito .sTrece{
+    color: var(--colorAzulFrancia);
+}
+
+.carrito .sCatorce{
+    color: var(--colorAzulFrancia);
+}
+
+.carrito .dDos{
+    color: var(--colorHueso);
+    font-size: 18px;
+    font-weight: 600;
+    
+    background-color: var(--colorAzulFrancia);
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
 }
