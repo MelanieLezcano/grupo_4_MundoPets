@@ -4,9 +4,11 @@
     background-size:100%;
     background-color: var(--colorAzulFrancia);
     flex-grow: 1;
-    margin:auto
+    margin:auto;
+    font-size: 13px;
 }
 .home .pie{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -14,42 +16,51 @@
     align-content: center;
     align-items: center;
 }
-
 .home .pie article{
-    width: 14%;
-    
+   /*  width: 8%; */
+   width: 20%;
 }
 .home  .contactanos{
-    width: 50%;
+    /* width: 100%; */
     color: white;
-    text-align: center;
+    /* text-align: center; */
     flex-grow: 1;
+
+}
+.home .contactanos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
 }
 .home .gatito{
-    width: 14%;
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 15%; */
 }
 .home  .gatito img{
-    
     width: 100%;
-  
-
+    flex-grow: 1;
 }
 .home  .maps{
-    width: 10%;
+   /*  width: 50%; */
     color: white;
     text-align: center;
     flex-grow: 1;
+}
 
-}
 .home .whatsapp{
-    width: 10%;
+    /* width: 100%; */
+    /* background-color: green; */
     text-align: center;
     flex-grow: 1;
-}
-.home .whatsapp i{
-    /* background-color: green; */
     color: white;
     text-align: center;
+}
+.home .pie .whatsapp i, .maps i, .contactanos i{
+    font-size: 30px;
 }
 .home .pie p{
     background-color: var(--colorNaranja);
@@ -59,6 +70,22 @@
     font-family: var(--fuenteSubtitulos);
 }
 .home .pie h4{
+    width: 50%;
     font-family: var(--fuenteSubtitulos);
     text-align: center;
+    font-size: 13px;
 }
+.home .pie p{
+    flex-grow: 1;
+}
+
+
+
+
+/* Tablet */
+@media (min-width:426px){}
+ 
+
+
+/* Desktop */
+@media (min-width:1024px){}
