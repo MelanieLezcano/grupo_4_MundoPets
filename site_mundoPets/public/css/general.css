@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: var(--fuenteTitulos);
+    background-image: url('/img/fondoPaws.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
