@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 11px;
+    padding: 9px;
+    border-radius: 10px;
+    width: 211px;
+}
 .register main{
     width: 100%;
     display: flex;
@@ -6,4 +13,26 @@
 }
 .register main section.container-image{
     display: none;
+}
+.register main button {
+    padding: 9px;
+    background-color: var(--colorAzulFrancia);
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 211px;
+}
+h2{
+    color: var(--colorAzulFrancia);
+    font-weight: bold ;
+}
+.register main .container input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--colorGris);
+}
+p{
+    color: var(--colorCeleste);
 }
