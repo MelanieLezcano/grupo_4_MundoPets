@@ -11,11 +11,10 @@
      text-decoration: none;
  }
  body{
-     background-image: url('../img/fondoPaws.png');
-     background-size: 100%;
-     width: 100%;
-     background-repeat: no-repeat;
-     display: block;
-     background-position: cover;
- }
- 
+    background-image: url('../img/fondoPaws.png');
+    background-size: 100%;
+    width: 100%;
+   /*   background-repeat: no-repeat; */
+   /*  display: block; */
+   /* background-position: cover; */
+}
