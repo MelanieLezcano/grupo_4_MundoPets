@@ -9,7 +9,8 @@ header{
     
  }
  
-.home header{
+/*.home header{
+>>>>>>> 6d2fa2c2eac31228c2241416523d65bb46cafb1c
     position: relative;
     margin-bottom: 20px;
     
@@ -18,7 +19,7 @@ header{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     
- }
+ }*/
  
  header .top{
      display: flex;
@@ -71,4 +72,3 @@ header{
  
  /* Tablet */
  @media (min-width:426px){}
->>>>>>> 805a54adfc9cec56f220560066fe030555935081
