@@ -1,4 +1,4 @@
-.home main{
+.main main{
   
     background-size: 100%;
     width: 100%;
@@ -9,20 +9,25 @@
     flex-direction: column;
     background-position: cover;
 } 
-.home .banner h2{
+.main .banner h2{
     position: absolute;
-  
     bottom:0;
     width: 100%;
+    font-family:var(--fuenteTitulos);
+    font-size: large;
+    text-align: center;
+    background-color: rgba(127, 164, 243, 0.452);
+    padding: 5px;
+    
 
 }
-.home .banner{
+.main .banner{
     position: relative;
 }
-.home .banner img{
+.main .banner img{
     width: 100%;
 }
-.home .main .section1{
+.main .main .section1{
     width: 100%;
     margin-top: 8px;
    /*  margin: 0; */
@@ -31,31 +36,32 @@
     font-size: large;
     background-color:white
 }
-.home .marcas h3{
+.main .section1 .marcas h3{
+    margin: 10px;
     font-family: var(--fuenteTitulos);
     color: var(--colorAzulMarino);
-    text-align: center;
+   text-align: center;
     margin-top: 4px;
 }
-.home .destacados{
+.main .destacados{
     font-family: var(--fuenteTitulos);
     color: var(--colorAzulMarino);
     text-align: center;
     margin-top: 6px;
 }
-.home .logos{
+.main .logos{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
-.home .logos img{
+.main .logos img{
     width: 20%;
     padding: 10px;
    /*  margin-top: 10px; */
 }
-.home .carrousel{
+.main .carrousel{
     text-align: center;
     border: 3px solid var(--colorAmarillo);
     border-radius: 8%;
@@ -68,22 +74,22 @@
     margin-top: 4px;
     margin: 4px 20px 20px;
 }
-.home .carrousel article{
+.main .carrousel article{
     text-align: center;
     width: 25%;
 }
-.home  .image{
-    width: 90%;
-}
-.home .image img{
+.main  .image{
     width: 100%;
 }
-.home .carrousel i{
+.main .image img{
+    width: 100%;
+}
+.main .carrousel i{
     color:var(--colorAmarillo);
     font-size: 30px;
 }
 
-.home .links{
+.main .links{
     text-align: center;
     width: 90%;
     display: flex; 
@@ -91,63 +97,73 @@
     justify-content: space-evenly;
     align-self: center;
     align-items: center;
+    margin-top: 4px;
+    margin: 4px 20px 20px;
 }
-.home .links section{
-    width: 40%;
+.main .links section{
+    width: 40%; 
     height: 150px;
     text-align: center;
     justify-items: center;
     
 }
-.home .links section .perro a, .gato a{
+.main .img{
+    width: 100%;
+}
+.main .image img{
+    width: 100%;
+}
+.main .image img{
+    width: 80%;
+}
+
+
+.main .links section .perro a, .gato a{
     text-align: left; 
     color: var(--colorAzulMarino);
 }
-.home .links  section img{
-    
-    width: 90%;
+.main .links  section img{
+    width: 80%;
 }
 
-.home .links .perro{
+.main .links .perro{
     margin: 10px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    align-content: stretch;
     background-color:var(--colorNaranja) ;
     border-radius: 8px;
     padding: 8px;
 }
-.home .perro  div img{
-    width: 80%;
+.main .perro  div img{
+    width: 70%;
 }
 
-.home .perro a, .gato a{
+.main .perro a{
     width: 10%;
-    margin-top: 4px;
     font-size: 16px;
 }
-.home .links .gato{
+.main .links .gato{
     
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
     border-radius: 8px;
     padding: 8px;
     background-color: var(--colorAmarillo);
 }
-.home .gato  div img{
-    width: 80%;
+.main .gato  div img{
+    width: 70%;
 }
-.home .gato a{
-    text-align: right;
+.main .gato a{
+    text-align: left;
+    width: 10%;
+    font-size: 16px;
 }
-.home .links .nosotros{
+.main .links .nosotros{
    
     margin: 10px;
     font-size: 14px;
@@ -161,12 +177,12 @@
     padding: 8px;
 }
 
-.home .nosotros a, .contacto a{
+.main .nosotros a, .contacto a{
     color: white;
     margin-bottom: 2px;
     text-align: center;
 }
-.home .links .contacto{
+.main .links .contacto{
    
     margin: 10px;
     display: flex;
@@ -179,14 +195,14 @@
     border-radius: 8px;
     padding: 8px;
 }
-.home .links  div i{
+.main .links  div i{
     width: 100%;
     font-size: 75px;
     color: white;
     text-align: center;
     
 }
-.home main a{
+.main main a{
     font-family: var(--fuenteSubtitulos);
 }
 
@@ -194,4 +210,126 @@
 
 
 /* Tablet */
-@media (min-width:426px){}
+@media (min-width:426px){
+    .main .links{
+        text-align: center;
+        width: 90%;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-self: center;
+        align-items: center;
+        margin-top: 4px;
+        margin: 4px 20px 20px;
+    }
+    .main .links section{
+        width: 45%; 
+        height: 180px;
+        text-align: center;
+        justify-items: center;
+        
+    }
+  
+    .main .img{
+        width: 90%;
+        height: 160px;
+    }
+   
+    .main .links section .perro a, .gato a{
+        text-align: left;
+        color: var(--colorAzulMarino);
+    }
+  
+    
+    .main .links .perro{
+        margin: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background-color:var(--colorNaranja) ;
+        border-radius: 8px;
+        padding: 8px;
+    }
+    .main .perro  div img{
+        width: 50%;
+        height: 140px;
+    }
+    
+    .main .perro a{
+        width: 40%;
+        font-size: 16px;
+    }
+    .main .links .gato{
+        
+        margin: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: var(--colorAmarillo);
+    }
+    .main .gato  div img{
+        width: 50%;
+        height: 150px;
+    }
+    .main .gato a{
+        text-align: left;
+        width: 10%;
+        font-size: 16px;
+    }
+  
+    .main .links .nosotros{
+       
+        margin: 15px;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorCeleste);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    
+    .main .nosotros a, .contacto a{
+        color: white;
+        margin-bottom: 2px;
+        text-align: center;
+
+    }
+    .main .links .contacto{
+       
+        margin: 15px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: var(--colorAzulMarino);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    .main .links  div i{
+        width: 100%;
+        font-size: 100px;
+        color: white;
+        text-align: center;
+        
+    }
+    .main a{
+        font-family: var(--fuenteSubtitulos);
+    }
+    
+    
+}
+
+/* Desktop */
+@media (min-width:1024px){}
+  
+
