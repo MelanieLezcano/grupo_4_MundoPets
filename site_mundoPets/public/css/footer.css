@@ -1,14 +1,15 @@
-.home footer{
+footer{
     margin-top: 10px;
     width: 100%;
-    background-size:100%;
+    height: 100px;
+    
     background-color: var(--colorAzulFrancia);
-    flex-grow: 1;
-    margin:auto;
+    margin: 0 auto;
     font-size: 13px;
 }
-.home .pie{
+.pie{
     width: 100%;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -16,18 +17,18 @@
     align-content: center;
     align-items: center;
 }
-.home .pie article{
-   /*  width: 8%; */
-   width: 20%;
+footer .pie article{
+    height: 66px;
 }
-.home  .contactanos{
-    /* width: 100%; */
-    color: white;
-    /* text-align: center; */
-    flex-grow: 1;
+footer .pie p{
+    height: 35px;
+    width: 100%;
+}
 
-}
-.home .contactanos{
+footer .contactanos{
+    width: 20%;
+    color: white;
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,47 +36,73 @@
     align-items: center;
 
 }
-.home .gatito{
+footer .contactanos i, .contactanos a, .contactanos h4{
+    flex-grow: 1;
+}
+footer .gatito{
+    width: 20%;
+    height: 80px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-items: flex-end;
     /* width: 15%; */
 }
-.home  .gatito img{
+footer .gatito .kitty{
+    height: 80px;
     width: 100%;
-    flex-grow: 1;
 }
-.home  .maps{
-   /*  width: 50%; */
+footer  .gatito img{
+    width: 100%;
+    height: 66px;
+
+}
+footer  .maps {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 15%;
     color: white;
     text-align: center;
-    flex-grow: 1;
+   
+   
 }
 
-.home .whatsapp{
-    /* width: 100%; */
-    /* background-color: green; */
+
+footer .whatsapp{
+    width: 15%; 
     text-align: center;
-    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     color: white;
+    
+}
+footer .pie .maps i, .whatsapp i{
+    width: 100%;
     text-align: center;
+  
 }
-.home .pie .whatsapp i, .maps i, .contactanos i{
+footer .pie .whatsapp i, .maps i, .contactanos i{
     font-size: 30px;
+    text-align: center;
+   
 }
-.home .pie p{
+footer .pie p{
+
     background-color: var(--colorNaranja);
     color: var(--colorAzulMarino);
     padding:10px;
     text-align: center;
     font-family: var(--fuenteSubtitulos);
 }
-.home .pie h4{
+footer .pie h4{
     width: 50%;
     font-family: var(--fuenteSubtitulos);
     text-align: center;
     font-size: 13px;
 }
-.home .pie p{
+footer .pie p{
     flex-grow: 1;
 }
 
