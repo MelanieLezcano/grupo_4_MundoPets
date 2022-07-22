@@ -32,15 +32,22 @@
     background-color: var(--colorGris);
     font-size: x-small;
     margin-bottom: 50px;
+    font: message-box;
 }
 
+main h4{
+    margin: 6px;
+    color: var(--colorCeleste);
+
+}
 main p{
     color: var(--colorCeleste);
-}
+}    
 main a{
+
     color: var(--colorAzulFrancia);
 }
-.main .container{
+.register main section form .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -48,3 +55,6 @@ main a{
     justify-content: center;
     font-weight: bold;
 }
+.register main label{
+    color: var(--colorAzulFrancia);
+}    
