@@ -35,17 +35,24 @@
     font: message-box;
 }
 
-main h4{
+.register main h4{
     margin: 6px;
     color: var(--colorCeleste);
 
 }
-main p{
+.register main p{
     color: var(--colorCeleste);
 }    
-main a{
+.register main a{
 
     color: var(--colorAzulFrancia);
+}
+.register main section{
+    width: 100%;
+    max-width: 800px;
+}
+.register main section form{
+    width: 100%;
 }
 .register main section form .container{
     display: flex;
@@ -58,3 +65,12 @@ main a{
 .register main label{
     color: var(--colorAzulFrancia);
 }    
+.register main section{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
