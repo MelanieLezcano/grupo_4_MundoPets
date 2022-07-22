@@ -1,15 +1,12 @@
-* {
-    box-sizing: border-box;
-    margin: 11px;
-    padding: 9px;
-    border-radius: 10px;
-    width: 211px;
-}
+* 
 .register main{
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
 }
 .register main section.container-image{
     display: none;
@@ -22,17 +19,32 @@
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    width: 211px;
+    width: 290px;
 }
-h2{
+.register main h2{
     color: var(--colorAzulFrancia);
     font-weight: bold ;
+    /* text-align: center; */
 }
 .register main .container input {
     width: 100%;
     padding: 10px;
     background-color: var(--colorGris);
+    font-size: x-small;
+    margin-bottom: 50px;
 }
-p{
+
+main p{
     color: var(--colorCeleste);
+}
+main a{
+    color: var(--colorAzulFrancia);
+}
+.main .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    font-weight: bold;
 }

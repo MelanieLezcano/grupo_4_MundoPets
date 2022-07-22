@@ -1,10 +1,10 @@
-/* * {
+* {
     box-sizing: border-box;
-    margin: 11px;
-    padding: 9px;
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
-    width: 211px;
-} */
+    width: 90%;
+}
 body{
     max-width: 1440px;
     margin: 0 auto;
