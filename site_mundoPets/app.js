@@ -14,7 +14,6 @@ app.get ('/detalle',(req,res) => {res.sendFile (path.join (__dirname, './views/d
 app.get ('/register',(req,res) => {res.sendFile (path.join (__dirname, './views/register.html'))});
 app.get ('/login',(req,res) => {res.sendFile (path.join (__dirname, './views/login.html'))});
 app.get ('/contacto',(req,res) => {res.sendFile (path.join (__dirname, './views/contacto.html'))});
-app.get ('*',(req,res) => {res.sendFile (path.join (__dirname, './views/404.html'))});
 
 app.listen (port,() => console.log("servidor levantado")
 );
