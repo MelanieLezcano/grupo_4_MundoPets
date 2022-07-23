@@ -1,0 +1,84 @@
+.carrito .main{
+    padding: 15px;
+}
+
+.carrito .h1{
+    color: var(--colorAzulFrancia);
+    font-family: var(--fuenteTitulos);
+}
+
+.carrito .sectionUno{
+    background-color: white;
+    border: 3px solid var(--colorAmarillo);
+    border-radius: 20px;
+}
+
+.carrito .secciones{
+    background-color: var(--colorAmarillo);
+    border-radius: 20px;
+    height: 49px;
+    
+    color: var(--colorAzulMarino);
+    font-family: var(--fuenteSubtitulos);
+    font-weight: 600;
+    font-size: 17px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.carrito .productoUno{
+    margin-bottom: 5px;
+}
+
+.carrito .imagenes .img{
+    height: 110px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.carrito .a{
+    color: var(--colorAzulFrancia);
+    font-family: var(--fuenteSubtitulos);
+    font-size: 13px;
+    width: 88px;
+    height: 10%;
+    margin-left: 2%;
+    margin-top: 5px;
+    
+    
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.carrito .precioLista{
+    color: var(--colorAzulFrancia);
+    font-family: var(--fuenteSubtitulos);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.carrito .agregarNum{
+    border: 3px solid var(--colorAmarillo);
+    border-radius: 20px;
+    width: 87px;
+    height: 31px;
+
+    text-align: center;
+    font-size: 17px;
+    font-family: var(--fuenteSubtitulos);
+    font-weight: 700;
+    color: var(--colorAzulMarino);
+}
+
+.carrito .botonAgregar, .botonSacar{
+    border: none;
+    color: var(--colorAzulFrancia);
+    font-size: 20px;
+    
+    
+
+    
+}

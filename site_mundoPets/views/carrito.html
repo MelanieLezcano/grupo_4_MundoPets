@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e5e17dceab.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/901c43a415.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Carrito</title>
 </head>
-<body>
+<body class="carrito">
     <header>
         <div class="top">
             <div class="logo">
@@ -37,32 +37,81 @@
          </nav>
         </div>
     </header>
-    <main>
-        <h1>Carrito de compras</h1>
-        <section>
+    <main class="main">
+        <h1 class="h1">Carrito de compras</h1>
+        <section class="sectionUno">
+            <div class="secciones">
+                <p class="productoUno">producto</p>
+                <p class="PrecioUno">precio</p>
+                <p class="CantidadUno">cantidad</p>
+            </div>
             <article>
                 <div>
-                    <p>producto</p>
                     <div class="imagenes">
-                        <img src="/img/ga-agility-gato-adulto.jpg" alt="agility gato adulto">
+                        <img class="img" src="/img/ga-agility-gato-adulto.jpg" alt="agility gato adulto">
                     </div>
-                    <p>seguir comprando</p>
                 </div>
                 <div>
-                    <a href="/detalle">Agility gato adulto</a>
+                    <a href="/detalle" class="a">Agility gato adulto</a>
                 </div>
-                <div>
-                    <p>precio</p>
+                <div class="precioLista">
                     <p>$5.320</p>
                 </div>
                 <div>
-                    <p>cantidad</p>
+                    <div class="agregar">
+                        <button class="botonAgregar"><i class="fa-solid fa-circle-minus"></i></button>
+                        <input type="number"  class="agregarNum" value="1">
+                        <button class="botonSacar"><i class="fa-solid fa-circle-plus"></i></button> 
+                    </div>
                     <div>
-                        
+                        <p>seguir comprando</p>
+                        <span><button onClick="window.location.reload();" class="sOcho">actualizar</button></span>
                     </div>
                 </div>
+        </section>
+        <section>
+            <div>total del carrito</div>
+            <article>
+                <div>
+                    <div>
+                        <span>Subtotal</span>
+                        <span>Envío</span>
+                        <span>Total</span>
+                    </div>
+                    <div>
+                        <span>$10.640</span>
+                        <span>$0</span>
+                        <span>$10.640</span>
+                    </div>
+                </div>
+                <div><button>inalizar Compra</button></div>
             </article>
         </section>
     </main>
+    <footer>
+        <section class="pie">
+
+            <article class="contactanos">
+                <i class="fas fa-headset"></i>
+                <a href="mailto:user@server.com"></a>
+                <h4>¿Alguna duda?Contactanos</h4><!-- contacto -->
+            </article>
+            <article class="maps">
+                <i class="fas fa-map-marker-alt"></i> <!-- ubicacion -->
+            </article>
+            <article class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <a href="tel:1136370707"></a>
+            </article>
+            <article class="gatito">
+                <div class="kitty">
+                    <img src="img/gatito2.webp" alt="gatito tierno fondo amarillo">
+                </div>
+            </article>
+            <p>Copyriht <i class="fas fa-copyright"></i> 2022 Mundo Pets | Todos los derechos reservados|</p>
+
+        </section>
+
+    </footer>
 </body>
 </html>

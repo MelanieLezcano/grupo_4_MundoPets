@@ -12,10 +12,15 @@
  }
  body{
      background-image: url('../img/fondoPaws.png');
-     background-size: 100%;
+     background-position: cover;
+     background-size: 180%;
      width: 100%;
      background-repeat: no-repeat;
-     display: block;
-     background-position: cover;
+     margin: 0 auto;
+     align-items: stretch; 
+
+
  }
- 
+  body .home{
+    max-height: 425px;
+  }
