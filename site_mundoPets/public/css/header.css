@@ -9,7 +9,7 @@ header{
     
  }
  
-header{
+/*.home header{
     position: relative;
     margin-bottom: 20px;
     
@@ -18,7 +18,7 @@ header{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     
- }
+ }*/
  
  header .top{
      display: flex;
@@ -71,3 +71,8 @@ header{
  
  /* Tablet */
  @media (min-width:426px){}
+
+/* Desktop */
+ @media (min-width:1024px){}
+
+
