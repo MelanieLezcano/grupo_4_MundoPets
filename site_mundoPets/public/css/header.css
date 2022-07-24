@@ -71,3 +71,6 @@ header{
  
  /* Tablet */
  @media (min-width:426px){}
+
+/* Desktop */
+ @media (min-width:1024px){}
