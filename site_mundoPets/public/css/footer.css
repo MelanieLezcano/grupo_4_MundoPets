@@ -1,0 +1,220 @@
+footer{
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.pie{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+footer .pie article{
+    height: 66px;
+    background-color: var(--colorAzulFrancia);
+}
+footer .pie p{
+    height: 35px;
+    width: 100%;
+}
+footer .contactanos{
+    width: 20%;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .contactanos i, .contactanos a, .contactanos h4{
+    flex-grow: 1;
+}
+footer .gatito{
+    width: 20%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: flex-end;
+    /* width: 15%; */
+}
+footer .gatito .kitty{
+    height: 80px;
+    width: 100%;
+}
+footer  .gatito img{
+    width: 100%;
+    height: 66px;
+}
+footer  .maps {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 15%;
+    color: white;
+    text-align: center;
+}
+footer .whatsapp{
+    width: 15%; 
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    color: white;
+}
+footer .pie .maps i, .whatsapp i{
+    width: 100%;
+    text-align: center;
+}
+footer .pie .whatsapp i, .maps i, .contactanos i{
+    font-size: 30px;
+    text-align: center;
+}
+footer .pie p{
+    background-color: var(--colorNaranja);
+    color: var(--colorAzulMarino);
+    padding:10px;
+    text-align: center;
+    font-family: var(--fuenteSubtitulos);
+}
+footer .pie h4{
+    width: 50%;
+    font-family: var(--fuenteSubtitulos);
+    text-align: center;
+    font-size: 13px;
+}
+footer .pie p{
+    flex-grow: 1;
+}
+footer .foot{
+    display: none;
+}
+
+
+
+
+/* Tablet */
+@media (min-width:426px){
+
+    footer .gatito{
+        width: 20%;
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: flex-end;
+        
+    }
+    footer .kitty{
+        height: 80px;
+        width: 100%;
+        align-items: flex-end;
+    }
+    footer  .kitty img{
+        width: 100%;
+        height: 80px;
+    
+    }
+    footer .foot{
+        display: none;
+    }
+}
+ 
+
+
+/* Desktop */
+@media (min-width:1024px){
+    footer{
+        height: 45px;
+        margin-top: 500px;
+    }
+   footer .pie article{
+    display: none;
+   }
+   footer .pie{
+    height: 45px;
+   }
+   footer .pie p{
+    height: 45px;
+    font-size: 18px;
+   
+   }
+   footer .foot{
+    width: 100%;
+    height: 120px;
+    background-color: var(--colorAzulFrancia);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+   }
+   footer .foot ul, .foot article, .foot div{
+    width: 25%;
+    
+   }
+
+   footer .foot .lista li{
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+
+   }
+   footer .foot .compra{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+   }
+   footer .foot .compra i{
+    width: 50%;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+   }
+   footer .foot .compra h4{
+    width: 50%;
+    color: white;
+    font-size: 16px;
+    font-family: var(--fuenteSubtitulos);
+   }
+   footer .foot .llamar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+   }
+   footer .foot .llamar i{
+    width: 50%;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+   }
+   footer .foot .llamar h4{
+    width: 50%;
+    color: white;
+    font-size: 16px;
+    font-family: var(--fuenteSubtitulos);
+   }
+   footer .logohome{
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+ }
+    footer .logohome img{
+    padding: 10px;
+    width: 70px;
+    height: 80px;
+ }
+}
