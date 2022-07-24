@@ -20,7 +20,7 @@ margin-left: 5px;
 
 }
 .detalle main section .contenedor{
-display: flex;
+    display: flex;
 
 }
 .detalle main section button{ /* boton de compra */
@@ -48,19 +48,19 @@ display: flex;
 .detalle main .detail{
 background-color: var(--colorHueso);
 opacity: 75%;
-padding: 10px;
+padding: 20px;
 }
 .detalle main section h1{
     font-size: 45px;
 }
 .detalle main section h2{
 text-align: center;
-padding: 20px;
+padding-top: 20px;
 }
 .detalle main section .precio{
     font-size: 35px;
 }
-.detalle main section article{
+.detalle main section .prod-similares{
 display: flex;
 flex-wrap: wrap;
 text-align: center;

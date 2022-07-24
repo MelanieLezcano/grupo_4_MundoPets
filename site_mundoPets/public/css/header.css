@@ -1,0 +1,57 @@
+header{
+    position: relative;
+    margin-bottom: 20px;
+    height: 68px;
+    background-color: #1c7eed;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+ }
+ 
+ .home header{
+    position: relative;
+    margin-bottom: 20px;
+    height: 68px;
+    background-color: rgba(127, 164, 243, 0.452);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+ }
+ header .top{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+ 
+ }
+ header .logo{
+    position: absolute;
+    display: flex;
+    width: 15%;
+ }
+ 
+ header img{
+    padding: 10px;
+    width: 68px;
+ }
+ 
+ header .carrito,  .user,  .menu, .lupa{
+     color:var(--colorHueso);
+     display: inline-block;
+ }
+ 
+ header .buscador{
+     display: inline-block;
+ 
+ }
+ header .carrito, .buscador, .lupa, .user, .menu{
+    padding: 10px;
+ }
+ header .Uno nav{
+    margin-top: 15px;
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+ }
+ 
+ /* Tablet */
+ @media (min-width:426px){}
