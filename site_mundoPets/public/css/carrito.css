@@ -2,10 +2,6 @@
     padding: 15px;
 }
 
-.carrito .h1{
-    color: var(--colorAzulFrancia);
-    font-family: var(--fuenteTitulos);
-}
 
 .carrito .sectionUno{
     background-color: white;
@@ -74,7 +70,7 @@
 .carrito .precioLista{
     color: var(--colorAzulFrancia);
     font-family: var(--fuenteSubtitulos);
-    font-size: 35px;
+    font-size: 27px;
     font-weight: 700;
 
 }
@@ -84,7 +80,8 @@
     border-radius: 20px;
     width: 50px;
     height: 31px;
-    margin-bottom: 17px;
+    margin-left: 5px;
+    margin-right: 8px;
 
     text-align: center;
     font-size: 17px;
@@ -113,6 +110,13 @@
     text-align: center;
     margin-right: 10%;
     margin-left: 10%;
+}
+
+.carrito .agregar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .carrito .borde{
@@ -156,3 +160,94 @@
 
     display: flex;
 }
+
+.carrito .sectionDos{
+    margin-top: 15px;
+    background-color: var(--colorGris);
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.carrito .fondoCuadroDos{
+    background-color: var(--colorCeleste);
+    height: 49px;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+
+}
+
+.carrito .totalCarrito{
+    font-size: 24px;
+    font-family: var(--fuenteSubtitulos);
+    font-weight: 600;
+    color: white;
+    margin-left: 20px;
+
+}
+
+.carrito .filaPrecios{
+    color: var(--colorAzulMarino);
+    font-family: var(--fuenteSubtitulos);
+    font-size: 22px;
+    font-weight: 600;
+
+    height: fit-content;
+    text-align: center;
+    line-height: 48px;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.carrito .filaTexto{
+    color: var(--colorAzulMarino);
+    font-family: var(--fuenteSubtitulos);
+    font-size: 22px;
+    font-weight: 600;
+
+    height: fit-content;
+    text-align: left;
+    line-height: 50px;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.carrito .articuloFila{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrito .envio{
+    font-weight: 800;
+}
+
+.carrito .precioFinal{
+    font-size: 2rem;
+    
+}
+
+.carrito .finalizar{
+    color: var(--colorHueso);
+    font-size: 18px;
+    font-weight: 600;
+    
+    background-color: var(--colorAzulFrancia);
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+}
+
+.carrito .divFinalizar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
