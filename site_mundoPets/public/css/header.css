@@ -42,13 +42,13 @@ header{
  header .carrito,  .user,  .menu, .lupa{
      
      color:var(--colorHueso);
-     display: inline-block;
+     display: flex;
  }
  
  
  
  header .buscador{
-     display: inline-block;
+     display: flex;
  
  }
  
