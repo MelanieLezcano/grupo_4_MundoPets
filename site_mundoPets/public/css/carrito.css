@@ -130,7 +130,8 @@
 
 .carritoUno .fondoCuadroDos{
     background-color: var(--colorCeleste);
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
+    height: 50px;
     
 
 }
@@ -141,7 +142,8 @@
     font-weight: 600;
     color: white;
     margin-left: 20px;
-
+    padding: 8px;
+    height: 50px;
 }
 
 .carritoUno .filaPrecios{
@@ -212,9 +214,33 @@
     visibility: hidden;
 }
 
+.carritoUno .titulosTabla{
+    visibility: hidden;
+}
+
+.carritoUno .marcoAmarillo{
+
+}
+
 @media (min-width:426px){
     .carritoUno .precioListaMovil{
         display: none;
+    }
+
+    .carritoUno .tabla{
+        border-collapse: collapse;
+        
+        font-size: 18px;
+        color: var(--colorAzulFrancia);
+        font-family: var(--fuenteSubtitulos);
+    }
+
+    .carritoUno .titulosTabla{
+        visibility: visible;
+        background-color: var(--colorAmarillo);
+        height: 50px;
+        border-radius: 20px;
+        width: 100%;
     }
 
     .carritoUno .precioListaDesktop{
@@ -235,7 +261,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
 
     .carritoUno .sectionUno{
@@ -244,6 +269,5 @@
 
     .carritoUno .sectionDos{
         width: 50%;
-
     }
   }
