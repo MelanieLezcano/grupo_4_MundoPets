@@ -218,10 +218,6 @@
     visibility: hidden;
 }
 
-.carritoUno .marcoAmarillo{
-
-}
-
 @media (min-width:426px){
     .carritoUno .precioListaMovil{
         display: none;
