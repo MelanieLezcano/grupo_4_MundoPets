@@ -2,7 +2,6 @@ html{
     height: 100%;
 }
 
-
 .carritoUno .main{
     padding: 15px;
 }
@@ -11,13 +10,11 @@ html{
     width: 100%;
 }
 
-
 .carritoUno .sectionUno{
     width: 100%;
     background-color: white;
     border: 3px solid var(--colorAmarillo);
     border-radius: 20px;
-
 }
 
 .carritoUno .img{
@@ -40,18 +37,14 @@ html{
     contain: content;
 }
 
-
-
 .carritoUno .productoDetalle{
-    text-align: left;
-    
+    text-align: left;    
 }
 
 .carritoUno .agregar{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .carritoUno .agregarNum{
@@ -141,11 +134,8 @@ html{
 
 .carritoUno .fondoCuadroDos{
     background-color: var(--colorCeleste);
-    height: 49px;
     border-radius: 20px;
     
-    display: flex;
-    align-items: center;
 
 }
 
@@ -243,4 +233,21 @@ html{
     }
   }
   
+  @media (min-width:1024px){
 
+    .carritoUno .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .carritoUno .sectionUno{
+        width: 80%;
+    }
+
+    .carritoUno .sectionDos{
+        width: 50%;
+
+    }
+  }
