@@ -17,7 +17,6 @@ app.get('/contacto',(req,res) => res.sendFile(path.resolve(__dirname,'views','co
 app.get('/gatos',(req,res) => res.sendFile(path.resolve(__dirname,'views','gatos.html')))
 app.get('/nosotros',(req,res) => res.sendFile(path.resolve(__dirname,'views','nosotros.html')))
 app.get('/perros',(req,res) => res.sendFile(path.resolve(__dirname,'views','perros.html')))
-app.get('/tabla',(req,res) => res.sendFile(path.resolve(__dirname,'views','tabla.html')))
 
 app.listen (port,() => console.log("servidor levantado")
 );
