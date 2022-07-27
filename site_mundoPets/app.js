@@ -7,16 +7,16 @@ const port = 3000
 const publicPath = path.resolve(__dirname, './public');
 
 app.use (express.static (publicPath));
-app.get('/',(req,res) => res.sendFile(path.resolve(__dirname,'views','index.html')))
-app.get('/detalle',(req,res) => res.sendFile(path.resolve(__dirname,'views','detalle.html')))
 
 app.get ('/',(req,res) => {res.sendFile (path.join (__dirname, './views/home.html'))});
 app.get ('/carrito',(req,res) => {res.sendFile (path.join (__dirname, './views/carrito.html'))});
 app.get ('/detalle',(req,res) => {res.sendFile (path.join (__dirname, './views/detalle.html'))});
 app.get ('/register',(req,res) => {res.sendFile (path.join (__dirname, './views/register.html'))});
 app.get ('/login',(req,res) => {res.sendFile (path.join (__dirname, './views/login.html'))});
-app.get ('/contacto',(req,res) => {res.sendFile (path.join (__dirname, './views/contacto.html'))});
-app.get ('*',(req,res) => {res.sendFile (path.join (__dirname, './views/404.html'))});
+app.get('/contacto',(req,res) => res.sendFile(path.resolve(__dirname,'views','contacto.html')))
+app.get('/gatos',(req,res) => res.sendFile(path.resolve(__dirname,'views','gatos.html')))
+app.get('/nosotros',(req,res) => res.sendFile(path.resolve(__dirname,'views','nosotros.html')))
+app.get('/perros',(req,res) => res.sendFile(path.resolve(__dirname,'views','perros.html')))
 
 app.listen (port,() => console.log("servidor levantado")
 );
