@@ -2,8 +2,8 @@
 
 :root{
     /* Fuentes */
-    --fuenteTitulos: 'Baloo Tammudu 2', cursive;
-    --fuenteSubtitulos: 'Mukta', sans-serif;
+    --fuenteTitulos:'Baloo Tammudu 2', cursive;
+    --fuenteSubtitulos:'Mukta', sans-serif;
 
     /* Colores */
     --colorAmarillo: #fddf65;

@@ -1,12 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/e5e17dceab.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Detalle de producto</title>
 </head>
-<body>
-    
+
+<body class="detalle">
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+            </div>
+        </div>
+        <div class="Uno">
+            <nav>
+                <div class="carrito">
+                     <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <!-- link carrito -->
+                </div>
+                <div class="buscador">
+                    <input type="text" maxlength="100" placeholder="Buscar"> <!-- barra buscador -->
+                </div>
+                <span class="lupa">
+                    <i class="fas fa-search"></i>
+                </span>
+                <div class="user">
+                    
+                    <a href="/login"><i class="fas fa-user"></i></a><!-- login & register -->
+                </div>
+
+                <div class="menu">
+                    <i class="fas fa-bars"></i> <!-- menu hamburguesa -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="imagen-principal">
+                <img src="/img/infinity-perro-cachorro-10kg.jpg" alt="infinity-perro-cachorro-10kg">
+            </div>
+            <!-- <div>
+                imagenes secundarias "carrousel"
+            </div> -->
+            <section >
+                <div class="textoDerecha">
+                    <div >
+                    <h1>Alimento balanceado infinity perro cachorro 10kg</h1>
+                    <p class="precio">$5.320</p>
+                </div>
+                <div class="contenedor">
+                    <div class="sumar-carrito">
+                        <!-- boton de cantidad -->
+                        <div class="restar">-</div>
+                        <input type="number">
+                        <div class="agregar">+</div>
+                    </div>
+                     <a href="/carrito"><button>Añadir al carrito</button></a><!-- boton de agregar al carrito -->
+                </div>
+            </div>
+            </section>
+            <section class="detail">
+                <h2>Detalle del producto</h2>
+                <p>Infinity es un alimento premium con los mejores ingredientes. Un alimento rico, de alta
+                    digestibilidad, que a él le deja el pelo brillante y a vos la alegría de verlo más vital que nunca.
+                </p>
+            </section>
+            <section>
+                <h2>Productos Relacionados</h2>
+                <article class="prod-similares">
+                    <div class="img1">
+                        <div>
+                            <img src="/img/pa-agility-perro-adulto.jpg" alt="">
+                            <h4>Agility adulto</h4>
+                        </div>
+                        <div>
+                            <img src="/img/pa-balanced-perro-adulto-cerdo-y-arroz-15kg.jpg" alt="">
+                            <h4>Balanced saborizado</h4>
+                        </div>
+                    </div>
+                    <div class="img2">
+                        <div>
+                            <img src="/img/pa-biopet-criadores-20kg.jpg" alt="">
+                            <h4>Biopet</h4>
+                        </div>
+                        <div>
+                            <img src="/img/pa-eukanuba-adulto-large.jpg" alt="">
+                            <h4>Eukanuba adulto</h4>
+                        </div>
+                    </div>
+                    
+                </article>
+            </section>
+    </main>
+
+    <footer>
+        <section class="pie">
+            <article class="contactanos">
+                <i class="fas fa-headset"></i>
+                <a href="mailto:user@server.com"></a>
+                <h4>¿Alguna duda?Contactanos</h4><!-- contacto -->
+            </article>
+            <article class="maps">
+                <i class="fas fa-map-marker-alt"></i> <!-- ubicacion -->
+            </article>
+            <article class="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <a href="tel:1136370707"></a>
+            </article>
+            <article class="gatito">
+                <div class="kitty">
+                    <img src="img/gatito2.webp" alt="gatito tierno fondo amarillo">
+                </div>
+            </article>
+            <p>Copyriht <i class="fas fa-copyright"></i> 2022 Mundo Pets | Todos los derechos reservados|</p>
+        </section>
+    </footer>
 </body>
+
 </html>

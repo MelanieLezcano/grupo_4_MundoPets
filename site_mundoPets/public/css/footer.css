@@ -25,7 +25,6 @@ footer .pie p{
     height: 35px;
     width: 100%;
 }
-
 footer .contactanos{
     width: 20%;
     color: white;
@@ -35,7 +34,6 @@ footer .contactanos{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-
 }
 footer .contactanos i, .contactanos a, .contactanos h4{
     flex-grow: 1;
@@ -56,7 +54,6 @@ footer .gatito .kitty{
 footer  .gatito img{
     width: 100%;
     height: 66px;
-
 }
 footer  .maps {
     display: flex;
@@ -193,14 +190,12 @@ footer .foot{
     font-size: 50px;
     text-align: center;
     color: white;
-
    }
    footer .foot .compra h4{
     width: 50%;
     color: white;
     font-size: 16px;
     font-family: var(--fuenteSubtitulos);
-
    }
    footer .foot .llamar{
     height: 100px;
@@ -209,13 +204,11 @@ footer .foot{
     align-items: center;
     align-content: center;
    }
-
    footer .foot .llamar i{
     width: 50%;
     font-size: 50px;
     text-align: center;
     color: white;
-
    }
    footer .foot .llamar h4{
     width: 50%;
@@ -238,5 +231,4 @@ footer .foot{
     width: 70px;
     height: 80px;
  }
-
 }
