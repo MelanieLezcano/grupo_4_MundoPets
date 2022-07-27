@@ -612,9 +612,6 @@ main {
         color: var(--colorAzulMarino);
     }
 
-    .mainHome .links section img {
-        /* width: 80%; */
-    }
 
     .mainHome .links .perro {
         position: absolute;
