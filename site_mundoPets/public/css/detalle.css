@@ -157,7 +157,7 @@
 /* desktop */
 @media (min-width:769px) {
     .detalle main img {
-        width: 30%;
+        width: 25%;
     }
 
     .detalle main section .imagen-principal {
@@ -165,17 +165,17 @@
         width: 100%;
         text-align: left;
     }
-
-    .detalle main section .aDerecha {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-    }
-
     .detalle main section .sumar-carrito {
         text-align: center;
     }
-
+    .detalle main section .textoDerecha{
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        position: absolute;
+        left: 200px;
+        top: 10px;
+    }
     .detalle main section .contenedor {
         display: flex;
         flex-wrap: wrap;
@@ -184,7 +184,14 @@
         align-content: space-around;
         align-items: flex-end;
     }
+    .detalle main section h1 {
+        font-size: 40px;
+        padding: 15% 15% 0 15%;
+    }
+    .detalle main section .precio{
+        text-align: center;
 
+    }
     .detalle main section .sumar-carrito input {
         width: 60px;
         /*  text-align: center; */
@@ -203,21 +210,26 @@
     }
 
     .detalle main section .prod-similares img{
-        width: 30%;
+        width: 57%;
         padding: 20px;
-        display: flex;
-       /*  flex-wrap: wrap; */
-         flex-direction: column;
-         justify-content: space-between; 
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /*flex-direction: column; */
+        /*justify-content: space-between; */ 
  
     }
-
-    .detalle main section h1 {
-        font-size: 40px;
+    .detalle main section .img1{
+        position: absolute;
+        right: 120px;
+    }
+    .detalle main section .img2{
+        position: absolute;
+        left: 120px;
     }
 
     .detalle main section h4 {
         font-size: 20px;
         font-family: var(--fuenteSubtitulos);
     }
-}
+
+    }
