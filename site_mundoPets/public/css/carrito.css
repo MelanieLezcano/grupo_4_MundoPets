@@ -191,6 +191,7 @@
 
 .carritoUno .finalizar{
     color: var(--colorHueso);
+    font-family: var(--fuenteSubtitulos);
     font-size: 18px;
     font-weight: 600;
     
