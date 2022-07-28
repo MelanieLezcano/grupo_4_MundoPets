@@ -10,6 +10,15 @@
  a{
      text-decoration: none;
  }
+ .home{
+    margin: 0 auto;
+    background-image: url('../img/fondoPaws.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: cover;
+}
+
  body{
      margin: 0 auto;
      background-image: url('../img/fondoPaws.png');
@@ -23,3 +32,4 @@
 
 
  }
+ 
