@@ -2,13 +2,37 @@ const express = require ('express');
 const path = require ('path');
 
 const app = express();
-const port = 3000
-
+const port = 3000;
 const publicPath = path.resolve(__dirname, './public');
 
-app.use (express.static (publicPath));
+/* requerir las rutas */
+let indexRouter = require('./routes/index')
+let administradorRouter = require('./routes/administrador')
+let productosRouter = require('./routes/productos')
+let usuariosRouter = require('./routes/usuarios')
 
-app.get ('/',(req,res) => {res.sendFile (path.join (__dirname, './views/home.html'))});
+
+
+
+//view engine setup
+app.set('views', path.join(__dirname,'views'));
+app.set('view engine','ejs')
+/* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
+
+//middlewares
+app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
+app.use(express.static (publicPath));
+
+//RUTAS
+app.use("./", indexRouter );
+app.use("./usuarios", usuariosRouter);
+app.use("./productos", productosRouter );
+app.use("./administrador", administradorRouter );
+
+app.listen (port,() => console.log("servidor levantado")
+);
+
+/* app.get ('/',(req,res) => {res.sendFile (path.join (__dirname, './views/home.html'))});
 app.get ('/carrito',(req,res) => {res.sendFile (path.join (__dirname, './views/carrito.html'))});
 app.get ('/detalle',(req,res) => {res.sendFile (path.join (__dirname, './views/detalle.html'))});
 app.get ('/register',(req,res) => {res.sendFile (path.join (__dirname, './views/register.html'))});
@@ -16,7 +40,4 @@ app.get ('/login',(req,res) => {res.sendFile (path.join (__dirname, './views/log
 app.get('/contacto',(req,res) => res.sendFile(path.resolve(__dirname,'views','contacto.html')))
 app.get('/gatos',(req,res) => res.sendFile(path.resolve(__dirname,'views','gatos.html')))
 app.get('/nosotros',(req,res) => res.sendFile(path.resolve(__dirname,'views','nosotros.html')))
-app.get('/perros',(req,res) => res.sendFile(path.resolve(__dirname,'views','perros.html')))
-
-app.listen (port,() => console.log("servidor levantado")
-);
+app.get('/perros',(req,res) => res.sendFile(path.resolve(__dirname,'views','perros.html'))) */
