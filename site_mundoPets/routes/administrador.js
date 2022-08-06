@@ -2,10 +2,10 @@ const express = require('express') /*  */
 const router = express.Router()
 
 
-let { create,edit,list } = require('../controllers/adminController')
+let {crear,editar,lista} = require('../controllers/adminController')
 
-router.get('/listar', list)
-router.get('/editar', edit)
-router.get('/crear', create)
+router.get('/lista', lista)
+router.get('/editar', editar)
+router.get('/crear', crear)
 
 module.exports = router

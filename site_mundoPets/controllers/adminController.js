@@ -1,12 +1,12 @@
 
 module.exports = {
-    list: (req, res) => {
+    lista: (req, res) => {
         return res.render('admin/listaProductos')
     },
-    create: (req, res) => {
+    crear: (req, res) => {
         ('admin/crearProductos')
     },
-    edit: (req, res) => {
+    editar: (req, res) => {
         /* id= +req.params.id
         let producto = productos.find(elemento) =>{
             return elemento .id == id

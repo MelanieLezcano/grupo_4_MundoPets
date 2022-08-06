@@ -1,9 +1,8 @@
 const express = require ('express');
-const path = require ('path');
-
 const app = express();
 const port = 3000;
-const publicPath = path.resolve(__dirname, './public');
+const path = require ('path');
+
 
 /* requerir las rutas */
 let indexRouter = require('./routes/index')
@@ -21,13 +20,14 @@ app.set('view engine','ejs')
 
 //middlewares
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
-app.use(express.static (publicPath));
+app.use(express.static(path.resolve(__dirname,'public')));
+
 
 //RUTAS
-app.use("./", indexRouter );
+app.use("./", indexRouter);
 app.use("./usuarios", usuariosRouter);
-app.use("./productos", productosRouter );
-app.use("./administrador", administradorRouter );
+app.use("./productos", productosRouter);
+app.use("./administrador", administradorRouter);
 
 app.listen (port,() => console.log("servidor levantado")
 );
