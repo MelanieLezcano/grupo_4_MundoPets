@@ -24,10 +24,10 @@ app.use(express.static(path.resolve(__dirname,'public')));
 
 
 //RUTAS
-app.use("./", indexRouter);
-app.use("./usuarios", usuariosRouter);
-app.use("./productos", productosRouter);
-app.use("./administrador", administradorRouter);
+app.use("/", indexRouter);
+app.use("/usuarios", usuariosRouter);
+app.use("/productos", productosRouter);
+app.use("/administrador", administradorRouter);
 
 app.listen (port,() => console.log("servidor levantado")
 );
