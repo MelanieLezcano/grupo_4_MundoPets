@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/e5e17dceab.js" crossorigin="anonymous"></script>
-    <!-- Css -->
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Mundo Pets</title>
-</head>
+    <%- include('./partials/head',{title: 'MundoPets'}) %
     <body class="home">
         <header>
             <div class="top">
@@ -21,7 +12,7 @@
             <div class="Uno">
               <nav>
                 <div class="carrito">
-                     <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
+                     <a href="/producto/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
                 </div>
                 <div class="buscador">
                     <input type="text" maxlength="100" placeholder="Buscar">  <!-- barra buscador -->
@@ -31,7 +22,10 @@
                 </span>
                 <div class="user">
                     
-                    <a href="/login"><i class="fas fa-user"></i></a><!-- login & register -->
+                    <a href="/user/login"><i class="fas fa-user"></i></a><!-- login & register -->
+                </div>
+                <div>
+                    <li><a href="/admin/lista">ADMIN</a></li>  
                 </div>
                 
                 <div class="menu">
@@ -84,28 +78,28 @@
             <section class="perro">
                
                <div class="dog">
-                <a href="/perros">Perros</a>
+                <a href="/index/perros">Perros</a>
                 <img src="img/perro1.png" alt="">
                </div>
             </section>
             <section class="gato">
                
                 <div class="cat">
-                    <a href="/gatos">Gatos</a>
+                    <a href="/index/gatos">Gatos</a>
                     <img src="img/gato1.png" alt="">
                 </div>
             </section>
             <section class="nosotros">
                 <div class="paw">
                     <i class="fas fa-paw"></i>
-                    <a href="/nosotros">Sobre Nosotros</a>
+                    <a href="/index/nosotros">Sobre Nosotros</a>
                 </div>
             </section>
             
             <section class="contacto">
                 <div class="envelop">
                     <i class="fas fa-envelope"></i>
-                    <a href="/contacto">Contacto</a>
+                    <a href="/index/contacto">Contacto</a>
                 </div>
             </section>
         </div>
@@ -120,10 +114,10 @@
         <section class="foot">
             <ul class="lista">
                <li>Productos</li>
-               <li>Perros</li> <a href="/perros.html"></a>
+               <li><a href="/index/perros">Perros</a></li> 
                <li>Adultos</li>
                <li>Cachorros</li>
-               <li>Gatos</li> <a href="/gatos.html"></a>
+               <li><a href="/index/gatos">Gatos</a></li> 
                <li>Adultos</li>
                <li>Cachorros</li>
             </ul>
