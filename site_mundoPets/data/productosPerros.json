@@ -1,14 +1,87 @@
 [
     {
+    "id": 1,
+    "marca": "Infinity",
+    "titulo": "Cachorro 10kg",
+    "precio": 15000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "infinity-perro-cachorro-10kg-removebg-preview.png"
+       
+    ]
+},
+{
+    "id": 2,
+    "marca": "Agility",
+    "titulo": "Cachorro 5kg",
+    "precio": 8000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "pc-agility-perro-cachorro-removebg-preview.png",
+        " ",
+        " ",
+        " "
+    ]
+},
+{
+    "id": 3,
+    "marca": "VitalCan",
+    "titulo": "Complete Junior 7.5kg",
+    "precio": 7500,
+    "descuento": 10,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "pc-complete-perro-junior--removebg-preview.png",
+        " ",
+        " ",
+        " "
+    ]
+},
+{
+    "id": 4,
+    "marca": "Dog Selection",
+    "titulo": "Cachorro 10kg",
+    "precio": 9000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "pc-dog-selection-perro-cachorro-x-10kg-removebg-preview.png",
+        "",
+        "",
+        ""
+    ]
+},
+{
+    "id": 5,
+    "marca": "Eukanuba",
+    "titulo": "Puppy Large 7.5kg",
+    "precio": 8000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "pc-eukanuba-puppy-large-removebg-preview.png",
+        "",
+        "",
+        ""
+    ]
+},
+    {
         "id": 6,
-        "marca": "Agility",
-        "titulo": "Adulto 10 kg",
+        "marca": "VitalCan",
+        "titulo": "Complete Adulto 20 kg",
         "precio": 9000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-agility-gato-adulto.jpg",
+            "pa-complete-adulto-light-20kg-removebg-preview.png",
             "",
             "",
             ""
@@ -16,14 +89,14 @@
     },
     {
         "id": 7,
-        "marca": "Cat Selection",
-        "titulo": "Premium Adulto 10 kg",
-        "precio": 7800,
+        "marca": "VitalCan",
+        "titulo": "Balanced Adulto 20 kg",
+        "precio": 17000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-cat-selection-adulto-x-10kg.jpg",
+            "pa-balanced-perro-adulto-medium-removebg-preview.png",
             "",
             "",
             ""
@@ -31,14 +104,14 @@
     },
     {
         "id": 8,
-        "marca": "Excellent",
+        "marca": "Biopet",
         "titulo": "Adulto 15 kg",
         "precio": 15000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-excellent-gato-adulto.jpg",
+            "pa-biopet-criadores-20kg-removebg-preview.png",
             "",
             "",
             ""
@@ -46,14 +119,14 @@
     },
     {
         "id": 9,
-        "marca": "Infinity",
-        "titulo": "Adulto 10 kg",
-        "precio": 8000,
+        "marca": "VitalCan",
+        "titulo": "Complete Senior  20 kg",
+        "precio": 17000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-infinity-gato-adulto-10kg.jpg",
+            "pa-complete-perro-senior-20kg-removebg-preview.png",
             "",
             "",
             ""
@@ -61,14 +134,14 @@
     },
     {
         "id": 10,
-        "marca": "Pro Plan",
-        "titulo": "Adulto 15 kg",
+        "marca": "Infinity",
+        "titulo": "Adulto 20 kg",
         "precio": 19000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "pro-plan-gato-adulto-.jpg",
+            "pa-infinity-perro-adulto-20kg-removebg-preview.png",
             "",
             "",
             ""

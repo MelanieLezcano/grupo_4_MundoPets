@@ -1,9 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head',{title: 'Perros'}) %
+    <%- include('./partials/head',{tittle:'MundoPets'}) %> 
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 <body>
     <header>
-        <i class="fas fa-construction"></i> <h1>Lo sentimos!Página en construcción</h1>
+        <div class="top">
+            <div class="logo">
+                <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+            </div>
+        </div>
+        <div class="Uno">
+          <nav>
+            <div class="carrito">
+                 <a href="/producto/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
+            </div>
+            <div class="buscador">
+                <input type="text" maxlength="100" placeholder="Buscar">  <!-- barra buscador -->
+            </div>
+            <span class="lupa">
+                <i class="fas fa-search"></i>
+            </span>
+            <div class="user">
+                <a href="/user/login"><i class="fas fa-user"></i></a><!-- login & register -->
+            </div>
+            <div>
+              <li><a href="/admin/lista">ADMIN</a></li>  
+            </div>
+            <div class="menu">
+             <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+        </div>
     </header>
+    <main>
+        <h1>Sección Perros</h1>
+         
+        <h2>Cachorros</h2>
+        <% productosPerros.forEach(producto2 => { %>
+          <div class="col-sm-6">
+            <img src="/img/<%= producto2.imagenes[0] %> " class="card-img-top" alt="...">
+            <div class="card">
+              <div class="card-body">
+               <h5 class="card-title"> <%= producto2.titulo %> </h5>
+               <p class="card-text"><<%= producto2.descripcion %> </p>
+               <a href="/producto/detalle/<%= producto2.id %> " class="btn btn-primary">Ver producto</a>
+              </div>
+              </div>
+          
+          </div>
+         
+        <% }) %>
+         
+      
+        <h2>Adultos</h2>
+        <% productosPerros.forEach(producto2 => { %>
+          <div class="col-sm-6">
+            <img src="/img/<%= producto2.imagenes[0] %> " class="card-img-top" alt="...">
+            <div class="card">
+              <div class="card-body">
+               <h5 class="card-title"> <%= producto2.titulo %> </h5>
+               <p class="card-text"><<%= producto2.descripcion %> </p>
+               <a href="/producto/detalle/<%= producto2.id %> " class="btn btn-primary">Ver producto</a>
+              </div>
+              </div>
+          
+          </div>
+         
+        <% }) %>
+    
+    </main> 
+    
+    <footer>
+        <section class="foot">
+            <ul class="lista">
+               <li>Productos</li>
+               <li><a href="/perros">Perros</a></li>
+               <li><a href="/perros">Adultos</a></li>
+               <li><a href="/perros">Cachorros</a></li>
+               <li><a href="/gatos">Gatos</a></li>
+               <li><a href="/gatos">Adultos</a></li>
+                <li><a href="/gatos">Cachorros</a></li>
+            </ul>
+            <article class="compra">
+                <h4>Donde Comprar</h4>
+                <a href="https://goo.gl/maps/dBXKhgS7HfVfiNde8"><i class="fas fa-map-marker-alt"></i></a>
+            </article>
+            <article class="llamar">
+                <h4>Contacto</h4>
+                <a href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp"></i></a>
+                
+            </article>
+            <div class="logohome">
+                <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+            </div>
+        </section>
+        <section class="pie">
+    
+            <article class="contactanos">
+                <h4>¿Alguna duda?Contactanos</h4>
+                <a href="mailto:user@server.com"><i class="fas fa-headset"></i></a><!-- contacto -->
+            </article>
+            <article class="maps">
+                <a href="https://goo.gl/maps/dBXKhgS7HfVfiNde8"><i class="fas fa-map-marker-alt"></i></a>  
+            </article>
+            <article class="whatsapp">
+               
+                <a href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp"></i></a>
+            </article>
+            <article class="gatito">
+                <div class="kitty">
+                    <img src="img/gatito2.webp" alt="gatito tierno fondo amarillo">
+                </div>
+            </article>
+            <p>Copyriht <i class="fas fa-copyright"></i> 2022 Mundo Pets | Todos los derechos reservados|</p>
+    
+        </section>
+    
+    </footer>
    
 </body>
+</html>
+

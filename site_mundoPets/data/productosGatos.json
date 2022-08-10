@@ -1,5 +1,78 @@
 [
     {
+    "id": 1,
+    "marca": "Royal Canin",
+    "titulo": "Kitten 10kg",
+    "precio": 15000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "royal-canin-gato-kitten--removebg-preview.png"
+       
+    ]
+},
+{
+    "id": 2,
+    "marca": "Agility",
+    "titulo": "Kitten 5kg",
+    "precio": 8000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "gk-agility-gato-kitten-removebg-preview.png",
+        " ",
+        " ",
+        " "
+    ]
+},
+{
+    "id": 3,
+    "marca": "VitalCan",
+    "titulo": "Balanced Kitten 7.5kg",
+    "precio": 7500,
+    "descuento": 10,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "gk-balanced-gato-kitten-75kg-removebg-preview.png",
+        " ",
+        " ",
+        " "
+    ]
+},
+{
+    "id": 4,
+    "marca": "Excellent",
+    "titulo": "Kitten 7.5kg",
+    "precio": 7800,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "gk-excellent-gatito-kitten-75kg-removebg-preview.png",
+        "",
+        "",
+        ""
+    ]
+},
+{
+    "id": 5,
+    "marca": "VitalCan",
+    "titulo": "Complete Kitten 7.5kg",
+    "precio": 8000,
+    "descuento": 20,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+    "stock": 13,
+    "imagenes": [
+        "gk-complete-gato-kitten-75kg-removebg-preview.png",
+        "",
+        "",
+        ""
+    ]
+},
+    {
         "id": 6,
         "marca": "Agility",
         "titulo": "Adulto 10 kg",
@@ -8,7 +81,7 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-agility-gato-adulto.jpg",
+            "ga-agility-gato-adulto-removebg-preview.png",
             "",
             "",
             ""
@@ -23,7 +96,7 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-cat-selection-adulto-x-10kg.jpg",
+            "ga-cat-selection-adulto-x-10kg-removebg-preview.png",
             "",
             "",
             ""
@@ -38,7 +111,7 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-excellent-gato-adulto.jpg",
+            "ga-excellent-gato-adulto-removebg-preview.png",
             "",
             "",
             ""
@@ -53,7 +126,7 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "ga-infinity-gato-adulto-10kg.jpg",
+            "ga-infinity-gato-adulto-10kg-removebg-preview.png",
             "",
             "",
             ""
@@ -68,7 +141,7 @@
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
         "stock": 13,
         "imagenes": [
-            "pro-plan-gato-adulto-.jpg",
+            "pro-plan-gato-adulto--removebg-preview.png",
             "",
             "",
             ""
