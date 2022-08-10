@@ -4,36 +4,34 @@
     <%- include('./partials/head',{title: 'MundoPets'}) %
     <body class="home">
         <header>
-            <div class="top">
-                <div class="logo">
-                    <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
-                </div>
-            </div>
-            <div class="Uno">
-              <nav>
-                <div class="carrito">
-                     <a href="/producto/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
-                </div>
-                <div class="buscador">
-                    <input type="text" maxlength="100" placeholder="Buscar">  <!-- barra buscador -->
-                </div>
-                <span class="lupa">
-                    <i class="fas fa-search"></i>
-                </span>
-                <div class="user">
-                    
-                    <a href="/user/login"><i class="fas fa-user"></i></a><!-- login & register -->
-                </div>
-                <div>
-                    <li><a href="/admin/lista">ADMIN</a></li>  
-                </div>
-                
-                <div class="menu">
-                    <i class="fas fa-bars"></i> <!-- menu hamburguesa -->
-                </div>
-             </nav>
-            </div>
-        </header>
+    <div class="top">
+        <div class="logo">
+            <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+        </div>
+    </div>
+    <div class="Uno">
+      <nav>
+        <div class="carrito">
+             <a href="/producto/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
+        </div>
+        <div class="buscador">
+            <input type="text" maxlength="100" placeholder="Buscar">  <!-- barra buscador -->
+        </div>
+        <span class="lupa">
+            <i class="fas fa-search"></i>
+        </span>
+        <div class="user">
+            <a href="/user/login"><i class="fas fa-user"></i></a><!-- login & register -->
+        </div>
+        <div>
+          <li><a href="/admin/lista">ADMIN</a></li>  
+        </div>
+        <div class="menu">
+         <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+</header>
     <main class="mainHome">
         <section class="banner">
             <h2>Pensando en ellos</h2>
@@ -111,49 +109,50 @@
 
     </main>
     <footer>
-        <section class="foot">
-            <ul class="lista">
-               <li>Productos</li>
-               <li><a href="/index/perros">Perros</a></li> 
-               <li>Adultos</li>
-               <li>Cachorros</li>
-               <li><a href="/index/gatos">Gatos</a></li> 
-               <li>Adultos</li>
-               <li>Cachorros</li>
-            </ul>
-            <article class="compra">
-                <i class="fas fa-map-marker-alt"></i> <h4>Donde Comprar</h4>
-            </article>
-            <article class="llamar">
-                <i class="fab fa-whatsapp"></i>
-                <h4>Contacto</h4>
-            </article>
-            <div class="logohome">
-                <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+    <section class="foot">
+        <ul class="lista">
+           <li>Productos</li>
+           <li><a href="/perros">Perros</a></li>
+           <li><a href="/perros">Adultos</a></li>
+           <li><a href="/perros">Cachorros</a></li>
+           <li><a href="/gatos">Gatos</a></li>
+           <li><a href="/gatos">Adultos</a></li>
+            <li><a href="/gatos">Cachorros</a></li>
+        </ul>
+        <article class="compra">
+            <h4>Donde Comprar</h4>
+            <a href="https://goo.gl/maps/dBXKhgS7HfVfiNde8"><i class="fas fa-map-marker-alt"></i></a>
+        </article>
+        <article class="llamar">
+            <h4>Contacto</h4>
+            <a href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp"></i></a>
+            
+        </article>
+        <div class="logohome">
+            <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
+        </div>
+    </section>
+    <section class="pie">
+
+        <article class="contactanos">
+            <h4>¿Alguna duda?Contactanos</h4>
+            <a href="mailto:user@server.com"><i class="fas fa-headset"></i></a><!-- contacto -->
+        </article>
+        <article class="maps">
+            <a href="https://goo.gl/maps/dBXKhgS7HfVfiNde8"><i class="fas fa-map-marker-alt"></i></a>  
+        </article>
+        <article class="whatsapp">
+           
+            <a href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp"></i></a>
+        </article>
+        <article class="gatito">
+            <div class="kitty">
+                <img src="img/gatito2.webp" alt="gatito tierno fondo amarillo">
             </div>
-        </section>
-        <section class="pie">
+        </article>
+        <p>Copyriht <i class="fas fa-copyright"></i> 2022 Mundo Pets | Todos los derechos reservados|</p>
 
-            <article class="contactanos">
-                <i class="fas fa-headset"></i>
-                <a href="mailto:user@server.com"></a>
-                <h4>¿Alguna duda?Contactanos</h4><!-- contacto -->
-            </article>
-            <article class="maps">
-                <i class="fas fa-map-marker-alt"></i> <!-- ubicacion -->
-            </article>
-            <article class="whatsapp">
-                <i class="fab fa-whatsapp"></i>
-                <a href="tel:1136370707"></a>
-            </article>
-            <article class="gatito">
-                <div class="kitty">
-                    <img src="img/gatito2.webp" alt="gatito tierno fondo amarillo">
-                </div>
-            </article>
-            <p>Copyriht <i class="fas fa-copyright"></i> 2022 Mundo Pets | Todos los derechos reservados|</p>
+    </section>
 
-        </section>
-
-    </footer>
+</footer>
 </body>

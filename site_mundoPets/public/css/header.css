@@ -43,19 +43,39 @@ header .buscador{
 
 
 header .carrito, .buscador, .lupa, .user, .menu{
-   padding: 10px;
+   padding: 4px;
 }
 
 header .Uno nav{
    margin-top: 15px;
-   margin-left: 65px;
+   margin-left: 57px;
    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
    align-items: center;
   
 }
 header i, a{
-   color:white
+   color:white;
+   text-decoration: none;
+
 }
+ /* header .menu label{
+   position: absolute;
+   top: 15px;
+    right: 19px;
+    font-size: 10px;
+    padding: 9px 7px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;
+} */
+header  .menu input{
+   display: none;
+}
+ 
+
 
 
 
@@ -87,13 +107,13 @@ header i, a{
     
   }
   header .Uno nav i{
-     font-size: 25px;
-     width: 30px;
+     font-size: 30px;
+     width: 40px;
   }
   header .carrito, .buscador, .lupa, .user, .menu{
      flex-grow: 1;
      text-align: center;
-     padding: 15px;
+     padding: 11px 2px;
   }
 }
   

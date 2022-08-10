@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "marca": "Royal Canin",
+        "titulo": "Kitten 10kg",
+        "precio": 15000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "carrusel2.png"
+           
+        ]
+    },
+    {
+        "id": 2,
+        "marca": "Agility",
+        "titulo": "Kitten 5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-agility-gato-kitten.jpg",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 3,
+        "marca": "VitalCan",
+        "titulo": "Balanced Kitten 7.5kg",
+        "precio": 7500,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-balanced-gato-kitten-75kg.jpg",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 4,
+        "marca": "Excellent",
+        "titulo": "Kitten 7.5kg",
+        "precio": 7800,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-excellent-gatito-kitten-75kg.jpg",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 5,
+        "marca": "VitalCan",
+        "titulo": "Complete Kitten 7.5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-complete-gato-kitten-75kg.jpg",
+            "",
+            "",
+            ""
+        ]
+    }
+]
