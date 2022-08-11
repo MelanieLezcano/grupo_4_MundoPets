@@ -18,7 +18,7 @@ module.exports = {
         })
     },
     carrito: (req, res) => {
-        res.render('carrito')
+        return res.render('carrito')
     },
 
 

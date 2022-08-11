@@ -13,9 +13,9 @@
 </head>
 
 <body class="login">
-    <header>
         
-    </header>
+    <%- include('./partials/header') %>
+
     <main>
         <section class="container-image">
             <div>
@@ -24,7 +24,9 @@
         </section>
         <section>
             <h2>Inicia sesión</h2>
-            <h4><p>Inicia sesión a <a href="">MundoPets</a> </p></h4>
+            <h4>
+                <p>Inicia sesión a <a href="">MundoPets</a> </p>
+            </h4>
             <form action="" method="get">
                 <!-- <div class="container bottom">
                     <label for="name">Nombre y Apellido</label>
@@ -48,6 +50,9 @@
         <h4>¿No tenés una cuenta? <a href="/register">Registrate</a></h4>
 
     </main>
+
+    <%- include('./partials/footer') %>
+
 </body>
 
 </html>
