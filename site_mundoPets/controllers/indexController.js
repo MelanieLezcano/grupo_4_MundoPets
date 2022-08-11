@@ -1,21 +1,14 @@
 
 
-let productosGatos = require('../data/productosGatos.json');
-let productosPerros = require('../data/productosPerros.json')
+let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
         return res.render('home')
     },
-    perros: (req, res) => {
-        return res.render('perros',{
-            productosPerros
-        })
-    },
-    gatos: (req, res) => {
-        return res.render('gatos',{
-           
-            productosGatos
+    vistaProductos: (req, res) => {
+        return res.render('vistaProductos',{
+            productos
         })
     },
     contacto: (req, res) => {

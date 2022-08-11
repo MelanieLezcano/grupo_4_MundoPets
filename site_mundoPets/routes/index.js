@@ -1,12 +1,11 @@
-let {home,gatos,perros} = require('../controllers/indexController')
+let {home,vistaProductos} = require('../controllers/indexController')
 const express = require('express') 
 const router = express.Router()
 
 
 
 router.get('/', home);
-router.get('/gatos', gatos);
-router.get('/perros', perros);
+router.get('/vistaProductos', vistaProductos);
 
 
 module.exports = router
