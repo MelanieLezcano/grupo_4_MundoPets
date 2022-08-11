@@ -12,7 +12,7 @@ module.exports = {
         })
     },
     crear: (req, res) => {
-        ('admin/crearProducto')
+        return res.render('admin/crearProducto')
     },
     editar: (req, res) => {
          id= +req.params.id

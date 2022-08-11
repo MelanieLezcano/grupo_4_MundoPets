@@ -1,39 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-    <%- include('./partials/head',{tittle:'MundoPets'}) %> 
+    <%- include('./partials/head',{title:'MundoPets'})%> 
     
     <body class="home">
-        <header>
-    <div class="top">
-        <div class="logo">
-            <a href="/"><img src="img/LogoMundoPets.png" alt="logo Mundo Pets"></a>
-        </div>
-    </div>
-    <div class="Uno">
-      <nav>
-        <div class="carrito">
-             <a href="/producto/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
-        </div>
-        <div class="buscador">
-            <input type="text" maxlength="100" placeholder="Buscar">  <!-- barra buscador -->
-        </div>
-        <span class="lupa">
-            <i class="fas fa-search"></i>
-        </span>
-        <div class="user">
-            <a href="/user/login"><i class="fas fa-user"></i></a><!-- login & register -->
-        </div>
-        <div>
-          <li><a href="/admin/lista">ADMIN</a></li>  
-        </div>
-        <div class="menu">
-         <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-    </div>
-</header>
-    <main class="mainHome">
+
+        <%- include('./partials/header') %>
+    
+        <main class="mainHome">
         <section class="banner">
             <h2>Pensando en ellos</h2>
             <img src="img/banner.jpg" alt="">
