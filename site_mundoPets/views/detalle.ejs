@@ -44,14 +44,14 @@
                     <section>
                         <h2>Productos Relacionados</h2>
                         <% for( let i=0; i < 10; i++ ) { %>
-                            <a href="/productos/detalle/productosGatos[i].id %>">
+                            <a href="/productos/detalle/productos[i].id %>">
                                 <article>
                                     <div class="related-img-0"></div>
-                                    <img src="/img/<%= productosGatos[i].imagenes[0] %>" alt="">
-                                    <p>$<%= productosGatos[i].precio %>
+                                    <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
+                                    <p>$<%= productos[i].precio %>
                                     </p>
                                     <h4>
-                                        <%= productosGatos[i].titulo %>
+                                        <%= productos[i].titulo %>
                                     </h4>
                                     <button>añadir al carrito</button>
                                 </article>

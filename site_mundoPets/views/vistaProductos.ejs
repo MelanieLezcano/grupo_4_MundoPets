@@ -7,9 +7,9 @@
   <body>
     <%- include('./partials/header') %> 
     <main>
-      <h1>Sección Gatos</h1>
+      <h1>PRODUCTOS</h1>
 
-      <h2>Cachorros</h2>
+      <h2>Gatos</h2>
       <% productos.forEach(producto=> { %>
         <div class="col-sm-6">
           <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
@@ -30,7 +30,7 @@
         <% }) %>
 
 
-          <h2>Adultos</h2>
+          <h2>Perros</h2>
           <% productos.forEach(producto=> { %>
             <div class="col-sm-6">
               <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
