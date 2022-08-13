@@ -8,6 +8,8 @@
     <%- include('./partials/header') %>
 
     <main class="main">
+
+
         <div class="sectionUno">
             <section>
                 <div class="backgroundAmarillo"></div>
@@ -18,22 +20,26 @@
                             <th>producto</th><th>precio</th><th>cantidad</th><th></th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <% products.forEach(producto => { %>
                         <tr>
                             <td>
                                 <div class="productoDetalle">
-                                    <img src="/img/ga-agility-gato-adulto.jpg" class="img" alt="agility gato adulto">
-                                    <a href="/detalle" class="a">Agility gato adulto</a>
+                                    <div  class="img">
+                                        <img id="imgMain" src="/img/<%= producto.imagenes[0] %>" alt="Imagen principal"  class="img">
+                                    </div> 
+                                    <a href="/detalle" class="a"><%= producto.titulo %> </a>
                                 </div>
                             </td>
                             <td>
                                 <div class="precioListaDesktop">
-                                    <p class="precioLista">$5.320</p>
+                                    <p class="precioLista"><%= "$"+producto.precio %></p>
                                 </div>
                             </td>
                             <td>
                                 <div class="precio">
                                     <div class="precioListaMovil">
-                                        <p class="precioLista">$5.320</p>
+                                        <p class="precioLista"><%= "$"+producto.precio %></p>
                                     </div>
                                     <div>
                                         <div class="agregar">
@@ -46,37 +52,8 @@
                                 </div>
                             </td>
                             <td><button class="eliminar"><i class="fa-solid fa-circle-xmark"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="productoDetalle">
-                                    <img src="/img/infinity-perro-cachorro-10kg.jpg" class="img" alt="infinity perro cachorro 10kg">
-                                    <a href="/detalle" class="a">infinity perro cachorro 10kg</a>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="precioListaDesktop">
-                                    <p class="precioLista">$7.960</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="precio">
-                                    <div class="precioListaMovil">
-                                        <p class="precioLista">$7.960</p>
-                                    </div>
-                                    <div>
-                                        <div class="agregar">
-                                            <button class="botonAgregar"><i
-                                                    class="fa-solid fa-circle-minus"></i></button>
-                                            <input type="number" class="agregarNum" value="1">
-                                            <button class="botonSacar"><i class="fa-solid fa-circle-plus"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><button class="eliminar"><i class="fa-solid fa-circle-xmark"></i></button></td>
-                        </tr>
-                    
+                            <% }) %>
+                        </tbody>
                 </table>
                 <div class="borde"></div>
                 <div class="seguirActualizar">
@@ -85,6 +62,7 @@
                 </div>
             </section>
         </div>
+
         <div class="sectionDos">
         <section>
                 <div class="fondoCuadroDos">

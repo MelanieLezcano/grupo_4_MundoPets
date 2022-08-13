@@ -12,7 +12,16 @@ module.exports = {
         })
     },
     carrito: (req, res) => {
-         res.render('carrito')
+
+        let products = []
+
+        for (let i = 0; i < 3; i++) {
+            products.push(productos[i]) 
+        }
+
+        return res.render('carrito', {
+            products
+        })
     },
 
 
