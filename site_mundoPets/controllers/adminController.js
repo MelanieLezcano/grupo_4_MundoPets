@@ -1,12 +1,20 @@
 
-let productos = require('../data/productos.json') 
+const fs = require('fs')
+const path = require('path')
+const productos = require('../data/productos.json')
+const historial = require('../data/historial.json')
 /* PARA USAR AL MOMENTO DE CREAR EL JSON CON LOS PRODUCTOS */
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
 
 
 module.exports = {
     lista: (req,res) => {
         return res.render('admin/listaProductos',{
-            productos
+            productos,
+            redirection: "historial"
         })
     },
     crear: (req, res) => {
@@ -23,5 +31,12 @@ module.exports = {
             categorias
         })
 
+    },
+    historial: (req, res) => {
+
+        return res.render('admin/listaProductos', {
+            productos: historial,
+            redirection: "lista"
+        })
     }
 }
