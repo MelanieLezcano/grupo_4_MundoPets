@@ -4,29 +4,28 @@
  
     background-repeat: no-repeat;
     background-position: cover;
-    margin-top: 20px;
 } 
 
 
 
 .mainHome .banner h2 {
     position: absolute;
-    bottom: 0;
+    top: 22%;
     width: 100%;
-    font-family: var(--fuenteTitulos);
-    font-size: large;
-    text-align: center;
-    background-color: rgba(127, 164, 243, 0.452);
-    padding: 5px;
-
-
+    background-color: rgba(28, 126, 237, 0.2);
 }
 
-.mainHome .banner {
-    position: relative;
+.mainHome .textoBanner{
+    font-family: var(--fuenteTitulos);
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
 }
 
 .mainHome .banner img {
+    top: 0;
+    position: -webkit-sticky;
     width: 100%;
 }
 
