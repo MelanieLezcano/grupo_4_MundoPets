@@ -38,5 +38,8 @@ module.exports = {
             productos: historial,
             redirection: "lista"
         })
+    },
+    detalle: (req,res) =>{
+        return res.render('admin/listaProductos')// revisar
     }
 }
