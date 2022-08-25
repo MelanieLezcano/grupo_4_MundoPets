@@ -44,12 +44,12 @@
                                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                             </a>
                             <% }else{ %>
-                              <form action="/admin/restore/<%= producto.id%>?_method=DELETE" method="post">
+                              <form action="/admin/restaurar/<%= producto.id%>?_method=DELETE" method="post">
                                 <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
                               </form>
                             <% } %>
                               <% if (redirection !== "lista") { %>
-                                <form action="/admin/destroy/<%= producto.id%>?_method=DELETE" method="post">
+                                <form action="/admin/eliminar/<%= producto.id%>?_method=DELETE" method="post">
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                 </form>
                               <% }else{ %>
@@ -57,7 +57,7 @@
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                               <% } %>
-                          </div> 
+                          </div>  
                         </td>
                       
                       </tr>

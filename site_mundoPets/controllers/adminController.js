@@ -28,7 +28,7 @@ module.exports = {
         /* return res.send(producto)  comprobar que esta llegando bien el elemento*/
         return res.render('admin/editarProducto',{
             producto,
-            categorias
+            /* categorias */
         })
 
     },
