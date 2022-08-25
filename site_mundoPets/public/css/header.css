@@ -1,25 +1,10 @@
-
 header{
    position: relative;
    margin-bottom: 20px;
-   
-   width: 100%;
-   height: 62px;
-   background-color: var(--colorAzulFrancia);
-   border-bottom-right-radius: 20px;
-   border-bottom-left-radius: 20px;
-   
-}
-
-.home header{
-   position: absolute;
-   margin-bottom: 20px;
-   
-   width: 100%;
-   height: 62px;
-   background: rgba(28, 126, 237, 0.2);
-   border-bottom-right-radius: 20px;
-   border-bottom-left-radius: 20px;
+   height: 68px;
+   background-color: rgba(127, 164, 243, 0.452);
+   border-bottom-right-radius: 25px;
+   border-bottom-left-radius: 25px;
    
 }
 
@@ -41,25 +26,43 @@ header img{
    padding: 10px;
    width: 68px;
 }
+/* header .Uno .carrito{
+   display: none;
+}
+header .Uno .user{
+   display: none;
+}
+header .Uno .admin{
+   display: none;
+} */
 
-header .carrito,  .user,  .menu, .lupa{
+ 
+
+header   .menu{
     
     color:var(--colorHueso);
     display: inline-block;
 }
 
-header .buscador{
-   width: 200px;
-   height: 38px;
-   font-family: var(--fuenteSubtitulos);
 
-   border-radius: 20px;
-   background-color: rgba(127, 164, 243, 0);
-   border: white solid 3px;
 
+
+header .buscador input{
+   padding: 0.25em 0.6em;
+   border-radius:0.3rem;
+   border:1px solid #d3d6e4;
+   text-align: center;
+   box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+   width: 95%;
+   font-family: "Font Awesome 5 Free"; 
+   font-weight: 600;
+}
+header .carrito,  .user, .menu{
+   padding: 7px;
+   width: 50px;
 }
 
-header .carrito, .buscador, .lupa, .user, .menu{
+header .buscador, .menu{
    padding: 4px;
 }
 
@@ -67,15 +70,33 @@ header .Uno nav{
    margin-top: 15px;
    margin-left: 57px;
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: space-around;
    align-items: center;
+   width: 92%;
   
 }
-header i, a{
+header .buscador{
+   display: inline-block;
+   padding: 4px;
+   width: 195px;
+}
+header .buscador .icono-placeholder{
+   color: var( --colorAzulMarino);
+}
+
+header i{
    color:white;
    text-decoration: none;
-
+}
+  
+header admin {
+   width: 20px;
+}
+header .admin a{
+   font-size: 17px;
+   color:white;
+   text-decoration: none;
 }
  /* header .menu label{
    position: absolute;
@@ -88,7 +109,14 @@ header i, a{
     border-radius: 10px;
     display: inline-block;
 } */
+header .menu{
+   text-align: center;
+}
 header  .menu input{
+    display: none; 
+}
+
+header .menu input:checked ~ nav{
    display: none;
 }
  
@@ -111,38 +139,116 @@ header  .menu input{
      padding: 10px;
      width: 74px;
   }
-
-
-
-
   header .Uno nav{
      margin-top: 15px;
      margin-left: 65px;
      display: flex;
      align-items: center;
      justify-content: space-around;
-    
-  }
-  header .Uno nav i{
-     font-size: 30px;
-     width: 40px;
-  }
-  header .carrito, .buscador, .lupa, .user, .menu{
-     flex-grow: 1;
-     text-align: center;
-     padding: 11px 2px;
-  }
-}
-  
-
-
-  /* Desktop */
-@media (min-width:1024px){}
-
-
-
-
-
-
-
+   }
+   header .Uno nav i{
+      font-size: 30px;
+      width: 40px;
+   }
+   header .carrito, .buscador,  .user, .menu{
+      flex-grow: 1;
+      text-align: center;
+      padding: 11px 2px;
+   }
+ }
+ header .admin a {
+    font-size: 126%;
+    color: white;
+    text-decoration: none;
+   }
  
+
+   
+/* Desktop */
+@media (min-width:1024px){
+   header{
+      position: relative;
+      margin-bottom: 20px;
+      
+      height: 68px;
+      background-color: rgba(127, 164, 243, 0.452);
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+      
+   }
+   
+   header .top{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: flex-start;
+   
+   }
+       
+   
+   header .logo{
+      position: absolute;
+      display: flex;
+      width: 15%;
+   }
+   
+   header img{
+      padding: 10px;
+      width: 68px;
+   }
+   header .Uno nav{
+      margin-top: 15px;
+      margin-left: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 92%;
+     
+   }
+  
+ 
+   header .carrito,  .user{
+       
+       color:var(--colorHueso);
+       display: inline-block;
+   }
+   
+   
+   
+   header .buscador{
+       display: inline-block;
+       padding: 4px;
+       width: 195px;
+   
+   }
+   header .buscador input{
+      padding: 0.25em 0.6em;
+      border-radius:0.3rem;
+      border:1px solid #d3d6e4;
+      text-align: center;
+      box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+      width: 100%;
+      font-family: "Font Awesome 5 Free"; 
+      font-weight: 900;
+   }
+   
+   
+   header .carrito, .buscador,  .user{
+      padding: 7px;
+   }
+   
+  
+   
+   header i, a{
+      color:white;
+      text-decoration: none;
+   
+   }
+   header a{
+      font-size: 100%;
+   }
+
+}
+
+
+
