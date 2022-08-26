@@ -249,6 +249,9 @@ header .menu input:checked ~ nav{
    }
 
 }
+header .menu{
+   display:none
+}
 
 
 
