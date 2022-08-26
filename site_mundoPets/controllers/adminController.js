@@ -24,7 +24,7 @@ module.exports = {
         })
 
     },
-    update: (req, res) => {
+    actualizar: (req, res) => {
         const idParams = +req.params.id
         /* const { Marca} */
          productos.forEach(producto => {
@@ -33,7 +33,7 @@ module.exports = {
             }
          })
     },
-    destroy: (req, res) => {
+    eliminar: (req, res) => {
         idParams = +req.params.id
         let 
     }
