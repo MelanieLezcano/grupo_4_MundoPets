@@ -6,12 +6,18 @@ let productos = require('../data/productos.json')
 module.exports = {
     lista: (req,res) => {
         return res.render('admin/listaProductos',{
-            productos
+            productos,
+            redirection: "historial"
         })
     },
     crear: (req, res) => {
         return res.render('admin/crearProducto')
     },
+    nuevo: (req, res) => {
+        return res.send(req.body)
+    },
+    
+
     editar: (req, res) => {
          id= +req.params.id
         let producto = productos.find((elemento) => {
@@ -25,16 +31,17 @@ module.exports = {
 
     },
     actualizar: (req, res) => {
-        const idParams = +req.params.id
-        /* const { Marca} */
-         productos.forEach(producto => {
-            if (producto.id === idParams) {
-
-            }
-         })
+        return res.render('admin/crearProducto')
     },
-    eliminar: (req, res) => {
-        idParams = +req.params.id
-        let 
+
+    historial: (req, res) => {
+
+        return res.render('admin/listaProductos', {
+            productos: historial,
+            redirection: "lista"
+        })
+    },
+    eliminar: (req,res) =>{
+        return res.render('admin/listaProductos')// revisar
     }
 }
