@@ -23,5 +23,18 @@ module.exports = {
             categorias
         })
 
+    },
+    update: (req, res) => {
+        const idParams = +req.params.id
+        const { Marca}
+         productos.forEach(producto => {
+            if (producto.id === idParams) {
+
+            }
+         })
+    },
+    destroy: (req, res) => {
+        idParams = +req.params.id
+        let 
     }
 }
