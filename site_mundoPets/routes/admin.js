@@ -3,6 +3,7 @@ const router = express.Router()
 
 
 
+
 let {crear,editar,lista,historial, nuevo, actualizar, eliminar} = require('../controllers/adminController')
 
 
@@ -21,11 +22,6 @@ router.put('/editar/:id', actualizar)
 
 router.delete('/eliminar/:id', eliminar)
 
-/* Creando un producto */
-router.put('/edit/:id',update);
 
-/* Eliminando un producto */
-
-router.delete('/destroy/:id',destroy);
 
 module.exports = router
