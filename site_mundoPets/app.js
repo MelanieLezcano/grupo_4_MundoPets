@@ -21,7 +21,7 @@ app.set('view engine','ejs')
 //middlewares
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 app.use(express.static(path.resolve(__dirname,'public')));
-
+app.use(express.urlencoded({ extended: false })); //para trabajar con el req.body
 
 //RUTAS
 app.use("/", indexRouter);

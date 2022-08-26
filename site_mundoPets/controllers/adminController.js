@@ -20,6 +20,11 @@ module.exports = {
     crear: (req, res) => {
         return res.render('admin/crearProducto')
     },
+    nuevo: (req, res) => {
+        return res.send(req.body)
+    },
+    
+
     editar: (req, res) => {
          id= +req.params.id
         let producto = productos.find((elemento) => {
@@ -32,6 +37,10 @@ module.exports = {
         })
 
     },
+    actualizar: (req, res) => {
+        return res.render('admin/crearProducto')
+    },
+
     historial: (req, res) => {
 
         return res.render('admin/listaProductos', {
@@ -39,7 +48,7 @@ module.exports = {
             redirection: "lista"
         })
     },
-    detalle: (req,res) =>{
+    eliminar: (req,res) =>{
         return res.render('admin/listaProductos')// revisar
     }
 }
