@@ -1,18 +1,22 @@
-const express = require('express') /*  */
+const express = require('express') 
 const router = express.Router()
 
 
-let {crear,editar,lista,actualizar,eliminar} = require('../controllers/adminController')
+let {crear,editar,lista,historial, nuevo, actualizar, eliminar} = require('../controllers/adminController')
 
-router.get('/lista', lista)
-router.get('/editar', editar)
-router.get('/crear', crear)
+/* GET home page */
+router.get('/lista', lista);
+router.get('/historial',historial);
 
-/* Creando un producto */
-router.put('/edit/:id',actualizar);
 
-/* Eliminando un producto */
+router.get('/crear', crear);
+router.post('/crear', nuevo);
 
-router.delete('/eliminar/:id',eliminar);
+
+
+router.get('/editar/:id', editar)
+router.put('/editar/:id', actualizar)
+
+router.delete('/eliminar/:id', eliminar)
 
 module.exports = router
