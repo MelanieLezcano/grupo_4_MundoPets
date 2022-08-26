@@ -37,6 +37,7 @@ module.exports = {
         })
 
     },
+<<<<<<< HEAD
     actualizar: (req, res) => {
         return res.render('admin/crearProducto')
     },
@@ -50,5 +51,19 @@ module.exports = {
     },
     eliminar: (req,res) =>{
         return res.render('admin/listaProductos')// revisar
+=======
+    update: (req, res) => {
+        const idParams = +req.params.id
+        /* const { Marca} */
+         productos.forEach(producto => {
+            if (producto.id === idParams) {
+
+            }
+         })
+    },
+    destroy: (req, res) => {
+        idParams = +req.params.id
+        let 
+>>>>>>> b74dcadcfe5a1f488a55c6da8617c3f56d7ee35c
     }
 }
