@@ -26,7 +26,7 @@ module.exports = {
     },
     update: (req, res) => {
         const idParams = +req.params.id
-        const { Marca}
+        /* const { Marca} */
          productos.forEach(producto => {
             if (producto.id === idParams) {
 
