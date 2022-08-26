@@ -42,6 +42,6 @@ module.exports = {
         })
     },
     eliminar: (req,res) =>{
-        return res.render('admin/listaProductos')// revisar
+        return res.render('admin/listaProductos')
     }
 }
