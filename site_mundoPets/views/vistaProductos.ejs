@@ -13,20 +13,23 @@
 
     <% perros.forEach(producto => { %>
 
-     <div class="col-sm-6">
-  <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">
-        <%= producto.titulo %>
-      </h5>
-      <p class="card-text">
-        <%= producto.descripcion %>
-      </p>
-      <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-    </div>
-  </div> 
-</div>
+      <div class="mx-auto" style="width: 400px;">
+        <div class="card border-warning mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/img/<%= producto.imagenes[0] %> "  class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= producto.titulo %></h5>
+                <p class="card-text"><%= producto.descripcion %></p>
+                <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
 
     <% }) %>
     
@@ -36,21 +39,23 @@
 
     <% gatos.forEach(producto => { %>
 
-     <div class="col-sm-6">
-  <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
-   <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">
-        <%= producto.titulo %>
-      </h5>
-      <p class="card-text">
-        <%= producto.descripcion %>
-      </p>
-      <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-    </div>
-  </div> 
-</div> 
-
+      <div class="mx-auto" style="width: 400px;">
+        <div class="card border-warning mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/img/<%= producto.imagenes[0] %> "  class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= producto.titulo %></h5>
+                <p class="card-text"><%= producto.descripcion %></p>
+                <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
 
     <% }) %>
     
