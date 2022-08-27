@@ -1,8 +1,8 @@
-
 const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
+const categorias = require('../data/historial.json')
 /* PARA USAR AL MOMENTO DE CREAR EL JSON CON LOS PRODUCTOS */
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -28,7 +28,7 @@ module.exports = {
     editar: (req, res) => {
          id= +req.params.id
         let producto = productos.find((elemento) => {
-            return elemento .id == id
+            return elemento.id == id
         } )
         /* return res.send(producto)  comprobar que esta llegando bien el elemento*/
         return res.render('admin/editarProducto',{

@@ -2,6 +2,7 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 const path = require ('path');
+const methodOverride = require('method-override')
 
 
 /* requerir las rutas */
@@ -22,6 +23,9 @@ app.set('view engine','ejs')
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 app.use(express.static(path.resolve(__dirname,'public')));
 app.use(express.urlencoded({ extended: false })); //para trabajar con el req.body
+
+ /* Trabajar con put y delete */
+app.use(methodOverride('_method'))
 
 //RUTAS
 app.use("/", indexRouter);
