@@ -8,7 +8,8 @@ const path = require ('path');
 let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin')
 let productosRouter = require('./routes/productos')
-let usuariosRouter = require('./routes/usuarios')
+let usuariosRouter = require('./routes/usuarios');
+const { urlencoded } = require('express');
 
 
 
@@ -19,6 +20,7 @@ app.set('view engine','ejs')
 /* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
 
 //middlewares
+app.use(express.urlencoded({ extended:false }));//trabajar con metodo HTTP (post)
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 app.use(express.static(path.resolve(__dirname,'public')));
 
