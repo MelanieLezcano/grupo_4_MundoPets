@@ -21,18 +21,40 @@ module.exports = {
         return res.render('admin/crearProducto')
     },
     nuevo: (req, res) => {
-        return res.send(req.body)
-    },
+        let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body
+
+        let productoNuevo = {
+            id : productos[productos.length - 1].id + 1 ,
+            categoria: Categoria,
+            subcategoria: Subcategoria,
+            marca: Marca,
+            titulo: Titulo,
+            precio: Precio,
+            descuento: Descuento,
+            descripcion: Descripcion,
+            stock: Stock,
+            imagenes: [
+                "default-image.png",
+                "",
+                "",
+                ""
+            ]
+    }
+    productos.push(productoNuevo)
+    guardar(productos)
+    res.redirect('/admin/lista')
+},
     
     editar: (req, res) => {
-         id= +req.params.id
+        let categorias = ['gato', 'perro']
+        id = +req.params.id
         let producto = productos.find((elemento) => {
-            return elemento .id == id
-        } )
-        /* return res.send(producto)  comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editarProducto',{
+            return elemento.id == id
+        })
+        /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
+        return res.render('admin/editarProducto', {
             producto,
-            /* categorias */
+            categorias
         })
 
     },
