@@ -7,53 +7,57 @@
   <body>
     <%- include('./partials/header') %> 
     <main>
-      <h1>PRODUCTOS</h1>
+      <h1>NUESTROS PRODUCTOS</h1>
 
-      <h2>Gatos</h2>
-      <% productos.forEach(producto=> { %>
-        <div class="col-sm-6">
-          <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">
-                <%= producto.titulo %>
-              </h5>
-              <p class="card-text">
-                <%= producto.descripcion %>
-              </p>
-              <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-            </div>
-          </div>
+     <h2>Sección Perros</h2> 
 
-        </div>
+    <% perros.forEach(producto => { %>
 
-        <% }) %>
+     <div class="col-sm-6">
+  <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= producto.titulo %>
+      </h5>
+      <p class="card-text">
+        <%= producto.descripcion %>
+      </p>
+      <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
+    </div>
+  </div> 
+</div>
+
+    <% }) %>
+    
 
 
-          <h2>Perros</h2>
-          <% productos.forEach(producto=> { %>
-            <div class="col-sm-6">
-              <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <%= producto.titulo %>
-                  </h5>
-                  <p class="card-text">
-                    <%= producto.descripcion %>
-                  </p>
-                  <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-                </div>
-              </div>
+    <h2>Sección Gatos</h2> 
 
-            </div>
+    <% gatos.forEach(producto => { %>
 
-            <% }) %>
+     <div class="col-sm-6">
+  <img src="/img/<%= producto.imagenes[0] %> " class="card-img-top" alt="...">
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= producto.titulo %>
+      </h5>
+      <p class="card-text">
+        <%= producto.descripcion %>
+      </p>
+      <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
+    </div>
+  </div> 
+</div> 
 
-    </main>
 
-    <%- include('./partials/footer') %> 
+    <% }) %>
+    
 
-  </body>
 
+
+  </main>
+  <%- include('./partials/footer') %> 
+</body>
 </html>

@@ -24,7 +24,6 @@ module.exports = {
         return res.send(req.body)
     },
     
-
     editar: (req, res) => {
          id= +req.params.id
         let producto = productos.find((elemento) => {
@@ -37,11 +36,13 @@ module.exports = {
         })
 
     },
-
     actualizar: (req, res) => {
         return res.render('admin/crearProducto')
     },
-
+    eliminar: (req,res) =>{
+       /*  return res.render('admin/listaProductos')
+       // revisar */
+    },
     historial: (req, res) => {
 
         return res.render('admin/listaProductos', {
@@ -49,9 +50,6 @@ module.exports = {
             redirection: "lista"
         })
     },
-    eliminar: (req,res) =>{
-        return res.render('admin/listaProductos')// revisar
-
     update: (req, res) => {
         const idParams = +req.params.id
         /* const { Marca} */
@@ -64,6 +62,6 @@ module.exports = {
     destroy: (req, res) => {
         idParams = +req.params.id
         let 
-
-    }
+    },
 }
+
