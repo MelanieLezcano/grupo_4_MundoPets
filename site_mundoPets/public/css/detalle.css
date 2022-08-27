@@ -1,4 +1,9 @@
+.detalle{
+    background-repeat:  repeat;
+}
+
 .detalle main img {
+    text-align: center;
     width: 80%;
     border: 1px solid var(--colorNaranja);
     border-radius: 50px;
@@ -12,7 +17,8 @@
 }
 
 .detalle main .prod-similares img {
-    width: 60%;
+    width: 50%;
+    
 }
 
 .detalle main section {
@@ -22,6 +28,7 @@
 .detalle main section .sumar-carrito {
     width: 100px;
     display: flex;
+    justify-content: flex-end;
     margin-left: 5px;
 
 }
@@ -46,7 +53,7 @@
 }
 
 .detalle main section .sumar-carrito input {
-    width: 50px;
+    width: 80px;
 }
 
 .detalle main section .sumar-carrito div {
@@ -54,8 +61,6 @@
     color: white;
     padding: 5px;
     margin: 0 2px;
-    /* display: flex;
-    justify-content: center; */
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -93,8 +98,8 @@
 }
 
 .detalle main section .prod-similares {
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     width: 100%;
 }
