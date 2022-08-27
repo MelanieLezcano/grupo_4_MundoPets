@@ -1,11 +1,25 @@
-const express = require('express') /*  */
+const express = require('express') 
 const router = express.Router()
 
+let {crear,editar,lista,historial, nuevo, actualizar, eliminar} = require('../controllers/adminController')
 
-let {crear,editar,lista} = require('../controllers/adminController')
+/* GET home page */
+router.get('/lista', lista);
+router.get('/historial',historial);
 
-router.get('/lista', lista)
-router.get('/editar', editar)
-router.get('/crear', crear)
+/* CREAR UN PRODUCTO */
+router.get('/crear', crear);
+router.post('/crear', nuevo);
+
+/* EDITAR UN PRODUCTO */
+
+router.get('/editar/:id', editar)
+router.put('/editar/:id', actualizar)
+
+
+/* ELIMINAR UN PRODUCTO */
+router.delete('/eliminar/:id', eliminar)
+
+
 
 module.exports = router

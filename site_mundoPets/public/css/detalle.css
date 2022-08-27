@@ -1,7 +1,9 @@
 .detalle{
     background-repeat:  repeat;
 }
+
 .detalle main img {
+    text-align: center;
     width: 80%;
     border: 1px solid var(--colorNaranja);
     border-radius: 50px;
@@ -15,7 +17,8 @@
 }
 
 .detalle main .prod-similares img {
-    width: 60%;
+    width: 50%;
+    
 }
 
 .detalle main section {
@@ -95,8 +98,8 @@
 }
 
 .detalle main section .prod-similares {
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     width: 100%;
 }
