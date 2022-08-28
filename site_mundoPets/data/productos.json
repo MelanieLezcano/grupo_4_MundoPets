@@ -348,5 +348,39 @@
             "",
             ""
         ]
+    },
+    {
+        "id": 22,
+        "categoria": "Gato",
+        "subcategoria": "Cachorro Gato",
+        "marca": "gsgg",
+        "titulo": "gsdgsg",
+        "precio": "145522",
+        "descuento": "10",
+        "descripcion": "kfdkdkdk",
+        "stock": "12",
+        "imagenes": [
+            "default-image.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 23,
+        "categoria": "Perro",
+        "subcategoria": "Adulto Gato",
+        "marca": "hrjjj",
+        "titulo": "mcmm",
+        "precio": "10000",
+        "descuento": "10",
+        "descripcion": "çjñhfje",
+        "stock": "4",
+        "imagenes": [
+            "default-image.png",
+            "",
+            "",
+            ""
+        ]
     }
 ]
