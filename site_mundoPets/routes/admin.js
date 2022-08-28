@@ -1,8 +1,9 @@
+const {crear,editar,lista,historial, nuevo, actualizar, eliminar} = require('../controllers/adminController')
 const express = require('express');
 const router = express.Router();
 
 
-let {crear,editar,lista,historial, nuevo, actualizar, eliminar} = require('../controllers/adminController')
+
 
 /* GET home page */
 router.get('/lista', lista);

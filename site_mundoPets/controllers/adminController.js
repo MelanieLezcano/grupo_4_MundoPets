@@ -2,7 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
-const categorias = require('../data/historial.json')
+/* const categorias = require('../data/historial.json') */
+const producto = require ('../data/productos.json')
+/* const redirection = require('../data/historial.json') */
 /* PARA USAR AL MOMENTO DE CREAR EL JSON CON LOS PRODUCTOS */
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -17,21 +19,21 @@ module.exports = {
             redirection: "historial"
         })
     },
-    crear: (req, res) => {
+    crear: (req,res) => {
         return res.render('admin/crearProducto')
     },
-    nuevo: (req, res) => {
-        return res.send(req.body)
-     /*    let{Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+    nuevo: (req,res) => {
+        /* return res.send(req.body) */
+        let{Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
 
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
             marca:Marca,
             titulo:Titulo,
             categorias:Categoria,
-            precio:Precio,
-            descuento:Descuento,
-            stock:Stock,
+            precio:+Precio,
+            descuento:+Descuento,
+            stock:+Stock,
             descripcion:Descripcion,
             imagenes : [
                 "default-image.png",
@@ -39,11 +41,11 @@ module.exports = {
                 "default-image.png",
                 "default-image.png"
             ],
-        } */
+        }
     },
     
 
-    editar: (req, res) => {
+    editar: (req,res) => {
         let categorias = ['Adultos','Cachorros']
          id= +req.params.id
         let producto = productos.find((elemento) => {
@@ -56,7 +58,7 @@ module.exports = {
         })
 
     },
-    actualizar: (req, res) => {
+    actualizar: (req,res) => {
         id = +req.params.id
         return res.render('admin/crearProducto')
         let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
@@ -78,7 +80,7 @@ module.exports = {
 
     },
 
-    historial: (req, res) => {
+    historial: (req,res) => {
 
         return res.render('admin/listaProductos', {
             productos: historial,
@@ -86,6 +88,20 @@ module.exports = {
         })
     },
     eliminar: (req,res) =>{
-        return res.render('admin/listaProductos')// revisar
+        /* return res.render('admin/listaProductos') */// revisar
+        idParams = +req.params.id
+        let productoAEliminar = producto.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        historial.push(productoAEliminar)
+        guardarHistorial(historial)
+
+        let productosModificados = productos.filter(producto => producto.id !== idParams)
+        guardar(productosModificados)
+
+        return res.redirect('/admin/lista')
     }
-}
+    
+
+    }
