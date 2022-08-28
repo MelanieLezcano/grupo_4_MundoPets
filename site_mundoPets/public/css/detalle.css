@@ -1,240 +1,128 @@
 .detalle{
-    background-repeat:  repeat;
-}
-
-.detalle main img {
     text-align: center;
-    width: 80%;
+    /* width: 100%; */
+}
+/* fuentes generales */
+.detalle h1,h2,h4,p{
+    font-family: var(--fuenteTitulos);
+    color: black;
+}
+/* botones */
+.detalle button{
+    background-color: var(--colorAzulFrancia);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    width: 20%;
+    
+}
+/* producto principal */
+.detalle main .imagen-princ{
+    text-align: center;
+    width: 60%;
     border: 1px solid var(--colorNaranja);
     border-radius: 50px;
     background-color: white;
 }
+/* .detalle main div .imagen-princ{
+} */
 
-.detalle main section .imagen-principal {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+.detalle main .precio{
+    font-family: var(--fuenteTitulos);
+    font-size: 35px;
 }
+/* .detalle main .contenedor{
 
-.detalle main .prod-similares img {
-    width: 50%;
-    
-}
-
-.detalle main section {
-    font-size: 17px;
-}
-
-.detalle main section .sumar-carrito {
-    width: 100px;
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 5px;
-
-}
-
-.detalle main section .contenedor {
+} */
+/* boton sumar - restar */
+.detalle main .sumar-carrito{
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
 }
-
-.detalle main section button {
-    /* boton de compra */
+.detalle main .sumar-carrito div{
     background-color: var(--colorAzulFrancia);
     color: white;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 90%;
-    text-align: center;
-}
-
-.detalle main section .sumar-carrito input {
-    width: 80px;
-}
-
-.detalle main section .sumar-carrito div {
-    background-color: var(--colorAzulFrancia);
-    color: white;
-    padding: 5px;
-    margin: 0 2px;
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    text-align: center;
-
+    margin: 2px;
+    /* padding: 5px; */
 }
-
+.detalle main .sumar-carrito input{
+    width: 50px;
+    
+}
+/* texto detalle de producto */
 .detalle main .detail {
     background-color: var(--colorCeleste);
     opacity: 80%;
     padding: 20px;
+    margin-bottom:20px;
 }
-
-.detalle main section h1 {
-    font-size: 30px;
-    font-family: var(--fuenteTitulos);
-    line-height: 35px;
-}
-
-.detalle main section h2 {
+/* productos relacionados img */
+.detalle main .prod-rel img{
     text-align: center;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    font-family: var(--fuenteSubtitulos);
-}
-
-.detalle main section h4 {
+    width: 60%;
+    border: 1px solid var(--colorNaranja);
+    border-radius: 50px;
+    background-color: white;
     margin-bottom: 10px;
-    font-family: var(--fuenteSubtitulos);
 }
-
-.detalle main section .precio {
-    font-family: var(--fuenteTitulos);
-    font-size: 35px;
+.detalle main .prod-rel{
+    font-size: 25px;
 }
-
-.detalle main section .prod-similares {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-}
-
 
 
 
 /* tablet */
-@media (min-width:426px) {
-    .detalle main img {
-        width: 70%;
-    }
+@media (min-width:426px){
 
-    .detalle main section .imagen-principal {
-        width: 100%;
-        text-align: center;
-    }
-
-    .detalle main section .sumar-carrito {
-        /*  width: 100%; */
-        text-align: center;
-    }
-
-    .detalle main section .contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px;
-        flex-direction: column;
-        align-content: space-around;
-        align-items: flex-end;
-    }
-
-    .detalle main section .sumar-carrito input {
-        width: 60px;
-        text-align: center;
-    }
-
-    .detalle main section .sumar-carrito div {
-        width: 40px;
-        height: 30px;
-
-    }
-
-    .detalle main section button {
-        /* boton de compra */
-        width: 100px;
-        height: 50px;
-    }
-
-    .detalle main .prod-similares img {
-        width: 40%;
-    }
-
-    .detalle main section h1 {
-        font-size: 40px;
-    }
+/* producto principal */
+.detalle main  div .imagen-princ{
+    display: flex;
+    text-align: center;
+    width: 60%;
+    border: 1px solid var(--colorNaranja);
+    border-radius: 50px;
+    background-color: white;
 }
+.detalle main .prod-rel img{
+    width: 40%;
+    height: 10%;
+}
+/* botones */
+.detalle button{
+    width: 80px;
+}
+
 
 
 /* desktop */
 @media (min-width:769px) {
-    .detalle main img {
-        width: 25%;
-    }
-
-    .detalle main section .imagen-principal {
-        display: flex;
-        width: 100%;
-        text-align: left;
-    }
-    .detalle main section .sumar-carrito {
-        text-align: center;
-    }
-    .detalle main section .textoDerecha{
-        display: flex;
-        flex-direction: column;
-        align-items: right;
-        position: absolute;
-        left: 200px;
-        top: 10px;
-    }
-    .detalle main section .contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px;
-        flex-direction: column;
-        align-content: space-around;
-        align-items: flex-end;
-    }
-    .detalle main section h1 {
-        font-size: 40px;
-        padding: 15% 15% 0 15%;
-    }
-    .detalle main section .precio{
-        text-align: center;
-
-    }
-    .detalle main section .sumar-carrito input {
-        width: 60px;
-        /*  text-align: center; */
-    }
-
-    .detalle main section .sumar-carrito div {
-        width: 40px;
-        height: 30px;
-
-    }
-
-    .detalle main section button {
-        /* boton de compra */
-        width: 100px;
-        height: 50px;
-    }
-
-    .detalle main section .prod-similares img{
-        width: 57%;
-        padding: 20px;
-        /* display: flex; */
-        /* flex-wrap: wrap; */
-        /*flex-direction: column; */
-        /*justify-content: space-between; */ 
- 
-    }
-    .detalle main section .img1{
-        position: absolute;
-        right: 120px;
-    }
-    .detalle main section .img2{
-        position: absolute;
-        left: 120px;
-    }
-
-    .detalle main section h4 {
-        font-size: 20px;
-        font-family: var(--fuenteSubtitulos);
-    }
-
-    }
+.detalle main .imagen-princ {
+width:30%;
+}
+.detalle main section .textoDerecha{
+display: flex;
+flex-direction: column;
+/* align-items: flex-end; */
+/* align-items: right; */
+ position: absolute;
+left: 50%;
+top: 15%;
+}
+.detalle main .detail{
+margin-top: 100px;
+}
+.detalle main .prod-rel img{
+    width: 15%;
+}
+.detalle main article .prod-rel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: flex-end;
+}
+}}

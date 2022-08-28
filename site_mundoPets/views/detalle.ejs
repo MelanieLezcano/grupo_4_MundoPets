@@ -47,7 +47,7 @@
                     <section>
                         <h2>Productos Relacionados</h2>
                         <% for( let i=0; i < 10; i++ ) { %>
-                            <a href="/productos/detalle/productos[i].id %>">
+                            <a href="/productos/detalle/<%=productos[i].id %>">
                                 <article>
                                     <div class="related-img-0"></div>
                                     <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
