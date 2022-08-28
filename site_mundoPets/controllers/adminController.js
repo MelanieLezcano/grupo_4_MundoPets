@@ -60,7 +60,7 @@ module.exports = {
     },
     actualizar: (req,res) => {
         id = +req.params.id
-        return res.render('admin/crearProducto')
+       /*  return res.render('admin/crearProducto') */
         let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
         
         productos.forEach(producto,index => {
@@ -76,13 +76,13 @@ module.exports = {
         })
         
         guardar(productos)
-        return res.redirect('/admin/list')
+        return res.redirect('/admin/listaProductos')
 
     },
 
     historial: (req,res) => {
 
-        return res.render('admin/listaProductos', {
+        return res.render('/admin/listaProductos', {
             productos: historial,
             redirection: "lista"
         })
@@ -101,7 +101,23 @@ module.exports = {
         guardar(productosModificados)
 
         return res.redirect('/admin/lista')
+    },
+    restaurar: (req, res) => {
+        idParams = +req.params.id
+
+        let productoParaRestaurar = historial.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        productos.push(productoParaRestaurar)
+        guardar(productos)
+
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial(historialModificado)
+
+        return res.redirect('/admin/lista')
     }
+    
     
 
     }

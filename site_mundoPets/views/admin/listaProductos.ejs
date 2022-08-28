@@ -9,7 +9,7 @@
         <a href="/admin/crear">
             <button type="button" class="btn btn-primary">Crear Producto</button>
         </a>
-        <a href="/admin/lista/<%= redirection %>">
+        <a href="/admin/<%= redirection %>">
           <button type="button" class="btn btn-warning"><%= redirection === "historial" ?  "Historial Productos" : "Listado de Productos" %></button>
       </a>
 
@@ -45,7 +45,7 @@
                             </a>
                             
                             <% }else{ %>
-                              <form action="/admin/restore/<%= producto.id%>?_method=DELETE" method="post">
+                              <form action="/admin/restaurar/<%= producto.id%>?_method=DELETE" method="post">
                                 <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
                               </form>
                             <% } %>
