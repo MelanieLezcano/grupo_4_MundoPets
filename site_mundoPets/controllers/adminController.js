@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
+const { validationResult } = require('express-validator')
 /* const categorias = require('../data/historial.json') */
 const producto = require ('../data/productos.json')
 /* const redirection = require('../data/historial.json') */
@@ -22,48 +23,58 @@ module.exports = {
     crear: (req,res) => {
         return res.render('admin/crearProducto')
     },
-    nuevo: (req,res) => {
-        /* return res.send(req.body) */
-        let{Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+
+    nuevo: (req, res) => {
+        let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body
 
         let productoNuevo = {
-            id: productos[productos.length - 1].id + 1,
-            marca:Marca,
-            titulo:Titulo,
-            categorias:Categoria,
-            precio:+Precio,
-            descuento:+Descuento,
-            stock:+Stock,
-            descripcion:Descripcion,
-            imagenes : [
+            id : productos[productos.length - 1].id + 1 ,
+            categoria: Categoria,
+            subcategoria: Subcategoria,
+            marca: Marca,
+            titulo: Titulo,
+            precio: Precio,
+            descuento: Descuento,
+            descripcion: Descripcion,
+            stock: Stock,
+            imagenes: [
                 "default-image.png",
-                "default-image.png",
-                "default-image.png",
-                "default-image.png"
-            ],
-        }
-    },
+                "",
+                "",
+                ""
+            ]
+    }
+    productos.push(productoNuevo)
+    guardar(productos)
+    res.redirect('/admin/lista')
+},
     
-
-    editar: (req,res) => {
-        let categorias = ['Adultos','Cachorros']
-         id= +req.params.id
+    editar: (req, res) => {
+        let categorias = ['gato', 'perro']
+        id = +req.params.id
         let producto = productos.find((elemento) => {
             return elemento.id == id
-        } )
-        /* return res.send(producto)  comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editarProducto',{
+        })
+        /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
+        return res.render('admin/editarProducto', {
             producto,
             categorias
         })
 
     },
     actualizar: (req,res) => {
-        id = +req.params.id
-       /*  return res.render('admin/crearProducto') */
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
-        
-        productos.forEach(producto,index => {
+        const idParams = +req.params.id
+        const { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+        if (errors.isEmpty()) {
+        productos.forEach(producto => {
             if (producto.id === idParams) {
                 producto.marca = Marca
                 producto.titulo = Titulo
@@ -76,13 +87,13 @@ module.exports = {
         })
         
         guardar(productos)
-        return res.redirect('/admin/listaProductos')
+        return res.redirect('/admin/lista')
 
-    },
+    }
+},
 
-    historial: (req,res) => {
-
-        return res.render('/admin/listaProductos', {
+    historial: (req, res) => {
+        return res.render('/admin/lista', {
             productos: historial,
             redirection: "lista"
         })
@@ -117,7 +128,4 @@ module.exports = {
 
         return res.redirect('/admin/lista')
     }
-    
-    
-
     }
