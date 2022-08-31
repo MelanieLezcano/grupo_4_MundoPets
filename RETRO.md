@@ -45,11 +45,11 @@ Repasar mas git/github
  ## Comenzar a hacer
  
 
-##Seguir haciendo
+## Seguir haciendo
 
   
 
-##Hacer más
+## Hacer más
 
 
 ## Dejar de hacer
