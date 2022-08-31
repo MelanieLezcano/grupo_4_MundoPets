@@ -1,46 +1,48 @@
-.detalle{
+.detalle {
     text-align: center;
-    /* width: 100%; */
+    width: 100%;
 }
+
 /* fuentes generales */
-.detalle h1,h2,h4,p{
+.detalle h1,h2,h4,p {
     font-family: var(--fuenteTitulos);
     color: black;
 }
+
 /* botones */
-.detalle button{
+.detalle button {
     background-color: var(--colorAzulFrancia);
     color: white;
     border-radius: 10px;
     margin: 20px;
     width: 20%;
-    
+
 }
+
 /* producto principal */
-.detalle main .imagen-princ{
+.detalle main section .imagen-princ {
+    /* display: flex; */
     text-align: center;
-    width: 60%;
+    width: 100%;
     border: 1px solid var(--colorNaranja);
     border-radius: 50px;
     background-color: white;
 }
-/* .detalle main div .imagen-princ{
-} */
 
-.detalle main .precio{
+.detalle main .precio {
     font-family: var(--fuenteTitulos);
     font-size: 35px;
 }
-/* .detalle main .contenedor{
 
-} */
 /* boton sumar - restar */
-.detalle main .sumar-carrito{
+.detalle main .sumar-carrito {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
-.detalle main .sumar-carrito div{
+
+.detalle main .sumar-carrito div {
     background-color: var(--colorAzulFrancia);
     color: white;
     width: 30px;
@@ -49,19 +51,22 @@
     margin: 2px;
     /* padding: 5px; */
 }
-.detalle main .sumar-carrito input{
+
+.detalle main .sumar-carrito input {
     width: 50px;
-    
+
 }
+
 /* texto detalle de producto */
 .detalle main .detail {
     background-color: var(--colorCeleste);
     opacity: 80%;
     padding: 20px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
 /* productos relacionados img */
-.detalle main .prod-rel img{
+.detalle main .prod-rel img {
     text-align: center;
     width: 60%;
     border: 1px solid var(--colorNaranja);
@@ -69,60 +74,97 @@
     background-color: white;
     margin-bottom: 10px;
 }
-.detalle main .prod-rel{
-    font-size: 25px;
+
+.detalle main .prod-rel {
+    font-size: 15px;
 }
-
-
 
 /* tablet */
-@media (min-width:426px){
+@media (min-width:426px) {
 
-/* producto principal */
-.detalle main  div .imagen-princ{
-    display: flex;
-    text-align: center;
-    width: 60%;
-    border: 1px solid var(--colorNaranja);
-    border-radius: 50px;
-    background-color: white;
-}
-.detalle main .prod-rel img{
-    width: 40%;
-    height: 10%;
-}
-/* botones */
-.detalle button{
-    width: 80px;
-}
+    /* producto principal */
+    .detalle main div .imagen-princ {
+        display: flex;
+        text-align: center;
+        width: 60%;
+        border: 1px solid var(--colorNaranja);
+        border-radius: 50px;
+        background-color: white;
+    }
+
+    .detalle main .prod-rel img {
+        width: 20%;
+        height: 10%;
+    }
+
+    /* botones */
+    .detalle button {
+        width: 80px;
+    }
 
 
 
-/* desktop */
-@media (min-width:769px) {
-.detalle main .imagen-princ {
-width:30%;
+    /* desktop */
+    @media (min-width:769px) {
+
+        /* fuentes */
+        .detalle h1{
+            font-size: 50px;
+        }
+
+        .detalle h2 {
+            font-size: 40px;
+        }
+
+        .detalle h4 {
+            font-size: 30px;
+        }
+
+        .detalle p {
+            font-size: 25px;
+            
+        }
+
+        .detalle main .precio {
+            font-size: 50px;
+        }
+
+        .detalle main .imagen-princ {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            position: relative;
+            left: 20%;
+
+        }
+
+        .detalle main section .textoDerecha {
+            display: flex;
+            flex-direction: column;
+            /* align-items: flex-end; */
+            /* align-items: right; */
+            position: absolute;
+            left: 50%;
+            top: 15%;
+        }
+
+        .detalle main .detail {
+            margin-top: 100px;
+        }
+
+        .detalle main .prod-rel img {
+            width: 15%;
+        }
+
+        .detalle main article .prod-rel {
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-around;
+            align-items: center;
+        }
+
+
+    }
 }
-.detalle main section .textoDerecha{
-display: flex;
-flex-direction: column;
-/* align-items: flex-end; */
-/* align-items: right; */
- position: absolute;
-left: 50%;
-top: 15%;
-}
-.detalle main .detail{
-margin-top: 100px;
-}
-.detalle main .prod-rel img{
-    width: 15%;
-}
-.detalle main article .prod-rel {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: flex-end;
-}
-}}
