@@ -43,18 +43,44 @@ Repasar mas git/github
  # RETRO SPRINT 3
  
  ## Comenzar a hacer
+ -hacer dailys mas seguidas.
+ -reuniones de trabajo en comun.
+
+
+## Seguir haciendo
+-comunicacion constante
+ -Reunión antes de realizar entregas
+ -rapida organizacion.
  
+  
+
+## Hacer más
+-ayuda mutua entre todos.
+
+## Dejar de hacer
+ -subestimar las tareas.
+
+## Hacer menos
+ -
+ 
+ 
+ 
+  # RETRO SPRINT 4
+ 
+ ## Comenzar a hacer
+
+
 
 ## Seguir haciendo
 
+ 
   
 
 ## Hacer más
 
 
 ## Dejar de hacer
-.
+
 
 ## Hacer menos
  -
- 
