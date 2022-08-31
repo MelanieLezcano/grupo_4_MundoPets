@@ -137,7 +137,6 @@
         "categoria": "gato",
         "subcategoria": "Adulto Gato",
         "marca": "Infinity",
-        "titulo": "Infinity Adulto 10 kg",
         "precio": 8000,
         "descuento": 10,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
@@ -337,7 +336,7 @@
         "id": 21,
         "categoria": "gato",
         "marca": "VitalCan",
-        "titulo": "VitalCan Complete Balance 10kg",
+        "titulo": "VitalCan Complete Balance 10kg   ",
         "precio": 9000,
         "descuento": 30,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
@@ -347,6 +346,7 @@
             "",
             "",
             ""
-        ]
+        ],
+        "categorias": "gato"
     }
 ]

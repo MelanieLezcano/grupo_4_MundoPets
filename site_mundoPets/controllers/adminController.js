@@ -1,8 +1,11 @@
-
 const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
+const { validationResult } = require('express-validator')
+/* const categorias = require('../data/historial.json') */
+
+/* const redirection = require('../data/historial.json') */
 /* PARA USAR AL MOMENTO DE CREAR EL JSON CON LOS PRODUCTOS */
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -17,50 +20,118 @@ module.exports = {
             redirection: "historial"
         })
     },
-    crear: (req, res) => {
+    crear: (req,res) => {
         return res.render('admin/crearProducto')
     },
-    nuevo: (req, res) => {
-        return res.send(req.body)
-    },
-    
 
+    nuevo: (req,res) => {
+        /*   return res.send(req.body) */
+          let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
+  
+        
+          let productoNuevo = {
+              
+              id: productos[productos.length - 1].id + 1, 
+              categoria:Categoria,
+              subcategoria:Subcategoria,
+              titulo:Titulo,
+              marca:Marca,
+              precio:+Precio,
+              descuento:+Descuento,
+              descripcion:Descripcion,
+              stock:+Stock,
+              imagenes:["default-image.png","","",""], /* tendra por defecto esta imagen */
+          }
+  
+          productos.push(productoNuevo)
+          guardar(productos) 
+  
+          /* redirecciona a la lista de productos */
+          res.redirect('/admin/lista')
+  
+         
+      },
     editar: (req, res) => {
-         id= +req.params.id
+        let categorias = ['gato', 'perro']
+        id = +req.params.id
         let producto = productos.find((elemento) => {
-            return elemento .id == id
-        } )
-        /* return res.send(producto)  comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editarProducto',{
+            return elemento.id == id
+        })
+        /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
+        return res.render('admin/editarProducto', {
             producto,
-            /* categorias */
+            categorias
         })
 
     },
+    actualizar: (req,res) => {
+        const idParams = +req.params.id
+        const { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+        if (errors.isEmpty()) {
+        productos.forEach(producto => {
+            if (producto.id === idParams) {
+                producto.marca = Marca
+                producto.titulo = Titulo
+                producto.categorias = Categoria
+                producto.precio = +Precio
+                producto.descuento = +Descuento
+                producto.stock = +Stock
+                producto.descripcion = Descripcion
+            }
+        })
+        
+        guardar(productos)
+        return res.redirect('/admin/lista')
 
-    actualizar: (req, res) => {
-        return res.render('admin/crearProducto')
-    },
+    }
+},
 
     historial: (req, res) => {
+        return res.render('/admin/lista', {
 
-        return res.render('admin/listaProductos', {
             productos: historial,
             redirection: "lista"
         })
     },
     eliminar: (req,res) =>{
-        return res.render('admin/listaProductos')// revisar
 
-    update: (req, res) => {
-        const idParams = +req.params.id
-        /* const { Marca} */
-         productos.forEach(producto => {
-            if (producto.id === idParams) {
-
-            }
-         })
-    },
-    destroy: (req, res) => {
         idParams = +req.params.id
-        let 
+
+        let productoAEliminar = productos.find((elemento) => {
+            return  elemento.id == idParams
+        })
+      historial.push(productoAEliminar)
+            guardarHistorial(historial)
+            let productosModificados = productos.filter(producto => producto.id !== idParams)
+            guardar(productosModificados )
+            return res.redirect('/admin/historial')
+        
+
+    },
+    restaurar: (req, res) => {
+        idParams = +req.params.id
+
+        let productoParaRestaurar = historial.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        productos.push(productoParaRestaurar)
+        guardar(productos)
+
+        let historialModificado = historial.filter(producto => producto.id !== idParams)
+        guardarHistorial(historialModificado)
+
+        return res.redirect('/admin/lista')
+    }
+    }
+
+
+    

@@ -7,9 +7,14 @@ module.exports = {
         return res.render('home')
     },
     vistaProductos: (req, res) => {
-        return res.render('vistaProductos',{
-            productos
-        })
+        let perros = productos.filter(producto => producto.categoria === "perro");
+        let  gatos = productos.filter(producto => producto.categoria === "gato");
+
+            return res.render('vistaProductos',{
+            productos,
+            gatos,
+            perros
+        });
     },
     contacto: (req, res) => {
         return res.render('contacto')
