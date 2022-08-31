@@ -2,9 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const productos = require('../data/productos.json')
 const historial = require('../data/historial.json')
-const { validationResult } = require('express-validator')
+ const { validationResult } = require('express-validator') 
 /* const categorias = require('../data/historial.json') */
-const producto = require ('../data/productos.json')
+
 /* const redirection = require('../data/historial.json') */
 /* PARA USAR AL MOMENTO DE CREAR EL JSON CON LOS PRODUCTOS */
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
@@ -33,10 +33,10 @@ module.exports = {
             subcategoria: Subcategoria,
             marca: Marca,
             titulo: Titulo,
-            precio: Precio,
-            descuento: Descuento,
+            precio: +Precio,
+            descuento: +Descuento,
             descripcion: Descripcion,
-            stock: Stock,
+            stock: +Stock,
             imagenes: [
                 "default-image.png",
                 "",
@@ -63,7 +63,7 @@ module.exports = {
 
     },
     actualizar: (req,res) => {
-        const idParams = +req.params.id
+         idParams = +req.params.id
         const { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
         let errors = validationResult(req)
         if (req.fileValidationError) {
