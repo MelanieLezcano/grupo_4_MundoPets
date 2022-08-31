@@ -9,21 +9,36 @@
       <div class="carrito">
            <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
       </div>
-      <div>
-          <input type="text" maxlength="100" placeholder="Buscar"  class="buscador">  <!-- barra buscador -->
-      </div>
-      <span class="lupa">
-          <i class="fas fa-search"></i>
-      </span>
       <div class="user">
-          <a href="/usuarios/login"><i class="fas fa-user"></i></a><!-- login & register -->
+        <a href="/usuarios/login"><i class="fas fa-user"></i></a><!-- login & register -->
+    </div>
+      <div class="buscador">
+        <form action=" " method="post" target="_blank"></form>
+          <input type="search" name= "Buscar" class="icono-placeholder" maxlength="100" placeholder="Buscar  " >  <!-- barra buscador -->
+         <!--  <button type="submit"> <i class="fas fa-search"></i></button> -->
       </div>
-      <div>
+      <div class="admin">
         <li><a href="/admin/lista">ADMIN</a></li>  
       </div>
       <div class="menu">
-       <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+      <input type="checkbox" name="burger" id="burger" checked>
+        <label for="burger"><i class="fas fa-ellipsis-v"></i></label>
+        <nav>
+          <ul class="menu">
+              <li><a href="/vistaProductos">Gato/a></li>
+              <li><a href="/vistaProductos">Perro</a></li>
+              <li><a href="/admin/lista">Admin</a></li>
+              
+          </ul>
+          <ul class="user">
+              <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a href="/usuarios/login">Login</a></li>
+              <li><a href="/usuarios/register">Registro</a></li>
+          </ul>
+      </nav>
+        
+    </div>
+  </nav>
+   
   </div>
 </header>
