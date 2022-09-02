@@ -114,6 +114,7 @@
 
         .detalle h2 {
             font-size: 40px;
+            margin-top: 80px;
         }
 
         .detalle h4 {
@@ -124,12 +125,18 @@
             font-size: 25px;
             
         }
+        /* boton */
+        /* .detalle button .contenedor .principal {
+            width: 20%;
+            padding: 15px;
+            border-radius: 25%; */
+        }
 
         .detalle main .precio {
             font-size: 50px;
         }
 
-        .detalle main .imagen-princ {
+        .detalle main section .imagen-princ {
             display: flex;
             flex-direction: column;
             width: 20%;
