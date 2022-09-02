@@ -50,5 +50,23 @@
             "",
             ""
         ]
-    }
+    },
+    {
+        "id": 22,
+        "categoria": "Gato",
+        "subcategoria": "Adulto Gato",
+        "marca": "gsgg",
+        "titulo": "gsdgsg",
+        "precio": "123",
+        "descuento": "1",
+        "descripcion": "mnglaedganngahnahjms,",
+        "stock": "12",
+        "imagenes": [
+            "default-image.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    null
 ]
