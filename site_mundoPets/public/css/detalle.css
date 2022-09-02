@@ -4,7 +4,10 @@
 }
 
 /* fuentes generales */
-.detalle h1,h2,h4,p {
+.detalle h1,
+h2,
+h4,
+p {
     font-family: var(--fuenteTitulos);
     color: black;
 }
@@ -108,12 +111,13 @@
     @media (min-width:769px) {
 
         /* fuentes */
-        .detalle h1{
+        .detalle h1 {
             font-size: 50px;
         }
 
         .detalle h2 {
             font-size: 40px;
+            margin-top: 80px;
         }
 
         .detalle h4 {
@@ -122,49 +126,53 @@
 
         .detalle p {
             font-size: 25px;
-            
+
         }
 
-        .detalle main .precio {
-            font-size: 50px;
-        }
-
-        .detalle main .imagen-princ {
-            display: flex;
-            flex-direction: column;
+        /* boton */
+        /* .detalle button .contenedor .principal {
             width: 20%;
-            position: relative;
-            left: 20%;
+            padding: 15px;
+            border-radius: 25%; */
+    }
 
-        }
+    .detalle main .precio {
+        font-size: 50px;
+    }
 
-        .detalle main section .textoDerecha {
-            display: flex;
-            flex-direction: column;
-            /* align-items: flex-end; */
-            /* align-items: right; */
-            position: absolute;
-            left: 50%;
-            top: 15%;
-        }
+    .detalle main section .imagen-princ {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        position: relative;
+        left: 20%;
 
-        .detalle main .detail {
-            margin-top: 100px;
-        }
+    }
 
-        .detalle main .prod-rel img {
-            width: 15%;
-        }
+    .detalle main section .textoDerecha {
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-end; */
+        /* align-items: right; */
+        position: absolute;
+        left: 50%;
+        top: 15%;
+    }
 
-        .detalle main article .prod-rel {
-            display: flex;
-            position: relative;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-content: space-around;
-            align-items: center;
-        }
+    .detalle main .detail {
+        margin-top: 100px;
+    }
 
+    .detalle main .prod-rel img {
+        width: 15%;
+    }
 
+    .detalle main article .prod-rel {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
     }
 }
