@@ -7,33 +7,35 @@
     <%- include('./partials/header') %> 
     <main>
 
-     <!--    <%- include('./partials/banner') %>  -->
+       <!-- include banner colocar aca  -->
         <!-- Categoria -->
         
         <h1><%= categoriaSeleccionada %> </h1>
 
-        <section class="carrouselProductos">
-            <div class="glider-contain">
-                <div class="glider">
-                    <% productoPorCategoria.forEach(producto => { %>
-                        <%- include('./partials/card',{
-                            id:producto.id,
-                            imagen:producto.imagenes[0],
-                            nombre:producto.titulo,
-                            descuento:producto.descuento,
-                            precio:producto.precio
-                        }) %> 
-                    <% }) %>
-                </div>
-              
-                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
-                <div role="tablist" class="dots"></div>
-              </div>
-        </section>
+     <section>
+        <% productoPorCategoria.forEach(producto => { %>
+            <article>
+                <h3><%= producto.marca %> </h3>
+                <h4><%= producto.titulo %> </h4>
+            </article>
+         
+        <% }) %> 
+     </section>
+     
     </main>
     <%- include('./partials/footer') %> 
 </body>
 </html>
-
-<!--  VER BIEN DEPSUES DISEÑO PARA ARMAR EL CARROUSEL  -->
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+       
