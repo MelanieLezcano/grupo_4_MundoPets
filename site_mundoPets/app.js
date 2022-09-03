@@ -2,15 +2,15 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 const path = require ('path');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+
 
 
 /* requerir las rutas */
 let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin')
 let productosRouter = require('./routes/productos')
-let usuariosRouter = require('./routes/usuarios');
-const { urlencoded } = require('express');
+let usuariosRouter = require('./routes/usuarios')
 
 
 
@@ -20,13 +20,14 @@ app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs')
 /* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
 
-//middlewares
-
+/* metodos HHTP (post) */
+app.use(express.urlencoded({ extended: false}));
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
-app.use(express.static(path.resolve(__dirname,'public')));
-app.use(express.urlencoded({ extended: false })); //para trabajar con el req.body
 
- /* Trabajar con put y delete */
+
+app.use(express.static(path.resolve(__dirname,'public')));
+
+/* trabajar con put y delete */
 app.use(methodOverride('_method'))
 
 //RUTAS
