@@ -334,19 +334,18 @@
     },
     {
         "id": 21,
-        "categoria": "gato",
-        "marca": "VitalCan",
-        "titulo": "VitalCan Complete Balance 10kg   ",
-        "precio": 9000,
-        "descuento": 30,
+        "categoria": "Gato",
+        "marca": "VitalCan ",
+        "titulo": "VitalCan Complete Balance 10kg    ",
+        "precio": "9500",
+        "descuento": "30",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 8,
+        "stock": "8",
         "imagenes": [
             "gk-complete-gato-kitten-75kg-removebg-preview.png",
             "",
             "",
             ""
         ]
-       
     }
 ]

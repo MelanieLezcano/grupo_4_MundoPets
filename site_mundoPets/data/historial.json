@@ -15,7 +15,17 @@
             "",
             ""
         ]
+    },
+    {
+        "id": 22,
+        "categoria": "Perro",
+        "subcategoria": "Cachorro",
+        "titulo": "Balanced arroz y cerdo 15kg",
+        "marca": "VITALCAN",
+        "precio": 45,
+        "descuento": 10,
+        "descripcion": "alimento balanceado para perro",
+        "stock": 3,
+        "imagenes": "img-1662236201708.png"
     }
-   
-  
 ]
