@@ -10,32 +10,30 @@
        <!-- include banner colocar aca  -->
         <!-- Categoria -->
         
-        <h1><%= categoriaSeleccionada %> </h1>
+        <h1>Todos nuestros Productos</h1>
 
      <section>
-        <% productoPorCategoria.forEach(producto => { %>
-            <article>
-                <h3><%= producto.marca %> </h3>
-                <h4><%= producto.titulo %> </h4>
-            </article>
+        <% productos.forEach(producto => { %>
+           
+            <%- include('./partials/cards',{
+                id : producto.id,
+                imagenes : producto.imagenes[0],
+                titulo : producto.titulo,
+                marca : producto.marca,
+                descripcion : producto.descripcion,
+                descuento : producto.descuento,
+                precio : producto.precio
+    
+    
+              }) %> 
          
         <% }) %> 
-     </section>
-
-
-
-
-
-     
-     
-    </main>
-    <%- include('./partials/footer') %> 
+    </section>
+    
+  </main>
+  <%- include('./partials/footer') %> 
 </body>
 </html>
-     
-     
-     
-     
      
      
      

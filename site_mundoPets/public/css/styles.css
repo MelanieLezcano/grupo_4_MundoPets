@@ -1,3 +1,4 @@
+@import url('./glider.css');
 @import url('./normalize.css');
 @import url('./general.css');
 @import url('./variables.css');
@@ -10,4 +11,7 @@
 @import url('./login.css');
 @import url('./register.css');
 @import url('./cards.css');
+@import url('./vistaProductos.css');
+@import url('./productos.css');
+@import url('./nosotros.css');
 @import url('./vistaProductos.css');

@@ -22,31 +22,47 @@
                 <img src="img/infinity_logo.png" alt="logo infinity ">
             </div>
         </section>
+
+
+        
         <section class="destacadosP">
             <h3>Productos destacados</h3>
            </section> 
-        <section class="carrousel">
+       <section class="carrousel">
+        <div class="glider-contain">
+            <div class="glider">
+             
+               
+                <% productos.forEach(producto => { %>
+                    
+                        <%- include('./partials/cards',{
+                            id : producto.id,
+                            imagenes : producto.imagenes[0],
+                            titulo : producto.titulo,
+                            marca : producto.marca,
+                            descripcion : producto.descripcion,
+                            descuento : producto.descuento,
+                            precio : producto.precio
+                
+                
+                          }) %> 
+                    
+                    
+                 
+                <% }) %> 
             
-            <i class="fas fa-chevron-left"></i>
-            <article>
-                <div class="image">
-                    <img src="img/carrusel1.png" alt="alimento balanceado">
+               
+            </div>
+          
+            <button aria-label="Previous" class="glider-prev">«</button>
+            <button aria-label="Next" class="glider-next">»</button>
+            <div role="tablist" class="dots"></div>
+          </div>
+       </section>
 
-                </div>
-            </article>
-            <article>
-                <div class="image">
-                    <img src="img/carrusel2.png" alt="alimento balanceado">
 
-                </div>
-            </article>
-            <article>
-                <div class="image">
-                    <img src="img/carrousel3.png" alt="alimeno balanceado">
-                </div>
-            </article>
-            <i class="fas fa-chevron-right"></i>
-        </section>
+
+        
         <div class="links">
             <section class="perro">
                <div class="dog">
@@ -77,13 +93,15 @@
             </section>
         </div>
         <section class="quienSomos">
-            <img src="/img/quienes.somos.png" alt="">
+            <a href="/nosotros"> <img src="/img/quienes.somos.png" alt=""></a>
+           
             <p>¿Quienes Somos? <br>
-                Somos una empresa dedicada a la nutricion y venta de alimentos para mascotas.Te ofrecemos las mejores marcas de balanceado para perros y gatos.Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas.Brindamos  asesoramiento para elegir la mejor opcion segun las necesidades de  tu mascota.Tenemos amplia variedad de productos y contamos con el mejor precio del mercado.    </p>
+                Somos una empresa dedicada a la nutrición y venta de alimentos para mascotas.Te ofrecemos las mejores marcas de balanceado para perros y gatos.Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas.Brindamos  asesoramiento para elegir la mejor opción según las necesidades de  tu mascota.Tenemos amplia variedad de productos y contamos con el mejor precio del mercado.    </p>
         </section>
 
     </main>
 
     <%- include('./partials/footer') %>
 
+    
 </body>

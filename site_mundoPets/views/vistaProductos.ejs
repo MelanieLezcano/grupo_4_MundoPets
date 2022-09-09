@@ -6,11 +6,12 @@
 
   <body>
     <%- include('./partials/header') %> 
-    <main>
+    <main class="vistaProductos">
+      
       <h1>NUESTROS PRODUCTOS</h1>
 
 
-      <h1><%= categoriaSeleccionada %> </h1>
+      <h2><%= categoriaSeleccionada %> </h2>
 
       <section>
          <% productoPorCategoria.forEach(producto => { %>
@@ -39,3 +40,10 @@
   <%- include('./partials/footer') %> 
 </body>
 </html>
+    
+       
+     
+             
+      
+      
+       
