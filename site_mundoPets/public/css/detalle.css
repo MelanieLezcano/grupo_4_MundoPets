@@ -86,18 +86,24 @@ p {
 @media (min-width:426px) {
 
     /* producto principal */
-    .detalle main div .imagen-princ {
+    .detalle main section div .imagen-princ {
         display: flex;
         text-align: center;
-        width: 60%;
+        width: 50%;
         border: 1px solid var(--colorNaranja);
         border-radius: 50px;
         background-color: white;
     }
+    /* texto detalle de producto */
+    .detalle main .detail{
+        margin-top: 50px;
 
+    }
+    /* productos relacionados img */
     .detalle main .prod-rel img {
         width: 20%;
         height: 10%;
+        border-radius: 30px;
     }
 
     /* botones */

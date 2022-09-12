@@ -37,6 +37,8 @@ let produEdit = productos.map((elemento,index) => {
      elemento.categoria = "perro"
      elemento.titulo = " Balanced Complete"
      elemento.precio = 18000
+     elemento.descuento= 10
+     elemento.descripcion = " Alimento para gatos Balanced Complete"
      elemento.stock = 8
    }
    return elemento

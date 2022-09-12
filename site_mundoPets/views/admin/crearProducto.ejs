@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <%- include('../partials/head',{title:"Crear Producto"}) %>
 <body>
     <main class="create">
@@ -9,13 +10,7 @@
         <h1 class="text-center pt-5 pb-5">Creando un producto nuevo </h1>
 
         <!-- Comienzo del Formulario -->
-<<<<<<< HEAD
-        <form action="/admin/crear/" method="POST">
-=======
-
-        <form action="/admin/crear" method="POST">
-
->>>>>>> 790082798660ea27fc154c62d9db1a9ec2c83e1d
+        <form action="/admin/crear" method="POST"  enctype="multipart/form-data"> 
 
             <!-- Contenedor de imagenes y Principales -->
             <div class="container">
@@ -26,22 +21,32 @@
                         <div class="form-floating mb-3"> 
                             <input type="text" class="form-control" name="Titulo" placeholder="Nombre del producto" id="name" placeholder="name@example.com">
                             <label for="name">Nombre del producto</label>
+                            <small>Obligatorio</small>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Marca" placeholder="Marca del Producto" id="brand">
                             <label class="form-label" for="brand">Marca del Producto</label>
+                            <small>Obligatorio</small>
                         </div>
+                        <!-- <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="Categoria" placeholder="Categoria"  id="category">
+                            <label class="form-label" for="brand">Categoria del Producto</label>
+                            <small>Obligatorio</small>
+                        </div> -->
                         <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="Precio" placeholder="Precio del producto" id="price">
                             <label class="form-label" for="price">Precio del producto</label>
+                            <small>Obligatorio</small>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="Descuento" placeholder="Descuento del producto" id="discount">
                             <label class="form-label" for="discount">Descuento del producto</label>
+                            <small>Obligatorio</small>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Stock" placeholder="Stock con el que cuenta el producto" id="stock">
                             <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
+                            <small>Obligatorio</small>
                         </div>
                     </div>
         
@@ -57,58 +62,59 @@
                                     <!-- Imagen 1 -->
 
                                     <div class="col col-5">
-                                        <label class="selectImg" for="product-img">
-                                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="">
+                                        <label class="form-label" for="imagenes">
+                                            <!-- <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt=""> -->
                                             <div class="imgHover">
                                                 <p class="text-center">Selecionar Imagen 1</p>
                                             </div>
                                         </label>
-                                        <div class="form-admin__box inactivo">
-                                            <input class="d-none" id="product-img" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*" multiple>
+                                        <div class="form-admin__box activo">
+                                            <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*">
+                                            <small>Obligatorio</small>
                                         </div>
                                     </div>
 
-                                    <!-- Imagen 2 -->
+                                     <!-- Imagen 2 -->
 
-                                    <div class="col col-5">
-                                        <label class="selectImg" for="product-sub-img-1">
-                                            <img id="sub-img-preview-1" class="img-fluid img-thumbnail  imagen-height rounded" src="/img/default-image.png" alt="" >
+                                   <!--  <div class="col col-5">
+                                        <label class="form-label" for="imagenes">
+                                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="">
                                             <div class="imgHover">
                                                 <p class="text-center">Selecionar Imagen 2</p>
                                             </div>
                                         </label>
-                                        <div class="form_desciption__box inactivo">
-                                            <input class="d-none" id="product-sub-img-1" type="file" name="imagenes" placeholder="Imagen del Producto">
+                                        <div class="form-admin__box activo">
+                                            <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*" multiple>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Imagen 3 -->
 
-                                    <div class="col col-5">
-                                        <label class="selectImg" for="product-sub-img-2">
-                                            <img id="sub-img-preview-2" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" height="auto" alt="" >
+                                    <!-- <div class="col col-5">
+                                        <label class="form-label" for="imagenes">
+                                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="">
                                             <div class="imgHover">
                                                 <p class="text-center">Selecionar Imagen 3</p>
                                             </div>
                                         </label>
-                                        <div class="form_desciption__box inactivo">
-                                            <input class="d-none " id="product-sub-img-2" type="file" name="imagenes" placeholder="Imagen del Producto">
+                                        <div class="form-admin__box activo">
+                                            <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*" multiple>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Imagen 4 -->
 
-                                    <div class="col col-5">
-                                        <label class="selectImg" for="product-sub-img-3">
-                                            <img id="sub-img-preview-3" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="" >
+                                   <!--  <div class="col col-5">
+                                        <label class="form-label" for="imagenes">
+                                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="">
                                             <div class="imgHover">
                                                 <p class="text-center">Selecionar Imagen 4</p>
                                             </div>
                                         </label>
-                                        <div class="form_desciption__box inactivo">
-                                            <input class="d-none" id="product-sub-img-3" type="file" name="imagenes" placeholder="Imagen del Producto">
+                                        <div class="form-admin__box activo">
+                                            <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*" multiple>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Columnas -->
 
@@ -146,10 +152,9 @@
                                 <h3 class="text-center">SubCategorias</h3>
                                 <select class="form-select" name="Subcategoria"floatingSelect" aria-label="Floating label select example">
                                     <option selected hidden>Selecciona una opcion</option>
-                                    <option value="Cachorro Gato">Cachorro Gato</option>
-                                    <option value="Adulto Gato">Adulto Gato</option>
-                                    <option value="Cachorro Perro">Cachorro Perro</option>
-                                    <option value="Adulto Perro">Adulto Perro</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Adulto">Adulto</option>
+                                    
                      
                                   </select>
                             </div>
@@ -164,6 +169,7 @@
                                 <div class="form-floating"> 
                                     <textarea name="Descripcion" id="description" cols="300" rows="300" class="form-control" placeholder="Leave a comment here" style="resize: none;"></textarea>
                                     <label for="description">Descripcion del producto</label>
+                                    <small>Obligatorio</small>
                                 </div>
                             </div>
                         </div>

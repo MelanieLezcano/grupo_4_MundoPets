@@ -23,6 +23,19 @@ module.exports = {
             products
         })
     },
+    categoria : (req,res) => {
+        let categoriaSeleccionada = req.params.categoria
+        let categorias = ['gatos','perros']
+        
+        productoPorCategoria = productos.filter(producto => producto.categorias === categoriaSeleccionada)
+
+        res.render('productos',{
+            categorias,
+            categoriaSeleccionada,
+            productos,
+            productoPorCategoria
+        })
+    },
 
 
 }
