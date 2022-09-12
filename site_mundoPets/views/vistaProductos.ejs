@@ -1,63 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head',{title: 'MundoPets' }) %>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+ <!--  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"> -->
 
   <body>
     <%- include('./partials/header') %> 
-    <main>
+    <main class="vistaProductos">
+      
       <h1>NUESTROS PRODUCTOS</h1>
 
-     <h2>Sección Perros</h2> 
 
-    <% perros.forEach(producto => { %>
+      <h2><%= categoriaSeleccionada %> </h2>
 
-      <div class="mx-auto" style="width: 400px;">
-        <div class="card border-warning mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="/img/<%= producto.imagenes[0] %> "  class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><%= producto.titulo %></h5>
-                <p class="card-text"><%= producto.descripcion %></p>
-                <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      </div>
-
-    <% }) %>
-    
+      <section>
+         <% productoPorCategoria.forEach(producto => { %>
+          <%- include('./partials/cards',{
+            id : producto.id,
+            imagenes : producto.imagenes[0],
+            titulo : producto.titulo,
+            marca : producto.marca,
+            descripcion : producto.descripcion,
+            descuento : producto.descuento,
+            precio : producto.precio
 
 
-    <h2>Sección Gatos</h2> 
+          }) %> 
+            
+          
+         <% }) %> 
+      </section>
 
-    <% gatos.forEach(producto => { %>
-
-      <div class="mx-auto" style="width: 400px;">
-        <div class="card border-warning mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="/img/<%= producto.imagenes[0] %> "  class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><%= producto.titulo %></h5>
-                <p class="card-text"><%= producto.descripcion %></p>
-                <a href="/productos/detalle/<%= producto.id %> " class="btn btn-primary">Ver producto</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      </div>
-
-    <% }) %>
+   
     
 
 
@@ -66,3 +40,10 @@
   <%- include('./partials/footer') %> 
 </body>
 </html>
+    
+       
+     
+             
+      
+      
+       

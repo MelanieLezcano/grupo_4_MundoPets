@@ -17,21 +17,16 @@
         ]
     },
     {
-        "id": 23,
+        "id": 22,
         "categoria": "Perro",
-        "subcategoria": "Adulto Gato",
-        "marca": "hrjjj",
-        "titulo": "mcmm",
-        "precio": "10000",
-        "descuento": "10",
-        "descripcion": "çjñhfje",
-        "stock": "4",
-        "imagenes": [
-            "default-image.png",
-            "",
-            "",
-            ""
-        ]
+        "subcategoria": "Cachorro",
+        "titulo": "Balanced arroz y cerdo 15kg",
+        "marca": "VITALCAN",
+        "precio": 45,
+        "descuento": 10,
+        "descripcion": "alimento balanceado para perro",
+        "stock": 3,
+        "imagenes": "img-1662236201708.png"
     }
    
 ]

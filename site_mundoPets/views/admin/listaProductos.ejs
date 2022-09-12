@@ -20,8 +20,9 @@
                 <th scope="col">#</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">producto</th>
-                <th scope="col">stock</th>
+                <th scope="col">Del Producto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Stock</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Des</th>
                 <th scope="col">Accion</th>
@@ -32,32 +33,30 @@
                   <tr>
                       
                         <th scope="row"><a href="/admin/editar/<%= producto.id %>"><%= producto.id %> </a></th>
-                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.marca %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %>"><%= producto.marca %></a></td>
                         <td colspan="2"><a href="/admin/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
-                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.stock %></a></td>
+                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.categoria %></a></td>
+                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/admin/editar/<%= producto.id %> "><%= producto.precio %></a></td>
                         <td><a href="/admin/editar/<%= producto.id %> "><%= producto.descuento %></a></td>
                         <td>
                           <div>
-                            <% if (redirection !== "lista") { %>
+                           
                               <a href="/admin/editar/<%= producto.id%>">
                                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                            </a>
-                            
-                            <% }else{ %>
-                              <form action="/admin/restaurar/<%= producto.id%>?_method=DELETE" method="post">
-                                <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
-                              </form>
-                            <% } %>
+                              </a>
                               <% if (redirection !== "lista") { %>
                                 <form action="/admin/eliminar/<%= producto.id%>?_method=DELETE" method="post">
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                 </form>
-                              <% }else{ %>
-                                <form action="/admin/crash/<%= producto.id%>?_method=DELETE" method="post">
-                                  <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                                </form>
-                              <% } %>
+                                <% }else{ %>
+                                  <form action="/admin/restaurar/<%= producto.id%>?_method=DELETE" method="post">
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
+                                  </form>
+                                <% } %>
+                          
+                               
+                             
                           </div>  
                         </td>
                       

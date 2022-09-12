@@ -8,9 +8,8 @@
         <%- include('./partials/header') %>
 
             <main>
-
-                <section>
-                    <div class="imagen-principal">
+                <section class="productoPincipal">
+                    <div class="imagen-princ">
                         <img src="/img/<%= producto.imagenes[0] %> " alt=" ">
                     </div>
                     <!-- <div>
@@ -31,27 +30,26 @@
                                     <div class="restar">-</div>
                                     <input type="number">
                                     <div class="agregar">+</div>
-
-                                    <!-- boton de agregar al carrito -->
                                 </div>
-                                <a href="/productos/carrito"><button>Añadir al carrito</button></a>
+                                <!-- boton de agregar al carrito -->
+                                <a href="/productos/carrito"><button class=" principal">Añadir al carrito</button></a>
                             </div>
                         </div>
                     </section>
                     <section class="detail">
                         <h2>Detalle del producto</h2>
-                        <p>
-                            <%= producto.descripcion %>
-                        </p>
+                        <p><%= producto.descripcion %></p>
                     </section>
-                    <section>
+                    <section class="productosRelacionados">
                         <h2>Productos Relacionados</h2>
                         <% for( let i=0; i < 10; i++ ) { %>
                             <a href="/productos/detalle/<%=productos[i].id %>">
                                 <article>
                                     <div class="related-img-0"></div>
-                                    <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
-                                    <p>$<%= productos[i].precio %>
+                                    <div class="prod-rel">
+                                        <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
+                                        <p>$<%= productos[i].precio %>
+                                    </div>
                                     </p>
                                     <h4>
                                         <%= productos[i].titulo %>
