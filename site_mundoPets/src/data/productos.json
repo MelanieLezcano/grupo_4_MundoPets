@@ -1,0 +1,351 @@
+[
+    {
+        "id": 1,
+        "categoria": "Gato",
+        "subcategoria": "cachorro",
+        "titulo": "Royal Canin Kitten 10kg",
+        "marca": "Royal Canin",
+        "precio": 15000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "royal-canin-Gato-kitten--removebg-preview.png"
+        ]
+    },
+    {
+        "id": 2,
+        "categoria": "Gato",
+        "subcategoria": "cachorro",
+        "marca": "Agility",
+        "titulo": "Agility Kitten 5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-agility-Gato-kitten-removebg-preview.png",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 3,
+        "categoria": "Gato",
+        "subcategoria": "cachorro",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Balanced Kitten 7.5kg",
+        "precio": 7500,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-balanced-Gato-kitten-75kg-removebg-preview.png",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 4,
+        "categoria": "Gato",
+        "subcategoria": "cachorro",
+        "marca": "Excellent",
+        "titulo": "Excellent Kitten 7.5kg",
+        "precio": 7800,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-excellent-gatito-kitten-75kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 5,
+        "categoria": "Gato",
+        "subcategoria": "cachorro",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Complete Kitten 7.5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "gk-complete-Gato-kitten-75kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 6,
+        "categoria": "Gato",
+        "subcategoria": "adulto",
+        "marca": "Agility",
+        "titulo": "Agility Adulto 10 kg",
+        "precio": 9000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "ga-agility-Gato-adulto-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 7,
+        "categoria": "Gato",
+        "subcategoria": "adulto",
+        "marca": "Cat Selection",
+        "titulo": "Cat Selection Premium Adulto 10 kg",
+        "precio": 7800,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "ga-cat-selection-adulto-x-10kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 8,
+        "categoria": "Gato",
+        "subcategoria": "adulto",
+        "marca": "Excellent",
+        "titulo": "Excellent Adulto 15 kg",
+        "precio": 15000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "ga-excellent-Gato-adulto-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 9,
+        "categoria": "Gato",
+        "subcategoria": "adulto",
+        "marca": "Infinity",
+        "precio": 8000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "ga-infinity-Gato-adulto-10kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 10,
+        "categoria": "Gato",
+        "subcategoria": "adulto",
+        "marca": "Pro Plan",
+        "titulo": "Pro Plan Adulto 15 kg",
+        "precio": 19000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pro-plan-Gato-adulto--removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 11,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "marca": "Infinity",
+        "titulo": "Infinity Cachorro 10kg",
+        "precio": 15000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "infinity-Perro-cachorro-10kg-removebg-preview.png"
+        ]
+    },
+    {
+        "id": 12,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "marca": "Agility",
+        "titulo": "Agility Cachorro 5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pc-agility-Perro-cachorro-removebg-preview.png",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 13,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Complete Junior 7.5kg",
+        "precio": 7500,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pc-complete-Perro-junior--removebg-preview.png",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    {
+        "id": 14,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "marca": "Dog Selection",
+        "titulo": "Dog Selection Cachorro 10kg",
+        "precio": 9000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pc-dog-selection-Perro-cachorro-x-10kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 15,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "marca": "Eukanuba",
+        "titulo": "Eukanuba Puppy Large 7.5kg",
+        "precio": 8000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pc-eukanuba-puppy-large-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 16,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Complete Adulto 20 kg",
+        "precio": 9000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-complete-adulto-light-20kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 17,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Balanced Adulto 20 kg",
+        "precio": 17000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-balanced-Perro-adulto-medium-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 18,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "marca": "Biopet",
+        "titulo": "Biopet Adulto 15 kg",
+        "precio": 15000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-biopet-criadores-20kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 19,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "marca": "VitalCan",
+        "titulo": "VitalCan Complete Senior  20 kg",
+        "precio": 17000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-complete-Perro-senior-20kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 20,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "marca": "Infinity",
+        "titulo": "Infinity Adulto 20 kg",
+        "precio": 19000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-infinity-Perro-adulto-20kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 21,
+        "categoria": "Gato",
+        "marca": "VitalCan ",
+        "titulo": "VitalCan Complete Balance 10kg    ",
+        "precio": "9500",
+        "descuento": "30",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": "8",
+        "imagenes": [
+            "gk-complete-Gato-kitten-75kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    }
+]
