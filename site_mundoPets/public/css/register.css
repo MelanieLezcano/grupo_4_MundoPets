@@ -86,3 +86,6 @@
 .register main section form .container{
     margin-bottom: 15px;
 }
+.register main small{
+    color: red;
+}

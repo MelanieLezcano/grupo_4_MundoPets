@@ -16,10 +16,10 @@
         <section>
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
-            <form action="" method="get">
+            <form action="" method="POST">
                 <div class="container bottom">
                     <label for="name">Nombre y Apellido</label>
-                    <input type="text" name="name" id="name" placeholder="Ingresa tu nombre y apellido" required>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre y apellido" required>
                     <small>Debe ingresar su nombre</small>
                 </div>
                 <div class="container bottom">
@@ -29,8 +29,18 @@
                 </div>
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
-                    <input type="password" name="pass" id="pass" placeholder="Ingresa una Contraseña">
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa una Contraseña">
                     <small>Debe ingresar su contraseña</small>
+                </div>
+                <div class="container bottom">
+                    <label for="pass"> Confirmá tu contraseña</label>
+                    <input type="password" name="contrasenia2" id="contrasenia2" placeholder="Ingresa tu Contraseña">
+                    <small>Debe ingresar su contraseña</small>
+                </div>
+                <div class="container bottom">
+                    <label for="imagen">Subí tu imagen de perfil</label>
+                    <input type="file" name="imagen" id="imagen">
+                    <small>No se ha subido ninguna imagen</small>
                 </div>
                 <button type="submit">Crear cuenta</button>
                 <!-- <button type="reset">Cancelar</button> -->

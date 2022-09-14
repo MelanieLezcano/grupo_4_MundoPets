@@ -11,6 +11,13 @@
 .login main section.container-image{
     display: none;
 }
+.login main small{
+    color: red;
+}
+.login main .recordame{
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorAzulFrancia);
+}
 .login main button {
     padding: 9px;
     background-color: var(--colorAzulFrancia);

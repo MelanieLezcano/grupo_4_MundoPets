@@ -18,6 +18,8 @@ const fileFilter = function(req,file,callback) {
     callback(null,true);
 }
 
-module.exports = multer({
-    storage
+const upload = multer({
+    storage,
+    fileFilter
 })
+module.exports = upload
