@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 
 
-app.use(express.static(path.resolve(__dirname,'public')));
+app.use(express.static(path.resolve(__dirname,'../public')));
 
 /* trabajar con put y delete */
 app.use(methodOverride('_method'))
