@@ -27,14 +27,14 @@ const {validationResult} = require('express-validator')
         
         let errors = validationResult(req)
          if(req.fileValidationError){
-            let imagen = {
-                param: 'imagen',
+            let Imagenes = {
+                param: 'Imagenes',
                 msg: req.fileValidationError,
             }
-            errors.errors.push(imagen)
+            errors.errors.push(Imagenes)
         } 
          if(errors.isEmpty()){
-            let img = req.files.map(imagen => {
+            let Imagenes = req.files.map(imagen => {
                 return imagen.filename
             })
 
@@ -86,13 +86,13 @@ const {validationResult} = require('express-validator')
            const idParams = +req.params.id
             const {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
             let errors = validationResult(req)
-     /*     if(req.fileValidationError){
-            let imagenes = {
-                param : 'imagenes',
+         if(req.fileValidationError){
+            let Imagenes = {
+                param : 'Imagenes',
                 msg: req.fileValidationError,
             }
-            errors.errors.push(imagenes)
-         } */
+            errors.errors.push(Imagenes)
+         } 
          if(errors.isEmpty()){ 
 
              productos.forEach(producto => {
