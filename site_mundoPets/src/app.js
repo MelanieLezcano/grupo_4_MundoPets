@@ -2,6 +2,8 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 const path = require ('path');
+const methodOverride = require('method-override');
+
 
 
 /* requerir las rutas */
@@ -18,10 +20,15 @@ app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs')
 /* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
 
-//middlewares
+/* metodos HHTP (post) */
+app.use(express.urlencoded({ extended: false}));
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
-app.use(express.static(path.resolve(__dirname,'public')));
 
+
+app.use(express.static(path.resolve(__dirname,'../public')));
+
+/* trabajar con put y delete */
+app.use(methodOverride('_method'))
 
 //RUTAS
 app.use("/", indexRouter);
