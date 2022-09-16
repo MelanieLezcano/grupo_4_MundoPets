@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head',{title: locals.usuarioLogin.nombre}) %> 
+<body class="perfil">
+    <%- include('../partials/header') %>
+    <main>
+        <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
+        <h1>Hola <%= `${locals.usuarioLogin.rol} ${locals.usuarioLogin.nombre}` %></h1>
+        
+        <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
+            <button type="submit">Cerrar Sesion</button>
+        </form>
+    </main>
+    
+</body>
+</html>
