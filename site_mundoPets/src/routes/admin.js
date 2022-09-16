@@ -1,22 +1,9 @@
 const {crear,editar,lista,nuevo,historial,actualizar,eliminar,restaurar} = require('../controllers/adminController')
 const express = require('express') 
 const router = express.Router()
-const path = require('path')
-const multer = require('multer')
 
-
-const storage =multer.diskStorage({
-    destination:(req,file,callback)  => {
-        callback(null,'./public/img')
-    },
-    filename:(req,file,callback) => {
-        callback(null,'img-' + Date.now() + path.extname(file.originalname)) 
-    }
-})
- 
-const upload = multer({
-    storage
-})
+const productosValidaciones= require('../validations/productosValidaciones')
+const upload = require('../middlewares/creacionProducto')
 
 
 /* GET home page */
@@ -28,13 +15,13 @@ router.get('/historial',historial);
 /* const upload = require('../middlewares/creacionProducto'); */
 
 /* crear un producto */
-
-router.get('/crear', crear); 
-router.post('/crear',upload.single('imagenes'),nuevo); 
+/* trabajan con la misma ruta pero el metodo es diferente */
+router.get('/crear', crear); /* estoy pidiendo la vista del formulario,sea de crear editar o lo q sea, */
+router.post('/crear',upload.single('Imagenes'),productosValidaciones,nuevo); /* por la misma ruta yo envio el formulario para que lo complete,post va modificar el tipo de vista para poder modificar y enviar informacion hacia el modelo */
 
 /* editar producto */
 router.get('/editar/:id', editar);
-router.put('/editar/:id',upload.single('imagenes'),actualizar);
+router.put('/editar/:id',upload.single('Imagenes'),productosValidaciones,actualizar);
 
 /* Eliminando un producto */
 router.delete('/eliminar/:id', eliminar);

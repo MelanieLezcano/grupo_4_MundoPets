@@ -19,14 +19,20 @@
                     <!-- Principales -->
                     <div class="col col-lg-4 col-md-12 col-sm-12">
                         <div class="form-floating mb-3"> 
-                            <input type="text" class="form-control" name="Titulo" placeholder="Nombre del producto" id="name" placeholder="name@example.com">
-                            <label for="name">Nombre del producto</label>
-                            <small>Obligatorio</small>
+                            <input type="text" class="form-control" name="Titulo" placeholder="Nombre del producto" id="titulo" value="<%= locals.old && old.Titulo ? old.Titulo : null %> " placeholder="name@example.com">
+                            <label for="titulo">Nombre del producto</label>
+                           <p class="span text-danger">
+                            <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %> 
+                           </p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="Marca" placeholder="Marca del Producto" id="brand">
+                            <input class="form-control" type="text" name="Marca" placeholder="Marca del Producto" id="brand"  value="<%= locals.old && old.Marca? old.Marca : null%>">
                             <label class="form-label" for="brand">Marca del Producto</label>
-                            <small>Obligatorio</small>
+                           <% if (locals.errors && errors.Marca) { %>
+                            <p class="span text-danger">
+                                <%= errors.Marca.msg %> 
+                            </p>
+                           <% } %>
                         </div>
                         <!-- <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Categoria" placeholder="Categoria"  id="category">
@@ -34,19 +40,25 @@
                             <small>Obligatorio</small>
                         </div> -->
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="number" name="Precio" placeholder="Precio del producto" id="price">
+                            <input class="form-control" type="number" name="Precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.Precio? old.Precio: null%>">
                             <label class="form-label" for="price">Precio del producto</label>
-                            <small>Obligatorio</small>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.Precio ? errors.Precio.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="number" name="Descuento" placeholder="Descuento del producto" id="discount">
+                            <input class="form-control" type="number" name="Descuento" placeholder="Descuento del producto" id="discount" value="<%= locals.old && old.Descuento ? old.Descuento : 0%>">
                             <label class="form-label" for="discount">Descuento del producto</label>
-                            <small>Obligatorio</small>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.Descuento ? errors.Descuento.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="Stock" placeholder="Stock con el que cuenta el producto" id="stock">
+                            <input class="form-control" type="text" name="Stock" placeholder="Stock con el que cuenta el producto" id="stock"  value="<%= locals.old && old.Stock ? old.Stock : null%>">
                             <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
-                            <small>Obligatorio</small>
+                            <p class="span text-danger">
+                                <%= locals.errors && errors.Stock ? errors.Stock.msg : null %>
+                            </p>
                         </div>
                     </div>
         
@@ -69,8 +81,8 @@
                                             </div>
                                         </label>
                                         <div class="form-admin__box activo">
-                                            <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen del Producto" accept="img/*">
-                                            <small>Obligatorio</small>
+                                            <input class="form-input" id="imagenes" type="file" name="Imagenes" placeholder="Imagen del Producto" accept="img/*">
+                                            
                                         </div>
                                     </div>
 
@@ -119,6 +131,9 @@
                                     <!-- Columnas -->
 
                                 </div>
+                                <p class="span text-danger">
+                                    <%= locals.errors && errors.Imagenes ? errors.Imagenes.msg : null %>
+                                </p>
                             </div>
 
                         </section>
@@ -139,24 +154,42 @@
                             <div class="col col-4">
                                 <h3 class="text-center">Categoria</h3>
                                 <select class="form-select" name="Categoria"floatingSelect" aria-label="Floating label select example">
-                                    <option selected hidden>Selecciona una opcion</option>
-                                    <option value="Gato">Gato</option>
-                                    <option value="Perro">Perro</option>
-                                   
-                     
+                                    <% if (locals.errors && old.Categoria) { %>
+                                        <option hidden value="">Selecciona una opcion</option>
+                                        <option <%= old.Categoria === "Gato" ? "selected" : null %>  value="Gato">Gato</option>
+                                        <option <%= old.Categoria === "Perro" ? "selected" : null %>   value="Perro">Perro</option>
+                                       
+                                    <% }else{ %>
+                                        <option selected hidden value="">Selecciona una opcion</option>
+                                        <option value="Gato">Gato</option>
+                                        <option value="Perro">Perro</option>
+                                       
+                                    <% } %> 
                                   </select>
+                                  <p class="span text-danger">
+                                    <%= locals.errors && errors.Categoria ? errors.Categoria.msg : null %>
+                                </p>
                             </div>
                     <div class="container m-3" >
                         <div class="row justify-content-around align-items-center">
                             <div class="col col-4">
                                 <h3 class="text-center">SubCategorias</h3>
                                 <select class="form-select" name="Subcategoria"floatingSelect" aria-label="Floating label select example">
-                                    <option selected hidden>Selecciona una opcion</option>
-                                    <option value="Cachorro">Cachorro</option>
-                                    <option value="Adulto">Adulto</option>
-                                    
-                     
+                                    <% if (locals.errors && old.Subcategoria) { %>
+                                        <option hidden value="">Selecciona una opcion</option>
+                                        <option <%= old.Subcategoria === "cachorro" ? "selected" : null %>  value="cachorro">cachorro</option>
+                                        <option <%= old.Subcategoria === "adulto" ? "selected" : null %>   value="adulto">adulto</option>
+                                       
+                                    <% }else{ %>
+                                        <option selected hidden value="">Selecciona una opcion</option>
+                                        <option value="cachorro">cachorro</option>
+                                        <option value="adulto">adulto</option>
+                                       
+                                    <% } %> 
                                   </select>
+                                  <p class="span text-danger">
+                                    <%= locals.errors && errors.Subcategoria ? errors.Subcategoria.msg : null %>
+                                </p>
                             </div>
                     
                         </div>
@@ -167,9 +200,11 @@
                         <div class="row">
                             <div class="col col-12">
                                 <div class="form-floating"> 
-                                    <textarea name="Descripcion" id="description" cols="300" rows="300" class="form-control" placeholder="Leave a comment here" style="resize: none;"></textarea>
+                                    <textarea name="Descripcion" id="description" cols="300" rows="300" class="form-control" placeholder="Leave a comment here" style="resize: none;"><%= locals.old && old.descripcion ? old.descripcion : null%></textarea>
                                     <label for="description">Descripcion del producto</label>
-                                    <small>Obligatorio</small>
+                                    <p class="span text-danger">
+                                        <%= locals.errors && errors.Descripcion ? errors.Descripcion.msg : null %>
+                                    </p>
                                 </div>
                             </div>
                         </div>
