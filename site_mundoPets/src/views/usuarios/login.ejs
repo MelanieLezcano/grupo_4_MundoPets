@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head',{title: 'Login'}) %>  
+<%- include('../partials/head',{title: 'Login'}) %>  
 
 <body class="login">
         
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
 
     <main>
         <section class="container-image">
@@ -27,12 +27,18 @@
                 <div class="container bottom">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-                    <small>Debe ingresar su email</small>
+                    <% if (locals.errors && errors.email) { %>
+                        <small><%= errors.email.msg %> </small>
+                        <!-- <small>Debe ingresar su email</small> -->
+                    <% } %>
                 </div>
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
                     <input type="password" name="pass" id="pass" placeholder="Ingresa tu Contraseña">
-                    <small>Debe ingresar su contraseña</small>
+                    <% if (locals.errors && errors.pass) { %>
+                        <small><%= errors.pass.msg %> </small>
+                        <!-- <small>Debe ingresar su contraseña</small> -->
+                    <% } %>
                 </div>
                 <button type="submit">Inicia sesion</button>
                 <!-- <button type="reset">Cancelar</button> -->
@@ -42,7 +48,7 @@
 
     </main>
 
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 
 </body>
 
