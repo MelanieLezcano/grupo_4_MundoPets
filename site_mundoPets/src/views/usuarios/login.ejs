@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head',{title: 'Login'}) %> 
+<%- include('../partials/head',{title: 'Login'}) %>  
 
 <body class="login">
         
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
 
     <main>
         <section class="container-image">
@@ -18,7 +18,7 @@
             <h4>
                 <p>Inicia sesión a <a href="">MundoPets</a> </p>
             </h4>
-            <form action="" method="get">
+            <form action="" method="post">
                 <!-- <div class="container bottom">
                     <label for="name">Nombre y Apellido</label>
                     <input type="text" name="name" id="name" placeholder="Ingresa tu nombre y apellido" required>
@@ -27,12 +27,18 @@
                 <div class="container bottom">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-                    <small>Debe ingresar su email</small>
+                    <% if (locals.errors && errors.email) { %>
+                        <small><%= errors.email.msg %> </small>
+                        <!-- <small>Debe ingresar su email</small> -->
+                    <% } %>
                 </div>
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
                     <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu Contraseña">
-                    <small>Debe ingresar su contraseña</small>
+                    <% if (locals.errors && errors.contrasenia { %>
+                        <small><%= error.contrasenia.msg %> </small>
+                        <!-- <small>Debe ingresar su contraseña</small> -->
+                    <% } %>
                 </div>
                 <div class="recordarme bottom">
                     <input type="checkbox" name="recordarme" id="recordarme">
@@ -46,7 +52,7 @@
 
     </main>
 
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 
 </body>
 

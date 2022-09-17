@@ -16,8 +16,6 @@ let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
 
 
-
-
 //view engine setup
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs')
@@ -38,11 +36,8 @@ app.use(session({secret:"Mundo Pets"}))
 
 app.use(usuarioLogin)
 
+
 app.use(cookieParser());
-
-
-
-
 
 //RUTAS
 app.use("/", indexRouter);
