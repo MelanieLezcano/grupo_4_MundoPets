@@ -2,9 +2,12 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 const path = require ('path');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const session =require('express-session')
 
-
+/* implementar locals dentro de la app*/
+const usuarioLogin = require('./middlewares/usuarioLoginCheck')
 
 /* requerir las rutas */
 let indexRouter = require('./routes/index')
@@ -29,6 +32,17 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 
 /* trabajar con put y delete */
 app.use(methodOverride('_method'))
+
+/* login e inicio de sesion  */
+app.use(session({secret:"Mundo Pets"}))
+
+app.use(usuarioLogin)
+
+app.use(cookieParser());
+
+
+
+
 
 //RUTAS
 app.use("/", indexRouter);
