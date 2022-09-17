@@ -35,7 +35,9 @@ app.use(methodOverride('_method'))
 
 
 /* Login e inicio de sesion */
-app.use(session({secret : "Grupo 4"}))
+app.use(session({secret : "Mundo Pets"}))
+
+app.use(usuarioLogin)
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..', 'public')));
