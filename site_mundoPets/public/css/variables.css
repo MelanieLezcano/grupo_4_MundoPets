@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;700&family=Mukta:wght@200;300;400;500;600;800&display=swap');
+
+:root{
+    /* Fuentes */
+    --fuenteTitulos:'Baloo Tammudu 2', cursive;
+    --fuenteSubtitulos:'Mukta', sans-serif;
+
+    /* Colores */
+    --colorAmarillo: #fddf65;
+    --colorNaranja: #f0a52a;
+    --colorHueso: #f3f4f6;
+    --colorGris: #dcebf0;
+    --colorAzulFrancia: #1c7eed;
+    --colorAzulMarino: #1f66b2;
+    --colorCeleste: #88b6db;
+}

@@ -1,0 +1,778 @@
+.mainHome {
+    background-size: 100%;
+    width: 100%;
+ 
+    background-repeat: no-repeat;
+    background-position: cover;
+    margin-top: 20px;
+} 
+
+
+
+.mainHome .banner h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: var(--fuenteTitulos);
+    font-size: large;
+    text-align: center;
+    background-color: rgba(127, 164, 243, 0.452);
+    padding: 5px;
+
+
+}
+
+.mainHome .banner {
+    position: relative;
+}
+
+.mainHome .banner img {
+    width: 100%;
+}
+
+.mainHome .section1 {
+    width: 100%;
+    margin-top: 8px;
+   
+    padding: 8px;
+    text-align: center;
+    font-size: large;
+   
+}
+
+.mainHome h3 {
+    margin: 10px;
+    font-family: var(--fuenteTitulos);
+    color: var(--colorAzulMarino);
+    text-align: center;
+    margin-top: 4px;
+    
+}
+
+.mainHome .destacadosP {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorAzulMarino);
+    text-align: center;
+    margin-top: 6px;
+}
+
+
+.mainHome .logos {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white
+}
+
+.mainHome .logos img {
+    width: 20%;
+    padding: 10px;
+    /*  margin-top: 10px; */
+}
+
+/* CARROUSEL*/
+.carrousel{
+    width: 95%;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.carrousel .glider-contain {
+    width: 80%;
+    height: 410px;
+    margin: 0 auto;
+    position: relative
+   }
+    
+   .carrousel  .glider {
+    height: 410px;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    transform: translateZ(0);
+  }
+  .carrousel .glider-track {
+    height: 378px;
+    transform: translateZ(0);
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+  }
+  .carrousel  .glider.draggable {
+    user-select: none;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  .carrousel  .glider.draggable .glider-slide img {
+    user-select: none;
+    pointer-events: none;
+  }
+  .carrousel  .glider.drag {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  .carrousel  .glider-slide {
+    height: 378px;
+    user-select: none;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+  }
+  .carrousel .glider-slide img {
+    max-width: 80%;
+  }
+  .carrousel  .glider::-webkit-scrollbar {
+    opacity: 0;
+    height: 0;
+  }
+  .carrousel .glider-prev,.glider-next {
+    user-select: none;
+    position: absolute;
+    outline: none;
+    background: none;
+    padding: 0;
+    z-index: 2;
+    font-size: 40px;
+    text-decoration: none;
+    left: 15px;
+    border: 0;
+    top: 30%;
+    cursor: pointer;
+    color: #666;
+    opacity: 1;
+    line-height: 1;
+    transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
+                color .5s cubic-bezier(.17,.67,.83,.67);
+  }
+  .carrousel  .glider-prev:hover,
+  .glider-next:hover,
+  .glider-prev:focus,
+  .glider-next:focus {
+    color: #a89cc8;
+  }
+  .carrousel .glider-next {
+    right: 20px;
+    left: auto;
+  }
+  .carrousel  .glider-next.disabled,
+  .glider-prev.disabled {
+    opacity: .25;
+    color: #666;
+    cursor: default;
+  }
+  .carrousel  .glider-slide {
+    min-width: 150px;
+  }
+  .carrousel  .glider-hide {
+    opacity: 0;
+  }
+  .carrousel .glider-dots {
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .carrousel  .glider-dot {
+    border: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    color: #ccc;
+    border-radius: 999px;
+    background: #ccc;
+    width: 12px;
+    height: 12px;
+    margin: 7px;
+  }
+  .carrousel  .glider-dot:hover,
+  .glider-dot:focus,
+  .glider-dot.active {
+    background: #a89cc8;
+  }
+  @media(max-width: 36em){
+    .carrousel  .glider::-webkit-scrollbar {
+      opacity: 1;
+      -webkit-appearance: none;
+      width: 7px;
+      height: 3px;
+    }
+    .carrousel  .glider::-webkit-scrollbar-thumb {
+      opacity: 1;
+      border-radius: 99px;
+      background-color: rgba(156, 156, 156, 0.25);
+      box-shadow: 0 0 1px rgba(255,255,255,.25);
+    }
+  }  
+
+
+
+  .mainHome .links {
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+    margin-top: 4px;
+    margin: 80px 20px 20px;
+}
+
+.mainHome .links section {
+    width: 40%;
+    height: 150px;
+    text-align: center;
+    justify-items: center;
+
+}
+
+.mainHome .img {
+    width: 100%;
+}
+
+.mainHome .image img {
+    width: 100%;
+}
+
+.mainHome .image img {
+    width: 80%;
+}
+
+
+.mainHome .links section .perro a,
+.gato a {
+    text-align: left;
+    color: var(--colorAzulMarino);
+}
+
+.mainHome .links section img {
+    width: 80%;
+}
+
+.mainHome .links .perro {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: var(--colorNaranja);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.mainHome .perro div img {
+    width: 70%;
+}
+
+.mainHome .perro a {
+    width: 10%;
+    font-size: 16px;
+}
+
+.mainHome .links .gato {
+
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--colorAmarillo);
+}
+
+.mainHome .gato div img {
+    width: 70%;
+}
+
+.mainHome .gato a {
+    text-align: left;
+    width: 10%;
+    font-size: 16px;
+}
+
+.mainHome .links .nosotros {
+
+    margin: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorCeleste);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.mainHome .nosotros a,
+.contacto a {
+    color: white;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.mainHome .links .contacto {
+
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--colorAzulMarino);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.mainHome .links div i {
+    width: 100%;
+    font-size: 75px;
+    color: white;
+    text-align: center;
+
+}
+
+.mainHome a {
+    font-family: var(--fuenteSubtitulos);
+}
+.mainHome .quienSomos{
+    display: none;
+}
+
+
+/* Tablet */
+@media (min-width:426px) {
+    .mainHome .links {
+        text-align: center;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-self: center;
+        align-items: center;
+        margin-top: 4px;
+        margin: 50px 20px 20px;
+    }
+
+    .mainHome .links section {
+        width: 36%;
+        height: 180px;
+        text-align: center;
+        justify-items: center;
+
+    }
+
+    .mainHome .dog,
+    .cat,
+    .paw,
+    .envelop {
+        width: 90%;
+        height: 160px;
+    }
+
+    .mainHome .links section .perro a,
+    .gato a {
+        font-size: 20px;
+        color: var(--colorAzulMarino);
+    }
+
+
+    .mainHome .links .perro {
+        margin: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background-color: var(--colorNaranja);
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .mainHome .dog {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .mainHome .dog img {
+        width: 60%;
+        height: 140px;
+    }
+
+    .mainHome .perro a {
+        width: 20%;
+        height: 70px;
+
+
+    }
+
+    .mainHome .links .gato {
+
+        margin: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: var(--colorAmarillo);
+    }
+
+    .mainHome .cat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .mainHome .gato div img {
+        width: 60%;
+        height: 140px;
+    }
+
+    .mainHome .gato a {
+        font-size: 20px;
+        width: 40%;
+        height: 70px;
+
+    }
+
+
+    .mainHome .links .nosotros {
+
+        margin: 15px;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorCeleste);
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .mainHome .paw {
+        display: contents;
+        flex-direction: column;
+    }
+
+    .mainHome .nosotros a,
+    .contacto a {
+        color: white;
+        margin-top: 6px;
+        margin-bottom: 2px;
+        text-align: center;
+
+    }
+
+    .mainHome .links .contacto {
+
+        margin: 15px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: var(--colorAzulMarino);
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .mainHome .envelop {
+        display: contents;
+        flex-direction: column;
+    }
+
+    .mainHome .links div i {
+        width: 100%;
+        font-size: 100px;
+        color: white;
+        text-align: center;
+
+    }
+
+    .mainHome .perro a,
+    .gato a,
+    .contacto a,
+    .nosotros a {
+        font-family: var(--fuenteSubtitulos);
+        font-size: 20px;
+    }
+    .mainHome .quienSomos{
+        display: none;
+    }
+    
+
+
+}
+
+/* Desktop */
+@media (min-width:1024px) {
+    main {
+
+        background-size: 100%;
+        width: 100%;
+        
+        background-repeat: no-repeat;
+      
+        background-position: cover;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .mainHome .banner {
+        position: relative;
+    }
+
+    .mainHome .banner img {
+        width:100%;
+        height: 716px;
+        margin-bottom: 50px;
+    }
+
+
+    .mainHome .banner h2 {
+        position: absolute;
+        top: 230px;
+        height: 35px;
+        width: 50%;
+        font-family: var(--fuenteTitulos);
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        background-color: rgba(127, 164, 243, 0.452);
+        padding: 1px;
+        margin: 2px;
+        margin-bottom: 20px;
+
+
+    }
+
+    .mainHome .section1 {
+        position: relative;
+        width: 100%;
+        height: 151px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+        padding: 8px;
+        text-align: center;
+        font-size: large;
+       
+    }
+   
+
+    .mainHome .marcas {
+        position: absolute;
+        padding: 10px;
+        left: 50px;
+        top: 680px;
+        width: 90%;
+        height: 48px;
+        font-size: 30px;
+      
+        margin-bottom: 10px;
+        font-family: var(--fuenteTitulos);
+        color: var(--colorAzulMarino);
+        text-align: center;
+        background-color: white;
+        border-radius: 50px;
+    }
+    
+    
+
+    .mainHome .logos {
+        position: absolute;
+        top: 783px;
+        margin: 0 auto;
+        width: 100%;
+        height: 161px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+    }
+
+    .mainHome .logos img {
+        
+        width: 23%;
+        padding: 10px;
+        height:  140px
+        /*  margin-top: 10px; */
+    }
+
+ 
+    .mainHome .links {
+        position: relative;
+        text-align: center;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-self: center;
+        align-items: center;
+        margin-top: 40px;
+     
+    }
+
+    .mainHome .links section {
+        width: 362px;
+        height: 347px;
+        text-align: center;
+        justify-items: center;
+
+    }
+    .mainHome .links section .perro a, .gato a {
+        text-align: left;
+        color: var(--colorAzulMarino);
+    }
+
+
+    .mainHome .links .perro {
+        position: absolute;
+        top: -827px;
+        margin-right: 390px;
+        text-align: left;
+        width: 300px;
+        height: 285px;
+      
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background-color: var(--colorNaranja);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    .mainHome .dog{
+        width: 300px;
+        height: 285px;
+    }
+
+    .mainHome .perro div img {
+        width: 231px;
+        height: 270px;
+    }
+
+    .mainHome .perro a {
+        text-align: center;
+        width: 30%;
+        font-size: 30px;
+    }
+
+    .mainHome .links .gato {
+        position: absolute;
+        text-align: right;
+        margin-left: 526px;
+        top: -827px;
+        width: 300px;
+        height: 285px;
+   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: var(--colorAmarillo);
+    }
+    .mainHome .cat{
+        width: 300px;
+        height: 285px;
+    }
+
+    .mainHome .gato div img {
+        width: 182px;
+        height: 231px;
+    }
+
+    .mainHome .gato a {
+        text-align: center;
+   
+        width: 30%;
+        font-size: 30px;
+    }
+
+    .mainHome .links .nosotros {
+        display: none;
+   
+    }
+
+    .mainHome .nosotros a,
+    .contacto a {
+        color: white;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+
+    .mainHome .links .contacto {
+        display: none;
+     
+    }
+
+    .mainHome .links div i {
+        width: 100%;
+        font-size: 75px;
+        color: white;
+        text-align: center;
+
+    }
+
+    .mainHome a {
+        font-family: var(--fuenteSubtitulos);
+    }
+   
+    .mainHome .quienSomos {
+        position: relative;
+        bottom: -360px;
+        display: flex;
+        width:90%;
+        height: 234px;
+        text-align: center;
+        display: flex;
+        right: -20px;
+    }
+    .mainHome .quienSomos  a {
+        width: 60%;
+        
+    }
+    .mainHome .quienSomos  a img {
+        width: 100%;
+        
+    }
+
+    .mainHome .quienSomos p{
+        width: 40%;
+        font-size: 17px;
+        font-style: italic;
+        font-family: var(--fuenteTitulos);
+        color:black;
+
+    }
+    
+
+
+}
+
+
+
+

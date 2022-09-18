@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+ }
+ li{
+     list-style: none;
+ }
+ a{
+     text-decoration: none;
+ }
+
+ body{
+     margin: 0 auto;
+     background-image: url('../img/fondoPaws.png');
+     background-attachment: fixed;
+     background-size: 100% 100%;
+    /*  width: 100%; */
+     background-repeat: no-repeat;
+     display: block;
+     background-position: cover;
+     background-size: 180%;
+     background-repeat: no-repeat;
+
+
+ }
+ .admin a{
+    color: black;
+   }
+    
+ 

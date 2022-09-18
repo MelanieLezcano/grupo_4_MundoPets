@@ -1,0 +1,29 @@
+.mainNosotros{
+    margin: 0 auto;
+    width: 100%;
+   
+
+}
+
+.mainNosotros .quienesSomos{
+width: 100%;
+margin: 0 auto;
+background-color: rgba(240, 255, 255, 0.541);
+}
+ .mainNosotros .quienesSomos h1{
+    font-family: var(--fuenteTitulos);
+    text-align: center;
+    font-size: 50px;
+    color: var(--colorAzulFrancia);
+    margin-top: 30px;
+    padding-top: 24px;
+ }
+ .mainNosotros .quienesSomos p{
+    text-align: center;
+    width: 90%;
+    color: var(--colorAzulMarino);
+    margin-left: 15px;
+    font-size: 17px;
+   
+
+ }

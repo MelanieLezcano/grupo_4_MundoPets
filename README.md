@@ -65,7 +65,14 @@ Eleccion de alimentos
 Eleccion de alimentos, estilo footer
 - https://infinity.com.ar/
 Categoria segun etapa de vida de las mascotas 
+<<<<<<< HEAD
 -----------
 ### Link tablero Trello
 
 https://trello.com/b/yL45lJmn/grupo-4
+=======
+
+
+### Link al tablero de trello
+>[Trello](https://trello.com/b/yL45lJmn/grupo-4)
+>>>>>>> c82daebc483eb7251058dbc109f38f7c4fd9e1c6
