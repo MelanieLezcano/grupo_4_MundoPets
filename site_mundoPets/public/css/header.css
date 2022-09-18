@@ -147,6 +147,9 @@ header  .menu input:checked~nav {
    header .top .nav .usuario i{
       
    }
+   header .top .nav .register{
+      
+   }
 
 header .burger{
    display: none
