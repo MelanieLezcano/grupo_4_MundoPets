@@ -15,8 +15,8 @@ module.exports = [
  .notEmpty().withMessage('Debe ingresar su contraseña').bail()
  .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
 
- body('email') /* value es lo que estamos recibiendo por valor de email */
- .custom((value,{req}) => {
+ //body('email') /* value es lo que estamos recibiendo por valor de email */
+/*  .custom((value,{req}) => {
     let usuario = usuarios.find(usuario => usuario.email === value && bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia))
     if (usuario) {
         return true
@@ -25,5 +25,5 @@ module.exports = [
     }
  })
 
- .withMessage('El usuario no se encuentra registrado')
+ .withMessage('El usuario no se encuentra registrado') */
 ]

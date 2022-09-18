@@ -2,6 +2,7 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 const path = require ('path');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const session =require('express-session')
 
@@ -36,6 +37,8 @@ app.use(methodOverride('_method'))
 app.use(session({secret:"Mundo Pets"}))
 
 app.use(usuarioLogin)
+
+app.use(cookieParser());
 
 //RUTAS
 app.use("/", indexRouter);
