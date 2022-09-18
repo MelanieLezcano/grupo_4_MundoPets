@@ -4,7 +4,7 @@ const port = 3000;
 const path = require ('path');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const session =require('express-session')
+const session = require('express-session')
 
 /* implementar locals dentro de la app*/
 const usuarioLogin = require('./middlewares/usuarioLoginCheck')
@@ -37,6 +37,10 @@ app.use(session({secret:"Mundo Pets"}))
 app.use(usuarioLogin)
 
 app.use(cookieParser());
+
+app.use(express.static(path.join(__dirname,'..', 'public')));
+
+
 
 //RUTAS
 app.use("/", indexRouter);
