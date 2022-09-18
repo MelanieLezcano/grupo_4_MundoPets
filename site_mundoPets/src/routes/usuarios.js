@@ -1,6 +1,7 @@
 const express = require('express') /*  */
 const {login,register, processLogin,perfil,cerrarSesion} = require('../controllers/usuariosControllers')
 const router = express.Router()
+const registerValidaciones = require('../validaciones/registerValidaciones')
 
 
 const upload = require('../middlewares/multerUsuarios')

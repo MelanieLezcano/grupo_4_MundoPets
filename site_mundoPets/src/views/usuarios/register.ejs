@@ -16,16 +16,27 @@
         <section>
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
-            <form action="" method="POST">
+            <form action="/usuarios/register"  method="POST">
                 <div class="container bottom">
-                    <label for="name">Nombre y Apellido</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre y apellido" required>
-                    <small>Debe ingresar su nombre</small>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <small><%= errors.nombre.msg %></small>
+                    <% } %>
+                </div>
+                <div class="container bottom">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
+                    <% if (locals.errors && errors.apellido) { %>
+                        <small><%= errors.apellidp.msg %></small>
+                    <% } %>
                 </div>
                 <div class="container bottom">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa un email">
-                    <small>Debe ingresar su email</small>
+                    <% if (locals.errors && errors.email) { %>
+                        <small><%= errors.email.msg %></small>
+                    <% } %>
                 </div>
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
