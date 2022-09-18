@@ -1,27 +1,20 @@
 const express = require('express') /*  */
-const {login,register, processLogin,perfil,cerrarSesion} = require('../controllers/usuariosControllers')
+const {login,register, processRegister, processLogin,perfil,cerrarSesion} = require('../controllers/usuariosControllers')
 const router = express.Router()
-const registerValidaciones = require('../validaciones/registerValidaciones')
-const upload = require('../middlewares/multerUsuarios')
 
 const upload = require('../middlewares/multerUsuarios')
+const registerValidaciones = require('../validations/registerValidaciones')
 const loginValidaciones = require('../validations/loginValidaciones')
 
-/* const registerValidaciones = require('../validations/registerValidaciones')
- */
-
-/* register */
-router.get('/register', register)
 
 
-/* login */
-router.get('/login', login)
+router.get('/register', register);
+router.post('/register',upload.single('imagen'),registerValidaciones,processRegister);
+
+router.get('/login',login)
 router.post('/login',loginValidaciones,processLogin);
 
-
-/* perfil */
 router.get('/perfil',perfil)
 router.delete('/cerrarSesion',cerrarSesion)
-
 
 module.exports = router

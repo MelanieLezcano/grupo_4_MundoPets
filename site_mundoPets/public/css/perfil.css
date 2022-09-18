@@ -1,0 +1,20 @@
+.perfil main{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.perfil main h1 {
+    text-transform: capitalize;
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorAzulMarino);
+}
+
+.perfil main button {
+    border: none;
+    background-color: var(--colorNaranja);
+    height: 40px;
+    color: var(--colorAzulFrancia);
+    border-radius: 8px;
+}

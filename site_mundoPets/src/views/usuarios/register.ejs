@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%-include('../partials/head',{title: 'Register'})  %>
+    <%- include('../partials/head',{title: 'Register'}) %> 
 
 <body class="register">
     
@@ -16,43 +16,46 @@
         <section>
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
-            <form action="/usuarios/register"  method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="container bottom">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                    <label for="name">Nombre y Apellido</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre y apellido" value="<%= locals.old && old.nombre ? old.nombre : null %> ">
                     <% if (locals.errors && errors.nombre) { %>
-                        <small><%= errors.nombre.msg %></small>
-                    <% } %>
-                </div>
-                <div class="container bottom">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
-                    <% if (locals.errors && errors.apellido) { %>
-                        <small><%= errors.apellido.msg %></small>
-                    <% } %>
+                        <small><%= errors.nombre.msg%></small>
+                       <% } %>
+                    
                 </div>
                 <div class="container bottom">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Ingresa un email">
+                    <input type="email" name="email" id="email" placeholder="Ingresa un email" value="<%= locals.old && old.email ? old.email : null %>">
                     <% if (locals.errors && errors.email) { %>
-                        <small><%= errors.email.msg %></small>
-                    <% } %>
+                        <small><%= errors.email.msg%></small>
+                       <% } %>
+                   
                 </div>
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
                     <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa una Contraseña">
-                    <small>Debe ingresar su contraseña</small>
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <small><%= errors.contrasenia.msg%></small>
+                       <% } %>
+                    
                 </div>
                 <div class="container bottom">
                     <label for="pass"> Confirmá tu contraseña</label>
                     <input type="password" name="contrasenia2" id="contrasenia2" placeholder="Ingresa tu Contraseña">
-                    <small>Debe ingresar su contraseña</small>
+                    <% if (locals.errors && errors.contrasenia2) { %>
+                        <small><%= errors.contrasenia2.msg%></small>
+                       <% } %>
                 </div>
                 <div class="container bottom">
                     <label for="imagen">Subí tu imagen de perfil</label>
                     <input type="file" name="imagen" id="imagen">
-                    <small>No se ha subido ninguna imagen</small>
+                    <% if (locals.errors && errors.imagen) { %>
+                        <small><%= errors.imagen.msg%></small>
+                       <% } %>
                 </div>
+
                 <button type="submit">Crear cuenta</button>
                 <!-- <button type="reset">Cancelar</button> -->
             </form>

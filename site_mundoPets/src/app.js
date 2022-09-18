@@ -1,10 +1,10 @@
 const express = require ('express');
 const app = express();
-const port = 3000;
+const port = 3018;
 const path = require ('path');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const session = require('express-session')
+const session =require('express-session')
 
 /* implementar locals dentro de la app*/
 const usuarioLogin = require('./middlewares/usuarioLoginCheck')
@@ -16,20 +16,23 @@ let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
 
 
+
+
 //view engine setup
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs')
 /* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
 
 /* metodos HHTP (post) */
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false}));/* para trabajar con req.body */
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 
 
-app.use(express.static(path.resolve(__dirname,'../public')));
+app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /* trabajar con put y delete */
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))/* para trabajar los formularios de mejor manera */
+
 
 /* login e inicio de sesion  */
 app.use(session({secret:"Mundo Pets"}))
@@ -37,10 +40,6 @@ app.use(session({secret:"Mundo Pets"}))
 app.use(usuarioLogin)
 
 app.use(cookieParser());
-
-app.use(express.static(path.join(__dirname,'..', 'public')));
-
-
 
 //RUTAS
 app.use("/", indexRouter);

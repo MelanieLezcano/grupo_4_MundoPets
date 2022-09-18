@@ -32,8 +32,9 @@ const {validationResult} = require('express-validator')
                 msg: req.fileValidationError,
             }
             errors.errors.push(Imagenes)
-        } 
-         if(errors.isEmpty()){
+        }  /* return res.send(errors) */
+        
+          if(errors.isEmpty()){
             let Imagenes = req.files.map(imagen => {
                 return imagen.filename
             })
@@ -51,21 +52,21 @@ const {validationResult} = require('express-validator')
                   descuento:+Descuento,
                   descripcion:Descripcion,
                   stock:+Stock,
-                  imagenes : req.file ? req.file.filename : 'default-image.png', /* tendra por defecto esta imagen */
-              }
-      
+                  imagenes : req.file ? req.file.filename : 'default-image.png',
+              } 
+       
               productos.push(productoNuevo)
-              guardar(productos) 
+              guardar(productos)   
       
-              /* redirecciona a la lista de productos */
-              res.redirect('/admin/lista')
-            }else{
-                
-               return res.render('admin/crearProducto',{
+             
+               res.redirect('/admin/lista') 
+             }else{  
+               
+                return res.render('admin/crearProducto',{
                 errors : errors.mapped(),
-                old: req.body /* nos trae todo lo que la presona escribio antes */
-               })
-            }
+                old: req.body 
+               })  
+             }   
             
         },
         editar: (req, res) => {
@@ -86,7 +87,7 @@ const {validationResult} = require('express-validator')
            const idParams = +req.params.id
             const {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
             let errors = validationResult(req)
-         if(req.fileValidationError){
+          if(req.fileValidationError){
             let Imagenes = {
                 param : 'Imagenes',
                 msg: req.fileValidationError,

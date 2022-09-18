@@ -86,25 +86,6 @@
 .register main section form .container{
     margin-bottom: 15px;
 }
-<<<<<<< HEAD
 .register main small{
     color: red;
-=======
-
-.register .imagenPerfil label{
-    background-color: var(--colorNaranja);
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid white;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.register .imagenPerfil input{
-    display: none;
-}
-
-.register small{
-    color: var(--colorNaranja)
->>>>>>> 8b3f4384588a7092fac58e65c3f79f623984d21d
 }
