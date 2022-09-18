@@ -18,10 +18,18 @@
             <p>completa los siguientes datos</p>
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="container bottom">
-                    <label for="name">Nombre y Apellido</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre y apellido" value="<%= locals.old && old.nombre ? old.nombre : null %> ">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre " value="<%= locals.old && old.nombre ? old.nombre : null %> ">
                     <% if (locals.errors && errors.nombre) { %>
                         <small><%= errors.nombre.msg%></small>
+                       <% } %>
+                    
+                </div>
+                <div class="container bottom">
+                    <label for="name">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" value="<%= locals.old && old.apellido ? old.apellido : null %> ">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <small><%= errors.apellido.msg%></small>
                        <% } %>
                     
                 </div>
@@ -48,8 +56,8 @@
                         <small><%= errors.contrasenia2.msg%></small>
                        <% } %>
                 </div>
-                <div class="container bottom">
-                    <label for="imagen">Subí tu imagen de perfil</label>
+                <div class="imagenPerfil">
+                    <label for="imagen">Foto de perfil</label>
                     <input type="file" name="imagen" id="imagen">
                     <% if (locals.errors && errors.imagen) { %>
                         <small><%= errors.imagen.msg%></small>

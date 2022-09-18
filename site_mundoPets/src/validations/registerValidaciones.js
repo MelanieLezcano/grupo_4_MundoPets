@@ -6,9 +6,9 @@ module.exports = [
     .notEmpty().withMessage('Debe ingresar su nombre').bail()
     .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
       // Apellido
-     /*  check('apellido').trim()
+     check('apellido').trim()
       .notEmpty().withMessage('Debe ingresar su nombre').bail()
-      .isLength({ min: 2 }).withMessage('Debe contener al menos 2 caracteres'), */
+      .isLength({ min: 2 }).withMessage('Debe contener al menos 2 caracteres'), 
     /* email */
     check('email').trim()
     .notEmpty().withMessage('Debe ingresar su email').bail()
