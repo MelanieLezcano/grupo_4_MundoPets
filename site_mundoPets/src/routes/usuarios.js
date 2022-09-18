@@ -6,8 +6,8 @@ const router = express.Router()
 const upload = require('../middlewares/multerUsuarios')
 const loginValidaciones = require('../validations/loginValidaciones')
 
-/* const registerValidaciones = require('../validations/registerValidaciones') */
-
+/* const registerValidaciones = require('../validations/registerValidaciones')
+ */
 
 /* register */
 router.get('/register', register)

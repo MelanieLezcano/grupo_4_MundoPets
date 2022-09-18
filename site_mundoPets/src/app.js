@@ -36,7 +36,6 @@ app.use(session({secret:"Mundo Pets"}))
 
 app.use(usuarioLogin)
 
-
 app.use(cookieParser());
 
 //RUTAS
