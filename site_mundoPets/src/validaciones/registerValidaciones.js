@@ -9,7 +9,7 @@ module.exports = [
 
     // Apellido
     check('apellido').trim()
-        .notEmpty().withMessage('Debe ingresar su nombre').bail()
+        .notEmpty().withMessage('Debe ingresar su apellido').bail()
         .isLength({ min: 2 }).withMessage('Debe contener al menos 2 caracteres'),
 
     // Email
