@@ -60,11 +60,11 @@
     {
         "id": 5,
         "nombre": "Melanie",
-        "apellido": "Brailey",
-        "email": "abrailey4@dell.com",
-        "contrasenia": "eaXmNTTYy",
+        "apellido": "Lezcano",
+        "email": "melanie.s.lezcano@gmail.com",
+        "contrasenia": "12345678",
         "contacto": "278-505-2526",
-        "ciudad": "Kushk",
+        "ciudad": "Lanús",
         "genero": "Femenino",
         "rol": "Administrador",
         "direccion": "832 Granby Center",
@@ -99,23 +99,5 @@
         "direccion": "mi casa 123",
         "numeroTarjeta": "5007667339597880",
         "imagenPerfil": "https://robohash.org/doloresestvoluptatibus.png?size=50x50&set=set1"
-    },
-    {
-        "id": 8,
-        "nombre": "melanie",
-        "apellido": "lezcano",
-        "email": "melanie.s.lezcano@gmail.com",
-        "contrasena": "12345678",
-        "imagenPerfil": "Capturar.PNG",
-        "rol": "usuario"
-    },
-    {
-        "id": 9,
-        "nombre": "melaniewr2",
-        "apellido": "lezcanower2w",
-        "email": "melanie.s.lezcano@gmail.com",
-        "contrasenia": "12345678",
-        "imagenPerfil": "Jsu35YNc7fhByjGvN7hrl1ULZtvfnN3FT5WKIxfC4UQ.jpg",
-        "rol": "usuario"
     }
 ]

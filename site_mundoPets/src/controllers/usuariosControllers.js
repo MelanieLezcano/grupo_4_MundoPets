@@ -1,12 +1,27 @@
 const fs = require('fs');
 const path = require('path')
+<<<<<<< HEAD
 const {validationResult} = require('express-validator');
 /* const bcrypt = require('bcryptjs') */
+=======
+
+const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs')
+>>>>>>> bd7be316b94496bd9d030bdc5d64d73ff5c3618c
 const usuarios = require('../data/usuarios.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8') 
 
 module.exports = {
+<<<<<<< HEAD
+=======
+    login: (req, res) => {
+        return res.render('usuarios/login')
+    },
+
+    processLogin: (req, res) => {},
+
+>>>>>>> bd7be316b94496bd9d030bdc5d64d73ff5c3618c
     register: (req, res) => {
         return res.render('usuarios/register')
     },
