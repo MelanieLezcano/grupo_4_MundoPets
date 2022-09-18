@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs')
 const usuarios = require('../data/usuarios.json')
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -11,18 +12,7 @@ module.exports = {
         return res.render('usuarios/login')
     },
 
-    processLogin: (req, res) => {
-        let errors = validationResult(req)
-        if (errors.isEmpty()) {
-            return res.send(req.body)
-        } else {
-            /* return res.send(errors.mapped()) */
-            return res.render('usuarios/login', {
-                errors: errors.mapped(),
-                old: req.body
-            })
-        }
-    },
+    processLogin: (req, res) => {},
 
     register: (req, res) => {
         return res.render('usuarios/register')
@@ -46,8 +36,8 @@ module.exports = {
                 nombre,
                 apellido,
                 email,
-                contrasenia,
-                imagenPerfil: req.body.imagenPerfil ? req.body.imagenPerfil : "avatar-porDefecto.jpg",
+                contrasenia: bcrypt.hashSync(contrasenia, 10),
+                imagenPerfil: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.jpg",
                 rol: "usuario"
             }
             usuarios.push(usuarioNuevo)
