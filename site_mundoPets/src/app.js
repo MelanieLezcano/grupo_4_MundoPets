@@ -4,18 +4,17 @@ const port = 3000;
 const path = require ('path');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const session = require('express-session');
+const session = require('express-session')
 
 
-
+/* implementar locals dentro de la app*/
+const usuarioLogin = require('./middlewares/usuarioLoginCheck')
 
 /* requerir las rutas */
 let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin')
 let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
-
-
 
 
 //view engine setup
@@ -34,13 +33,19 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.use(methodOverride('_method'))
 
 
+
 /* Login e inicio de sesion */
 app.use(session({secret : "Mundo Pets"}))
+
+
 
 app.use(usuarioLogin)
 
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname,'..', 'public')));
+
+
 
 //RUTAS
 app.use("/", indexRouter);
