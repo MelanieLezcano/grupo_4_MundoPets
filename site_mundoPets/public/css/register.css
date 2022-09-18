@@ -86,3 +86,20 @@
 .register main section form .container{
     margin-bottom: 15px;
 }
+
+.register .imagenPerfil label{
+    background-color: var(--colorNaranja);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.register .imagenPerfil input{
+    display: none;
+}
+
+.register small{
+    color: var(--colorNaranja)
+}
