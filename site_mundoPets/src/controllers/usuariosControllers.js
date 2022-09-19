@@ -38,7 +38,7 @@ module.exports = {
                return res.redirect('/') 
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-            if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
+            if (ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
