@@ -28,7 +28,7 @@ module.exports = {
                 nombre,
                 email,
                 contrasenia:bcrypt.hashSync(contrasenia, 10),
-                imagen: req.file.size > 1 ? req.file.filename : "avatar-pordefecto.jpg",
+                imagen: req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
                 rol:"usuario"
                 
             }
