@@ -1,66 +1,30 @@
 .card{
-    width: 260px;
-    margin: 10px auto;
-    border-color: var(--colorNaranja);
+
+    border: none;
     }
-    /* .card .card-img{
-       
-    
-    } */
-    
-    .card  .card-img  .card-img-background .imgMain{
+
+    .mainHome .card .card-titulo{
+        height: 16%;
         width: 100%;
-        height: 250px;
-        position: center;
-        
-        
-    }
-    
-    .card .card-titulo{
-        text-align: center;
+
         font-family: var(--fuenteTitulos);
-    
-    }
-    
-    .card .card-marca{
-        text-align: center;
-        font-family: var(--fuenteTitulos);
-    
-    }
-    
-    .card .card-valor{
-        border-color: var(--colorNaranja);
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row-reverse;
-        align-items: center;
-    
-    }
-    .card .card-descuento{
-    font-size: 20px;
-    color: var(--colorAzulMarino);
-    }
-    .card .card-precio{
-        font-size: 25px;
         color: var(--colorAzulMarino);
+        text-align: center;
     }
+
+    .card .card-img-background{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card a{
+        background-color: white;
+        width: 260px;
+    }
+
     .card .card-button{
-        text-align: center;
-    
+        height: 15%;
     }
-    .card .card-button button{
-        text-align: center;
-        background-color: var(--colorAzulFrancia);
-        color: white;
-        border-radius: 10px;
-        margin-top: 8px;
-        margin-bottom: 20px;
-        width: 40%;
-        text-align: center;
-        font-family: var(--fuenteSubTitulos);
-    
-    }
-    
     
     
     /* Tablet */

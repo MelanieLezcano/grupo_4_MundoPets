@@ -40,7 +40,7 @@
    
 }
 
-.mainHome h3 {
+.mainHome .marcas {
     margin: 10px;
     font-family: var(--fuenteTitulos);
     color: var(--colorAzulMarino);
@@ -75,12 +75,21 @@
 
 /* CARROUSEL*/
 .carrousel{
-    width: 95%;
+    width: 100%;
     height: 420px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+.carrousel .carousel-inner{
+    width: 100%;
+}
+
+.carrousel img{
+    width: 50%;
+}
+
 .carrousel .glider-contain {
     width: 80%;
     height: 410px;
@@ -89,9 +98,6 @@
    }
     
    .carrousel  .glider {
-    height: 410px;
-    margin: 0 auto;
-    position: relative;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
@@ -120,15 +126,9 @@
     cursor: grabbing;
   }
   .carrousel  .glider-slide {
-    height: 378px;
     user-select: none;
-    justify-content: center;
-    align-content: center;
-    width: 80%;
   }
-  .carrousel .glider-slide img {
-    max-width: 80%;
-  }
+
   .carrousel  .glider::-webkit-scrollbar {
     opacity: 0;
     height: 0;
