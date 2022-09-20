@@ -1,69 +1,35 @@
 header {
-   width: 100%;
    position: relative;
-   margin: auto 0;
-   height: 70px;
+   margin-bottom: 20px;
+   height: 68px;
    background-color: rgba(127, 164, 243, 0.452);
    border-bottom-right-radius: 25px;
-   border-bottom-left-radius: 25px;
 }
+
 header .top {
-   width: 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
-   /* border-bottom-left-radius: 25px */;
+   border-bottom-left-radius: 25px;
 }
-header .top .nav{
-height: 68px;
-width: 100%;
-display: flex;
-flex-direction:column;
-flex-wrap: wrap;
-justify-content: space-between;
 
-}
-header .top .nav .logo, .carrito, .buscador, .admin, .burger{
-   flex-grow: 1;
-}
-header .top .nav .logo{
+header .logo {
+   position: absolute;
    display: flex;
-   flex-wrap: wrap;
-  align-content: center;
-   height: 65px;
-   width: 16%;
-   justify-content:space-around;
-   
+   width: 15%;
 }
-header .top .nav .logo  img{
-   height: 46px;
-   margin-left: 3px;
 
+header img {
+   padding: 10px;
+   width: 68px;
 }
-header .top .nav .carrito{
-   width: 6%;
-   height: 65px;
-   display: flex;
-   flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-around;
-  
+
+header .menu {
+   color: var(--colorHueso);
+   display: inline-block;
 }
-header .top .nav .usuario{
-   display: none;
-   
-}
-header .top .nav .buscador{
-   display:flex;
-   flex-wrap:wrap;
-   justify-content: space-evenly;
-   align-items: center;
-   padding: 4px;
-   width: 41%;
-   height: 65px;
-   
-}
-header .top .nav .buscador input {
+
+header .buscador input {
    padding: 0.25em 0.6em;
    border-radius: 0.3rem;
    border: 1px solid #d3d6e4;
@@ -73,88 +39,193 @@ header .top .nav .buscador input {
    font-family: "Font Awesome 5 Free";
    font-weight: 600;
 }
-header .top .nav .buscador .icono-placeholder {
+
+header .carrito,
+.user,
+.menu {
+   padding: 7px;
+   width: 50px;
+}
+
+header .Uno nav .user a {
+   font-size: 14px;
+   color: white;
+}
+
+header .buscador,
+.menu {
+   padding: 4px;
+}
+
+header .Uno nav {
+   margin-top: 15px;
+   margin-left: 57px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   align-items: center;
+   width: 92%;
+}
+
+header .buscador {
+   display: inline-block;
+   padding: 4px;
+   width: 195px;
+}
+
+header .buscador .icono-placeholder {
    color: var(--colorAzulMarino);
 }
-header .top .nav .admin{
-   display: flex;
-   flex-wrap: wrap;
-  align-content: center;
-   width: 16%;
-   height: 65px;
-   
+
+header i {
+   color: white;
+   text-decoration: none;
 }
-header .top .nav .admin li a{
+
+header admin {
+   width: 20px;
+}
+
+header .admin a {
    font-size: 17px;
    color: white;
    text-decoration: none;
 }
-header .burger {
-   height: 65px;
-   
-   
-}
-header .burger label{
-   position: absolute;
-   top: -1px;
-   right: -1px;
-   left: 363px;
-   font-size: 30px;
-   padding: 11px 30px;
-   color: white;
-   /* border: 1px solid white;
-   border-radius: 10px; */
-   display: inline-block;
-   height: 65px;
-}
-header .menusup{
-   display: none;
-}
 
-header  .menu {
+header .menu {
    text-align: center;
 }
 
-header  .burger input {
+header .menu input {
    display: none;
 }
 
-header  .menu input:checked~nav {
+header .menu input:checked~nav {
    display: none;
 }
 
- 
+
 /* Tablet */
-@media (min-width:426px) {}
-   
+ @media (min-width:426px) {
+   header .logo {
+      position: absolute;
+      display: flex;
+      width: 15%;
+   }
+
+   header img {
+      padding: 10px;
+      width: 74px;
+   }
+
+   header .Uno nav {
+      margin-top: 15px;
+      margin-left: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   header .Uno nav i {
+      font-size: 30px;
+      width: 40px;
+   }
+
+   header .carrito,
+   .buscador,
+   .user,
+   .menu {
+      flex-grow:1;
+      text-align: center;
+      padding: 11px 2px;
+   }
+}
+
+header .admin a {
+   font-size: 126%;
+   color: white;
+   text-decoration: none;
+} 
 
 
 /* Desktop */
-@media (min-width:1024px){
-   header .top .nav .usuario{
-      width: 16%;
-      height: 65px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-     align-content: space-around;
-     align-items: center;
-     justify-content: center;
-   }
-   header .top .nav .usuario a{
-      
-   }
-   header .top .nav .usuario i{
-      
-   }
-   header .top .nav .register{
-      
+ @media (min-width:1024px) {
+   header {
+      position: relative;
+      margin-bottom: 20px;
+
+      height: 68px;
+      background-color: rgba(127, 164, 243, 0.452);
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
    }
 
-header .burger{
-   display: none
-}
-}
+   header .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+   }
+
+   header .logo {
+      position: absolute;
+      display: flex;
+      width: 15%;
+   }
+
+   header img {
+      padding: 10px;
+      width: 68px;
+   }
+
+   header .Uno nav {
+      margin-top: 15px;
+      margin-left: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 92%;
+   }
+
+   header .carrito,
+   .user {
+      color: var(--colorHueso);
+      display: inline-block;
+   }
+
+   header .buscador {
+      display: inline-block;
+      padding: 4px;
+      width: 195px;
+   }
+
+   header .buscador input {
+      padding: 0.25em 0.6em;
+      border-radius: 0.3rem;
+      border: 1px solid #d3d6e4;
+      text-align: center;
+      box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+      width: 100%;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+   }
+
+   header .carrito,
+   .buscador,
+   .user {
+      padding: 7px;
+   }
+
+   header i,
+   a {
+      color: white;
+      text-decoration: none;
+   }
+
+   header a {
+      font-size: 100%;
+   }
+} 
    
 
 
