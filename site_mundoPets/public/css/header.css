@@ -48,7 +48,7 @@ header .register li a{
    color: white;
     
 }
-header   .buscador{
+ header   .buscador{
    position: absolute;
    display:flex;
    flex-wrap:wrap;
@@ -68,12 +68,26 @@ header   .buscador input {
    text-align: center;
    box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
    width: 95%;
-   font-family: "Font Awesome 5 Free";
+   font-family: var(--fuenteSubtitulos);
    font-weight: 600;
 }
-header   .buscador .icono-placeholder {
-   color: var(--colorAzulMarino);
+header .buscador button{
+   color: white;
+   border-color: white;
+   border-radius: 0;
+   border: 0;
+   position: absolute;
+   height: 23px;
+   left: 107px ;
+   top:20px;
+   padding: 4px;
 }
+header   .buscador .lupa {
+   color: var(--colorAzulMarino);
+   background-color: white;
+   border-radius: none;
+   border-color: white;
+} 
 header .admin{
    position: absolute;
    display: flex;
@@ -172,6 +186,17 @@ header .buscador{
    position: absolute;
    left:264px;
    width: 40%;
+}
+header .buscador button{
+   color: white;
+   border-color: white;
+   border-radius: 0;
+   border: 0;
+   position: absolute;
+   height: 24px;
+   left: 240px ;
+   top:20px;
+   padding: 4px;
 }
 header .admin{
    position: absolute;
@@ -276,8 +301,19 @@ header .burger nav{
    }
    header .buscador{
       position: absolute;
-      left:486px;
+      left:492px;
       width: 40%;
+   }
+   header .buscador button{
+      color: white;
+      border-color: white;
+      border-radius: 0;
+      border: 0;
+      position: absolute;
+      height: 25px;
+      left: 292px ;
+      top:20px;
+      padding: 4px;
    }
    header .admin{
       position: absolute;
@@ -288,7 +324,6 @@ header .burger nav{
    }
    
 }
-   
 
 
 
