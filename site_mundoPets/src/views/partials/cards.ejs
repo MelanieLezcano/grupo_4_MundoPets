@@ -1,0 +1,48 @@
+<div class="card">
+  <a href="/productos/detalle/<%= id %> ">
+    <div class="card-img">
+      <div class="card-img-background">
+        <img class="imgMain" src="/img/<%=imagen%>" alt="">
+      </div>
+    </div>
+  <h3 class=" card-titulo">
+      <%=titulo%>
+        </h3>
+        <h4 class="card-marca">
+          <%=marca%>
+        </h4>
+        
+        <div class="card-valor">
+          <p class="card-descuento">
+            <%=descuento%>%
+          </p>
+          <p class="card-precio">$<%=precio - (precio * descuento / 100)%>
+          </p>
+        </div>
+        <div class="card-button">
+          <button>VER PRODUCTO</button>
+        </div>
+
+        
+  </a>
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

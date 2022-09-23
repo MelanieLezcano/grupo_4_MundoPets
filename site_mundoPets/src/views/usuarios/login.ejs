@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head',{title: 'Login'}) %> 
+
+<body class="login">
+        
+    <%- include('../partials/header') %>
+
+    <main>
+        <section class="container-image">
+            <div>
+                <img src="/img/imagen_para_header.jpg" alt="">
+            </div>
+        </section>
+        <section>
+            <h2>Inicia sesión</h2>
+            <h4>
+                <p>Inicia sesión a <a href="">MundoPets</a> </p>
+            </h4>
+            <form action="" method="post">
+              
+                <div class="container bottom">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                    <% if (locals.errors && errors.email) { %>
+                        <small><%= errors.email.msg%></small>
+                       <% } %>
+                </div>
+                <div class="container bottom">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu Contraseña">
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <small><%= errors.contrasenia.msg%></small>
+                       <% } %>
+                </div>
+                <div class="recordarme bottom">
+                    <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme">Recordarme</label>
+                </div>
+                <button type="submit">Inicia sesion</button>
+                <!-- <button type="reset">Cancelar</button> -->
+            </form>
+        </section>
+        <h4>¿No tenés una cuenta? <a href="/usuarios/register">Registrate</a></h4>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

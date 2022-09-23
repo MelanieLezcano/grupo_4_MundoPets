@@ -1,0 +1,32 @@
+[
+    {
+        "id": 20,
+        "mascota": "perro",
+        "marca": "Infinity",
+        "categorias": "adulto",
+        "titulo": "Infinity Adulto 20 kg",
+        "precio": 19000,
+        "descuento": 10,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "pa-infinity-perro-adulto-20kg-removebg-preview.png",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 22,
+        "categoria": "Perro",
+        "subcategoria": "Cachorro",
+        "titulo": "Balanced arroz y cerdo 15kg",
+        "marca": "VITALCAN",
+        "precio": 45,
+        "descuento": 10,
+        "descripcion": "alimento balanceado para perro",
+        "stock": 3,
+        "imagenes": "img-1662236201708.png"
+    }
+   
+]
