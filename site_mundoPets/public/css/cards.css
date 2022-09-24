@@ -1,32 +1,4 @@
-.card{
 
-    border: none;
-    }
-
-    .mainHome .card .card-titulo{
-        height: 16%;
-        width: 100%;
-
-        font-family: var(--fuenteTitulos);
-        color: var(--colorAzulMarino);
-        text-align: center;
-    }
-
-    .card .card-img-background{
-        width: 100%;
-        justify-content: center;
-    }
-
-    .card a{
-        background-color: white;
-        width: 260px;
-    }
-
-    .card .card-button{
-        height: 15%;
-    }
-    
-    
     /* Tablet */
     @media (min-width:426px){}
     

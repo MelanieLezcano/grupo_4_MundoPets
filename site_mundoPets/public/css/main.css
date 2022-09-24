@@ -346,7 +346,7 @@
 
 }
 
-.mainHome a {
+.mainHome  {
     font-family: var(--fuenteSubtitulos);
 }
 .mainHome .quienSomos{
