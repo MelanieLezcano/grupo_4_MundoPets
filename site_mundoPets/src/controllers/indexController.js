@@ -43,4 +43,18 @@ module.exports = {
             productoPorCategoria
         })
     }, 
+    search:(req,res) => {
+        let elemento = req.query.search
+
+        let resultados = productos.filter(producto => {
+            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+        })
+        
+        return res.render('busqueda',
+        {
+        busqueda: elemento,
+        resultados
+        
+        })
+    }
 }
