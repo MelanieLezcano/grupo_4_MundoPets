@@ -1,7 +1,58 @@
+.card{
+    width: 150px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 3px solid var(--colorNaranja);
+    display: flex;
+    flex-direction: row;
+}
+.card .card-img .card-img-background{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card .card-name{
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--fuenteTitulos);
+    font-weight: 700;
+}
+.card .card-value{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.card .card-discount{
+    font-family: var(--fuenteSubtitulos);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--colorNaranja);
+}
+.card .card-price{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--colorAzulFrancia);
+}
+.card .card-button{
+    text-align: center;
+}
+.card .card-button button{
+    background-color: var(--colorAzulFrancia);
+    font-family: var(--fuenteTitulos);
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
 
-    /* Tablet */
-    @media (min-width:426px){}
-    
-    
-    /* Desktop */
-    @media (min-width:1024px){}
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    padding: 5px;
+    padding-top: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
