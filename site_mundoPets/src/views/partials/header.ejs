@@ -1,44 +1,56 @@
 <header>
   <div class="top">
-      <div class="logo">
-          <a href="/"><img src="/img/LogoMundoPets2.png" alt="logo Mundo Pets"></a>
-      </div>
+    <div class="logo">
+      <a href="/"><img src="/img/LogoMundoPets2.png" alt="logo Mundo Pets"></a>
+    </div>
   </div>
-  <div class="Uno">
-    <nav>
-      <div class="carrito">
-           <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a> <!-- link carrito -->
-      </div>
-      <div class="user">
-        <a href="/usuarios/login"><i class="fas fa-user"></i></a><!-- login & register -->
-    </div>
-      <div class="buscador">
-        <form action=" " method="post" target="_blank"></form>
-          <input type="search" name= "Buscar" class="icono-placeholder" maxlength="100" placeholder="Buscar  " >  <!-- barra buscador -->
-         <!--  <button type="submit"> <i class="fas fa-search"></i></button> -->
-      </div>
-      <div class="admin">
-        <li><a href="/admin/lista">ADMIN</a></li>  
-      </div>
-      <div class="menu">
-      <input type="checkbox" name="burger" id="burger" checked>
-        <label for="burger"><i class="fas fa-ellipsis-v"></i></label>
-        <nav>
-          <ul class="menu">
-              <li><a href="/vistaProductos/Gato">Gato</a></li>
-              <li><a href="/vistaProductos/Perro">Perro</a></li>
-              <li><a href="/admin/lista">Admin</a></li>
-              
-          </ul>
-          <ul class="user">
-              <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a></li>
-              <li><a href="/usuarios/login">Login</a></li>
-              <li><a href="/usuarios/register">Registro</a></li>
-          </ul>
-      </nav>
-        
-    </div>
-  </nav>
+  <div class="carrito">
+    <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+  <div class="usuario">
+    <% if (locals.usuarioLogin) { %>
+      <a href="/usuarios/perfil"> Bienvenid@ <%=locals.usuarioLogin.nombre %></a>
+    <% } else { %>
+      <a href="/usuarios/login"><i class="fas fa-user"></i></a>
+      <% } %>
+  </div>
+  <div class="register">
+      <li><a href="/usuarios/register">Creá tu cuenta</a></li>
+  </div>
+<div class="buscador">
+    <form action="/busqueda" method="get" target="_blank">
+      <input type="text" name= "search" id="search" class="barrabusqueda" maxlength="100" placeholder="Buscar">
+      <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    
+
+  </div>
    
+  <div class="admin">
+    <% if (locals.usuarioLogin && locals.usuarioLogin.rol === "Administrador") { %>
+      <li><a href="/admin/lista">ADMIN</a></li>  
+    <% } %>
   </div>
-</header>
+  <div class="burger">
+    <input type="checkbox" name="burger" id="burger" class="burger-menu" checked>
+    <label for="burger" class="burger-label"><i class="fas fa-bars"></i></label>
+    <nav>
+      <div class="center">
+        <ul class="menu">
+          <% if (locals.usuarioLogin) { %>
+            <li><a href="/usuarios/perfil">Mi perfil</a></li> 
+          <% } else { %>
+            <li><a href="/usuarios/login">Ingresá</a></li>
+            <% } %>
+            <li><a href="/productos/carrito">Carrito</a></li>
+            <li><a href=" ">Mis compras</a></li>
+            <li><a href="/productos">Todos los productos</a></li>
+            <li><a href="/vistaProductos/Perro">Categoría Perro</a></li>
+            <li><a href="/vistaProductos/Gato">Categoría Gato</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/usuarios/cerrarSesion?_method=DELETE">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>    

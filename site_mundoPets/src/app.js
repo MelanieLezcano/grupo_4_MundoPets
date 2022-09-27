@@ -24,14 +24,15 @@ app.set('view engine','ejs')
 /* liveReloadServer.watch(path.join(__dirname,'views')); en el caso que se use live reload*/
 
 /* metodos HHTP (post) */
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false}));/* para trabajar con req.body */
 app.use(express.json()); //si se usa JSON CLASE54, 1:10:48
 
 
-app.use(express.static(path.resolve(__dirname,'../public')));
+app.use(express.static(path.resolve(__dirname,'..', 'public')));
 
 /* trabajar con put y delete */
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))/* para trabajar los formularios de mejor manera */
+
 
 /* login e inicio de sesion  */
 app.use(session({secret:"Mundo Pets"}))
@@ -39,10 +40,6 @@ app.use(session({secret:"Mundo Pets"}))
 app.use(usuarioLogin)
 
 app.use(cookieParser());
-
-
-
-
 
 //RUTAS
 app.use("/", indexRouter);

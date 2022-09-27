@@ -22,9 +22,11 @@
 
 }
 
-.mainHome .banner {
+
+ .mainHome .banner {
     position: relative;
-}
+    z-index: auto;
+} 
 
 .mainHome .banner img {
     width: 100%;
@@ -772,7 +774,6 @@
 
 
 }
-
 
 
 

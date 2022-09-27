@@ -68,19 +68,33 @@ Repasar mas git/github
   # RETRO SPRINT 4
  
  ## Comenzar a hacer
+- repasar temas relacionados al sprint antes de empezar a trabajarlo
+ - fecha de vencimiento a las tareas en trello
+ - completar las tareas lo antes posible,poniendo una fecha estimada antes de la fecha de entrega de sprint
+ - revision general de las tareas 
+ - realizar 2 dailys minimo en cada sprint
+ - organizar los tiempos personales
+ - cada uno manejar su tarea asignada en trello
 
 
 
 ## Seguir haciendo
 
+ - organizacion rapida de las tareas del sprint
+ - comunicacion 
+ - buena relacion entre compañeros
  
   
 
 ## Hacer más
-
+- comunicar ante cualquier dificultad lo antes posible 
+ - comunicar a los compañeros
 
 ## Dejar de hacer
-
+- ENTREGAR FUERA DE FECHA PACTADA
+ - subestimar tareas
 
 ## Hacer menos
- -
+ - no pedir ayuda
+- manejar el trello sola (mechy)
+

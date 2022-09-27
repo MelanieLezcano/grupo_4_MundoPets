@@ -1,257 +1,339 @@
-header{
+header {
+   width: 100%;
    position: relative;
-   margin-bottom: 20px;
-   height: 68px;
+   margin: auto 0;
+   height: 70px;
+   z-index: 10;
    background-color: rgba(127, 164, 243, 0.452);
    border-bottom-right-radius: 25px;
    border-bottom-left-radius: 25px;
+}
+header .top {
+   height:68px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start; 
+  width: 15%;
+}
+header .top  .logo{
+   display: flex;
+   flex-wrap: wrap;
+  align-content: center;
+   height: 65px;
+   width: 100%;
+   justify-content:space-around;
    
 }
-
-header .top{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+header .top  .logo  img{
+   height: 46px;
+   margin-left: 3px;
 
 }
+header   .carrito{
+  
+   display: none;
+}
+header   .usuario{
+   display: none;
+   
+}
+header   .register{
+     position: absolute;
+     top:20px;
+     left: 66px
+}
+header .register li a{
+   font-size: 14px;
+   font-family: var(--fuenteSubtitulos);
+   color: white;
     
-
-header .logo{
+}
+ header   .buscador{
    position: absolute;
-   display: flex;
-   width: 15%;
+   display:flex;
+   flex-wrap:wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 4px;
+   width: 34%;
+   height: 65px;
+   top:0;
+   left: 156px;
+  
 }
-
-header img{
-   padding: 10px;
-   width: 68px;
-}
-/* header .Uno .carrito{
-   display: none;
-}
-header .Uno .user{
-   display: none;
-}
-header .Uno .admin{
-   display: none;
-} */
-
- 
-
-header   .menu{
-    
-    color:var(--colorHueso);
-    display: inline-block;
-}
-
-
-
-
-header .buscador input{
+header   .buscador input {
    padding: 0.25em 0.6em;
-   border-radius:0.3rem;
-   border:1px solid #d3d6e4;
+   border-radius: 0.3rem;
+   border: 1px solid #d3d6e4;
    text-align: center;
    box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
    width: 95%;
-   font-family: "Font Awesome 5 Free"; 
+   font-family: var(--fuenteSubtitulos);
    font-weight: 600;
 }
-header .carrito,  .user, .menu{
-   padding: 7px;
-   width: 50px;
-}
-
-header .buscador, .menu{
-   padding: 4px;
-}
-
-header .Uno nav{
-   margin-top: 15px;
-   margin-left: 57px;
-   display: flex;
-   flex-wrap: nowrap;
-   justify-content: space-around;
-   align-items: center;
-   width: 92%;
-  
-}
-header .buscador{
-   display: inline-block;
-   padding: 4px;
-   width: 195px;
-}
-header .buscador .icono-placeholder{
-   color: var( --colorAzulMarino);
-}
-
-header i{
-   color:white;
-   text-decoration: none;
-}
-  
-header admin {
-   width: 20px;
-}
-header .admin a{
-   font-size: 17px;
-   color:white;
-   text-decoration: none;
-}
- /* header .menu label{
+header .buscador button{
+   color: white;
+   border-color: white;
+   border-radius: 0;
+   border: 0;
    position: absolute;
-   top: 15px;
-    right: 19px;
-    font-size: 10px;
-    padding: 9px 7px;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    display: inline-block;
-} */
-header .menu{
-   text-align: center;
+   height: 23px;
+   left: 107px ;
+   top:20px;
+   padding: 4px;
 }
-header  .menu input{
-    display: none; 
+header   .buscador .lupa {
+   color: var(--colorAzulMarino);
+   background-color: white;
+   border-radius: none;
+   border-color: white;
+} 
+header .admin{
+   position: absolute;
+   display: flex;
+   flex-wrap: wrap;
+  align-content: center;
+   width: 10%;
+   height: 65px;
+   top:0;
+   left: 308px
 }
-
-header .menu input:checked ~ nav{
+header .admin li a{
+   font-size: 17px;
+   color: white;
+   text-decoration: none;
+}
+header .burger {
+   height: 65px;
+}
+header .burger label.burger-label{
+   position: absolute;
+   top: -1px;
+   right: 7px;
+   left: 350px;
+   font-size: 30px;
+   padding: 11px 30px;
+   color: white;
+   display: inline-block;
+   height: 65px;
+}
+header .burger input.burger-menu{
    display: none;
 }
- 
-
-
-
-
-
-
-
-/* Tablet */
-@media (min-width:426px){
-  header .logo{
-     position: absolute;
-     display: flex;
-     width: 15%;
-  }
+header  .menu {
+   text-align: center;
+}
+header .burger input.burger-menu:checked ~ nav{
+   display: none;
+}
+header .burger nav{
+   width: 100%;
+   display: block;
+   margin-top: 20px;
+   text-align: center;
+}
+header .burger nav ul{
+   padding-bottom: 20px;
+   margin-bottom: 0;
+   padding-left: 0;
+   background-color: rgba(127, 164, 243, 0.74);
+   
+}
+header .burger nav ul li{
+   margin: 20px 0;
+}
+header .burger nav a{
+   color: white;
+   text-transform: uppercase;
+   font-size: 18px;
+}
+   
+   
   
-  header img{
-     padding: 10px;
-     width: 74px;
-  }
-  header .Uno nav{
-     margin-top: 15px;
-     margin-left: 65px;
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
-   }
-   header .Uno nav i{
-      font-size: 30px;
-      width: 40px;
-   }
-   header .carrito, .buscador,  .user, .menu{
-      flex-grow: 1;
-      text-align: center;
-      padding: 11px 2px;
-   }
- }
- header .admin a {
-    font-size: 126%;
-    color: white;
-    text-decoration: none;
-   }
- 
-
+/* Tablet */
+@media (min-width:768px) {
    
-/* Desktop */
-@media (min-width:1024px){
-   header{
-      position: relative;
-      margin-bottom: 20px;
-      
-      height: 68px;
-      background-color: rgba(127, 164, 243, 0.452);
-      border-bottom-right-radius: 25px;
-      border-bottom-left-radius: 25px;
-      
-   }
-   
-   header .top{
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: flex-start;
-   
-   }
-       
-   
-   header .logo{
-      position: absolute;
-      display: flex;
-      width: 15%;
-   }
-   
-   header img{
-      padding: 10px;
-      width: 68px;
-   }
-   header .Uno nav{
-      margin-top: 15px;
-      margin-left: 3px;
+   header .top {
+      height:68px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      width: 92%;
-     
+      justify-content: flex-start; 
+     width: 15%;
    }
-  
- 
-   header .carrito,  .user{
-       
-       color:var(--colorHueso);
-       display: inline-block;
-   }
-   
-   
-   
-   header .buscador{
-       display: inline-block;
-       padding: 4px;
-       width: 195px;
-   
-   }
-   header .buscador input{
-      padding: 0.25em 0.6em;
-      border-radius:0.3rem;
-      border:1px solid #d3d6e4;
-      text-align: center;
-      box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+   header .top  .logo{
+      display: flex;
+      flex-wrap: wrap;
+     align-content: center;
+      height: 65px;
       width: 100%;
-      font-family: "Font Awesome 5 Free"; 
-      font-weight: 900;
+      justify-content:space-around;
+      
    }
+   header .top  .logo  img{
+      height: 46px;
+      margin-left: 3px;
    
+   } 
+
+header   .register{
+   position: absolute;
+   left: 136px;
+}
+header .register li a{
+  font-size: 18px;
+}
+header .buscador{
+   position: absolute;
+   left:264px;
+   width: 40%;
+}
+header .buscador button{
+   color: white;
+   border-color: white;
+   border-radius: 0;
+   border: 0;
+   position: absolute;
+   height: 24px;
+   left: 240px ;
+   top:20px;
+   padding: 4px;
+}
+header .admin{
+   position: absolute;
+   left:577px
+}
+header .burger{
+   position: absolute;
+   top: 5px;
+   left: 234px;
+   width: 50%;
    
-   header .carrito, .buscador,  .user{
-      padding: 7px;
-   }
-   
-  
-   
-   header i, a{
-      color:white;
-      text-decoration: none;
-   
-   }
-   header a{
-      font-size: 100%;
-   }
+}
+header .burger label.burger-label, input.burger-menu{
+   left: 422px;
+   top:-6px
+}
+header .burger nav{
+   width: 100%;
+   display: block;
+   margin-top: 67px;
+   text-align: center;
+}
 
 }
-header .menu{
-   display:none
+   
+    
+   
+ 
+/* Desktop */
+@media (min-width:1024px){
+
+   header .top {
+      height:68px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; 
+     width: 10%;
+   }
+   header .top  .logo{
+      display: flex;
+      flex-wrap: wrap;
+     align-content: center;
+      height: 65px;
+      width: 100%;
+      justify-content:space-around;
+      
+   }
+
+  
+   header .top  .logo  img{
+      height: 60px;
+      margin-left: 3px;
+   
+   } 
+
+   header .carrito{
+      position: absolute;
+      width: 6%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      top: 3px;
+      left: 112px;
+   
+   }
+   header .carrito a{
+      color: white;
+      font-size: 25px;
+   }
+   header  .usuario{
+      position: absolute;
+      top: 7px;
+      left: 342px;
+      width: 16%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+     align-content: space-around;
+     align-items: center;
+     justify-content: center;
+   }
+   header  .usuario a{
+      text-align: center;
+      font-size: 14px;
+      font-family: var(--fuenteTitulos);
+      color: white;
+   }
+   header  .usuario i{
+      width: 100%;
+      font-size: 25px;
+   }
+   header   .register{
+      position: absolute;
+      left: 226px;
+   }
+   header .register li a{
+     font-size: 20px;
+     
+   }
+   header .buscador{
+      position: absolute;
+      left:492px;
+      width: 40%;
+   }
+   header .buscador button{
+      color: white;
+      border-color: white;
+      border-radius: 0;
+      border: 0;
+      position: absolute;
+      height: 25px;
+      left: 292px ;
+      top:20px;
+      padding: 4px;
+   }
+   header .admin{
+      position: absolute;
+      left:910px
+   }
+   header  .burger{
+      display: none
+   }
+   
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
