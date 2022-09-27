@@ -4,12 +4,8 @@
     <%- include('./partials/head',{title: 'Mundo Pets'}) %> 
 
 <body class="productos">
-    <%- include('./partials/header') %> 
-    <main>
 
-        <%- include('./partials/banner') %> 
-        <!-- Categoria -->
-        
+    <main> 
         <h1><%= categoriaSeleccionada %></h1>
 
         <section class="carrouselProductos">
@@ -31,7 +27,9 @@
               </div>
         </section>
     </main>
-    <%- include('./partials/footer') %> 
+           
+    <script src="/javascripts/glider.js"></script>
+    <script src="/javascripts/productos.js"></script>
 </body>
 </html>
        
