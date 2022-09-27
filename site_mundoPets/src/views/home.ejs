@@ -28,24 +28,24 @@
         <section class="destacadosP">
             <h3>Productos destacados</h3>
            </section> 
-       <section class="carrousel">
-        <div class="glider-contain">
-            <div class="glider">
-                <% productos.forEach(productos => { %>
-                    <%- include('./partials/cards',{
-                        id:productos.id,
-                        imagenes:productos.imagenes[0],
-                        nombre:productos.titulo,
-                        descuento:productos.descuento,
-                        precio:productos.precio
-                    }) %> 
-                <% }) %>
-            </div>   
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
-            <div role="tablist" class="dots"></div>
-          </div>
-       </section>
+           <section class="carrouselProductos">
+            <div class="glider-contain">
+                <div class="glider">
+                    <% productoPorCategoria.forEach(productos => { %>
+                        <%- include('./partials/cards',{
+                            id:productos.id,
+                            imagenes:productos.imagenes[0],
+                            nombre:productos.titulo,
+                            descuento:productos.descuento,
+                            precio:productos.precio
+                        }) %> 
+                    <% }) %>
+                </div>             
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                <div role="tablist" class="dots"></div>
+              </div>
+        </section>
 
 
 
