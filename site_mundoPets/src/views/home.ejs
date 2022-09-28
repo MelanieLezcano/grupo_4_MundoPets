@@ -31,7 +31,7 @@
            <section class="carrouselProductos">
             <div class="glider-contain">
                 <div class="glider">
-                    <% productoPorCategoria.forEach(productos => { %>
+                    <% productos.forEach(productos => { %>
                         <%- include('./partials/cards',{
                             id:productos.id,
                             imagenes:productos.imagenes[0],
