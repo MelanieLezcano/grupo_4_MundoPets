@@ -277,23 +277,28 @@
     background: none;
     padding: 0;
     z-index: 2;
-    font-size: 40px;
+    font-size: 70px;
     text-decoration: none;
     left: 15px;
     border: 0;
     top: 30%;
     cursor: pointer;
-    color: #666;
+    color: var(--colorNaranja);
     opacity: 1;
     line-height: 1;
     transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
                 color .5s cubic-bezier(.17,.67,.83,.67);
   }
+
+  .home .glider-next{
+    font-size: 70px;
+  }
+
   .home .glider-prev:hover,
   .glider-next:hover,
   .glider-prev:focus,
   .glider-next:focus {
-    color: #a89cc8;
+    color: var(--colorNaranja);
   }
   .home .glider-next {
     right: 20px;
@@ -302,9 +307,18 @@
   .home .glider-next.disabled,
   .glider-prev.disabled {
     opacity: .25;
-    color: #666;
+    color: var(--colorNaranja);
     cursor: default;
   }
+
+  .fa-chevron-right:before{
+    color: var(--colorNaranja);
+  }
+
+  .fa-chevron-left:before{
+    color: var(--colorNaranja);
+  }
+
   .home .glider-slide {
     min-width: 150px;
   }
@@ -326,9 +340,9 @@
     outline: none;
     display: block;
     cursor: pointer;
-    color: #ccc;
+    color: var(--colorCeleste);
     border-radius: 999px;
-    background: #ccc;
+    background: var(--colorCeleste);
     width: 12px;
     height: 12px;
     margin: 7px;
@@ -336,8 +350,13 @@
   .home .glider-dot:hover,
   .glider-dot:focus,
   .glider-dot.active {
-    background: #a89cc8;
+    background: var(--colorAzulFrancia);
   }
+
+  .home .glider-dot.active{
+    background: var(--colorAzulFrancia);
+  }
+  
 
   @media(max-width: 36em){
     .home .glider::-webkit-scrollbar {
