@@ -12,7 +12,7 @@ new Glider(document.querySelector('.glider'), {
     responsive: [
       {
         // screens greater than >= 775px
-        breakpoint: 450,
+        breakpoint: 460,
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
           slidesToShow: 2,

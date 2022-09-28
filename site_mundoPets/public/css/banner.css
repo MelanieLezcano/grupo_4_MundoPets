@@ -1,9 +1,0 @@
-.carousel slide{
-    width: 100%;
-}
-.carousel slide .carousel-item active, .carousel-item{
-    height: 284px;
-}
-.carousel slide .carousel-item active, .carousel-item img{
-    width: 100%;
-}
