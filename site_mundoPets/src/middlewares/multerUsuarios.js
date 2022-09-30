@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     
 })
 const fileFilter = function(req,file,callback) {
-    if (!file.originalname.match(/\.(jpg|jepg|png|jfif|gif|webp)$/)){
+    if (!file.originalname.match(/\.(jpg|jepg|jpeg|png|jfif|gif|webp)$/)){
         req.fileValidationError = "Sólo se permite imágenes";
         return callback(null,false,req.fileValidationError)
     }

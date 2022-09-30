@@ -1,45 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <%- include('./partials/head',{title: 'Mundo Pets'}) %> 
 
 <body class="productos">
     <%- include('./partials/header') %> 
-    <main>
+    <main> 
+        <%- include('./partials/banner') %> 
+        <h1><%= categoriaSeleccionada %></h1>
 
-       <!-- include banner colocar aca  -->
-        <!-- Categoria -->
-        
-        <h1>Todos nuestros Productos</h1>
-
-     <section>
-        <% productos.forEach(producto => { %>
-           
-            <%- include('./partials/cards',{
-                id : producto.id,
-                imagenes : producto.imagenes[0],
-                titulo : producto.titulo,
-                marca : producto.marca,
-                descripcion : producto.descripcion,
-                descuento : producto.descuento,
-                precio : producto.precio
-    
-    
-              }) %> 
-         
-        <% }) %> 
-    </section>
-    
-  </main>
-  <%- include('./partials/footer') %> 
+        <section class="carrouselProductos">
+            <div class="glider-contain">
+                <div class="glider">
+                    <% productoPorCategoria.forEach(productos => { %>
+                        <%- include('./partials/cards',{
+                            id:productos.id,
+                            imagenes:productos.imagenes[0],
+                            nombre:productos.titulo,
+                            descuento:productos.descuento,
+                            precio:productos.precio
+                        }) %> 
+                    <% }) %>
+                </div>             
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                <div role="tablist" class="dots"></div>
+              </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %> 
 </body>
 </html>
-     
-     
-     
-     
-     
-     
-     
-     
        

@@ -28,37 +28,24 @@
         <section class="destacadosP">
             <h3>Productos destacados</h3>
            </section> 
-       <section class="carrousel">
-        <div class="glider-contain">
-            <div class="glider">
-             
-               
-                <% productos.forEach(producto => { %>
-                    
+           <section class="carrouselProductos">
+            <div class="glider-contain">
+                <div class="glider">
+                    <% productos.forEach(productos => { %>
                         <%- include('./partials/cards',{
-                            id : producto.id,
-                            imagenes : producto.imagenes[0],
-                            titulo : producto.titulo,
-                            marca : producto.marca,
-                            descripcion : producto.descripcion,
-                            descuento : producto.descuento,
-                            precio : producto.precio
-                
-                
-                          }) %> 
-                    
-                    
-                 
-                <% }) %> 
-            
-               
-            </div>
-          
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
-            <div role="tablist" class="dots"></div>
-          </div>
-       </section>
+                            id:productos.id,
+                            imagenes:productos.imagenes[0],
+                            nombre:productos.titulo,
+                            descuento:productos.descuento,
+                            precio:productos.precio
+                        }) %> 
+                    <% }) %>
+                </div>             
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                <div role="tablist" class="dots"></div>
+              </div>
+        </section>
 
 
 
@@ -66,7 +53,7 @@
         <div class="links">
             <section class="perro">
                <div class="dog">
-                <a href="/vistaProductos/Perro ">Perros</a> 
+                <a href="/productos/Perro ">Perros</a> 
                 <img src="img/perro1.png" alt="">
            </div>
               
@@ -74,7 +61,7 @@
             <section class="gato">
                
                 <div class="cat">
-                    <a href="/vistaProductos/Gato ">Gatos</a>
+                    <a href="/productos/Gato ">Gatos</a>
                     <img src="img/gato1.png" alt="">
                 </div>
             </section>
