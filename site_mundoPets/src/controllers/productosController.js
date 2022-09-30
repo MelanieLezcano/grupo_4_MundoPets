@@ -27,7 +27,7 @@ module.exports = {
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['gatos','perros']
         
-        productoPorCategoria = productos.filter(producto => producto.categorias === categoriaSeleccionada)
+        productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada)
 
         res.render('productos',{
             categorias,
@@ -35,6 +35,7 @@ module.exports = {
             productos,
             productoPorCategoria
         })
+
     },
 
 

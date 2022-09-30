@@ -1,35 +1,23 @@
 <div class="card">
-  <a href="/productos/detalle/<%= id %> ">
+  <a href="/productos/detalle/<%= id %>">
     <div class="card-img">
-      <div class="card-img-background">
-        <img class="imgMain" src="/img/<%=imagenes%>" alt="">
+      <div
+        class="card-img-background"
+        style="background-image: url('/img/<%= imagenes %>')"
+      ></div>
+    </div>
+  </a>
+    <div class="card-text-box">
+      <h3 class="card-name"><%=nombre%></h3>
+      <div class="card-value">
+        <p class="card-discount"><%= descuento %>%</p>
+        <p class="card-price">$<%= precio - (precio * descuento/ 100)%></p>
       </div>
     </div>
-  <h3 class=" card-titulo">
-      <%=titulo%>
-        </h3>
-        <h4 class="card-marca">
-          <%=marca%>
-        </h4>
-        
-        <div class="card-valor">
-          <p class="card-descuento">
-            <%=descuento%>%
-          </p>
-          <p class="card-precio">$<%=precio - (precio * descuento / 100)%>
-          </p>
-        </div>
-        <div class="card-button">
-          <button>VER PRODUCTO</button>
-        </div>
-
-        
-  </a>
+    <div class="card-button">
+        <button>Añadir al carrito</button>
+    </div>
 </div>
-
-      
-
-
 
 
 
