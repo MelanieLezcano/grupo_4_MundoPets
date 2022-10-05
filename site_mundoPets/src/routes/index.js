@@ -1,4 +1,4 @@
-let {home,vistaProductos,contacto,nosotros,search} = require('../controllers/indexController')
+let {home,productos,contacto,nosotros,search} = require('../controllers/indexController')
 const express = require('express') 
 const router = express.Router()
 
@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/', home);
 router.get('/busqueda', search);
-router.get('/vistaProductos/:categoria', vistaProductos);
+router.get('/productos/:categoria', productos);
 router.get('/contacto',contacto);
 router.get('/nosotros',nosotros);
 

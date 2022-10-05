@@ -9,13 +9,13 @@ module.exports = {
             
         })
     },
-    vistaProductos: (req, res) => {
+    productos: (req, res) => {
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['Perro','Gato']
         
         productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('vistaProductos',{
+        res.render('productos',{
             categorias,
             categoriaSeleccionada,
             productos,
