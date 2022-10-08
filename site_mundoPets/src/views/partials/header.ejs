@@ -5,7 +5,9 @@
     </div>
   </div>
   <div class="carrito">
+    <% if (locals.usuarioLogin) { %>
     <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a>
+    <% } %>
   </div>
   <div class="usuario">
     <% if (locals.usuarioLogin) { %>
@@ -42,13 +44,19 @@
           <% } else { %>
             <li><a href="/usuarios/login">Ingresá</a></li>
             <% } %>
+            <% if (locals.usuarioLogin) { %>
             <li><a href="/productos/carrito">Carrito</a></li>
+            <% } %>
+            <% if (locals.usuarioLogin) { %>
             <li><a href=" ">Mis compras</a></li>
+            <% } %>
             <li><a href="/productos">Todos los productos</a></li>
             <li><a href="/vistaProductos/Perro">Categoría Perro</a></li>
             <li><a href="/vistaProductos/Gato">Categoría Gato</a></li>
             <li><a href="/contacto">Contacto</a></li>
+            <% if (locals.usuarioLogin) { %>
             <li><a href="/usuarios/cerrarSesion?_method=DELETE">Cerrar sesión</a></li>
+            <% } %>
         </ul>
       </div>
     </nav>

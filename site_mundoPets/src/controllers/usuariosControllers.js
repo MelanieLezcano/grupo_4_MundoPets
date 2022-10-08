@@ -35,7 +35,7 @@ module.exports = {
               usuarios.push(usuarioNuevo)
               guardar(usuarios)  
 
-               return res.redirect('/') 
+               return res.redirect('usuarios/login') 
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
             if (ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
