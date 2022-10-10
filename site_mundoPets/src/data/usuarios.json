@@ -107,5 +107,13 @@
         "contrasenia": "$2a$10$ZEe175N9WsfFBGMAlTMO8O.fuz8xp.8ycUfvRBozvtZS0Bq6IKP4G",
         "imagen": "avatar-1663535027596.jpg",
         "rol": "usuario"
+    },
+    {
+        "id": 9,
+        "nombre": "brian",
+        "email": "brian.eg50@gmail.com",
+        "contrasenia": "$2a$10$Xd/pB.eFptx/j/Zio9TIuO0YbWm549uFpJykFfD44x.C2PYwK7Rnu",
+        "imagen": "avatar-1665416267628.jpg",
+        "rol": "Administrador"
     }
 ]
