@@ -13,7 +13,7 @@ module.exports = {
     processRegister:(req,res) => {
        /*  return res.send (req.file) */
         let errors = validationResult(req)
-         if(req.fileValidationError){
+         if(req.fileValidationError != undefined){
             let imagen = {
                 param: 'imagen',
                 msg: req.fileValidationError,
@@ -28,7 +28,7 @@ module.exports = {
                 nombre,
                 email,
                 contrasenia:bcrypt.hashSync(contrasenia, 10),
-                imagen: req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
                 rol:"usuario"
                 
             }
@@ -38,14 +38,13 @@ module.exports = {
                return res.redirect('/') 
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-            if (ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+            if ( req.file && req.file.filename != undefined && ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
 
 
 
-            /* return res.send(errors.mapped()) */
              return res.render('usuarios/register',{
                 errors: errors.mapped(),
                 old: req.body
