@@ -4,16 +4,15 @@
 <body class="perfil">
     <%- include('../partials/header') %>
     <main>
-        <div class="imgPerfil">
+        <!-- <div class="imgPerfil"> -->
             <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
-        </div>
+        <!-- </div> -->
        
         <h1>Hola <%= `${locals.usuarioLogin.rol} ${locals.usuarioLogin.nombre}` %></h1>
         
         <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
             <button type="submit">Cerrar Sesion</button>
         </form>
-    </main>
-    
+    </main>    
 </body>
 </html>
