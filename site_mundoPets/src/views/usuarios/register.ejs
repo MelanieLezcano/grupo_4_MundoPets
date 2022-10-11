@@ -59,7 +59,7 @@
                 <div class="imagenPerfil">
                     <label for="imagen">Foto de perfil</label>
                     <input type="file" name="imagen" id="imagen">
-                    <% if (locals.errors && errors.imagen) { %>
+                    <% if (locals.errors && errors.imagen) {%>
                         <small><%= errors.imagen.msg%></small>
                        <% } %>
                 </div>
