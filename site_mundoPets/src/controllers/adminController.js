@@ -35,9 +35,9 @@ const {validationResult} = require('express-validator')
         }  /* return res.send(errors) */
         
           if(errors.isEmpty()){
-            let Imagenes = req.files.map(imagen => {
+            /* let Imagenes = req.files.map(imagen => {
                 return imagen.filename
-            })
+            }) */
 
             let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
             
