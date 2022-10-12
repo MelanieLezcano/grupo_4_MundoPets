@@ -325,6 +325,111 @@ header .burger nav{
    
 }
 
+/* Desktop L */
+@media (min-width:1440px){
+
+   header .top {
+      height:68px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; 
+     width: 10%;
+   }
+   header .top  .logo{
+      display: flex;
+      flex-wrap: wrap;
+     align-content: center;
+      height: 65px;
+      width: 100%;
+      justify-content:space-around;
+      
+   }
+
+  
+   header .top  .logo  img{
+      height: 60px;
+      margin-left: 3px;
+   
+   } 
+
+   header .carrito{
+      position: absolute;
+      width: 6%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      top: 3px;
+      left: 112px;
+   
+   }
+   header .carrito a{
+      color: white;
+      font-size: 25px;
+   }
+   header  .usuario{
+      position: absolute;
+      top: 7px;
+      left: 342px;
+      width: 16%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+     align-content: space-around;
+     align-items: center;
+     justify-content: center;
+   }
+   header  .usuario a{
+      text-align: center;
+      font-size: 14px;
+      font-family: var(--fuenteTitulos);
+      color: white;
+   }
+   header  .usuario i{
+      width: 100%;
+      font-size: 25px;
+   }
+   header   .register{
+      position: absolute;
+      left: 209px;
+   }
+   header .register li a{
+     font-size: 20px;
+     
+   }
+   header .buscador{
+      position: absolute;
+      left:492px;
+      width: 45%;
+   }
+   header .buscador form{
+      width: 50%;
+   }
+   header .buscador input{
+      width: 168%;
+   }
+   header .buscador button{
+      color: white;
+      border-color: white;
+      border-radius: 0;
+      border: 0;
+      position: absolute;
+      height: 25px;
+      left: 260px ;
+      top:20px;
+      padding: 4px;
+   }
+   header .admin{
+      position: absolute;
+      left:1217px
+   }
+   header  .burger{
+      display: none
+   }
+   
+}
 
 
 
