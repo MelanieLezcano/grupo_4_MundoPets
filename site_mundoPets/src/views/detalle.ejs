@@ -8,13 +8,10 @@
         <%- include('./partials/header') %>
 
             <main>
-                <section class="productoPincipal">
+                <section class="productoPrincipal">
                     <div class="imagen-princ">
                         <img src="/img/<%= producto.imagenes[0] %> " alt=" ">
                     </div>
-                    <!-- <div>
-                    imagenes secundarias "carrousel"
-                    </div> -->
                     <section>
                         <div class="textoDerecha">
                             <div>
@@ -24,7 +21,7 @@
                                 <p class="precio">$ <%= producto.precio %>
                                 </p>
                             </div>
-                            <div class="contenedor">
+                            <div>
                                 <div class="sumar-carrito">
                                     <!-- boton de cantidad -->
                                     <div class="restar">-</div>
@@ -32,33 +29,40 @@
                                     <div class="agregar">+</div>
                                 </div>
                                 <!-- boton de agregar al carrito -->
-                                <a href="/productos/carrito"><button class=" principal">Añadir al carrito</button></a>
+                                <a href="/productos/carrito"><button class="princip">Añadir al carrito</button></a>
                             </div>
                         </div>
                     </section>
+                </section>
                     <section class="detail">
                         <h2>Detalle del producto</h2>
                         <p><%= producto.descripcion %></p>
                     </section>
                     <section class="productosRelacionados">
                         <h2>Productos Relacionados</h2>
-                        <% for( let i=0; i < 10; i++ ) { %>
-                            <a href="/productos/detalle/<%=productos[i].id %>">
-                                <article>
-                                    <div class="related-img-0"></div>
-                                    <div class="prod-rel">
-                                        <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
-                                        <p>$<%= productos[i].precio %>
-                                    </div>
-                                    </p>
-                                    <h4>
-                                        <%= productos[i].titulo %>
-                                    </h4>
-                                    <button>añadir al carrito</button>
-                                </article>
-                            </a>
-                            <% } %>
+                        <% for( let i=0; i < 6; i++ ) { %>
                     </section>
+                    <article>
+                            <div class="contenedor">
+                            <a href="/productos/detalle/<%=productos[i].id %>">
+                            </div>
+                            <div class="prod-rel">
+                                <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
+                            </div>
+                            <div>
+                                <p class="pre">$<%= productos[i].precio %></p>
+                            </div>
+                            <div>
+                                <h4>
+                                <%= productos[i].titulo %>
+                                </h4>
+                            </div>
+                            <div>
+                                <button>añadir al carrito</button>
+                            </div>          
+                        </article>
+                        </a>
+                     <% } %>
             </main>
             <%- include('./partials/footer') %>
     </body>

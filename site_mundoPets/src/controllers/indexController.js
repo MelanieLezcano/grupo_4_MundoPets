@@ -1,4 +1,4 @@
-
+const db = require('../database/models')
 
 let productos = require('../data/productos.json');
 
