@@ -10,6 +10,17 @@
     font-family: var(--fuenteSubtitulos);
     color: var(--colorAzulMarino);
 }
+.perfil main .imgPerfil{
+    width:50%;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    
+}
+.perfil main .imgPerfil img{
+    width: 75%;
+    height: 183px
+}
 
 .perfil main button {
     border: none;
@@ -17,4 +28,34 @@
     height: 40px;
     color: var(--colorAzulFrancia);
     border-radius: 8px;
+}
+
+@media (min-width:768px){
+    .perfil main .imgPerfil{
+        width: 47%;
+        height: 236px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .perfil main .imgPerfil img{
+        width: 76%;
+        height: 236px;
+    }
+}
+
+@media (min-width:1024px){
+   
+    .perfil main .imgPerfil{
+        width:60%;
+        height: 370px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .perfil main .imgPerfil img{
+        width: 68%;
+        height: 370px;
+        
+    }
 }

@@ -79,11 +79,13 @@ footer .whatsapp{
 footer .pie .maps i, .whatsapp i{
     width: 100%;
     text-align: center;
+    color: white
   
 }
 footer .pie .whatsapp i, .maps i, .contactanos i{
     font-size: 30px;
     text-align: center;
+    color: white;
    
 }
 footer .pie p{
@@ -178,6 +180,9 @@ footer .foot{
     font-family: var(--fuenteSubtitulos);
     color: white;
 
+   }
+   footer .foot .lista li a{
+    color: white;
    }
    footer .foot .compra{
     height: 100px;
