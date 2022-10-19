@@ -107,6 +107,19 @@
         "contrasenia": "$2a$10$ZEe175N9WsfFBGMAlTMO8O.fuz8xp.8ycUfvRBozvtZS0Bq6IKP4G",
         "imagen": "avatar-1663535027596.jpg",
         "rol": "Administrador"
+    },
+    {
+        "id": 9,
+        "nombre": "brian",
+        "apellido": "gonzalez",
+        "email": "brian.eg50@gmail.com",
+        "contrasenia": "$2a$10$PE7SN2P7YAT5H6aSDybFBecYkgZbOncvyaWBDZufVFs3PcCAUIWDO",
+        "contacto": "",
+        "ciudad": "",
+        "genero": "",
+        "rol": "usuario",
+        "direccion": "",
+        "numeroTarjeta": "",
+        "imagen": "avatar-1666139439094.jpg"
     }
-    
 ]
