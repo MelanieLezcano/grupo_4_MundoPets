@@ -1,15 +1,25 @@
 const db = require('../database/models')
 
-let productos = require('../data/productos.json');
+/* let productos = require('../data/productos.json'); */ //viejo
+const { Op } = require("sequelize");
 
 module.exports = {
     home: (req, res) => {
-        return res.render('home',{
-            productos,
-            
+        /* return res.render('home',{productos,}) */ //viejo
+        let productos = db.Productos.findAll({
+            include: ['categoria','marca','imagenes']//revisar los nombres
         })
+        Promise.all([productos])
+        .then(([productos]) => {
+            /* return res.send(productos) */
+            return res.render('home',{
+                mensaje: 'Aca estamos aprendiendo controladores',
+                productos
+            });
+        })
+        .catch(error => res.send(error))
     },
-    productos: (req, res) => {
+    productos: (req, res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['Perro','Gato']
         
@@ -24,13 +34,13 @@ module.exports = {
 
 
     },
-    contacto: (req, res) => {
+    contacto: (req, res) => { //viejo
         return res.render('contacto')
     },
-    nosotros: (req, res) => {
+    nosotros: (req, res) => { //viejo
         return res.render('nosotros')
     },
-    categoria : (req,res) => {
+    categoria : (req,res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['Perro','Gato']
         
@@ -46,15 +56,20 @@ module.exports = {
     search:(req,res) => {
         let elemento = req.query.search
 
-        let resultados = productos.filter(producto => {
-            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
-        })
-        
+        /* let resultados = productos.filter(producto => {return producto.marca === elemento || (producto.titulo.includes(elemento))  }) */ //viejo
+        db.Productos.findAll({
+            where : {
+                [Op.or] : [
+                    {nombre : {[Op.substring] : elemento}},
+                    {descripcion : {[Op.substring] : elemento}}
+                ]
+            }
+        })   
         return res.render('busqueda',
         {
         busqueda: elemento,
         resultados
         
-        })
+        });
     }
 }

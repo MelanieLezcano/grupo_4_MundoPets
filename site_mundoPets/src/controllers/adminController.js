@@ -1,11 +1,12 @@
 const fs = require('fs')
 const path = require('path')
-const productos = require('../data/productos.json')
-const historial = require('../data/historial.json') 
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8') 
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-    , JSON.stringify(dato, null, 4), 'utf-8')
 const {validationResult} = require('express-validator')
+let db = require('../database/models')
+/* const productos = require('../data/productos.json')
+const historial = require('../data/historial.json')  */
+/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8') 
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8') */
 
 
 
@@ -14,13 +15,36 @@ const {validationResult} = require('express-validator')
 
     module.exports = {
     lista: (req,res) => {
-        return res.render('admin/listaProductos',{
+
+        db.Productos.findAll({
+            include : [{
+                all : true
+            }]
+        })
+        .then(productos => {
+            /* return res.send(productos) */
+            return res.render('admin/listaProductos', {
+                productos,
+                redirection: "history"// fijarse que nombre va
+            })
+        })
+       /*  return res.render('admin/listaProductos',{ //viejo
             productos,
             redirection: "historial"
-        })
+        }) */
     },
-    crear: (req, res) => {
-        return res.render('admin/crearProducto') 
+    crear: async (req, res) => {
+        /* return res.render('admin/crearProducto')  */ //viejo
+        try {
+            let categorias = await db.Categorias.findAll()
+            let marcas = await db.Marcas.findAll()
+            return res.render('admin/crearProducto',{
+                categorias,
+                marcas
+            })
+        } catch (error) {
+            return res.send(error)
+        }
     },
    
     nuevo: (req,res) => {
@@ -35,9 +59,9 @@ const {validationResult} = require('express-validator')
         }  /* return res.send(errors) */
         
           if(errors.isEmpty()){
-            let Imagenes = req.files.map(imagen => {
+            /* let Imagenes = req.files.map(imagen => { en crafsty no estaba
                 return imagen.filename
-            })
+            }) */
 
             let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
             
