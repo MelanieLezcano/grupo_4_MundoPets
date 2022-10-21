@@ -4,10 +4,18 @@ let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
-        return res.render('home',{
-            productos,
-            
+
+
+        let productos = db.Productos.findAll()
+        Promise.all(productos)
+        .then ((productos) =>{
+            return res.render('home',{
+                productos,
+                
+            })
         })
+        .catch(error => res.send(error))
+        
     },
     productos: (req, res) => {
         let categoriaSeleccionada = req.params.categoria
