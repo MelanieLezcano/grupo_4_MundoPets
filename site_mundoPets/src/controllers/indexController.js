@@ -7,9 +7,11 @@ module.exports = {
     home: (req, res) => {
 
 
-        let productos = db.Productos.findAll()
-        Promise.all(productos)
-        .then ((productos) =>{
+        let productos = db.Productos.findAll({
+            include:['subproductos','marcasProductos','imagenesProductos']
+        })
+        Promise.all([productos])
+        .then (([productos]) =>{
             return res.render('home',{
                 productos,
                 

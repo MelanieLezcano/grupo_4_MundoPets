@@ -13,7 +13,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       productos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Productos',
+            
+          },
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,

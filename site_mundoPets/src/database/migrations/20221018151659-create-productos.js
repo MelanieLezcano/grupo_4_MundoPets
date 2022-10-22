@@ -25,10 +25,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       subcategorias_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Subcategorias',
+            
+          },
+          key:'id'
+        }
       },
       marcas_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Marcas',
+            
+          },
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,
