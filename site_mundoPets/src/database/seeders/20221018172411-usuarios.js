@@ -6,15 +6,15 @@ let usuarios = listado.map(usuario => {
   let elemento = {
     nombre: usuario.name,
     apellido: usuario.apellido,
-    genero: usuario.genero,
     email: usuario.email,
-    contrasenia: usuario.pass,
-    direccion: null,
+    contraseña: usuario.pass,
+    /* contacto: usuario.contacto, */
     ciudad: usuario.ciudad,
-    codigoPostal: null,
+    genero: usuario.genero,
+    direccion: null,
     imagen: usuario.imagen,
-    numeroTarjeta: null,
-    rolId: usuario.rol === 'admin' ? 1 : 2,
+    /* numeroTarjeta: null, */
+    roles_id: usuario.rol === 'admin' ? 1 : 2,
     createdAt:new Date,
     updatedAt:new Date
   }

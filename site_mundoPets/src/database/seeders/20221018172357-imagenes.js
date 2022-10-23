@@ -6,7 +6,7 @@ let imagenes = []
 listado.forEach(producto => {
   let imagen = {
     nombre: producto.imagenes[0],
-    productosId: producto.id,
+    productos_id: producto.id,
     createdAt:new Date,
     updatedAt:new Date
   }

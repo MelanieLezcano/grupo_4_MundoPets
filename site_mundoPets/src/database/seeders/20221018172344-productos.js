@@ -24,13 +24,13 @@ listado.forEach(producto => {
   });
 
   let nuevo = {
-    nombre: producto.titulo,
+    titulo: producto.titulo,
     stock: producto.stock,
     precio: producto.precio,
     descuento: producto.descuento,
     descripcion: producto.descripcion,
-    categoriasId: categoria,
-    marcasId: marca,
+    subcategorias_id: categoria,
+    marcas_id: marca,
     createdAt:new Date,
     updatedAt:new Date
   }
