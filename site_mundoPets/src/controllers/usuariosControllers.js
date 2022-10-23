@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
-const db = require('../database/models')
+let db = require('../database/models')
 /* const usuarios = require('../data/usuarios.json') */ //viejo
 /* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8') */ //viejo
 

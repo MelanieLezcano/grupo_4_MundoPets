@@ -1,4 +1,4 @@
-const db = require('../database/models')
+let db = require('../database/models')
 
 /* let productos = require('../data/productos.json'); */ //viejo
 const { Op } = require("sequelize");
@@ -12,6 +12,7 @@ module.exports = {
         })
         Promise.all([productos])
         .then (([productos]) =>{
+            return res.send(productos)
             return res.render('home',{
                 productos,
                 
