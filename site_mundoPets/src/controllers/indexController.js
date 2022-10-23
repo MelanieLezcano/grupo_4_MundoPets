@@ -5,21 +5,16 @@ const { Op } = require("sequelize");
 
 module.exports = {
     home: (req, res) => {
-
-
-        let productos = db.Productos.findAll({
-            include:['subproductos','marcasProductos','imagenesProductos']
-        })
-        Promise.all([productos])
-        .then (([productos]) =>{
-            return res.send(productos)
+        db.Productos.findAll({Include: ['productoCarts','productosMarca','productosSub','productosImagenes']})
+        .then( producto => { 
+            return res.status(200).json(producto)
             return res.render('home',{
-                productos,
-                
-            })
-        })
-        .catch(error => res.send(error))
+            producto,
+        } )
         
+            
+        })
+        .catch(error => res.status(500).send(error))
     },
     productos: (req, res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
