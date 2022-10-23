@@ -1,25 +1,48 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
+let listado = require('../../data/productos.json')
+
+let listadoCategorias = ["Perro","Gato"]
+let marcas = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
+
+let productos = []
+
+listado.forEach(producto => {
+  let categoria
+  let marca
+  
+  listadoCategorias.forEach((categoriaLista,index) => {
+    if (categoriaLista === producto.categoria) {
+        return categoria = index + 1
+    }
+  });
+
+  marcas.forEach((elemento,index) => {
+    if ((elemento.toUpperCase()) === (producto.marca.toUpperCase())) {
+        return marca = index + 1
+    }
+  });
+
+  let nuevo = {
+    nombre: producto.titulo,
+    stock: producto.stock,
+    precio: producto.precio,
+    descuento: producto.descuento,
+    descripcion: producto.descripcion,
+    categoriasId: categoria,
+    marcasId: marca,
+    createdAt:new Date,
+    updatedAt:new Date
+  }
+  productos.push(nuevo)
+})
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+     await queryInterface.bulkInsert('Productos', productos, {});
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+     await queryInterface.bulkDelete('Productos', null, {});
   }
 };

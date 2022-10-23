@@ -1,7 +1,7 @@
-const db = require('../database/models')
-
 /* let productos = require('../data/productos.json'); */ //viejo
+const db = require('../database/models')
 const { Op } = require("sequelize");
+
 
 module.exports = {
     home: (req, res) => {
