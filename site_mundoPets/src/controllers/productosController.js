@@ -51,9 +51,9 @@ module.exports = {
         })
     },
     categoria : (req,res) => {
-        let categoriaSeleccionada = req.params.categoria
         /* let categorias = ['gatos','perros'] */
-       /*  productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada) */
+        /*  productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada) */
+        let categoriaSeleccionada = req.params.categoria
        db.Categorias.findOne({
         where: {
             nombre: categoriaSeleccionada

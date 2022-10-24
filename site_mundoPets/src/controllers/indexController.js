@@ -42,17 +42,29 @@ module.exports = {
     },
     categoria : (req,res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
-        let categorias = ['Perro','Gato']
-        
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+        db.Categorias.findOne({
+            where: {
+                nombre: categoriaSeleccionada
+            },
+            include : [
+                {
+                    association : 'productos',
+                    include : [{
+                        all:true
+                    }]
+                }
+            ]
         })
-    }, 
+        .then(categorias => {
+            /* return res.send(categorias) */
+
+            return res.render('productos', {
+                categorias,
+            })
+        })
+        .catch(error => res.send(error))
+    },
     search:(req,res) => {
         let elemento = req.query.search
 
