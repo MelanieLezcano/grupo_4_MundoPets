@@ -10,28 +10,31 @@ module.exports = {
             include: ['categoria','marca','imagenes']//revisar los nombres
         })
         Promise.all([productos])
-        .then(([productos]) => {
+        .then((productos) => {
             /* return res.send(productos) */
             return res.render('home',{
-                mensaje: 'Aca estamos aprendiendo controladores',
+                mensaje: "HOLA",
                 productos
             });
         })
         .catch(error => res.send(error))
     },
     productos: (req, res) => { //viejo
-        let categoriaSeleccionada = req.params.categoria
+        let categoriaSeleccionada = db.categoria.findAll()
         let categorias = ['Perro','Gato']
         
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
+        let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+    .then((productos) => {
+       /*  return res.send(productos) */
+        return res.render('productos',{
+                categorias,
+                categoriaSeleccionada,
+                productos,
+                productoPorCategoria
+            })
         })
-
+        .catch(error => res.send(error))
 
     },
     contacto: (req, res) => { //viejo
