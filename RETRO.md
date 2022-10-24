@@ -98,3 +98,29 @@ Repasar mas git/github
  - no pedir ayuda
 - manejar el trello sola (mechy)
 
+#RETRO SPRINT 5
+
+##Comenzar a hacer
+- repasar temas relacionados al sprint antes de empezar a trabajarlo
+ - fecha de vencimiento a las tareas en trello
+ - completar las tareas lo antes posible,poniendo una fecha estimada antes de la fecha de entrega de sprint
+ - revision general de las tareas 
+- cada uno manejar su tarea asignada en trello
+
+##Seguir haciendo
+- organizacion rapida de las tareas del sprint
+- buena relacion entre compañeros
+
+##Hacer más
+- organizar los tiempos personales
+ - comunicar ante cualquier dificultad lo antes posible 
+ - comunicar a los compañeros
+
+##Dejar de hacer
+- ENTREGAR FUERA DE FECHA PACTADA
+ - subestimar tareas
+
+##Hacer menos
+- no pedir ayuda
+- manejar el trello sola (mechy)
+
