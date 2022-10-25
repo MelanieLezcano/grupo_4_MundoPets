@@ -4,20 +4,30 @@ const { Op } = require("sequelize");
 
 
 module.exports = {
-    home: (req, res) => {
+    home: async (req, res) => {
         /* return res.render('home',{productos,}) */ //viejo
-        let productos = db.Productos.findAll({
-            include: ['categoria','marca','imagenes']//revisar los nombres
+        let productos = await db.Productos.findAll({
+            include: ['productoCarts','productosMarca','productosSub', 'productosImagenes']//revisar los nombres
         })
+        
+        try {
+            return res.render('home',{
+                mensaje: 'Aca estamos aprendiendo controladores',
+                productos
+            });
+
+        } catch (error) {
+            res.send(error)
+        }
+        /* 
         Promise.all([productos])
         .then(([productos]) => {
-            /* return res.send(productos) */
             return res.render('home',{
                 mensaje: 'Aca estamos aprendiendo controladores',
                 productos
             });
         })
-        .catch(error => res.send(error))
+        .catch(error => res.send(error)) */
     },
     productos: (req, res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
