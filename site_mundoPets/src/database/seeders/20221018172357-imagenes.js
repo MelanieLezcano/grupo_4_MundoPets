@@ -1,43 +1,25 @@
 'use strict';
 
-let listado = require('../../data/productos.json')
-let imagenes = []
-
-listado.forEach(producto => {
-  let imagen = {
-    nombre: producto.imagenes[0],
-    productos_id: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
- /*  let imagen2 = {
-    nombre: producto.imagenes[1],
-    productosId: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
-  let imagen3 = {
-    nombre: producto.imagenes[2],
-    productosId: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
-  let imagen4 = {
-    nombre: producto.imagenes[3],
-    productosId: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  } */
-  imagenes.push(imagen/* ,imagen2,imagen3,imagen4 */)
-})
-
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Imagenes', imagenes, {});
+    /**
+     * Add seed commands here.
+     *
+     * Example:
+     * await queryInterface.bulkInsert('People', [{
+     *   name: 'John Doe',
+     *   isBetaMember: false
+     * }], {});
+    */
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Imagenes', null, {});
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
   }
 };
-
