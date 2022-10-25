@@ -1,7 +1,6 @@
 let db = require('../database/models')
 
-/* let productos = require('../data/productos.json'); */ //viejo
-const { Op } = require("sequelize");
+let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
@@ -16,7 +15,7 @@ module.exports = {
         })
         .catch(error => res.status(500).send(error))
     },
-    productos: (req, res) => { //viejo
+    productos: (req, res) => {
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['Perro','Gato']
         
@@ -31,13 +30,13 @@ module.exports = {
 
 
     },
-    contacto: (req, res) => { //viejo
+    contacto: (req, res) => {
         return res.render('contacto')
     },
-    nosotros: (req, res) => { //viejo
+    nosotros: (req, res) => {
         return res.render('nosotros')
     },
-    categoria : (req,res) => { //viejo
+    categoria : (req,res) => {
         let categoriaSeleccionada = req.params.categoria
         let categorias = ['Perro','Gato']
         
@@ -53,20 +52,15 @@ module.exports = {
     search:(req,res) => {
         let elemento = req.query.search
 
-        /* let resultados = productos.filter(producto => {return producto.marca === elemento || (producto.titulo.includes(elemento))  }) */ //viejo
-        db.Productos.findAll({
-            where : {
-                [Op.or] : [
-                    {nombre : {[Op.substring] : elemento}},
-                    {descripcion : {[Op.substring] : elemento}}
-                ]
-            }
-        })   
+        let resultados = productos.filter(producto => {
+            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+        })
+        
         return res.render('busqueda',
         {
         busqueda: elemento,
         resultados
         
-        });
+        })
     }
 }

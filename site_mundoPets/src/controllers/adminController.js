@@ -1,12 +1,11 @@
 const fs = require('fs')
 const path = require('path')
-const {validationResult} = require('express-validator')
-let db = require('../database/models')
-/* const productos = require('../data/productos.json')
-const historial = require('../data/historial.json')  */
-/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8') 
+const productos = require('../data/productos.json')
+const historial = require('../data/historial.json') 
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8') 
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-    , JSON.stringify(dato, null, 4), 'utf-8') */
+    , JSON.stringify(dato, null, 4), 'utf-8')
+const {validationResult} = require('express-validator')
 
 
 
@@ -15,36 +14,13 @@ const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../dat
 
     module.exports = {
     lista: (req,res) => {
-
-        db.Productos.findAll({
-            include : [{
-                all : true
-            }]
-        })
-        .then(productos => {
-            /* return res.send(productos) */
-            return res.render('admin/listaProductos', {
-                productos,
-                redirection: "history"// fijarse que nombre va
-            })
-        })
-       /*  return res.render('admin/listaProductos',{ //viejo
+        return res.render('admin/listaProductos',{
             productos,
             redirection: "historial"
-        }) */
+        })
     },
-    crear: async (req, res) => {
-        /* return res.render('admin/crearProducto')  */ //viejo
-        try {
-            let categorias = await db.Categorias.findAll()
-            let marcas = await db.Marcas.findAll()
-            return res.render('admin/crearProducto',{
-                categorias,
-                marcas
-            })
-        } catch (error) {
-            return res.send(error)
-        }
+    crear: (req, res) => {
+        return res.render('admin/crearProducto') 
     },
    
     nuevo: (req,res) => {
@@ -59,9 +35,9 @@ const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../dat
         }  /* return res.send(errors) */
         
           if(errors.isEmpty()){
-            /* let Imagenes = req.files.map(imagen => { en crafsty no estaba
+            let Imagenes = req.files.map(imagen => {
                 return imagen.filename
-            }) */
+            })
 
             let {Categoria,Subcategoria,Marca,Titulo,Precio,Descuento,Descripcion,Stock} = req.body 
             
