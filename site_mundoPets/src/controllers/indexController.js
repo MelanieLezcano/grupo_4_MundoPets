@@ -6,12 +6,12 @@ const { Op } = require("sequelize");
 module.exports = {
     home: (req, res) => {
         /* return res.render('home',{productos,}) */ //viejo
-        let productos = db.Productos.findAll({
-            include: ['categoria','marca','imagenes']//revisar los nombres
+        db.Productos.findAll({
+            include: [{all:true}]//revisar los nombres
         })
-        Promise.all([productos])
-        .then((productos) => {
-            /* return res.send(productos) */
+        
+        .then(productos => {
+            return res.send(productos)
             return res.render('home',{
                 mensaje: "HOLA",
                 productos

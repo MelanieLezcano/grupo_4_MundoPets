@@ -10,10 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       numero_tarjeta: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       Usuarios_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: { 
+            tablename : 'Usuarios'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

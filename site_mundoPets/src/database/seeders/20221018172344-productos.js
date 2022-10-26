@@ -3,6 +3,7 @@
 let listado = require('../../data/productos.json')
 
 let listadoCategorias = ["Perro","Gato"]
+let listadosubCategorias = ["juguetes","alimentos"]
 let marcas = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
 
 let productos = []
@@ -29,7 +30,9 @@ listado.forEach(producto => {
     precio: producto.precio,
     descuento: producto.descuento,
     descripcion: producto.descripcion,
-    subcategorias_id: categoria,
+    imagen: producto.imagenes[0],
+    subcategorias_id: 1,
+    categorias_id: categoria,
     marcas_id: marca,
     createdAt:new Date,
     updatedAt:new Date

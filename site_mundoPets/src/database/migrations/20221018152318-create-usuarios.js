@@ -30,14 +30,17 @@ module.exports = {
       genero: {
         type: Sequelize.STRING
       },
-      direccion: {
-        type: Sequelize.STRING
-      },
       imagen: {
         type: Sequelize.STRING
       },
-      roles_id: {
-        type: Sequelize.INTEGER
+      rolesid: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: { 
+            tablename : 'Roles'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

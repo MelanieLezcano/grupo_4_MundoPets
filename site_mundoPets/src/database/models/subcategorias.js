@@ -11,20 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      SubCategorias.belongsTo(models.Categorias,{
-        as: 'category',
-        foreignKey: 'categorias_id'
-      }),
       SubCategorias.hasMany(models.Productos,{
-        as: 'subProducto',
+        as: 'subcategorias',
         foreignKey: 'subcategorias_id'
       })
     }
   }
   SubCategorias.init({
     nombre: DataTypes.STRING,
-    banner: DataTypes.STRING,
-    categorias_id: DataTypes.INTEGER
+    banner: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'SubCategorias',
