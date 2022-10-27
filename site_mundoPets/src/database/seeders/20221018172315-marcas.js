@@ -1,25 +1,23 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
+let listado = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
+
+let marcas = listado.map(marca => {
+  let elemento = {
+    nombre: marca,
+    createdAt:new Date,
+    updatedAt:new Date
+  }
+  return elemento
+})
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+     await queryInterface.bulkInsert('Marcas', marcas, {});
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+     await queryInterface.bulkDelete('Marcas', null, {});
   }
 };
