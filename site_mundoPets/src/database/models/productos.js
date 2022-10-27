@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'marcas_id'
       }),
       Productos.belongsTo(models.SubCategorias,{
-        as: 'productosSub',
+        as: 'subcategoria',
         foreignKey: 'subcategorias_id'
       }),
-      Productos.hasMany(models.Imagenes,{
-        as: 'productosImagenes',
-        foreignKey: 'productos_id'
-      })
+      Productos.belongsTo(models.Categorias,{
+        as: 'categoria',
+        foreignKey: 'categorias_id'
+      }) 
     }
   }
   Productos.init({
@@ -34,8 +34,10 @@ module.exports = (sequelize, DataTypes) => {
     precio: DataTypes.INTEGER,
     descuento: DataTypes.INTEGER,
     descripcion: DataTypes.STRING,
+    imagen: DataTypes.STRING,
     stock: DataTypes.INTEGER,
     subcategorias_id: DataTypes.INTEGER,
+    categorias_id: DataTypes.INTEGER,
     marcas_id: DataTypes.INTEGER
   }, {
     sequelize,

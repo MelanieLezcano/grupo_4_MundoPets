@@ -4,30 +4,36 @@ let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
-        db.Productos.findAll({Include: ['productoCarts','productosMarca','productosSub','productosImagenes']})
-        .then( producto => { 
-            return res.status(200).json(producto)
-            return res.render('home',{
-            producto,
-        } )
+        /* return res.render('home',{productos,}) */ //viejo
+        db.Productos.findAll({
+            include: [{all:true}]//revisar los nombres
+        })
         
-            
+        .then(productos => {
+            return res.send(productos)
+            return res.render('home',{
+                mensaje: "HOLA",
+                productos
+            });
         })
         .catch(error => res.status(500).send(error))
     },
-    productos: (req, res) => {
-        let categoriaSeleccionada = req.params.categoria
+    productos: (req, res) => { //viejo
+        let categoriaSeleccionada = db.categoria.findAll()
         let categorias = ['Perro','Gato']
         
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
+        let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+    .then((productos) => {
+       /*  return res.send(productos) */
+        return res.render('productos',{
+                categorias,
+                categoriaSeleccionada,
+                productos,
+                productoPorCategoria
+            })
         })
-
+        .catch(error => res.send(error))
 
     },
     contacto: (req, res) => {
@@ -38,17 +44,29 @@ module.exports = {
     },
     categoria : (req,res) => {
         let categoriaSeleccionada = req.params.categoria
-        let categorias = ['Perro','Gato']
-        
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+        db.Categorias.findOne({
+            where: {
+                nombre: categoriaSeleccionada
+            },
+            include : [
+                {
+                    association : 'productos',
+                    include : [{
+                        all:true
+                    }]
+                }
+            ]
         })
-    }, 
+        .then(categorias => {
+            /* return res.send(categorias) */
+
+            return res.render('productos', {
+                categorias,
+            })
+        })
+        .catch(error => res.send(error))
+    },
     search:(req,res) => {
         let elemento = req.query.search
 

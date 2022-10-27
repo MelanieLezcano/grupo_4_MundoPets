@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Tarjetas.init({
-    numero_tarjeta: DataTypes.INTEGER,
+    numero_tarjeta: DataTypes.STRING,
     Usuarios_id: DataTypes.INTEGER
   }, {
     sequelize,
