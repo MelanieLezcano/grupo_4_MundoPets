@@ -56,6 +56,30 @@
                         <small><%= errors.contrasenia2.msg%></small>
                        <% } %>
                 </div>
+                <div class="container bottom">
+                    <label for="contacto">Contacto</label>
+                    <input type="phonenumber" name="contacto" id="contacto" placeholder="Ingresa tu numero de telefono">
+                    <% if (locals.errors && errors.contacto{ %>
+                        <small><%= errors.contacto.msg%></small>
+                       <% } %>
+                    
+                </div>
+                <div class="container bottom">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="city" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad">
+                    <% if (locals.errors && errors.ciudad{ %>
+                        <small><%= errors.ciudad.msg%></small>
+                       <% } %>
+                    
+                </div>
+                <div class="container bottom">
+                    <label for="genero">Genero</label>
+                    <input type="genre" name="genero" id="genero" >
+                    <% if (locals.errors && errors.genero{ %>
+                        <small><%= errors.genero.msg%></small>
+                       <% } %>
+                    
+                </div>
                 <div class="imagenPerfil">
                     <label for="imagen">Foto de perfil</label>
                     <input type="file" name="imagen" id="imagen">

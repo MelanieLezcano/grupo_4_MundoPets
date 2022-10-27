@@ -22,7 +22,24 @@ module.exports = {
         }
         if (errors.isEmpty()) {
 
-            let { nombre, email, contrasenia, apellido } = req.body
+            let { nombre, email, contrasenia, apellido,contacto,ciudad,genero} = req.body
+
+             db.usuarios.create({
+              
+                nombre:nombre,
+                apellido:apellido,
+                email,
+                contrasenia: bcrypt.hashSync(contrasenia, 10),
+                contacto: contacto,
+                ciudad: ciudad,
+                genero: genero,
+                rol: "usuario",
+                direccion: "",
+                numeroTarjeta: "",
+                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                roles_id: 2
+             })
+/* 
             let usuarioNuevo = {
                 id: usuarios[usuarios.length - 1].id + 1,
                 nombre,
@@ -41,11 +58,23 @@ module.exports = {
             }
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
+ */
 
-            return res.redirect('/')
+            .then(usuario => {
+                req.session.usuarioLogin = {
+                    id: usuario.id,
+                    nombre: usuario.nombre,
+                    imagen: usuario.imagen,
+                    roles_id: usuario.roles_id
+                }
+                return res.redirect('/')
+            })
+            .catch(errores => res.send(errores))
         } else {
+
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-            if (req.file && req.file.filename != undefined && ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+
+            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
@@ -75,8 +104,14 @@ module.exports = {
         if (errors.isEmpty()) {
 
             const { email, recordarme } = req.body
-            let usuario = usuarios.find(usuario => usuario.email === email)
+          /*   let usuario = usuarios.find(usuario => usuario.email === email) */
 
+          db.usuarios.findOne({
+            where : {
+                email 
+           }
+          })
+          .then(usuario => {
             req.session.usuarioLogin = {
                 id: usuario.id,
                 nombre: usuario.nombre,
@@ -92,6 +127,14 @@ module.exports = {
 
             return res.redirect('/usuarios/perfil')
             /* return res.send(req.body) */
+          })
+
+          .catch(errores => res.send(errores))
+
+            
+
+          
+           
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('usuarios/login', {
