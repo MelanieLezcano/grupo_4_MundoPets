@@ -24,15 +24,15 @@ module.exports = [
         }
     })
     .then(usuario => {
-        if(usuario && bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia)) {
+       /*  if(usuario && bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia)) {
             return Promise.reject()
         }else{
             return false
-        }
-
-    /*  if( !usuario && !bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia)) {
-            return Promise.reject()
         } */
+
+     if( !usuario && !bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia)) {
+            return Promise.reject()
+        } 
 
 
     })
