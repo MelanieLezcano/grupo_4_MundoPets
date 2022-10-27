@@ -1,8 +1,7 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('SubCategorias', {
+    await queryInterface.createTable('Categorias', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -15,9 +14,6 @@ module.exports = {
       banner: {
         type: Sequelize.STRING
       },
-      categorias_id: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -29,6 +25,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('SubCategorias');
+    await queryInterface.dropTable('Categorias');
   }
 };
