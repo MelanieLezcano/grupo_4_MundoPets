@@ -8,12 +8,10 @@ let usuarios = listado.map(usuario => {
     apellido: usuario.apellido,
     email: usuario.email,
     contraseña: usuario.pass,
-    /* contacto: usuario.contacto, */
+    contacto: 125263,
     ciudad: usuario.ciudad,
     genero: usuario.genero,
-    direccion: null,
     imagen: usuario.imagen,
-    /* numeroTarjeta: null, */
     roles_id: usuario.rol === 'admin' ? 1 : 2,
     createdAt:new Date,
     updatedAt:new Date

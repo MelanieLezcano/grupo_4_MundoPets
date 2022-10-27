@@ -29,29 +29,29 @@ module.exports = {
       },
       subcategorias_id: {
         type: Sequelize.INTEGER,
-        references: {
-          model: { 
-            tablename :'Subcategorias'
+        references : {
+          model : {
+            tableName : "Subcategorias",
           },
-          key: 'id'
+          key : "id"
         }
       },
       categorias_id: {
         type: Sequelize.INTEGER,
-        references: {
-          model: { 
-            tablename : 'Categorias'
+        references : {
+          model : {
+            tableName : "Categorias",
           },
-          key: 'id'
+          key : "id"
         }
       },
       marcas_id: {
         type: Sequelize.INTEGER,
-        references: {
-          model: { 
-            tablename : 'Marcas'
+        references : {
+          model : {
+            tableName : "Marcas",
           },
-          key: 'id'
+          key : "id"
         }
       },
       createdAt: {
