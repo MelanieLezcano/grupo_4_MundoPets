@@ -17,7 +17,7 @@ router.get('/historial',adminCheck,historial);
 
 /* crear un producto */
 /* trabajan con la misma ruta pero el metodo es diferente */
-router.get('/crear',adminCheck, crear); /* estoy pidiendo la vista del formulario,sea de crear editar o lo q sea, */
+router.get('/crear', crear); /* estoy pidiendo la vista del formulario,sea de crear editar o lo q sea, */
 router.post('/crear',upload.single('Imagenes'),productosValidaciones,nuevo); /* por la misma ruta yo envio el formulario para que lo complete,post va modificar el tipo de vista para poder modificar y enviar informacion hacia el modelo */
 
 /* editar producto */

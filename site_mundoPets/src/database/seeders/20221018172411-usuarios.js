@@ -1,8 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-/** @type {import('sequelize-cli').Migration} */
-=======
 let listado = require('../../data/usuarios.json')
 
 let usuarios = listado.map(usuario => {
@@ -22,7 +19,6 @@ let usuarios = listado.map(usuario => {
   return elemento
 })
 
->>>>>>> 7e8d2a59c0430c67f31390c26c1b0d90216a6208
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**

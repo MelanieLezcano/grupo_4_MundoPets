@@ -1,8 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-/** @type {import('sequelize-cli').Migration} */
-=======
 let listado = require('../../data/productos.json')
 
 let listadoCategorias = ["Perro","Gato"]
@@ -43,7 +40,6 @@ listado.forEach(producto => {
   productos.push(nuevo)
 })
 
->>>>>>> 7e8d2a59c0430c67f31390c26c1b0d90216a6208
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
