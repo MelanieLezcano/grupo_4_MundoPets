@@ -26,19 +26,19 @@ module.exports = {
 
              db.usuarios.create({
               
-                nombre:nombre,
-                apellido:apellido,
+                nombre,
+                apellido,
                 email,
                 contrasenia: bcrypt.hashSync(contrasenia, 10),
-                contacto: contacto,
-                ciudad: ciudad,
-                genero: genero,
-                rol: "usuario",
-                direccion: "",
-                numeroTarjeta: "",
+                contacto,
+                ciudad,
+                genero,
+                direccion,
+                numeroTarjeta,
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
                 roles_id: 2
              })
+                
 /* 
             let usuarioNuevo = {
                 id: usuarios[usuarios.length - 1].id + 1,
@@ -49,7 +49,7 @@ module.exports = {
                 contacto: "",
                 ciudad: "",
                 genero: "",
-                rol: "usuario",
+               
                 direccion: "",
                 numeroTarjeta: "",
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",

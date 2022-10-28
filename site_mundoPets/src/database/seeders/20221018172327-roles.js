@@ -1,6 +1,6 @@
 'use strict';
 
-
+let tipoRol = ['Administrador','Usuario']
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
