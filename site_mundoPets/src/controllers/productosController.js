@@ -47,15 +47,12 @@ module.exports = {
         })
     })
     .catch(error => res.send(error))
-},
+}
         /* res.render('productos',{
             categorias,
             categoriaSeleccionada,
             productos,
             productoPorCategoria
-        })
+        })/*  */
 
-    
-
-
-
+}

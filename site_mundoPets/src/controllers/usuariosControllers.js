@@ -11,7 +11,7 @@ module.exports = {
         return res.render('usuarios/register')
     },
     processRegister: (req, res) => {
-        /*  return res.send (req.file) */
+        return res.send (req.body) 
         let errors = validationResult(req)
         if (req.fileValidationError != undefined) {
             let imagen = {
@@ -24,6 +24,16 @@ module.exports = {
 
             let { nombre, email, contrasenia, apellido,contacto,ciudad,genero} = req.body
 
+            /* {
+  "nombre": "Mercedes",
+  "apellido": "Alvarez",
+  "email": "mechychevy@gmail.com",
+  "contrasenia": "12345678",
+  "contrasenia2": "12345678",
+  "contacto": "1136370707",
+  "ciudad": "buenos aires",
+  "genero": "femenino"
+} */
              db.usuarios.create({
               
                 nombre,
