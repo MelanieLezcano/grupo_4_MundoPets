@@ -12,7 +12,7 @@ let usuarios = listado.map(usuario => {
     ciudad: usuario.ciudad,
     genero: usuario.genero,
     imagen: usuario.imagen,
-    roles_id: usuario.rol === 'admin' ? 1 : 2,
+    roles_id: usuario.rol === 'Administrador' ? 1 : 2,
     createdAt:new Date,
     updatedAt:new Date
   }
