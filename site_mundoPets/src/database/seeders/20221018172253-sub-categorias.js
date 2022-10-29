@@ -10,7 +10,7 @@ subcategorias = subcategorias.map(categoria => {
     updatedAt: new Date
   }
   return elemento
-} )
+} ) 
 module.exports = {
   async up (queryInterface, Sequelize) {
     
