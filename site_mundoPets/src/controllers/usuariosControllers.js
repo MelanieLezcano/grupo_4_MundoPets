@@ -11,7 +11,7 @@ module.exports = {
         return res.render('usuarios/register')
     },
     processRegister: (req, res) => {
-        return res.send (req.body) 
+       /*  return res.send (req.body)  */
         let errors = validationResult(req)
         if (req.fileValidationError != undefined) {
             let imagen = {
