@@ -1,5 +1,5 @@
 let productos = require('../data/productos.json');
-
+let db = require('../database/models')
 module.exports = {
 
 
@@ -27,7 +27,7 @@ module.exports = {
         /* let categorias = ['gatos','perros'] */
         /*  productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada) */
         let categoriaSeleccionada = req.params.categoria
-       db.Categorias.findOne({
+        db.Categorias.findOne({
         where: {
             nombre: categoriaSeleccionada
         },

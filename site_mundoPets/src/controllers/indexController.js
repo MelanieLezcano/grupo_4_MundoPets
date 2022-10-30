@@ -18,10 +18,10 @@ module.exports = {
         .catch(error => res.status(500).send(error))
     },
     productos: (req, res) => { //viejo
-        let categoriaSeleccionada = db.categoria.findAll()
+        let categoriaSeleccionada = db.Categorias.findAll()
         let categorias = ['Perro','Gato']
         
-        let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
+        let productoPorCategoria = db.productos.filter(producto => producto.categorias === categoriaSeleccionada)
 
     .then((productos) => {
       return res.send(productos) 
