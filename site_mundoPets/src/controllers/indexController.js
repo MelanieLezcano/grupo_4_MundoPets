@@ -25,7 +25,7 @@ module.exports = {
         let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
     .then((productos) => {
-       /*  return res.send(productos) */
+      return res.send(productos) 
         return res.render('productos',{
                 categorias,
                 categoriaSeleccionada,
