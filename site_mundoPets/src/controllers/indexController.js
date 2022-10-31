@@ -1,6 +1,6 @@
 let db = require('../database/models')
 
-let productos = require('../data/productos.json');
+ let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
