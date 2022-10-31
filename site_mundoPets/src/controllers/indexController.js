@@ -21,10 +21,10 @@ module.exports = {
         let categoriaSeleccionada = db.Categorias.findAll()
         let categorias = ['Perro','Gato']
         
-        let productoPorCategoria = db.productos.filter(producto => producto.categorias === categoriaSeleccionada)
+        let productoPorCategoria = productos.filter(producto => producto.categorias === categoriaSeleccionada)
 
     .then((productos) => {
-      return res.send(productos) 
+     /*  return res.send(productos)  */
         return res.render('productos',{
                 categorias,
                 categoriaSeleccionada,
