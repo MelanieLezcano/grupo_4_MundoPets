@@ -61,7 +61,7 @@ module.exports = {
             }) */
             let { Categoria, Subcategoria, Marca, Titulo, Precio, Descuento, Descripcion, Stock } = req.body
 
-            db.productos.create({
+            db.Productos.create({
                 /* id: productos[productos.length - 1].id + 1,  */
                 categoria: Categoria,
                 subcategoria: Subcategoria,
