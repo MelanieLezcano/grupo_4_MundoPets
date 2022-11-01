@@ -10,11 +10,18 @@ let productos = []
 
 listado.forEach(producto => {
   let categoria
+  let subcategoria
   let marca
   
   listadoCategorias.forEach((categoriaLista,index) => {
     if (categoriaLista === producto.categoria) {
         return categoria = index + 1
+    }
+  });
+
+  listadosubCategorias.forEach((subcategoriaLista,index) => {
+    if (subcategoriaLista === producto.subcategoria) {
+        return subcategoria = index + 1
     }
   });
 

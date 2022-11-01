@@ -29,17 +29,17 @@
                                         <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %>
                                     </p>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" type="text" name="Marca"
-                                        placeholder="Marca del Producto" id="brand"
-                                        value="<%= locals.old && old.Marca? old.Marca : null%>">
-                                    <label class="form-label" for="brand">Marca del Producto</label>
-                                    <% if (locals.errors && errors.Marca) { %>
-                                        <p class="span text-danger">
-                                            <%= errors.Marca.msg %>
-                                        </p>
-                                        <% } %>
-                                </div>
+                                <select style="padding: 17px; margin-bottom: 16px" class="form-select" name="Marca" floatingSelect"
+                                aria-label="Floating label select example">
+                                <option hidden value="">Selecciona una marca</option>
+                                <% marcas.forEach(marca=> { %>
+
+                                    <option value="<%- marca.id %>"><%- marca.nombre  %></option>
+
+                                    <% }); %>
+
+                                        
+                            </select>
                                 <!-- <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Categoria" placeholder="Categoria"  id="category">
                             <label class="form-label" for="brand">Categoria del Producto</label>

@@ -57,14 +57,14 @@ module.exports = {
 
                         db.Productos.create({
                             categorias_id: +Categoria,
-                            subcategoria_id: Subcategoria,
+                            subcategorias_id: +Subcategoria,
                             titulo: Titulo,
                             marcas_id: +Marca,
                             precio: +Precio,
                             descuento: +Descuento,
-                            Descripcion,
+                            descripcion: Descripcion,
                             stock: +Stock,
-                            imagenes: req.file ? req.file.filename : 'default-image.png',
+                            imagen: req.file ? req.file.filename : 'default-image.png',
                         })
 
             .then(productoNuevo => {
@@ -79,15 +79,15 @@ module.exports = {
                     })
                     db.Imagenes.bulkCreate(img)
                         .then(imagenes => {
-                            return res.redirect('/admin/list')
+                            return res.redirect('/admin/lista')
                         })
                 } else {
                     db.Imagenes.create({
                         nombre: 'default-image.png',
-                        productosId: productoNuevo.id
+                        productos_Id: productoNuevo.id
                     })
                         .then(imagenes => {
-                            return res.redirect('/admin/list')
+                            return res.redirect('/admin/lista')
                         })
                 }
             })
@@ -143,7 +143,7 @@ module.exports = {
         }
         if (errors.isEmpty()) {
             const idParams = +req.params.id
-            const { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+            const { Marca, Titulo, Categoria, Subcategoria, Precio, Descuento, Stock, Descripcion } = req.body
 
             let producto = db.Productos.findOne({
                 where: {
@@ -154,13 +154,14 @@ module.exports = {
                 }]
             })
             let actualizacion = db.Productos.update({
-                nombre: titulo,
-                precio: +precio,
-                descuento: +descuento,
-                stock: +stock,
-                descripcion,
-                categorias_Id: categoria,
-                marcas_Id: marca,
+                nombre: Titulo,
+                precio: +Precio,
+                descuento: +Descuento,
+                stock: +Stock,
+                descripcion: Descripcion,
+                categorias_Id: Categoria,
+                subcategorias_Id: Subcategoria,
+                marcas_Id: Marca,
             }, {
                 where: {
                     id: idParams
@@ -170,45 +171,45 @@ module.exports = {
             Promise.all([producto, actualizacion])
                 .then(([producto, actualizacion]) => {
 
-                    let imagen1
+                    let imagenes
                     let promesas = []
 
                     /* Imagen 1 */
                     /* Existe en la base de datos */
-                    if (producto.imagenes[0].length !== 0) {
+                    if (producto.imagen[0].length !== 0) {
                         /* viene una imagen nueva */
-                        if (!!req.files.imagen1) {
+                        if (!!req.files.imagenes) {
                             /* Guardo el nombre en una variable para despues borrarla */
-                            imagen1 = producto.imagenes[0].nombre
+                            imagenes = producto.imagenes[0].nombre
                             /* La reemplazamos en la base de datos */
                             promesas.push(
                                 db.Imagenes.update({
-                                    nombre: req.files.imagen1[0].filename
+                                    nombre: req.files.imagenes[0].filename
                                 }, {
                                     where: {
                                         id: producto.imagenes[0].id
                                     }
                                 }))
                             /* Borramos la imagen anterior */
-                            if (fs.existsSync(path.join(__dirname, '../../public/images/productos', imagen1))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/images/productos', imagen1))
+                            if (fs.existsSync(path.join(__dirname, '../../public/images/productos', imagen))) {
+                                fs.unlinkSync(path.join(__dirname, '../../public/images/productos', imagen))
                             }
                         }
                     } else {
                         /* Si no existe la imagen en la base de datos, tenemos que crearla */
-                        if (!!req.files.imagen1) {
+                        if (!!req.files.imagen) {
 
                             /* Creamos la imagen en la base de datos */
                             promesas.push(
                                 db.Imagenes.create({
-                                    nombre: req.files.imagen1[0].filename,
-                                    productosId: producto.id
+                                    nombre: req.files.imagen[0].filename,
+                                    productos_id: producto.id
                                 }))
                         }
                     }
                     Promise.all(promesas)
                         .then(promesas => {
-                            return res.redirect('/admin/list')
+                            return res.redirect('/admin/lista')
                         })
                 })
                 .catch(error => res.send(error))
