@@ -1,10 +1,11 @@
-let db = require('../database/models')
+let db = require('../database/models');
+const productos = require('../database/models/productos');
 
- let productos = require('../data/productos.json');
+ /* let productos = require('../data/productos.json'); */
 
 module.exports = {
     home: (req, res) => {
-        db.Productos.findAll({
+        db.productos.findAll({
             include: [{all:true}]
         })
         
@@ -42,7 +43,7 @@ module.exports = {
         return res.render('nosotros')
     },
     categoria : (req,res) => {
-        let categoriaSeleccionada = req.params.categoria
+        let categoriaSeleccionada = req.params.categorias
 
         db.Categorias.findOne({
             where: {

@@ -4,7 +4,7 @@ const { categoria } = require("../../controllers/indexController");
 
 let category = ['Perro','Gato']
 
-let categorias = category.map(categoria =>{
+let categorias = category.map(categoria => {
   let elemento = {
     nombre:categoria
   }

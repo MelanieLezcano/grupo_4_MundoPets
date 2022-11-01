@@ -2,7 +2,7 @@
     {
         "id": 1,
         "categoria": "Gato",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "titulo": "Royal Canin Kitten 10kg",
         "marca": "Royal Canin",
         "precio": 15000,
@@ -16,7 +16,7 @@
     {
         "id": 2,
         "categoria": "Gato",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Agility",
         "titulo": "Agility Kitten 5kg",
         "precio": 8000,
@@ -33,7 +33,7 @@
     {
         "id": 3,
         "categoria": "Gato",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Balanced Kitten 7.5kg",
         "precio": 7500,
@@ -50,7 +50,7 @@
     {
         "id": 4,
         "categoria": "Gato",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Excellent",
         "titulo": "Excellent Kitten 7.5kg",
         "precio": 7800,
@@ -67,7 +67,7 @@
     {
         "id": 5,
         "categoria": "Gato",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Complete Kitten 7.5kg",
         "precio": 8000,
@@ -168,9 +168,9 @@
     {
         "id": 11,
         "categoria": "Perro",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Infinity",
-        "titulo": "Infinity Cachorro 10kg",
+        "titulo": "Infinity cachorro 10kg",
         "precio": 15000,
         "descuento": 20,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
@@ -182,7 +182,7 @@
     {
         "id": 12,
         "categoria": "Perro",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Agility",
         "titulo": "Agility Cachorro 5kg",
         "precio": 8000,
@@ -199,7 +199,7 @@
     {
         "id": 13,
         "categoria": "Perro",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Complete Junior 7.5kg",
         "precio": 7500,
@@ -216,7 +216,7 @@
     {
         "id": 14,
         "categoria": "Perro",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Dog Selection",
         "titulo": "Dog Selection Cachorro 10kg",
         "precio": 9000,
@@ -233,7 +233,7 @@
     {
         "id": 15,
         "categoria": "Perro",
-        "subcategoria": "cachorro",
+        "subcategoria": "alimentos",
         "marca": "Eukanuba",
         "titulo": "Eukanuba Puppy Large 7.5kg",
         "precio": 8000,
@@ -250,7 +250,7 @@
     {
         "id": 16,
         "categoria": "Perro",
-        "subcategoria": "adulto",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Complete Adulto 20 kg",
         "precio": 9000,
@@ -267,7 +267,7 @@
     {
         "id": 17,
         "categoria": "Perro",
-        "subcategoria": "adulto",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Balanced Adulto 20 kg",
         "precio": 17000,
@@ -284,7 +284,7 @@
     {
         "id": 18,
         "categoria": "Perro",
-        "subcategoria": "adulto",
+        "subcategoria": "alimentos",
         "marca": "Biopet",
         "titulo": "Biopet Adulto 15 kg",
         "precio": 15000,
@@ -301,7 +301,7 @@
     {
         "id": 19,
         "categoria": "Perro",
-        "subcategoria": "adulto",
+        "subcategoria": "alimentos",
         "marca": "VitalCan",
         "titulo": "VitalCan Complete Senior  20 kg",
         "precio": 17000,
@@ -318,7 +318,7 @@
     {
         "id": 20,
         "categoria": "Perro",
-        "subcategoria": "adulto",
+        "subcategoria": "alimentos",
         "marca": "Infinity",
         "titulo": "Infinity Adulto 20 kg",
         "precio": 19000,

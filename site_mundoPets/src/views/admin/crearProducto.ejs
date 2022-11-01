@@ -177,13 +177,13 @@
                                 <select class="form-select" name="Subcategoria"floatingSelect" aria-label="Floating label select example">
                                     <% if (locals.errors && old.Subcategoria) { %>
                                         <option hidden value="">Selecciona una opcion</option>
-                                        <option <%= old.Subcategoria === "cachorro" ? "selected" : null %>  value="cachorro">cachorro</option>
-                                        <option <%= old.Subcategoria === "adulto" ? "selected" : null %>   value="adulto">adulto</option>
+                                        <option <%= old.Subcategoria === "alimentos" ? "selected" : null %>  value="alimentos">cachorro</option>
+                                        <option <%= old.Subcategoria === "juguetes" ? "selected" : null %>   value="juguetes">adulto</option>
                                        
                                     <% }else{ %>
                                         <option selected hidden value="">Selecciona una opcion</option>
-                                        <option value="cachorro">cachorro</option>
-                                        <option value="adulto">adulto</option>
+                                        <option value="alimentos">alimentos</option>
+                                        <option value="juguetes">juguetes/option>
                                        
                                     <% } %> 
                                   </select>
