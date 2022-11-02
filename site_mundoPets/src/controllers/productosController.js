@@ -1,4 +1,4 @@
-/* let productos = require('../data/productos.json'); */ //viejo
+/* let productos = require('../data/productos.json'); */ //viejo...
 let db = require('../database/models')
 let Sequelize = require('sequelize')
 
