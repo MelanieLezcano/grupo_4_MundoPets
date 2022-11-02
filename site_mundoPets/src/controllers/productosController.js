@@ -4,8 +4,6 @@ const { Op } = require("sequelize");
 let productos = require('../data/productos.json'); 
 let db = require('../database/models')
 module.exports = {
-
-
     detalle: (req, res) => {
         let id = +req.params.id
         /* let productoEnDetalle = productos.find((producto) => producto.id === id) */ //viejo
@@ -39,7 +37,7 @@ module.exports = {
             producto: productoEnDetalle,
             productos
         }) */
-    },
+    
     carrito: (req, res) => {
 
         let products = []
@@ -76,12 +74,11 @@ module.exports = {
         })
     })
     .catch(error => res.send(error))
-}
-        /* res.render('productos',{
+},
+        /* return res.render('productos',{
             categorias,
             categoriaSeleccionada,
             productos,
             productoPorCategoria
-        })
-
+        }) */
 }
