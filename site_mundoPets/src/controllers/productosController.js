@@ -1,4 +1,7 @@
-let productos = require('../data/productos.json');
+
+const { Op } = require("sequelize");
+
+let productos = require('../data/productos.json'); 
 let db = require('../database/models')
 module.exports = {
 
