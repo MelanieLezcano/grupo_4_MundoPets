@@ -1,18 +1,20 @@
 let db = require('../database/models');
-const productos = require('../database/models/productos');
-
- /* let productos = require('../data/productos.json'); */
+/* const productos = require('../database/models/productos'); */
+const { Op } = require("sequelize");
+/* let productos = require('../data/productos.json');  */
 
 module.exports = {
     home: (req, res) => {
-        db.productos.findAll({
-            include: [{all:true}]
+
+
+          let productos =  db.Productos.findAll({
+            include: ['categorias','marcas']
         })
         
-        .then(productos => {
+        .then(([productos]) => {
            /*  return res.send(productos) */
             return res.render('home',{
-                mensaje: "HOLA",
+                
                 productos
             });
         })
@@ -68,17 +70,39 @@ module.exports = {
         .catch(error => res.send(error))
     },
     search:(req,res) => {
-        let elemento = req.query.search
+        /* let elemento = req.query.search
 
         let resultados = productos.filter(producto => {
-            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
-        })
+            return producto.marca === elemento || (producto.titulo.includes(elemento)) */  /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+      /*   })
         
         return res.render('busqueda',
         {
         busqueda: elemento,
         resultados
         
+        }) */
+     
+        let elemento = req.query.search
+
+        db.Productos.findAll({
+            where : {
+                [Op.or] : [
+                    {nombre : {[Op.substring] : elemento}},
+                    {descripcion : {[Op.substring] : elemento}}
+                ]
+            }
         })
+        return res.render('busqueda', 
+        {
+            busqueda: elemento,
+            resultados
+        });
+
+
+
+
+
+
     }
 }
