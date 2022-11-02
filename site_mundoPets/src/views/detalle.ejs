@@ -10,7 +10,7 @@
             <main>
                 <section class="productoPrincipal">
                     <div class="imagen-princ">
-                        <img src="/img/<%= producto.imagenes[0] %> " alt=" ">
+                        <img src="/img/<%= producto.imagen %> " alt=" ">
                     </div>
                     <section>
                         <div class="textoDerecha">
@@ -40,14 +40,14 @@
                     </section>
                     <section class="productosRelacionados">
                         <h2>Productos Relacionados</h2>
-                        <% for( let i=0; i < 6; i++ ) { %>
+                        <% for( let i=0; i < 4; i++ ) { %>
                     </section>
                     <article>
                             <div class="contenedor">
                             <a href="/productos/detalle/<%=productos[i].id %>">
                             </div>
                             <div class="prod-rel">
-                                <img src="/img/<%= productos[i].imagenes[0] %>" alt="">
+                                <img src="/img/<%= productos[i].imagen %>" alt="">
                             </div>
                             <div>
                                 <p class="pre">$<%= productos[i].precio %></p>
