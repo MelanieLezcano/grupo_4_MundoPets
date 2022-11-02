@@ -15,7 +15,7 @@ module.exports = {
             .then(producto => {
                 db.Productos.findAll({
                     where: {
-                        categoriasId: producto.categoriasId
+                        categorias_id: producto.categorias_id
                     },
                     limit: 4,
                     order: [[Sequelize.literal("RAND()")]],
@@ -24,7 +24,7 @@ module.exports = {
                     }]
                 })
                     .then(productos => {
-                        /* return res.send(productos) */
+                        /*  return res.send(productos)  */
                         return res.render('detalle', {
                             producto,
                             productos
