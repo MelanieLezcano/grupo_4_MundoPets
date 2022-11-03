@@ -8,7 +8,7 @@ const adminCheck = require('../middlewares/adminCheck')
 
 
 /* GET home page */
-router.get('/lista',adminCheck, lista);
+router.get('/lista',/* adminCheck, */ lista);
 router.get('/historial',adminCheck,historial);
 
 
