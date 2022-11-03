@@ -4,13 +4,12 @@ let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
-        /* return res.render('home',{productos,}) */ //viejo
         db.Productos.findAll({
-            include: [{all:true}]//revisar los nombres
+            include: [{all:true}]
         })
         
         .then(productos => {
-            return res.send(productos)
+           /*  return res.send(productos) */
             return res.render('home',{
                 mensaje: "HOLA",
                 productos
@@ -19,14 +18,32 @@ module.exports = {
         .catch(error => res.send(error))
     },
     productos: (req, res) => { //viejo
-        let categoriaSeleccionada = db.categoria.findAll()
-        let categorias = ['Perro','Gato']
+       /*  let categoriaSeleccionada = db.categoria.findAll() */
+       let  categoriaSeleccionada = req.params.categoria
+       /* console.log(categoriaSeleccionada); */
+       db.Categorias.findOne({
+        where:{
+            nombre : categoriaSeleccionada
+        },
+        
+        include: [{all:true}]})
+
+       .then(categorias => {
+          /*  return res.send(categorias) */
+           return res.render('productos',{categorias} )
+
+       })
+       .catch(error => res.send(error))
+
+
+
+      /*   let categorias = ['Perro','Gato']
         
         let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
     .then((productos) => {
        /*  return res.send(productos) */
-        return res.render('productos',{
+       /*  return res.render('productos',{
                 categorias,
                 categoriaSeleccionada,
                 productos,
@@ -34,7 +51,7 @@ module.exports = {
             })
         })
         .catch(error => res.send(error))
-
+ */ 
     },
     contacto: (req, res) => {
         return res.render('contacto')
