@@ -124,6 +124,7 @@ module.exports = {
         Promise.all([categorias, marcas, producto])
             .then(([categorias, marcas, producto]) => {
                 /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
+                console.log(producto);
                 return res.render('admin/editarProducto', {
                     producto,
                     categorias,
@@ -171,38 +172,38 @@ module.exports = {
             Promise.all([producto, actualizacion])
                 .then(([producto, actualizacion]) => {
 
-                    let imagenes
+                    let imagen1
                     let promesas = []
 
                     /* Imagen 1 */
                     /* Existe en la base de datos */
-                    if (producto.imagen[0].length !== 0) {
+                    if (producto.imagenes[0].length !== 0) {
                         /* viene una imagen nueva */
-                        if (!!req.files.imagenes) {
+                        if (!!req.files.imagen1) {
                             /* Guardo el nombre en una variable para despues borrarla */
-                            imagenes = producto.imagenes[0].nombre
+                            imagen1 = producto.imagenes[0].nombre
                             /* La reemplazamos en la base de datos */
                             promesas.push(
                                 db.Imagenes.update({
-                                    nombre: req.files.imagenes[0].filename
+                                    nombre: req.files.imagen1[0].filename
                                 }, {
                                     where: {
                                         id: producto.imagenes[0].id
                                     }
                                 }))
                             /* Borramos la imagen anterior */
-                            if (fs.existsSync(path.join(__dirname, '../../public/images/productos', imagen))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/images/productos', imagen))
+                            if (fs.existsSync(path.join(__dirname, '../../public/img', imagen1))) {
+                                fs.unlinkSync(path.join(__dirname, '../../public/img', imagen1))
                             }
                         }
                     } else {
                         /* Si no existe la imagen en la base de datos, tenemos que crearla */
-                        if (!!req.files.imagen) {
+                        if (!!req.files.imagen1) {
 
                             /* Creamos la imagen en la base de datos */
                             promesas.push(
                                 db.Imagenes.create({
-                                    nombre: req.files.imagen[0].filename,
+                                    nombre: req.files.imagen1[0].filename,
                                     productos_id: producto.id
                                 }))
                         }
@@ -214,10 +215,10 @@ module.exports = {
                 })
                 .catch(error => res.send(error))
         } else {
-            return res.render('admin/crearProducto', {
+            return res.redirect('/admin/crear'/* , {
                 errors: errors.mapped(),
                 old: req.body
-            })
+            } */)
         }
     },
     eliminar: (req, res) => {
