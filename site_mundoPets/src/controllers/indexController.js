@@ -1,66 +1,107 @@
+/* let productos = require('../data/productos.json'); */ //viejo
 const db = require('../database/models')
+const { Op } = require("sequelize");
 
-let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
-        db.Productos.findAll({Include: ['productoCarts','productosMarca','productosSub','productosImagenes']})
-        .then( producto => { 
-            return res.status(200).json(producto)
+        db.Productos.findAll({
+            include: [{all:true}]
+        })
+        
+        .then(productos => {
+           /*  return res.send(productos) */
             return res.render('home',{
-            producto,
-        } )
-        
-            
+                mensaje: "HOLA",
+                productos
+            });
         })
-        .catch(error => res.status(500).send(error))
+        .catch(error => res.send(error))
     },
-    productos: (req, res) => {
-        let categoriaSeleccionada = req.params.categoria
-        let categorias = ['Perro','Gato']
+    productos: (req, res) => { //viejo
+       /*  let categoriaSeleccionada = db.categoria.findAll() */
+       let  categoriaSeleccionada = req.params.categoria
+       /* console.log(categoriaSeleccionada); */
+       db.Categorias.findOne({
+        where:{
+            nombre : categoriaSeleccionada
+        },
         
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
+        include: [{all:true}]})
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+       .then(categorias => {
+          /*  return res.send(categorias) */
+           return res.render('productos',{categorias} )
+
+       })
+       .catch(error => res.send(error))
+
+
+
+      /*   let categorias = ['Perro','Gato']
+        
+        let productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
+
+    .then((productos) => {
+       /*  return res.send(productos) */
+       /*  return res.render('productos',{
+                categorias,
+                categoriaSeleccionada,
+                productos,
+                productoPorCategoria
+            })
         })
-
-
+        .catch(error => res.send(error))
+ */ 
     },
-    contacto: (req, res) => {
+    contacto: (req, res) => { //viejo
         return res.render('contacto')
     },
-    nosotros: (req, res) => {
+    nosotros: (req, res) => { //viejo
         return res.render('nosotros')
     },
-    categoria : (req,res) => {
+    categoria : (req,res) => { //viejo
         let categoriaSeleccionada = req.params.categoria
-        let categorias = ['Perro','Gato']
-        
-        productoPorCategoria = productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
-        res.render('productos',{
-            categorias,
-            categoriaSeleccionada,
-            productos,
-            productoPorCategoria
+        db.Categorias.findOne({
+            where: {
+                nombre: categoriaSeleccionada
+            },
+            include : [
+                {
+                    association : 'productos',
+                    include : [{
+                        all:true
+                    }]
+                }
+            ]
         })
-    }, 
+        .then(categorias => {
+            /* return res.send(categorias) */
+
+            return res.render('productos', {
+                categorias,
+            })
+        })
+        .catch(error => res.send(error))
+    },
     search:(req,res) => {
         let elemento = req.query.search
 
-        let resultados = productos.filter(producto => {
-            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
-        })
-        
+        /* let resultados = productos.filter(producto => {return producto.marca === elemento || (producto.titulo.includes(elemento))  }) */ //viejo
+        db.Productos.findAll({
+            where : {
+                [Op.or] : [
+                    {nombre : {[Op.substring] : elemento}},
+                    {descripcion : {[Op.substring] : elemento}}
+                ]
+            }
+        })   
         return res.render('busqueda',
         {
         busqueda: elemento,
         resultados
         
-        })
+        });
     }
 }

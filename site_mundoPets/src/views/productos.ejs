@@ -7,15 +7,15 @@
     <%- include('./partials/header') %> 
     <main> 
         <%- include('./partials/banner') %> 
-        <h1><%= categoriaSeleccionada %></h1>
+        <h1><%= categorias.nombre %></h1>
 
         <section class="carrouselProductos">
             <div class="glider-contain">
                 <div class="glider">
-                    <% productoPorCategoria.forEach(producto => { %>
+                    <% categorias.productos.forEach(producto => { %>
                         <%- include('./partials/cards',{
                             id:producto.id,
-                            imagenes:producto.imagenes[0],
+                            imagenes:producto.imagen,
                             nombre:producto.titulo,
                             descuento:producto.descuento,
                             precio:producto.precio
