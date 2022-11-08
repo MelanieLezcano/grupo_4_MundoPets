@@ -100,11 +100,16 @@ module.exports = {
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
 
-            req.files.forEach(imagen => {
+            /* req.files.forEach(imagen => {
                 if (ruta(imagen) && (imagen !== "default-image.png")) {
                     fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen))
                 }
-            })
+            }) */
+            if (req.file) {
+                if (ruta(req.file.filename) && (req.file.filename !== 'default-img.png')) {
+                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', req.file.filename))
+                }
+            }
             /* return res.send(errors.mapped()) */
             return res.render('admin/crearProducto', {
                 errors: errors.mapped(),

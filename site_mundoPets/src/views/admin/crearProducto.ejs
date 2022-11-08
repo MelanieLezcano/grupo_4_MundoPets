@@ -21,18 +21,17 @@
                         <div class="form-floating mb-3"> 
                             <input type="text" class="form-control" name="Titulo" placeholder="Nombre del producto" id="titulo" value="<%= locals.old && old.Titulo ? old.Titulo : null %> " placeholder="name@example.com">
                             <label for="titulo">Nombre del producto</label>
-                           <p class="span text-danger">
+                           <p class="span text-danger" id="tituloError">
                             <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %> 
-                           </p>
+                           </p> 
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Marca" placeholder="Marca del Producto" id="brand"  value="<%= locals.old && old.Marca? old.Marca : null%>">
                             <label class="form-label" for="brand">Marca del Producto</label>
-                           <% if (locals.errors && errors.Marca) { %>
-                            <p class="span text-danger">
-                                <%= errors.Marca.msg %> 
-                            </p>
-                           <% } %>
+                            <p class="span text-danger" id="marcaError">
+                                <%= locals.errors && errors.Marca ? errors.Marca.msg : null %> 
+                               </p>
+                           
                         </div>
                         <!-- <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Categoria" placeholder="Categoria"  id="category">
@@ -42,21 +41,21 @@
                         <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="Precio" placeholder="Precio del producto" id="price" value="<%= locals.old && old.Precio? old.Precio: null%>">
                             <label class="form-label" for="price">Precio del producto</label>
-                            <p class="span text-danger">
+                            <p class="span text-danger" id="priceError">
                                 <%= locals.errors && errors.Precio ? errors.Precio.msg : null %>
                             </p>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="number" name="Descuento" placeholder="Descuento del producto" id="discount" value="<%= locals.old && old.Descuento ? old.Descuento : 0%>">
                             <label class="form-label" for="discount">Descuento del producto</label>
-                            <p class="span text-danger">
+                            <p class="span text-danger" id="discountError">
                                 <%= locals.errors && errors.Descuento ? errors.Descuento.msg : null %>
                             </p>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="Stock" placeholder="Stock con el que cuenta el producto" id="stock"  value="<%= locals.old && old.Stock ? old.Stock : null%>">
                             <label class="form-label" for="stock">Stock con el que cuenta el producto</label>
-                            <p class="span text-danger">
+                            <p class="span text-danger" id="stockError">
                                 <%= locals.errors && errors.Stock ? errors.Stock.msg : null %>
                             </p>
                         </div>
@@ -131,8 +130,8 @@
                                     <!-- Columnas -->
 
                                 </div>
-                                <p class="span text-danger">
-                                    <%= locals.errors && errors.Imagenes ? errors.Imagenes.msg : null %>
+                                <p class="span text-danger" id="imgError">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                 </p>
                             </div>
 
@@ -166,9 +165,7 @@
                                        
                                     <% } %> 
                                   </select>
-                                  <p class="span text-danger">
-                                    <%= locals.errors && errors.Categoria ? errors.Categoria.msg : null %>
-                                </p>
+                                  <p class="span text-danger" id="categoriaError"><%= (locals.errors && errors.categoria) ?  errors.categoria.msg : null %></p>
                             </div>
                     <div class="container m-3" >
                         <div class="row justify-content-around align-items-center">
@@ -202,8 +199,8 @@
                                 <div class="form-floating"> 
                                     <textarea name="Descripcion" id="description" cols="300" rows="300" class="form-control" placeholder="Leave a comment here" style="resize: none;"><%= locals.old && old.descripcion ? old.descripcion : null%></textarea>
                                     <label for="description">Descripcion del producto</label>
-                                    <p class="span text-danger">
-                                        <%= locals.errors && errors.Descripcion ? errors.Descripcion.msg : null %>
+                                    <p class="span text-danger" id="descriptionError">
+                                        <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
                                     </p>
                                 </div>
                             </div>
@@ -217,10 +214,11 @@
             <!-- Button -->
 
             <div class="create-button text-center mt-5 pb-5">
-                <button class="btn btn-primary" type="submit">Crear producto</button>
+                <button class="btn btn-primary" id="btn-submit" type="submit">Crear producto</button>
             </div>
         </form>
     </main>
     <script src="/javascripts/imagenes.js"></script>
+    <script src="/javascripts/validacionProductos.js"></script>
 </body>
 </html>

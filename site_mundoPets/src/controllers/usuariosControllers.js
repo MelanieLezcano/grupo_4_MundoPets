@@ -22,19 +22,21 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-
+            /* return res.status(200).send(req.body) */
             let { nombre, email, contrasenia, apellido } = req.body
             
             db.Usuarios.create({
-                nombre: name, //revisar
-                apellido: lastname,
-                genero,
+                nombre: nombre, //revisar
+                apellido: apellido,
+                genero: '',
                 email,
-                password: bcrypt.hashSync(pass, 12),
-                pais,
-                provincia: provincia,
-                imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-                rolId: 2
+                password: bcrypt.hashSync(contrasenia, 12),
+                pais: '',
+                provincia: '',
+                imagen: req.file ? req.file.filename : "avatar-porDefecto.png",
+                roles_id: 2,
+                createdAt:new Date,
+                updatedAt: new Date
             })
             /* let usuarioNuevo = {
                 id: usuarios[usuarios.length - 1].id + 1,
@@ -118,8 +120,8 @@ module.exports = {
                         req.session.userLogin = {
                             id : usuario.id,
                             nombre : usuario.nombre,
-                            image : usuario.imagen,
-                            rol : usuario.rolId
+                            imagen : usuario.imagen,
+                            rol : usuario.roles_id
                         }
                         if(recordarme){
                             res.cookie('Crafsy',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})

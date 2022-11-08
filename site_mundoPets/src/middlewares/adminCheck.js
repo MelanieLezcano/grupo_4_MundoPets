@@ -1,6 +1,6 @@
 module.exports = (req,res,next) => {
-    if (req.session.usuarioLogin) {
-        if(req.session.usuarioLogin.rol === "Administrador"){
+    if (req.session.userLogin) {
+        if(req.session.userLogin.rol === 2){
           return next()
         }
     }

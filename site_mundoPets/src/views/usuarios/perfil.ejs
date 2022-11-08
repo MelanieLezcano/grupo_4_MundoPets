@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/head',{title: locals.usuarioLogin.nombre}) %> 
+    <%- include('../partials/head',{title: locals.userLogin.nombre}) %> 
 <body class="perfil">
     <%- include('../partials/header') %>
     <main>
         <div class="imgPerfil">
-            <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
+            <img src="/img/usuarios/<%= locals.userLogin.imagen %>  " alt="">
         </div>
        
-        <h1>Hola <%= `${locals.usuarioLogin.rol} ${locals.usuarioLogin.nombre}` %></h1>
+        <h1>Hola <%= `${locals.userLogin.rol === 1? 'Usuario' : 'Administrador'} ${locals.userLogin.nombre}` %></h1>
         
         <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
             <button type="submit">Cerrar Sesion</button>
