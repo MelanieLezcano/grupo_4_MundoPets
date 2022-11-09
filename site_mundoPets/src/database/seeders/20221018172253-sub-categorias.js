@@ -1,6 +1,6 @@
 'use strict';
 
-let subcategorias = ['juguetes','alimentos']
+let subcategorias = ['juguetes','alimento']
     
 subcategorias = subcategorias.map(categoria => {
   let elemento = {

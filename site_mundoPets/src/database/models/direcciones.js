@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Direcciones',
+    timestamps: true
   });
   return Direcciones;
 };

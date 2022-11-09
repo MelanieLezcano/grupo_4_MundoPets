@@ -3,7 +3,8 @@ let db = require('../database/models')
 let Sequelize = require('sequelize')
 
 module.exports = {
-    
+
+
     detalle: (req, res) => {
         let id = +req.params.id
         /* let productoEnDetalle = productos.find((producto) => producto.id === id) */ //viejo
@@ -36,9 +37,9 @@ module.exports = {
         /* return res.render('detalle', { //viejo
             producto: productoEnDetalle,
             productos
-        }) */
-
-    carrito: (req, res) => { //viejo
+        })
+    },
+    carrito: (req, res) => {
 
         let products = []
 
@@ -53,7 +54,7 @@ module.exports = {
     categoria : (req,res) => {
         /* let categorias = ['gatos','perros'] */
         /*  productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada) */
-        let categoriaSeleccionada = req.params.categoria
+       /*  let categoriaSeleccionada = req.params.categoria
        db.Categorias.findOne({
         where: {
             nombre: categoriaSeleccionada
@@ -69,17 +70,18 @@ module.exports = {
     })
     .then(categorias => {
         /* return res.send(categorias) */
-        return res.render('productos', {
+       /*  return res.render('productos', {
             categorias,
         })
     })
     .catch(error => res.send(error))
-},
+}, */ 
         /* res.render('productos',{
             categorias,
             categoriaSeleccionada,
             productos,
             productoPorCategoria
         })
-    }, */
+
+    },*/
 }
