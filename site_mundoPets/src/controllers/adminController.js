@@ -26,10 +26,8 @@ module.exports = {
         /* return res.render('admin/crearProducto')  */ //viejo
         let categorias = await db.Categorias.findAll()
         let subCategorias = await db.SubCategorias.findAll()
-
         let marcas = await db.Marcas.findAll()
 
-        console.log(marcas);
         try {
             return res.render('admin/crearProducto', {
                 categorias,
@@ -250,20 +248,21 @@ module.exports = {
             .then(producto => {
 
                 db.Historiales.create({
-                    nombre: producto.nombre,
+                    categorias_id: producto.categorias_id,
+                    subcategorias_id: producto.subcategorias_id,
+                    titulo: producto.titulo,
+                    marcas_id: marcas_id,
                     precio: producto.precio,
                     descuento: producto.descuento,
-                    stock: producto.stock,
                     descripcion: producto.descripcion,
-                    categoriasId: producto.categoriasId,
-                    marcasId: producto.marcasId,
+                    stock: producto.stock,
                 })
                     .then(historial => {
                         let promesas = []
 
                         let imagen1 = db.HistorialImagenes.create({
-                            nombre: producto.imagenes[0].nombre,
-                            historialId: historial.id
+                            nombre: producto.imagen[0].nombre,
+                            historial_id: historial.id
                         })
 
                         Promise.all([imagen1,])
@@ -274,7 +273,7 @@ module.exports = {
                                     }
                                 })
                                     .then(producto => {
-                                        return res.redirect('/admin/history')
+                                        return res.redirect('/admin/historial')
                                     })
                             })
                     })
@@ -292,7 +291,7 @@ module.exports = {
                 /* return res.send(historial) */
                 return res.render('admin/listaProductos', {
                     productos: historial,
-                    redirection: "list"
+                    redirection: "lista"
                 })
             })
     },
@@ -308,18 +307,19 @@ module.exports = {
         })
             .then(historialProducto => {
                 db.Productos.create({
-                    nombre: historialProducto.nombre,
+                    titulo: historialProducto.titulo,
                     precio: historialProducto.precio,
                     descuento: historialProducto.descuento,
                     stock: historialProducto.stock,
                     descripcion: historialProducto.descripcion,
-                    categoriasId: historialProducto.categoriasId,
-                    marcasId: historialProducto.marcasId,
+                    categorias_id: historialProducto.categorias_id,
+                    subcategorias_id: historialProducto.categorias_id,
+                    marcas_id: historialProducto.marcas_id,
                 })
                     .then(productoNuevo => {
                         let imagen1 = db.Imagenes.create({
-                            nombre: historialProducto.imagenes[0].nombre,
-                            productoId: productoNuevo.id
+                            nombre: historialProducto.imagen[0].nombre,
+                            producto_id: productoNuevo.id
                         })
 
                         Promise.all([imagen1])
@@ -330,7 +330,7 @@ module.exports = {
                                     }
                                 })
                                     .then(eliminar => {
-                                        return res.redirect('/admin/list')
+                                        return res.redirect('/admin/lista')
                                     })
                             })
                     })
