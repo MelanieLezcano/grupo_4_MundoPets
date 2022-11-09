@@ -13,27 +13,18 @@
         <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
             <!--  -->
             <div class="form-floating m-2">
-                <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
-                    <% if (locals.errors && old.marca) { %>
-                        <option hidden value="">Selecciona una opcion</option>
-                        <% marcas.forEach(marca => { %>
-                            <% if (marca.id == old.marca) { %>
-                                <option value="<%= marca.id %>" selected><%= marca.nombre %></option>
-                            <% }else{ %>
-                                <option value="<%= marca.id %>"><%= marca.nombre %></option>
-                            <% } %>
-                            <option value="<%= marca.id %>"><%= marca.nombre %></option>
-                        <% }) %>
-                    <% }else{ %>
-                        <option selected hidden value="">Selecciona una opcion</option>
-                        <% marcas.forEach(marca => { %>
-                            <option value="<%= marca.id %>" <%= producto.marcasId === marca.id ? "selected" : null %>><%= marca.nombre %></option>
-                        <% }) %>
-                    <% } %> 
-                </select>
-                <% if (locals.errors && errors.marca) { %>
-                    <p class="span text-danger"><%= errors.marca.msg %></p>
-                <% } %>
+                <textarea class="form-control" name="Titulo" placeholder="Por favor inserte el titulo del producto"
+                    id="floatingTextarea"><%= producto.titulo %></textarea>
+                <label for="floatingTextarea">Titulo</label>
+                <small>Obligatorio</small>
+            </div>
+            <div class="form-floating m-2">
+                <select class="form-select" name="Marca" id="floatingSelect" aria-label="Floating label select example">
+               
+                   <% marcas.forEach(marca => { %>
+                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                  <% }) %> 
+                </select> 
                 <label for="floatingSelect">Marca</label>
                 <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
              </div>
@@ -45,6 +36,16 @@
                       <% }) %> 
                     </select> 
                     <label for="floatingSelect">Categoria</label>
+                    <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
+                 </div>
+                 <div class="form-floating m-2">
+                    <select class="form-select" name="Subcategoria" id="floatingSelect" aria-label="Floating label select example">
+                   
+                       <% subCategorias.forEach(subCategorias => { %>
+                        <option value="<%= subCategorias.id %>"><%= subCategorias.nombre %></option>
+                      <% }) %> 
+                    </select> 
+                    <label for="floatingSelect">Subcategoria</label>
                     <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
                  </div>
                  <div class="form-floating m-2">
@@ -79,8 +80,10 @@
                                 <p class="text-center">Selecionar Imagen</p>
                             </div>
                         </label>
-                        <div class="form-admin__box inactivo">
-                            <input class="form-control" id="imagenes" type="file" name="imagen1" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <div class="form-admin__box activo">
+                            <input class="form-input" id="imagenes" type="file" name="Imagenes"
+                                placeholder="Imagen del Producto" accept="img/*">
+
                         </div>
                     </div>
                     
