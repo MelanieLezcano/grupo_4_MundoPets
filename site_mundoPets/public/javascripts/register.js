@@ -24,7 +24,6 @@ window.addEventListener('load', () => {
     nombre.addEventListener('blur',() => {
         let error = {
             id: 1,
-            elemento:"nombre",
             mensaje: "El Nombre es obligatorio"
         }
         let variable = true
