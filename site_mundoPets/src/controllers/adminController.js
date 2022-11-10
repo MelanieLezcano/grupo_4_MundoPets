@@ -66,7 +66,9 @@ module.exports = {
             })
 
                 .then(productoNuevo => {
-                    if (req.files) {
+                   
+                    return res.redirect('/admin/lista')
+                    /* if (req.files) {
                         let img = req.files.map(imagen => {
                             let nuevo = {
                                 nombre: imagen.filename,
@@ -87,23 +89,29 @@ module.exports = {
                             .then(imagenes => {
                                 return res.redirect('/admin/lista')
                             })
-                    }
+                    } */
                 })
                 .catch(error => res.send(error))
         } else {
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', dato))
-            if (req.files && req.files.length > 0) {
-                req.files.forEach(imagen => {
-                    if (ruta(imagen) && (imagen !== "default-image.png")) {
-                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', imagen))
+            if (req.file) {
+                
+                    if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img',req.file.filename ))
                     }
-                })
+                
             }
-
-            return res.render('admin/crearProducto', {
+            let categorias = db.Categorias.findAll()
+            let subCategorias = db.SubCategorias.findAll()
+            let marcas = db.Marcas.findAll()
+            Promise.all([categorias,subCategorias,marcas])
+            .then(([categorias,subCategorias,marcas])=> {
+               return res.render('admin/crearProducto', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,categorias,subCategorias,marcas
             })
+            })
+            
         }
     },
     editar: (req, res) => {/* 

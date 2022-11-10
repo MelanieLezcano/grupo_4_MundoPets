@@ -12,7 +12,7 @@ console.log('holassssssssssss')
             btn.style.backgroundColor = '#1a78fd'
         }else{
             btn.disabled = true
-            btn.style.backgroundColor = 'gray'
+            btn.style.backgroundColor = 'red'
         }
     }
 
@@ -25,11 +25,13 @@ console.log('holassssssssssss')
     let categorias = $('#categorias')
     let marcas = $('#brand')
     let description = $('#description')
+    let Subcategoria = $('#Subcategoria')
 
     let imagenes = $('#imagenes')
     
 
     let btn = $('#btn-submit')
+    console.log(btn)
 
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
@@ -142,6 +144,23 @@ console.log('holassssssssssss')
         }
         funcValidate(validate)
     })
+    Subcategoria.addEventListener('blur', function() {
+        switch (true) {
+            case !this.value.trim():
+                $('#SubcategoriaError').innerHTML = "Debes ingresar una Subcategoria"
+                this.classList.add('is-invalid')
+                validate.Subcategoria = false
+                break;
+            
+            default:
+                $('#SubcategoriaError').innerHTML = null
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                validate.Subcategoria = true
+                break;
+        }
+        funcValidate(validate)
+    })
     marcas.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
@@ -196,6 +215,7 @@ console.log('holassssssssssss')
     
 
     /* Validacion */
+    console.log(validate)
     const validate = {
         titulo : false,
         price : false,
@@ -205,8 +225,10 @@ console.log('holassssssssssss')
         marcas : false ,
         description : false ,
         imagenes : true ,
+        Subcategoria : false,
         
     }
 
-    funcValidate(validate)
+   /*  funcValidate(validate) */
+   
 })
