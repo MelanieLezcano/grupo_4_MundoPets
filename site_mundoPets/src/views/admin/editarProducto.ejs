@@ -10,28 +10,42 @@
     <main>
         <h1>Editando el producto</h1>
 
-        <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
+        <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
             <!--  -->
-            <section>
-                <div class="form-floating m-2">
-                    <input type="text" name="Marca" class="form-control" id="marca" placeholder="Marca" value="<%= producto.marca %> ">
-                    <label for="marca">Marca</label>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="form-floating m-2">
-                    <input type="text" name="Titulo" class="form-control" id="Titulo" placeholder="Titulo" value="<%= producto.titulo %> ">
-                    <label for="Titulo">Titulo</label>
-                    <small>Obligatorio</small>
-                </div>
-
+            <div class="form-floating m-2">
+                <textarea class="form-control" name="Titulo" placeholder="Por favor inserte el titulo del producto"
+                    id="floatingTextarea"><%= producto.titulo %></textarea>
+                <label for="floatingTextarea">Titulo</label>
+                <small>Obligatorio</small>
+            </div>
+            <div class="form-floating m-2">
+                <select class="form-select" name="Marca" id="floatingSelect" aria-label="Floating label select example">
+               
+                   <% marcas.forEach(marca => { %>
+                    <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                  <% }) %> 
+                </select> 
+                <label for="floatingSelect">Marca</label>
+                <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
+             </div>
                 <div class="form-floating m-2">
                     <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
                    
                        <% categorias.forEach(categoria => { %>
-                        <option value="<%= categoria %>"<%= producto.categoria.toLowerCase() === categoria.toLowerCase() ? 'selected' : null %> ><%= categoria %></option>
+                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                       <% }) %> 
                     </select> 
                     <label for="floatingSelect">Categoria</label>
+                    <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
+                 </div>
+                 <div class="form-floating m-2">
+                    <select class="form-select" name="Subcategoria" id="floatingSelect" aria-label="Floating label select example">
+                   
+                       <% subCategorias.forEach(subCategorias => { %>
+                        <option value="<%= subCategorias.id %>"><%= subCategorias.nombre %></option>
+                      <% }) %> 
+                    </select> 
+                    <label for="floatingSelect">Subcategoria</label>
                     <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
                  </div>
                  <div class="form-floating m-2">
@@ -56,9 +70,21 @@
                     </div>
     
                     <div class="m-2">
-                        <label for="formFileMultiple" name="Imagenes" class="form-label">Subir imagenes del producto</label>
+<!--                         <label for="formFileMultiple" name="Imagenes" class="form-label">Subir imagenes del producto</label>
                         <input class="form-control" type="file" id="imagenes" name="imagenes" >
-                        <small>Obligatorio</small>
+                        <small>Obligatorio</small> -->
+
+                        <label class="form-label" for="product-img">
+                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/<%=producto.imagen[0].nombre%>" alt="">
+                            <div class="imgHover">
+                                <p class="text-center">Selecionar Imagen</p>
+                            </div>
+                        </label>
+                        <div class="form-admin__box activo">
+                            <input class="form-input" id="imagenes" type="file" name="Imagenes"
+                                placeholder="Imagen del Producto" accept="img/*">
+
+                        </div>
                     </div>
                     
                     <div class="button">

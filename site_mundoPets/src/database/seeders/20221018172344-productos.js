@@ -10,11 +10,18 @@ let productos = []
 
 listado.forEach(producto => {
   let categoria
+  let subcategoria
   let marca
   
   listadoCategorias.forEach((categoriaLista,index) => {
     if (categoriaLista === producto.categoria) {
         return categoria = index + 1
+    }
+  });
+
+  listadosubCategorias.forEach((subcategoriaLista,index) => {
+    if (subcategoriaLista === producto.subcategoria) {
+        return subcategoria = index + 1
     }
   });
 
@@ -42,10 +49,10 @@ listado.forEach(producto => {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Productos', productos, {});
+    await queryInterface.bulkInsert('Productos', productos, {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Productos', null, {});
+    await queryInterface.bulkDelete('Productos', null, {});
   }
 };

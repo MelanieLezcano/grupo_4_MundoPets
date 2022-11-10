@@ -1,7 +1,6 @@
-/* let productos = require('../data/productos.json'); */ //viejo
 const db = require('../database/models')
-const { Op } = require("sequelize");
 
+let productos = require('../data/productos.json');
 
 module.exports = {
     home: (req, res) => {
@@ -54,13 +53,13 @@ module.exports = {
         .catch(error => res.send(error))
  */ 
     },
-    contacto: (req, res) => { //viejo
+    contacto: (req, res) => {
         return res.render('contacto')
     },
-    nosotros: (req, res) => { //viejo
+    nosotros: (req, res) => {
         return res.render('nosotros')
     },
-    categoria : (req,res) => { //viejo
+    categoria : (req,res) => {
         let categoriaSeleccionada = req.params.categoria
 
         db.Categorias.findOne({
@@ -88,20 +87,15 @@ module.exports = {
     search:(req,res) => {
         let elemento = req.query.search
 
-        /* let resultados = productos.filter(producto => {return producto.marca === elemento || (producto.titulo.includes(elemento))  }) */ //viejo
-        db.Productos.findAll({
-            where : {
-                [Op.or] : [
-                    {nombre : {[Op.substring] : elemento}},
-                    {descripcion : {[Op.substring] : elemento}}
-                ]
-            }
-        })   
+        let resultados = productos.filter(producto => {
+            return producto.marca === elemento || (producto.titulo.includes(elemento)) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+        })
+        
         return res.render('busqueda',
         {
         busqueda: elemento,
         resultados
         
-        });
+        })
     }
 }

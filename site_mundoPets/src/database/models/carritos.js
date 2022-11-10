@@ -31,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Carritos',
+    timestamps: true
   });
   return Carritos;
 };

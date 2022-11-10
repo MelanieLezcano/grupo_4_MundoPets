@@ -26,8 +26,8 @@
                     
                 </div>
                 <div class="container bottom">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu git apellido" value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                    <label for="nombre">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido" value="<%= locals.old && old.apellido ? old.apellido : null%>">
                     <% if (locals.errors && errors.apellido) { %>
                         <small><%= errors.apellido.msg%></small>
                        <% } %>
@@ -43,7 +43,10 @@
                 </div>
                 <div class="container bottom">
                     <label for="contrasenia">Contraseña</label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa una Contraseña">
+                    <div class="contrasenia">
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa una Contraseña">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
                     <% if (locals.errors && errors.contrasenia) { %>
                         <small><%= errors.contrasenia.msg%></small>
                        <% } %>
@@ -51,7 +54,7 @@
                 </div>
                 <div class="container bottom">
                     <label for="contrasenia2"> Confirmá tu contraseña</label>
-                    <input type="password" name="contrasenia2" id="contrasenia2" placeholder="Ingresa tu Contraseña">
+                    <input type="password" name="contrasenia2" id="contrasenia2" placeholder="Confirma tu Contraseña"><i class="fas fa-eye-slash"></i> 
                     <% if (locals.errors && errors.contrasenia2) { %>
                         <small><%= errors.contrasenia2.msg%></small>
                        <% } %>

@@ -2,14 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const { validationResult } = require('express-validator')
 let db = require('../database/models')
-/* const productos = require('../data/productos.json')
-const historial = require('../data/historial.json')  */
-/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8') 
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-    , JSON.stringify(dato, null, 4), 'utf-8') */
-
-/* const productsFilePath = path.join(__dirname, '../data/productsDataBase.json'); */
-
 
 module.exports = {
     lista: (req, res) => {
@@ -22,7 +14,7 @@ module.exports = {
                 /* return res.send(productos) */
                 return res.render('admin/listaProductos', {
                     productos,
-                    redirection: "history"// fijarse que nombre va
+                    redirection: "historial"// fijarse que nombre va
                 })
             })
         /*  return res.render('admin/listaProductos',{ //viejo
@@ -32,12 +24,15 @@ module.exports = {
     },
     crear: async (req, res) => {
         /* return res.render('admin/crearProducto')  */ //viejo
+        let categorias = await db.Categorias.findAll()
+        let subCategorias = await db.SubCategorias.findAll()
+        let marcas = await db.Marcas.findAll()
+
         try {
-            let categorias = await db.Categorias.findAll()
-            let marcas = await db.Marcas.findAll()
             return res.render('admin/crearProducto', {
                 categorias,
-                marcas
+                marcas,
+                subCategorias
             })
         } catch (error) {
             return res.send(error)
@@ -55,23 +50,21 @@ module.exports = {
             errors.errors.push(Imagenes)
         }  /* return res.send(errors) */
         if (errors.isEmpty()) {
-            /* let Imagenes = req.files.map(imagen => { en crafsty no estaba
-                return imagen.filename
-            }) */
+
             let { Categoria, Subcategoria, Marca, Titulo, Precio, Descuento, Descripcion, Stock } = req.body
 
-            db.productos.create({
-                /* id: productos[productos.length - 1].id + 1,  */
-                categoria: Categoria,
-                subcategoria: Subcategoria,
+            db.Productos.create({
+                categorias_id: +Categoria,
+                subcategorias_id: +Subcategoria,
                 titulo: Titulo,
-                marca: Marca,
+                marcas_id: +Marca,
                 precio: +Precio,
                 descuento: +Descuento,
                 descripcion: Descripcion,
                 stock: +Stock,
-                imagenes: req.file ? req.file.filename : 'default-image.png',
+                imagen: req.file ? req.file.filename : 'default-image.png',
             })
+
                 .then(productoNuevo => {
                     if (req.files) {
                         let img = req.files.map(imagen => {
@@ -84,42 +77,46 @@ module.exports = {
                         })
                         db.Imagenes.bulkCreate(img)
                             .then(imagenes => {
-                                return res.redirect('/admin/list')
+                                return res.redirect('/admin/lista')
                             })
                     } else {
                         db.Imagenes.create({
                             nombre: 'default-image.png',
-                            productosId: productoNuevo.id
+                            productos_Id: productoNuevo.id
                         })
                             .then(imagenes => {
-                                return res.redirect('/admin/list')
+                                return res.redirect('/admin/lista')
                             })
                     }
                 })
                 .catch(error => res.send(error))
         } else {
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
-
-            /* req.files.forEach(imagen => {
-                if (ruta(imagen) && (imagen !== "default-image.png")) {
-                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen))
-                }
-            }) */
-            if (req.file) {
-                if (ruta(req.file.filename) && (req.file.filename !== 'default-img.png')) {
-                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', req.file.filename))
-                }
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', dato))
+            if (req.files && req.files.length > 0) {
+                req.files.forEach(imagen => {
+                    if (ruta(imagen) && (imagen !== "default-image.png")) {
+                        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', imagen))
+                    }
+                })
             }
-            /* return res.send(errors.mapped()) */
+
             return res.render('admin/crearProducto', {
                 errors: errors.mapped(),
                 old: req.body
             })
         }
     },
-    editar: (req, res) => {
+    editar: (req, res) => {/* 
+        db.Productos.findAll()
+        .then((marcas) => {
+            return res.send(marcas)
+       }).catch((err) => {
+        res.send(err)
+       }); */
+
         let idParams = +req.params.id
         let categorias = db.Categorias.findAll()
+        let subCategorias = db.SubCategorias.findAll()
         let marcas = db.Marcas.findAll()
         let producto = db.Productos.findOne({
             where: {
@@ -129,18 +126,21 @@ module.exports = {
                 all: true
             }]
         })
-        Promise.all([categorias, marcas, producto])
-            .then(([categorias, marcas, producto]) => {
-                /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
+
+        Promise.all([categorias, subCategorias, marcas, producto])
+            .then(([categorias,subCategorias, marcas, producto]) => {
+
                 return res.render('admin/editarProducto', {
                     producto,
                     categorias,
+                    subCategorias,
                     marcas
                 })
             })
             .catch(error => res.send(error))
     },
     actualizar: (req, res) => {
+        console.log(req.body);
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -151,7 +151,7 @@ module.exports = {
         }
         if (errors.isEmpty()) {
             const idParams = +req.params.id
-            const { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+            const { Marca, Titulo, Categoria, Subcategoria, Precio, Descuento, Stock, Descripcion } = req.body
 
             let producto = db.Productos.findOne({
                 where: {
@@ -161,14 +161,17 @@ module.exports = {
                     all: true
                 }]
             })
+           
+
             let actualizacion = db.Productos.update({
-                nombre: titulo,
-                precio: +precio,
-                descuento: +descuento,
-                stock: +stock,
-                descripcion,
-                categorias_Id: categoria,
-                marcas_Id: marca,
+                categorias_id: +Categoria,
+                subcategorias_id: +Subcategoria,
+                titulo: Titulo,
+                marcas_id: +Marca,
+                precio: +Precio,
+                descuento: +Descuento,
+                descripcion: Descripcion,
+                stock: +Stock,
             }, {
                 where: {
                     id: idParams
@@ -181,49 +184,54 @@ module.exports = {
                     let imagen1
                     let promesas = []
 
-                    /* Imagen 1 */
-                    /* Existe en la base de datos */
-                    if (producto.imagenes[0].length !== 0) {
-                        /* viene una imagen nueva */
+                    if (producto.imagen[0].length !== 0) {
+
                         if (!!req.files.imagen1) {
-                            /* Guardo el nombre en una variable para despues borrarla */
-                            imagen1 = producto.imagenes[0].nombre
-                            /* La reemplazamos en la base de datos */
+
+                            imagen1 = producto.imagen[0].nombre
+
                             promesas.push(
                                 db.Imagenes.update({
                                     nombre: req.files.imagen1[0].filename
                                 }, {
                                     where: {
-                                        id: producto.imagenes[0].id
+                                        id: producto.imagen[0].id
                                     }
                                 }))
                             /* Borramos la imagen anterior */
-                            if (fs.existsSync(path.join(__dirname, '../../public/images/productos', imagen1))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/images/productos', imagen1))
+                            if (fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', imagen1))) {
+                                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', imagen1))
                             }
                         }
                     } else {
-                        /* Si no existe la imagen en la base de datos, tenemos que crearla */
+
                         if (!!req.files.imagen1) {
 
-                            /* Creamos la imagen en la base de datos */
+
                             promesas.push(
                                 db.Imagenes.create({
                                     nombre: req.files.imagen1[0].filename,
-                                    productosId: producto.id
+                                    productos_id: producto.id
                                 }))
                         }
                     }
                     Promise.all(promesas)
                         .then(promesas => {
-                            return res.redirect('/admin/list')
+                            return res.redirect('/admin/lista')
                         })
                 })
                 .catch(error => res.send(error))
         } else {
+            let marcas = []
+            let categorias = []
+            let subCategorias = []
+            
             return res.render('admin/crearProducto', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                marcas,
+                categorias,
+                subCategorias
             })
         }
     },
@@ -240,20 +248,21 @@ module.exports = {
             .then(producto => {
 
                 db.Historiales.create({
-                    nombre: producto.nombre,
+                    categorias_id: producto.categorias_id,
+                    subcategorias_id: producto.subcategorias_id,
+                    titulo: producto.titulo,
+                    marcas_id: marcas_id,
                     precio: producto.precio,
                     descuento: producto.descuento,
-                    stock: producto.stock,
                     descripcion: producto.descripcion,
-                    categoriasId: producto.categoriasId,
-                    marcasId: producto.marcasId,
+                    stock: producto.stock,
                 })
                     .then(historial => {
                         let promesas = []
 
                         let imagen1 = db.HistorialImagenes.create({
-                            nombre: producto.imagenes[0].nombre,
-                            historialId: historial.id
+                            nombre: producto.imagen[0].nombre,
+                            historial_id: historial.id
                         })
 
                         Promise.all([imagen1,])
@@ -264,7 +273,7 @@ module.exports = {
                                     }
                                 })
                                     .then(producto => {
-                                        return res.redirect('/admin/history')
+                                        return res.redirect('/admin/historial')
                                     })
                             })
                     })
@@ -282,78 +291,81 @@ module.exports = {
                 /* return res.send(historial) */
                 return res.render('admin/listaProductos', {
                     productos: historial,
-                    redirection: "list"
+                    redirection: "lista"
                 })
             })
     },
     restaurar: (req, res) => {
         let idParams = +req.params.id
         db.Historiales.findOne({
-            where : {
-                id :idParams
+            where: {
+                id: idParams
             },
-            include : [{
-                all : true
+            include: [{
+                all: true
             }]
         })
-        .then(historialProducto => {
-            db.Productos.create({
-                nombre: historialProducto.nombre,
-                precio: historialProducto.precio,
-                descuento: historialProducto.descuento,
-                stock: historialProducto.stock,
-                descripcion:historialProducto.descripcion,
-                categoriasId: historialProducto.categoriasId,
-                marcasId: historialProducto.marcasId,
-            })
-            .then(productoNuevo => {
-                let imagen1 = db.Imagenes.create({
-                    nombre: historialProducto.imagenes[0].nombre,
-                    productoId: productoNuevo.id
+            .then(historialProducto => {
+                db.Productos.create({
+                    titulo: historialProducto.titulo,
+                    precio: historialProducto.precio,
+                    descuento: historialProducto.descuento,
+                    stock: historialProducto.stock,
+                    descripcion: historialProducto.descripcion,
+                    categorias_id: historialProducto.categorias_id,
+                    subcategorias_id: historialProducto.categorias_id,
+                    marcas_id: historialProducto.marcas_id,
                 })
-                
-                Promise.all([imagen1])
-                .then(([imagen1]) =>{
-                    db.Historiales.destroy({
-                        where : {
-                            id : idParams
-                        }
-                    })
-                    .then(eliminar => {
-                        return res.redirect('/admin/list')
-                    })
-                })
-            })
-        })
-        .catch(errores => res.send(errores))
-    },}
-    /* crash: (req, res) => {
-        let idParams = +req.params.id
+                    .then(productoNuevo => {
+                        let imagen1 = db.Imagenes.create({
+                            nombre: historialProducto.imagen[0].nombre,
+                            producto_id: productoNuevo.id
+                        })
 
-        db.Historiales.findOne({
-            where : {
-                id : idParams
-            },
-            include : [{
-                all : true
-            }]
-        })
-        .then(producto => {
-            
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
-            producto.imagenes.forEach(imagen => {
-                if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.png")) {
-                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen.nombre))
-                }
+                        Promise.all([imagen1])
+                            .then(([imagen1]) => {
+                                db.Historiales.destroy({
+                                    where: {
+                                        id: idParams
+                                    }
+                                })
+                                    .then(eliminar => {
+                                        return res.redirect('/admin/lista')
+                                    })
+                            })
+                    })
             })
+            .catch(errores => res.send(errores))
+    }
+}
 
-            db.Historiales.destroy({
-                where : {
-                    id : idParams
-                }
-            })
-            .then(eliminar => {
-                return res.redirect('/admin/list')
-            })
-        })
-        .catch(errores => res.send(errores)} */
+/* crash: (req, res) => {
+let idParams = +req.params.id
+
+db.Historiales.findOne({
+    where : {
+        id : idParams
+    },
+    include : [{
+        all : true
+    }]
+})
+.then(producto => {
+    
+    let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', dato))
+    producto.imagenes.forEach(imagen => {
+        if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.png")) {
+            fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'productos', imagen.nombre))
+        }
+    })
+
+    db.Historiales.destroy({
+        where : {
+            id : idParams
+        }
+    })
+    .then(eliminar => {
+        return res.redirect('/admin/list')
+    })
+})
+.catch(errores => res.send(errores)} */

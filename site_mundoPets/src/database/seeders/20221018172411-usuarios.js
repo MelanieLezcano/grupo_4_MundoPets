@@ -21,10 +21,23 @@ let usuarios = listado.map(usuario => {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Usuarios', usuarios, {});
+    /**
+     * Add seed commands here.
+     *
+     * Example:
+     * await queryInterface.bulkInsert('People', [{
+     *   name: 'John Doe',
+     *   isBetaMember: false
+     * }], {});
+    */
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Usuarios', null, {});
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
   }
 };

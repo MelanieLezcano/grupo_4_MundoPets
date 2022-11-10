@@ -14,7 +14,8 @@
     bottom: 0;
     width: 100%;
     font-family: var(--fuenteTitulos);
-    font-size: large;
+    color: white;
+    font-size: 20px;
     text-align: center;
     background-color: rgba(127, 164, 243, 0.452);
     padding: 5px;
@@ -572,16 +573,18 @@
     .mainHome .banner h2 {
         position: absolute;
         top: 230px;
-        height: 35px;
+        height: 27px;
         width: 50%;
         font-family: var(--fuenteTitulos);
         color: white;
-        font-size: 30px;
+        font-size: 32px;
         text-align: center;
+        
         background-color: rgba(127, 164, 243, 0.452);
         padding: 1px;
-        margin: 2px;
-        margin-bottom: 20px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        right: 4px;
 
 
     }

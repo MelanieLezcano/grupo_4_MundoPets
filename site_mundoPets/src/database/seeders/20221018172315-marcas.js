@@ -1,6 +1,5 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 let listado = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
 
 let marcas = listado.map(marca => {
@@ -12,12 +11,13 @@ let marcas = listado.map(marca => {
   return elemento
 })
 
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Marcas', marcas, {});
+    await queryInterface.bulkInsert('Marcas', marcas, {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Marcas', null, {});
+    await queryInterface.bulkDelete('Marcas', null, {});
   }
 };
