@@ -6,8 +6,7 @@ window.addEventListener('load', () => {
     const regExLetter = /^[A-Z]+$/;
 
     
-
-    let formulario = $('#formulario')
+/*     let formulario = $('#formulario') */
     let nombre = $('#nombre')
     let apellido = $('#apellido')
 
