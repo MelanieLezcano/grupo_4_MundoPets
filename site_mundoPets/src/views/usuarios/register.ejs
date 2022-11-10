@@ -16,22 +16,24 @@
         <section>
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
-            <form action="" method="POST" enctype="multipart/form-data">
-                <div class="container bottom">
+            <form action="" method="POST" enctype="multipart/form-data" id="formulario">
+                
+                <div class="container bottom" >
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
+                    <div id="nameContainer"></div>
                     <% if (locals.errors && errors.nombre) { %>
                         <small><%= errors.nombre.msg%></small>
                        <% } %>
-                    
                 </div>
                 <div class="container bottom">
-                    <label for="nombre">Apellido</label>
+                    <label for="apellido">Apellido</label>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido" value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                    <div id="apellidoContainer"></div>
                     <% if (locals.errors && errors.apellido) { %>
                         <small><%= errors.apellido.msg%></small>
                        <% } %>
-                    
+                    <div></div>
                 </div>
                 <div class="container bottom">
                     <label for="email">Email</label>
@@ -72,12 +74,9 @@
             </form>
         </section>
         <h4>¿Ya tenés una cuenta? <a href="/usuarios/login">Inicia sesión</a></h4>
-
     </main>
-
-
     <%- include('../partials/footer') %>
-
+   
 </body>
 
 </html>
