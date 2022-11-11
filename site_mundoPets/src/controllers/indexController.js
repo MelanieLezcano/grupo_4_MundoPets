@@ -5,10 +5,8 @@ const { Op } = require("sequelize");
 
 module.exports = {
     home: (req, res) => {
-
-
-          let productos =  db.Productos.findAll({
-            include: ['categorias','marcas']
+        db.Productos.findAll({
+            include: [{all:true}]
         })
         
         .then(([productos]) => {

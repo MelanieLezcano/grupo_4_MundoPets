@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Tarjetas',
+    timestamps: true
   });
   return Tarjetas;
 };

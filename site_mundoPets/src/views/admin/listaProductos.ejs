@@ -19,8 +19,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Marca</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Del Producto</th>
+                <th scope="col">Nombre producto</th>
                 <th scope="col">Categoria</th>
                 <th scope="col">Subcategoria</th>
                 <th scope="col">Stock</th>
@@ -35,8 +34,8 @@
                       
                         <th scope="row"><a href="/admin/editar/<%= producto.id %>"><%= producto.id %> </a></th>
                         <td><a href="/admin/editar/<%= producto.id %>"><%= producto.marca %></a></td>
-                        <td colspan="2"><a href="/admin/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
-                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.categoria %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
+                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.categoria.nombre %></a></td>
                         <td><a href="/admin/editar<%= producto.id %> "><%= producto.subcategoria %></a></td>
                         <td><a href="/admin/editar<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/admin/editar/<%= producto.id %> "><%= producto.precio %></a></td>
