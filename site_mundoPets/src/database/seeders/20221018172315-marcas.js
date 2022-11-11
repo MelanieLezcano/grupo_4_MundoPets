@@ -1,20 +1,62 @@
 'use strict';
 
-let listado = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
+let marca = ['Royal Canin','Agility','VitalCan','Excellent','Cat Selection','Infinity','Pro Plan','Dog Selection','Eukanuba','Biopet']
 
-let marcas = listado.map(marca => {
-  let elemento = {
-    nombre: marca,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
-  return elemento
-})
-
+let x = [ {
+  nombre : 'Royal Canin',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Agility',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'VitalCan',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Excellent',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Cat Selection',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Infinity',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Pro Plan',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Dog Selection',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Eukanuba',
+  createdAt:new Date,
+  updatedAt: new Date
+},
+{
+  nombre:'Biopet',
+  createdAt:new Date,
+  updatedAt: new Date
+}
+]
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Marcas', marcas, {});
+    await queryInterface.bulkInsert('Marcas', x, {});
   },
 
   async down (queryInterface, Sequelize) {

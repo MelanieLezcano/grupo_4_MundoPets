@@ -9,6 +9,7 @@ console.log(ultimoId);
 let nuevoProducto={
     id: 21,
     categoria: "gato",
+    subCategoria: "alimento",
     marca: "VitalCan",
     titulo: "VitalCan Complete Balance 10kg",
     precio: 9000,
@@ -35,6 +36,8 @@ fs.writeFileSync('./site_mundoPets/data/productos.json',string,'utf-8') */
 let produEdit = productos.map((elemento,index) => {
    if (elemento.id === 5) {
      elemento.categoria = "perro"
+     elemento.subCategoria = "alimento"
+     elemento.marca = "Biopet"
      elemento.titulo = " Balanced Complete"
      elemento.precio = 18000
      elemento.descuento= 10
