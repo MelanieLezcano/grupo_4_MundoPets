@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
     },{
         id: 4,
         elemento:"inputContrasenia",
-        mensaje: "Debe contener al menos 8 caracteres"
+        mensaje: "Debe ingresar una contraseña"
     },{
         id: 5,
         elemento:"inputContrasenia2",
@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
         let variable = true
         switch (true) {
             case !inputContrasenia.value:
-                $('#passContainer').innerHTML = "<small>Debe ingresar una contraseña</small>"
+                $('#contraseniaContainer').innerHTML = "<small>Debe ingresar una contraseña</small>"
                 inputContrasenia.style.border = "1px solid red"
                 errores.forEach(e => {
                     if(e.id === 4 ){
@@ -127,10 +127,10 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExPass.test(inputContrasenia.value):
-                $('#passContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
-                email.style.border = "1px solid red"
+                $('#contraseniaContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
+                inputContrasenia.style.border = "1px solid red"
                 errores.forEach(e => {
-                    if(e.id === 3 ){
+                    if(e.id === 4 ){
                         e.mensaje = "Debe contener al menos 8 caracteres"
                         variable = false
                     }
@@ -140,7 +140,7 @@ window.addEventListener('load', () => {
                 }
                 break;
             default:
-                $('#passContainer').innerHTML = ""
+                $('#contraseniaContainer').innerHTML = ""
                 inputContrasenia.style.border = "1px solid black"
                 errores = errores.filter(error => {
                     return error.id !== 4
@@ -158,7 +158,7 @@ window.addEventListener('load', () => {
         
         switch (true) {
             case !inputContrasenia2.value:
-                $('#passContainer2').innerHTML = "<small>Debe confirmar su contraseña</small>"
+                $('#contraseniaContainer2').innerHTML = "<small>Debe confirmar su contraseña</small>"
                 inputContrasenia2.style.border = "1px solid red"
                 error.mensaje = "Debe confirmar su contraseña"
                 errores.forEach(e => {
@@ -172,7 +172,7 @@ window.addEventListener('load', () => {
                 
                 break;
             case inputContrasenia2.value != inputContrasenia.value:
-                $('#passContainer2').innerHTML = "<small>Las contraseñas no coinciden</small>"
+                $('#contraseniaContainer2').innerHTML = "<small>Las contraseñas no coinciden</small>"
                 error.mensaje = "Las contraseñas no coinciden"
                 inputContrasenia2.style.border = "1px solid red"
                 errores.forEach(e => {
@@ -187,7 +187,7 @@ window.addEventListener('load', () => {
                 
                 break;
             default:
-                $('#passContainer2').innerHTML = ""
+                $('#contraseniaContainer2').innerHTML = ""
                 inputContrasenia2.style.border = "1px solid black"
                 errores = errores.filter(error => {
                     return error.id !== 5
