@@ -36,6 +36,7 @@
                 <div class="container bottom">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa un email" value="<%= locals.old && old.email ? old.email : null %>">
+                    <div  id="emailContainer"></div>
                     <% if (locals.errors && errors.email) { %>
                         <small><%= errors.email.msg%></small>
                        <% } %>
