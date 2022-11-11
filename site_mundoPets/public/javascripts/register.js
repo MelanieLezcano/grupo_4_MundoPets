@@ -3,10 +3,10 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
 
-    const regExLetter = /^[A-Z]+$/;
-
+    const regExLetter = /^[A-Za-z]+$/i ;
+    /* /^[A-Z]+$/ */
     
-/*     let formulario = $('#formulario') */
+    
     let nombre = $('#nombre')
     let apellido = $('#apellido')
 
@@ -41,7 +41,22 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-            case regExLetter.test(nombre.value):
+
+                /* case !nombre.value:
+                    $('#nameContainer').innerHTML = "<small>El Nombre debe contener al menos dos caracteres</small>"
+                    nombre.style.border = "1px solid red"
+                    errores.forEach(e => {
+                        if(e.id === 1 ){
+                            e.mensaje = "El Nombre debe contener al menos dos caracteres"
+                            variable = false
+                        }
+                    });
+                    if (variable) {
+                        errores.push(error)
+                    }
+                    break; */
+
+            case !regExLetter.test(nombre.value):
                 $('#nameContainer').innerHTML = "<small>El Nombre solo acepta letras</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
@@ -85,7 +100,7 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-            case regExLetter.test(apellido.value):
+            case !regExLetter.test(apellido.value):
                 $('#apellidoContainer').innerHTML = "<small>El apellido no puede contener numeros ni caracteres especiales</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
