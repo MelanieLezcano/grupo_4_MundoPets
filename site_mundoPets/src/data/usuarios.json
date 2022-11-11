@@ -121,5 +121,19 @@
         "direccion": "",
         "numeroTarjeta": "",
         "imagen": "avatar-1666139439094.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "CaneNut",
+        "apellido": "Nut",
+        "email": "canela.nut@gmail.com",
+        "contrasenia": "$2a$10$6iPl2sAWaG04HclbxXlRs.D0CsoF3JeO.5aRaIN9xr1mWH/CKGZ9C",
+        "contacto": "",
+        "ciudad": "",
+        "genero": "",
+        "rol": "usuario",
+        "direccion": "",
+        "numeroTarjeta": "",
+        "imagen": "avatar-1668166405306.jpeg"
     }
 ]

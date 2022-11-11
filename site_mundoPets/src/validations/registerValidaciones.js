@@ -7,7 +7,7 @@ module.exports = [
     .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
       // Apellido
      check('apellido').trim()
-      .notEmpty().withMessage('Debe ingresar su nombre').bail()
+      .notEmpty().withMessage('Debe ingresar su apellido').bail()
       .isLength({ min: 2 }).withMessage('Debe contener al menos 2 caracteres'), 
     /* email */
     check('email').trim()
@@ -18,8 +18,8 @@ module.exports = [
     .notEmpty().withMessage('Debe ingresar una contraseña').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
     check('contrasenia2')
-    .notEmpty().withMessage('Debe confirmar su contraseña').bail()
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
+    .notEmpty().withMessage('Debe confirmar su contraseña').bail(),
+    /* .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(), */
     
 
     /* body traermos el body trabaja con contraseña de confirmar contraseña, tenemos  q hacer una cudtom para hacer la contraseña a nuestro gusto, tendra un value que sera el valor del body,utilizaremos el value y utilizamos el req lo trabajamos como objeto literal,como validacion,es una funcion q recibe 2 paametroa  si value es dist req.body.pass entonces sera un false sino sera un true  que pase este mensaje. va mandar un mensaje de error es decir las contraseñas no coinciden. */
