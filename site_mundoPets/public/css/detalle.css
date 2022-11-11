@@ -30,10 +30,29 @@
       border: 1px solid var(--colorNaranja);
       background-color: white;
   }
+  .detalle main .prec-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
   .detalle main .precio {
+    font-family: var(--fuenteTitulos);
+    color: grey;
+    font-size: 28px;
+    text-decoration:line-through;
+}
+.detalle main .descuento {
+  font-family: var(--fuenteTitulos);
+  font-size: 20px;
+  color: var( --colorNaranja);
+  padding: 10px;
+  
+}
+  .detalle main .card-discount {
       font-family: var(--fuenteTitulos);
       font-size: 35px;
-  }
+      color: var(--colorAzulFrancia);
+}
   /* boton sumar - restar */
   .detalle main .sumar-carrito {
       display: flex;

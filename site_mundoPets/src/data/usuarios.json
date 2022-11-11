@@ -124,16 +124,16 @@
     },
     {
         "id": 10,
-        "nombre": "CaneNut",
-        "apellido": "Nut",
-        "email": "canela.nut@gmail.com",
-        "contrasenia": "$2a$10$6iPl2sAWaG04HclbxXlRs.D0CsoF3JeO.5aRaIN9xr1mWH/CKGZ9C",
+        "nombre": "fernando",
+        "apellido": "borquez",
+        "email": "ferjjgz89@hotmail.com",
+        "contrasenia": "$2a$10$MW099AVuiOy7.b0Oa1VyhOj2TSzjzlWwK3CgjaHyQIWf69948iaw6",
         "contacto": "",
         "ciudad": "",
         "genero": "",
         "rol": "usuario",
         "direccion": "",
         "numeroTarjeta": "",
-        "imagen": "avatar-1668166405306.jpeg"
+        "imagen": "avatar-1663535027596.jpg"
     }
 ]
