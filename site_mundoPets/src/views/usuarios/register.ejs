@@ -17,12 +17,8 @@
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
             <form action="" method="POST" enctype="multipart/form-data" id="formulario">
-<<<<<<< HEAD
-                <div class="container bottom">
-=======
                 
                 <div class="container bottom" >
->>>>>>> dd458f0f4a068cf043cf7bcd98d3d5acceb65ef2
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
                     <div id="nameContainer"></div>
@@ -88,11 +84,18 @@
                     
                 </div>
                 <div class="container bottom">
-                    <label for="genero">Genero</label>
-                    <input type="text" name="genero" id="genero" >
-                    <% if (locals.errors && errors.genero){ %>
-                        <small><%= errors.genero.msg%></small>
-                       <% } %>
+                    <label for="">Genero</label>
+                    <!-- <h2 class="bottom">Genero</h2> -->
+                    <input type="radio" name="genero" id="F" class="genero" value="F" <%= locals.old && old.genero==='F' ? "checked" : null%> >
+                    <label for="F">Femenino</label>
+                    <input type="radio" name="genero" id="M" class="genero" value="M" <%= locals.old && old.genero==='M' ? "checked" : null%>>
+                    <label for="M">Masculino</label>
+                    <input type="radio" name="genero" id="SN" class="genero" value="SN" <%= locals.old && old.genero==='SN' ? "checked" : null%> >
+                    <label for="SN">Prefiero no decirlo</label>
+                    <div id="generoContainer"></div>
+                    <% if (locals.errors && errors.genero) { %>
+                        <small><%= errors.genero.msg %></small>
+                    <% } %>
                     
                 </div>
                 <div class="imagenPerfil">

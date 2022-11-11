@@ -209,7 +209,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#emailContainer').innerHTML = ""
-                email.style.border = "1px solid black"
+                email.style.border = "1px solid green"
                 errores = errores.filter(error => {
                     return error.id !== 3
                 })
@@ -253,7 +253,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#contraseniaContainer').innerHTML = ""
-                inputContrasenia.style.border = "1px solid black"
+                inputContrasenia.style.border = "1px solid green"
                 errores = errores.filter(error => {
                     return error.id !== 4
                 })
@@ -275,6 +275,7 @@ window.addEventListener('load', () => {
                 error.mensaje = "Debe confirmar su contraseña"
                 errores.forEach(e => {
                     if (e.id === 5) {
+                        e.mensaje = "Debe confirmar su contraseña"
                         variable = false
                     }
                 });
@@ -300,7 +301,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#contraseniaContainer2').innerHTML = ""
-                inputContrasenia2.style.border = "1px solid black"
+                inputContrasenia2.style.border = "1px solid green"
                 errores = errores.filter(error => {
                     return error.id !== 5
                 })
