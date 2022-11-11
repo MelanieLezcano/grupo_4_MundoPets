@@ -134,7 +134,7 @@ window.addEventListener('load', () => {
         let error = {
             id: 2,
             elemento: "apellido",
-            mensaje: "Falta el apellido"
+            mensaje: "El apellido es obligatorio"
         }
         let variable = true
         switch (true) {
