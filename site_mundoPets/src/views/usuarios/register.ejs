@@ -91,7 +91,7 @@
                     <input type="radio" name="genero" id="M" class="genero" value="M" <%= locals.old && old.genero==='M' ? "checked" : null%>>
                     <label for="M">Masculino</label>
                     <input type="radio" name="genero" id="SN" class="genero" value="SN" <%= locals.old && old.genero==='SN' ? "checked" : null%> >
-                    <label for="SN">Prefiero no decirlo</label>
+                    <label for="SN">Indefinido</label>
                     <div id="generoContainer"></div>
                     <% if (locals.errors && errors.genero) { %>
                         <small><%= errors.genero.msg %></small>
