@@ -2,16 +2,16 @@ const fs = require('fs');
 const path = require('path')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
-const usuarios = require('../data/usuarios.json')
-
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8')
+let db = require('../database/models')
+/* const usuarios = require('../data/usuarios.json') */ //viejo
+/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8') */ //viejo
 
 module.exports = {
     register: (req, res) => {
         return res.render('usuarios/register')
     },
     processRegister: (req, res) => {
-        /*  return res.send (req.file) */
+       /*  return res.send (req.body)  */
         let errors = validationResult(req)
         if (req.fileValidationError != undefined) {
             let imagen = {
@@ -22,7 +22,34 @@ module.exports = {
         }
         if (errors.isEmpty()) {
 
-            let { nombre, email, contrasenia, apellido } = req.body
+            let { nombre, email, contrasenia, apellido,contacto,ciudad,genero} = req.body
+
+            /* {
+  "nombre": "Mercedes",
+  "apellido": "Alvarez",
+  "email": "mechychevy@gmail.com",
+  "contrasenia": "12345678",
+  "contrasenia2": "12345678",
+  "contacto": "1136370707",
+  "ciudad": "buenos aires",
+  "genero": "femenino"
+} */
+             db.usuarios.create({
+              
+                nombre,
+                apellido,
+                email,
+                contrasenia: bcrypt.hashSync(contrasenia, 10),
+                contacto,
+                ciudad,
+                genero,
+                direccion,
+                numeroTarjeta,
+                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                roles_id: 2
+             })
+                
+/* 
             let usuarioNuevo = {
                 id: usuarios[usuarios.length - 1].id + 1,
                 nombre,
@@ -32,7 +59,7 @@ module.exports = {
                 contacto: "",
                 ciudad: "",
                 genero: "",
-                rol: "usuario",
+               
                 direccion: "",
                 numeroTarjeta: "",
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
@@ -41,11 +68,23 @@ module.exports = {
             }
             usuarios.push(usuarioNuevo)
             guardar(usuarios)
+ */
 
-            return res.redirect('/')
+            .then(usuario => {
+                req.session.usuarioLogin = {
+                    id: usuario.id,
+                    nombre: usuario.nombre,
+                    imagen: usuario.imagen,
+                    roles_id: usuario.roles_id
+                }
+                return res.redirect('/')
+            })
+            .catch(errores => res.send(errores))
         } else {
+
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-            if (req.file && req.file.filename != undefined && ruta(req.file.filename) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+
+            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
@@ -75,8 +114,14 @@ module.exports = {
         if (errors.isEmpty()) {
 
             const { email, recordarme } = req.body
-            let usuario = usuarios.find(usuario => usuario.email === email)
+          /*   let usuario = usuarios.find(usuario => usuario.email === email) */
 
+          db.usuarios.findOne({
+            where : {
+                email 
+           }
+          })
+          .then(usuario => {
             req.session.usuarioLogin = {
                 id: usuario.id,
                 nombre: usuario.nombre,
@@ -92,6 +137,14 @@ module.exports = {
 
             return res.redirect('/usuarios/perfil')
             /* return res.send(req.body) */
+          })
+
+          .catch(errores => res.send(errores))
+
+            
+
+          
+           
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('usuarios/login', {

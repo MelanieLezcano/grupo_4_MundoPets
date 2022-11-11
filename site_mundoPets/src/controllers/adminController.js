@@ -2,7 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const { validationResult } = require('express-validator')
 let db = require('../database/models')
-
 module.exports = {
     lista: (req, res) => {
         db.Productos.findAll({

@@ -3,8 +3,6 @@ let db = require('../database/models')
 let Sequelize = require('sequelize')
 
 module.exports = {
-
-
     detalle: (req, res) => {
         let id = +req.params.id
         /* let productoEnDetalle = productos.find((producto) => producto.id === id) */ //viejo
@@ -37,8 +35,8 @@ module.exports = {
         /* return res.render('detalle', { //viejo
             producto: productoEnDetalle,
             productos
-        })
-    },
+        }) */
+    
     carrito: (req, res) => {
 
         let products = []
@@ -82,6 +80,7 @@ module.exports = {
             productos,
             productoPorCategoria
         })
+,*/
+    }
 
-    },*/
 }
