@@ -49,10 +49,10 @@ module.exports = {
             products
         })
     },
-    categoria : (req,res) => {
-        /* let categorias = ['gatos','perros'] */
+    categoria: (req,res) => {
+         /* let categorias = ['gatos','perros']  */
         /*  productoPorCategoria = productos.filter(producto => productos.categorias === categoriaSeleccionada) */
-       /*  let categoriaSeleccionada = req.params.categoria
+        let categoriaSeleccionada = req.params.categoria
        db.Categorias.findOne({
         where: {
             nombre: categoriaSeleccionada
@@ -68,19 +68,19 @@ module.exports = {
     })
     .then(categorias => {
         /* return res.send(categorias) */
-       /*  return res.render('productos', {
+        return res.render('productos', {
             categorias,
         })
     })
     .catch(error => res.send(error))
-}, */ 
-        /* res.render('productos',{
+}, 
+       /*   res.render('productos',{
             categorias,
             categoriaSeleccionada,
             productos,
             productoPorCategoria
         })
-,*/
-    }
+
+    }, */
 
 }

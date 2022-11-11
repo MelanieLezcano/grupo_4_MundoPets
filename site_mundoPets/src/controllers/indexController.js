@@ -61,7 +61,7 @@ module.exports = {
         return res.render('nosotros')
     },
     categoria : (req,res) => {
-        let categoriaSeleccionada = req.params.categorias
+        let categoriaSeleccionada = req.params.categoria
 
         db.Categorias.findOne({
             where: {
