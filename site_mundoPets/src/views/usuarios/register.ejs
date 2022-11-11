@@ -17,12 +17,8 @@
             <h2>Registro</h2>
             <p>completa los siguientes datos</p>
             <form action="" method="POST" enctype="multipart/form-data" id="formulario">
-<<<<<<< HEAD
-                <div class="container bottom">
-=======
                 
                 <div class="container bottom" >
->>>>>>> dd458f0f4a068cf043cf7bcd98d3d5acceb65ef2
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
                     <div id="nameContainer"></div>
@@ -71,30 +67,7 @@
                         <small><%= errors.contrasenia2.msg%></small>
                        <% } %>
                 </div>
-                <div class="container bottom">
-                    <label for="contacto">Contacto</label>
-                    <input type="" name="contacto" id="contacto" placeholder="Ingresa tu numero de telefono">
-                    <% if (locals.errors && errors.contacto){ %>
-                        <small><%= errors.contacto.msg%></small>
-                       <% } %>
-                    
-                </div>
-                <div class="container bottom">
-                    <label for="ciudad">Ciudad</label>
-                    <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad">
-                    <% if (locals.errors && errors.ciudad){ %>
-                        <small><%= errors.ciudad.msg%></small>
-                       <% } %>
-                    
-                </div>
-                <div class="container bottom">
-                    <label for="genero">Genero</label>
-                    <input type="text" name="genero" id="genero" >
-                    <% if (locals.errors && errors.genero){ %>
-                        <small><%= errors.genero.msg%></small>
-                       <% } %>
-                    
-                </div>
+               
                 <div class="imagenPerfil">
                     <label for="imagen">Foto de perfil</label>
                     <input type="file" name="imagen" id="imagen">
@@ -110,12 +83,8 @@
         <h4>¿Ya tenés una cuenta? <a href="/usuarios/login">Inicia sesión</a></h4>
     </main>
     <%- include('../partials/footer') %>
-<<<<<<< HEAD
     <script src="/javascripts/register.js"></script>
 
-=======
-   
->>>>>>> dd458f0f4a068cf043cf7bcd98d3d5acceb65ef2
 </body>
 
 </html>
