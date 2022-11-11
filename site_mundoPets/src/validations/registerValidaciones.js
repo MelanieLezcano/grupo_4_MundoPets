@@ -15,8 +15,10 @@ module.exports = [
     .isEmail().withMessage('Debe ingresar un email válido'),
     /* contraseña */
     check('contrasenia')
+    .notEmpty().withMessage('Debe ingresar una contraseña').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
     check('contrasenia2')
+    .notEmpty().withMessage('Debe confirmar su contraseña').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
     
 
