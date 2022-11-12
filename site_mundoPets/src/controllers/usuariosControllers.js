@@ -34,17 +34,17 @@ module.exports = {
   "ciudad": "buenos aires",
   "genero": "femenino"
 } */
-             db.usuarios.create({
+             db.Usuarios.create({
               
                 nombre,
                 apellido,
                 email,
-                contrasenia: bcrypt.hashSync(contrasenia, 10),
-                contacto,
-                ciudad,
+                contraseña: bcrypt.hashSync(contrasenia, 10),
+                /* contacto, */
+               /*  ciudad, */
                 genero,
-                direccion,
-                numeroTarjeta,
+                /* direccion, */
+                /* numeroTarjeta, */
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
                 roles_id: 2
              })
@@ -116,7 +116,7 @@ module.exports = {
             const { email, recordarme } = req.body
           /*   let usuario = usuarios.find(usuario => usuario.email === email) */
 
-          db.usuarios.findOne({
+          db.Usuarios.findOne({
             where : {
                 email 
            }

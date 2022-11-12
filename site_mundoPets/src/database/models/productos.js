@@ -32,10 +32,10 @@ module.exports = (sequelize, DataTypes) => {
     precio: DataTypes.INTEGER,
     descuento: DataTypes.INTEGER,
     descripcion: DataTypes.STRING,
-/*     imagen: DataTypes.STRING, */
+    imagen: DataTypes.STRING,
     stock: DataTypes.INTEGER,
     subcategorias_id: DataTypes.INTEGER,
-    /* categorias_id: DataTypes.INTEGER, */
+    categorias_id: DataTypes.INTEGER,
     marcas_id: DataTypes.INTEGER
   }, {
     sequelize,
