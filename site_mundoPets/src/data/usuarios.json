@@ -121,5 +121,19 @@
         "direccion": "",
         "numeroTarjeta": "",
         "imagen": "avatar-1666139439094.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "fernando",
+        "apellido": "borquez",
+        "email": "ferjjgz89@hotmail.com",
+        "contrasenia": "$2a$10$MW099AVuiOy7.b0Oa1VyhOj2TSzjzlWwK3CgjaHyQIWf69948iaw6",
+        "contacto": "",
+        "ciudad": "",
+        "genero": "",
+        "rol": "usuario",
+        "direccion": "",
+        "numeroTarjeta": "",
+        "imagen": "avatar-1663535027596.jpg"
     }
 ]

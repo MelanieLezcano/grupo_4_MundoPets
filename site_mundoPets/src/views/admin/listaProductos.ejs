@@ -9,9 +9,6 @@
         <a href="/admin/crear">
             <button type="button" class="btn btn-primary">Crear Producto</button>
         </a>
-        <a href="/admin/<%= redirection %>">
-          <button type="button" class="btn btn-warning"><%= redirection === "historial" ?  "Historial Productos" : "Listado de Productos" %></button>
-      </a>
 
         <div class="table-responsive">
         <table class="table table-hover">
@@ -33,11 +30,11 @@
                   <tr>
                       
                         <th scope="row"><a href="/admin/editar/<%= producto.id %>"><%= producto.id %> </a></th>
-                        <td><a href="/admin/editar/<%= producto.id %>"><%= producto.marca %></a></td>
-                        <td><a href="/admin/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
-                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.categoria.nombre %></a></td>
-                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.subcategoria %></a></td>
-                        <td><a href="/admin/editar<%= producto.id %> "><%= producto.stock %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.productosMarca ? producto.productosMarca.nombre : "no definida" %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.titulo %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.categoria.nombre %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.subcategoria ? producto.subcategoria.nombre : "no definida" %></a></td>
+                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/admin/editar/<%= producto.id %> "><%= producto.precio %></a></td>
                         <td><a href="/admin/editar/<%= producto.id %> "><%= producto.descuento %></a></td>
                         <td>
@@ -46,15 +43,9 @@
                               <a href="/admin/editar/<%= producto.id%>">
                                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                               </a>
-                              <% if (redirection !== "lista") { %>
                                 <form action="/admin/eliminar/<%= producto.id%>?_method=DELETE" method="post">
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                 </form>
-                                <% }else{ %>
-                                  <form action="/admin/restaurar/<%= producto.id%>?_method=DELETE" method="post">
-                                    <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
-                                  </form>
-                                <% } %>
                           
                                
                              
