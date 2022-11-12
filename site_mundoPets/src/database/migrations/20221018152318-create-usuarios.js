@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       contacto: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       ciudad: {
         type: Sequelize.STRING,

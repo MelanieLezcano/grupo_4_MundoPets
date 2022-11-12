@@ -1,11 +1,11 @@
 window.addEventListener('load', () => {
 
     let $ = (elemento) => document.querySelector(elemento)
-    console.log("Register vinculado");
+   /*  console.log("Register vinculado"); */
 
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
-    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
 
@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
 
     eye.addEventListener('click', (e) => {
         inputContrasenia.type === 'password' ? inputContrasenia.type = 'text' : inputContrasenia.type = 'password'
-        console.log(eye.classList.contains('fa-eye-slash'))
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
         if (eye.classList.contains('fa-eye-slash')) {
             eye.classList.toggle('fa-eye-slash')
             eye.classList.toggle('fa-eye')
@@ -128,7 +128,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
-        console.log(errores);
+        /* console.log(errores); */
     })
     apellido.addEventListener('blur', () => {
         let error = {
@@ -215,7 +215,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
-        console.log(errores);
+        /* console.log(errores); */
     })
     inputContrasenia.addEventListener('blur', () => {
         let error = {
