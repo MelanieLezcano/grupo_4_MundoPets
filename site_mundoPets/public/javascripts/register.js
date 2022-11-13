@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
     let inputContrasenia2 = $('#contrasenia2')
+    let image = $('#image')
 
     let errores = [{
         id: 1,
@@ -308,6 +309,25 @@ window.addEventListener('load', () => {
                 break;
         }
     })
+    image.addEventListener('change', function() {
+        switch (true) {
+            case !regExExt.exec(image.value):
+                $('#imgError').innerHTML = "Solo se permite ingresar una image valida formato (jpg|jpeg|png|jfif|gif|webp)"
+                validate.image = false
+                break;
+            default:
+                $('#imgError').innerHTML = null
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                validate.image = true
+                break;
+        }
+        funcValidate(validate)
+    })
+
+    const validate = {
+        image : true,
+    }
 
 
 

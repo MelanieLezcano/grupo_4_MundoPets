@@ -85,7 +85,7 @@
 
                                             <div class="col col-5">
                                                 <label class="form-label" for="imagenes">
-                                                    <!-- <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt=""> -->
+                                                    <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/default-image.png" alt="">
                                                     <div class="imgHover">
                                                         <p class="text-center">Selecionar Imagen</p>
                                                     </div>
@@ -100,11 +100,11 @@
                                             <!-- Columnas -->
 
                                         </div>
-                                        <p class="span text-danger" id="imgError">
-                                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                        </p>
                                     </div>
-
+                                    
+                                    <p class="span text-danger" id="imgError">
+                                        <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                    </p>
                                 </section>
                             </div>
 

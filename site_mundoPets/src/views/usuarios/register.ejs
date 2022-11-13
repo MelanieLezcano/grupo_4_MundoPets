@@ -100,10 +100,12 @@
                 </div>
                 <div class="imagenPerfil">
                     <label for="imagen">Foto de perfil</label>
-                    <input type="file" name="imagen" id="imagen">
+                    <input type="file" name="imagen" id="image">
+                    <p class="span text-danger" id="imgError">
                     <% if (locals.errors && errors.imagen) {%>
                         <small><%= errors.imagen.msg%></small>
                        <% } %>
+                    </p>
                 </div>
 
                 <button type="submit">Crear cuenta</button>

@@ -160,7 +160,7 @@ window.addEventListener('load', () => {
     marcas.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
-                $('#marcaError').innerHTML =
+                $('#marcaError').innerHTML = "Debes ingresar una marca"
                 this.classList.add('is-invalid')
                 validate.marcas = false
                 break;
@@ -198,11 +198,13 @@ window.addEventListener('load', () => {
     imagen.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(imagen.value):
-                $('#imgError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imgError').innerHTML = "Solo se permite ingresar una imagen valida formato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.imagen = false
                 break;
             default:
                 $('#imgError').innerHTML = null
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
                 validate.imagen = true
                 break;
         }
@@ -212,7 +214,7 @@ window.addEventListener('load', () => {
     const validate = {
         titulo : false,
         precio : false,
-        descuento : false,
+        descuento : true,
         stock : false,
         marcas : false,
         categorias : false,
