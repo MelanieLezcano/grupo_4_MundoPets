@@ -8,7 +8,7 @@
             <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
         </div>
        
-        <h1>Hola <%= `${locals.usuarioLogin.rol} ${locals.usuarioLogin.nombre}` %></h1>
+        <h1>Hola <%= `${locals.usuarioLogin.rol == 1 ? 'Administrador' : 'Usuario' } ${locals.usuarioLogin.nombre}` %></h1>
         
         <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
             <button type="submit">Cerrar Sesion</button>

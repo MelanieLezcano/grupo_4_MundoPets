@@ -32,7 +32,7 @@
   </div>
    
   <div class="admin">
-    <% if (locals.usuarioLogin && locals.usuarioLogin.rol === 1) { %>
+    <% if (locals.usuarioLogin && (locals.usuarioLogin.rol) === 1) { %>
       <li><a href="/admin/lista">ADMIN</a></li>  
     <% } %>
   </div>
