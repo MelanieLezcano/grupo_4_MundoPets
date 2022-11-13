@@ -129,11 +129,11 @@
                                 <input class="form-input" id="image" type="file" name="Imagenes"
                                     placeholder="Imagen del Producto" accept="img/*">
 
+                                    <p class="span text-danger" id="imgError" style="width: 500px;">
+                                        <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <p class="span text-danger" id="imgError">
-                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                        </p>
                         </div>
 
                         <button type="submit">Crear cuenta</button>
