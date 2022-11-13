@@ -140,10 +140,27 @@ window.addEventListener('load', () => {
         }
         funcValidate(validate)
     })
+    subcategorias.addEventListener('blur', function() {
+        switch (true) {
+            case !this.value.trim():
+                $('#subcategoriaError').innerHTML = "Debes ingresar una subcategoria"
+                this.classList.add('is-invalid')
+                validate.subcategorias = false
+                break;
+            
+            default:
+                $('#subcategoriaError').innerHTML = null
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                validate.subcategorias = true
+                break;
+        }
+        funcValidate(validate)
+    })
     marcas.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
-                $('#marcaError').innerHTML = "Debes ingresar una marca"
+                $('#marcaError').innerHTML =
                 this.classList.add('is-invalid')
                 validate.marcas = false
                 break;
@@ -180,7 +197,7 @@ window.addEventListener('load', () => {
 
     imagen.addEventListener('change', function() {
         switch (true) {
-            case !regExExt.exec(img.value):
+            case !regExExt.exec(imagen.value):
                 $('#imgError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.imagen = false
                 break;

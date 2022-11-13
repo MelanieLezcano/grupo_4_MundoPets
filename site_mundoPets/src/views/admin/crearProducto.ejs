@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <%- include('../partials/head',{title:"Crear Producto"}) %>
 
@@ -29,20 +29,20 @@
                                         <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %>
                                     </p>
                                 </div>
-                                <select style="padding: 17px; margin-bottom: 16px" class="form-select" name="Marca" id="marcas" floatingSelect"
-                                aria-label="Floating label select example">
-                                <option hidden value="">Selecciona una marca</option>
-                                <% marcas.forEach(marca=> { %>
-
-                                    <option value="<%- marca.id %>"><%- marca.nombre  %></option>
-
-                                    <% }); %>
-                                    <p class="span text-danger" id="marcaError">
-                                        <%= locals.errors && errors.marca ? errors.marca.msg : null %>
-                                    </p>
-
-                                        
-                            </select>
+                                            <select class="form-select" name="Marca" id="marcas" floatingSelect"
+                                                aria-label="Floating label select example">
+                                                <option hidden value="">Selecciona una marca</option>
+                                                <% marcas.forEach(marca=> { %>
+    
+                                                    <option value="<%- marca.id %>"><%- marca.nombre  %></option>
+    
+                                                    <% }); %>
+    
+                                                        
+                                            </select>
+                                            <p class="span text-danger" id="marcaError">
+                                                <%= locals.errors && errors.marca ? errors.marca.msg : null %>
+                                            </p>
                                 <div class="form-floating mb-3">
                                     <input class="form-control" type="number" name="Precio"
                                         placeholder="Precio del producto" id="precio"
@@ -132,15 +132,16 @@
                                                 <% }); %>
 
                                                     
-                                        </select>
+                                        </select><div style="display: flex; justify-content: center;">
                                         <p class="span text-danger" id="categoriaError">
                                             <%= locals.errors && errors.Categoria ? errors.Categoria.msg : null %>
                                         </p>
                                     </div>
+                                    </div>
                                     <div class="container m-3">
                                         <div class="row justify-content-around align-items-center">
                                             <div class="col col-4">
-                                                <h3 class="text-center">SubCategorias</h3>
+                                                <h3 class="text-center">Subcategorias</h3>
                                                 <select class="form-select" name="Subcategoria" id="subcategorias" floatingSelect"
                                                     aria-label="Floating label select example">
                                                     <% locals.errors && errors.subCategoria ? errors.Categoria.msg : null %>
@@ -151,16 +152,18 @@
             
                                                             <% }); %>
                                                 </select>
-                                                <p class="span text-danger" id="subcategoriaError">
-                                                    <%= locals.errors && errors.subCategoria ? errors.subCategoria.msg :
-                                                        null %>
-                                                </p>
                                             </div>
+                                            <div style="display: flex; justify-content: center;">
+                                            <p class="span text-danger" id="subcategoriaError">
+                                                <%= locals.errors && errors.subCategoria ? errors.subCategoria.msg :
+                                                    null %>
+                                            </p>
+                                        </div>
 
                                         </div>
                                     </div>
 
-
+                                <div class="row justify-content-around align-items-center">
                                     <div class="container m-3">
                                         <div class="row">
                                             <div class="col col-12">
@@ -177,6 +180,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
 
                                 </div>
