@@ -23,6 +23,7 @@
                 <div class="container bottom">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                    <div  id="emailContainer"></div>
                     <% if (locals.errors && errors.email) { %>
                         <small><%= errors.email.msg%></small>
                        <% } %>
@@ -30,6 +31,7 @@
                 <div class="container bottom">
                     <label for="pass">Contraseña</label>
                     <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu Contraseña">
+                    <div id="contraseniaContainer"></div>
                     <% if (locals.errors && errors.contrasenia) { %>
                         <small><%= errors.contrasenia.msg%></small>
                        <% } %>
