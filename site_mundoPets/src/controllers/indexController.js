@@ -9,8 +9,8 @@ module.exports = {
             include: [{all:true}]
         })
         
-        .then(([productos]) => {
-           /*  return res.send(productos) */
+        .then(productos => {
+            /* return res.send(productos) */
             return res.render('home',{
                 
                 productos

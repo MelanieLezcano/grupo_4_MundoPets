@@ -38,7 +38,7 @@ listado.forEach(producto => {
     descuento: producto.descuento,
     descripcion: producto.descripcion,
     imagen: producto.imagenes[0],
-    subcategorias_id: 1,
+    subcategorias_id: subcategoria,
     categorias_id: categoria,
     marcas_id: marca,
     createdAt:new Date,

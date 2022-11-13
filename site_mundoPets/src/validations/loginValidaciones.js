@@ -25,7 +25,7 @@ module.exports = [
                 }
             })
                 .then(usuario => {
-                    if (!bcryptjs.compareSync(value,usuario.dataValues.contrasenia)) {
+                    if (!bcryptjs.compareSync(value,usuario.dataValues.contraseña)) {
                         return Promise.reject()
                     } 
 
@@ -52,12 +52,12 @@ module.exports = [
 
  
  /* contraseña */
- check('contrasenia').trim()
+/*  check('contrasenia').trim()
  .notEmpty().withMessage('Debe ingresar su contraseña').bail()
  .isLength({min:8}).withMessage('La contraseña es inválida'),
  
  body('email') /* value es lo que estamos recibiendo por valor de email */
- .custom((value,{req}) => {
+ /* .custom((value,{req}) => {
     let usuario = usuarios.find(usuario => usuario.email === value && bcryptjs.compareSync(req.body.contrasenia, usuario.contrasenia))
     if (usuario) {
         return true
@@ -65,6 +65,6 @@ module.exports = [
         return false
     }
  })
-/*  .withMessage('El mail o la contraseña no coinciden') */
- .withMessage('El usuario no se encuentra registrado')
+ .withMessage('El mail o la contraseña no coinciden')
+ .withMessage('El usuario no se encuentra registrado')  */
 
