@@ -1,6 +1,6 @@
 'use strict';
 
-let roles = ['administrador','usuario']
+let roles = ['Administrador','Usuario']
 
 let todosLosRoles = roles.map( elemento => {
   return {

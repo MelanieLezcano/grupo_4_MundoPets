@@ -75,7 +75,7 @@ module.exports = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     imagen: usuario.imagen,
-                    roles_id: usuario.roles_id
+                    rol: usuario.roles_id
                 }
                 return res.redirect('/')
             })
@@ -126,7 +126,7 @@ module.exports = {
                 id: usuario.id,
                 nombre: usuario.nombre,
                 imagen: usuario.imagen,
-                rol: usuario.rol
+                rol: usuario.roles_id
             }
             if (recordarme) {
                 res.cookie('MundoPets', req.session.usuarioLogin, {
