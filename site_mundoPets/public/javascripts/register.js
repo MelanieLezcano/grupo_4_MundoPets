@@ -3,10 +3,23 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
    /*  console.log("Register vinculado"); */
 
+   const funcValidate = (obj) => {
+    let arr = Object.values(obj)
+    console.log(arr);
+    if (!arr.includes(false)) {
+        btn.disabled = false
+        btn.style.backgroundColor = 'var(--colorAzulFrancia)'
+    }else{
+        btn.disabled = true
+        btn.style.backgroundColor = 'var(--colorCeleste)'
+    }
+}
+
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
+    const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
 
 
     let formulario = $('#formulario')
