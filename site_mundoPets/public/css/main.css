@@ -10,7 +10,7 @@
 
 
 .mainHome .banner h2 {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     width: 100%;
     font-family: var(--fuenteTitulos);
@@ -18,7 +18,21 @@
     font-size: 20px;
     text-align: center;
     background-color: rgba(127, 164, 243, 0.452);
-    padding: 5px;
+    padding: 5px; */
+    position: absolute;
+    top: 68px;
+    height: 18px;
+    width: 50%;
+    font-family: var(--fuenteTitulos);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    background-color: rgba(127, 164, 243, 0.452);
+    padding: 1px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    right: 6px;
 
 
 }
@@ -27,6 +41,7 @@
  .mainHome .banner {
     position: relative;
     z-index: auto;
+    
 } 
 
 .mainHome .banner img {
@@ -362,7 +377,7 @@
   @media(max-width: 36em){
     .home .glider::-webkit-scrollbar {
       opacity: 1;
-      -webkit-appearance: none;
+      -webkit-appearance: none; 
       width: 7px;
       height: 3px;
     }
@@ -377,6 +392,24 @@
 
 /* Tablet */
 @media (min-width:426px) {
+    .mainHome.banner h2{
+
+        position: absolute;
+        top: 134PX;
+        height: 23px;
+        width: 50%;
+        font-family: var(--fuenteTitulos);
+        color: white;
+        font-size: 30px;
+        text-align: center;
+
+        background-color: rgba(127, 164, 243, 0.452);
+        padding: 1px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        right: 6px;
+
+    }
     .mainHome .links {
         text-align: center;
         width: 90%;
