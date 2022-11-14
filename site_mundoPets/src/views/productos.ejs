@@ -6,7 +6,16 @@
 <body class="productos">
     <%- include('./partials/header') %> 
     <main> 
-        <%- include('./partials/banner') %> 
+        
+       
+        <% if (categorias.nombre === 'Gato') { %>
+            <%- include('./partials/bannerGatos') %> 
+          <% } else { %>
+            <%- include('./partials/bannerPerros') %> 
+            <% } %>
+       
+       
+       
         <h1><%= categorias.nombre %></h1>
 
         <section class="carrouselProductos">
