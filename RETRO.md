@@ -128,26 +128,26 @@ Repasar mas git/github
 # RETRO SPRINT 6
 
 ## Comenzar a hacer
-repasar temas relacionados al sprint antes de empezar a trabajarlo
-revision general de las tareas
-cada uno manejar su tarea asignada en trello
+- repasar temas relacionados al sprint antes de empezar a trabajarlo
+- revision general de las tareas
+- cada uno manejar su tarea asignada en trello
 
 ## Seguir haciendo
-organizacion rapida de las tareas del sprint
-buena relacion entre compañeros
+- organizacion rapida de las tareas del sprint
+- buena relacion entre compañeros
 
 ## Hacer más
 
-organizar los tiempos personales,puede dificultar el desarrollo del proyecto y de sus compañeros si no se maneja bien los tiempos personales
-comunicar ante cualquier dificultad lo antes posible
+- organizar los tiempos personales,puede dificultar el desarrollo del proyecto y de sus compañeros si no se maneja bien los tiempos personales
+- comunicar ante cualquier dificultad lo antes posible
 
 
 ## Dejar de hacer
 
-ENTREGAR FUERA DE FECHA PACTADA
-subestimar tareas
+- ENTREGAR FUERA DE FECHA PACTADA
+- subestimar tareas
 
 ## Hacer menos
 
-no pedir ayuda
-manejar el trello sola (mechy)
+- no pedir ayuda
+- manejar el trello sola (mechy)
