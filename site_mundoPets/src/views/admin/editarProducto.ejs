@@ -13,87 +13,113 @@
         <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
             <!--  -->
             <div class="form-floating m-2">
-                <textarea class="form-control" name="Titulo" placeholder="Por favor inserte el titulo del producto"
-                    id="floatingTextarea"><%= producto.titulo %></textarea>
+                <input class="form-control" name="Titulo" placeholder="Por favor inserte el titulo del producto"
+                    id="titulo" value="<%= producto.titulo %>">
                 <label for="floatingTextarea">Titulo</label>
-                <small>Obligatorio</small>
+                <p class="span text-danger" id="tituloError">
+                    <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %>
+                </p>
             </div>
             <div class="form-floating m-2">
-                <select class="form-select" name="Marca" id="floatingSelect" aria-label="Floating label select example">
+                <select class="form-select" name="Marca" id="marcas" aria-label="Floating label select example">
                
                    <% marcas.forEach(marca => { %>
                     <option value="<%= marca.id %>"><%= marca.nombre %></option>
                   <% }) %> 
                 </select> 
                 <label for="floatingSelect">Marca</label>
-                <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
-             </div>
+                <p class="span text-danger" id="marcaError">
+                    <%= locals.errors && errors.marca ? errors.marca.msg : null %>
+                </p>
+            </div>
                 <div class="form-floating m-2">
-                    <select class="form-select" name="Categoria" id="floatingSelect" aria-label="Floating label select example">
+                    <select class="form-select" name="Categoria" id="categorias" aria-label="Floating label select example">
                    
                        <% categorias.forEach(categoria => { %>
                         <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                      <% }) %> 
+                        <% }) %> 
                     </select> 
                     <label for="floatingSelect">Categoria</label>
-                    <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
-                 </div>
+                    <p class="span text-danger" id="categoriaError">
+                        <%= locals.errors && errors.Categoria ? errors.Categoria.msg : null %>
+                    </p>
+                </div>
                  <div class="form-floating m-2">
-                    <select class="form-select" name="Subcategoria" id="floatingSelect" aria-label="Floating label select example">
+                    <select class="form-select" name="Subcategoria" id="subcategorias" aria-label="Floating label select example">
                    
                        <% subCategorias.forEach(subCategorias => { %>
                         <option value="<%= subCategorias.id %>"><%= subCategorias.nombre %></option>
-                      <% }) %> 
+                        <% }) %> 
                     </select> 
                     <label for="floatingSelect">Subcategoria</label>
-                    <small>Obligatorio</small> <!-- la idea es que recorra las categorias  -->
-                 </div>
+                    <p class="span text-danger" id="subcategoriaError">
+                        <%= locals.errors && errors.subCategoria ? errors.subCategoria.msg :
+                            null %>
+                    </p>
+                </div>
                  <div class="form-floating m-2">
-                     <input type="number" name="Precio" class="form-control" id="Precio" placeholder="Precio" value="<%=producto.precio%>">
+                     <input type="number" name="Precio" class="form-control" id="precio" placeholder="Precio" value="<%=producto.precio%>">
                      <label for="Precio m-2">Precio</label>
-                     <small>Obligatorio</small>
+                     <p class="span text-danger" id="precioError">
+                        <%= locals.errors && errors.Precio ? errors.Precio.msg : null %>
+                    </p>
                     </div>
                     <div class="form-floating m-2">
-                        <input type="number" name="Descuento" class="form-control" id="Descuento" placeholder="Descuento" value="<%=producto.descuento%>">
+                        <input type="number" name="Descuento" class="form-control" id="descuento" placeholder="Descuento" value="<%=producto.descuento%>">
                         <label for="Descuento">Descuento</label>
+                        <p class="span text-danger" id="descuentoError">
+                            <%= locals.errors && errors.Descuento ? errors.Descuento.msg : null %>
+                        </p>
                     </div>
                     <div class="form-floating m-2">
-                        <input type="number" name="Stock" class="form-control" id="Stock" placeholder="Stock" value="<%=producto.stock%>">
+                        <input type="number" name="Stock" class="form-control" id="stock" placeholder="Stock" value="<%=producto.stock%>">
                         <label for="Stock">Stock</label>
+                        <p class="span text-danger" id="stockError">
+                            <%= locals.errors && errors.Stock ? errors.Stock.msg : null %>
+                        </p>
                     </div>
                     
                     <div class="form-floating m-2">
-                        <textarea class="form-control h-100" name="Descripcion" placeholder="Por favor inserte la descripcion del producto"
-                            id="floatingTextarea"><%= producto.descripcion %></textarea>
-                        <label for="floatingTextarea">Descripcion</label>
-                        <small>Obligatorio</small>
+                        <textarea class="form-control h-100" name="Descripcion" id="descripcion" placeholder="Por favor inserte la descripcion del producto"><%= producto.descripcion %></textarea>
+                        <label for="description">Descripcion</label>
+                        <p class="span text-danger" id="descripcionError">
+                            <%= locals.errors && errors.Descripcion ? errors.Descripcion.msg : null %>
+                        </p>
                     </div>
     
-                    <div class="m-2">
-<!--                         <label for="formFileMultiple" name="Imagenes" class="form-label">Subir imagenes del producto</label>
-                        <input class="form-control" type="file" id="imagenes" name="imagenes" >
-                        <small>Obligatorio</small> -->
-
-                        <label class="form-label" for="product-img">
-                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/<%=producto.imagen[0].nombre%>" alt="">
-                            <div class="imgHover">
-                                <p class="text-center">Selecionar Imagen</p>
+                    <section class="img-product">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-5">
+                                    <label class="form-label" for="imagenes">
+                                        <img id="img-preview"
+                                            class="img-fluid img-thumbnail imagen-height rounded"
+                                            src="/img/<%=producto.imagen%>" alt="">
+                                        <div class="imgHover">
+                                            <p class="text-center">Selecionar Imagen</p>
+                                        </div>
+                                    </label>
+                                    <div class="form-admin__box activo">
+                                        <input class="form-input" id="imagen" type="file" name="Imagenes"
+                                            placeholder="Imagen del Producto" accept="img/*">
+                                    </div>
+                                </div>
                             </div>
-                        </label>
-                        <div class="form-admin__box activo">
-                            <input class="form-input" id="imagenes" type="file" name="Imagenes"
-                                placeholder="Imagen del Producto" accept="img/*">
-
                         </div>
-                    </div>
+                        <p class="span text-danger" id="imgError">
+                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                        </p>
+                        
+                    </section>
                     
                     <div class="button">
-                        <button class="btn btn-outline-success" type="submit">Editar Producto</button>
+                        <button class="btn btn-outline-success" id="btn-submit" type="submit">Editar Producto</button>
                     </div>
-                    
                 </section>
             </form>
         </main>
+        <script src="/javascripts/imagenes.js"></script>
+        <script src="/javascripts/validacionProductos.js"></script>
     </body>
     
     </html>
