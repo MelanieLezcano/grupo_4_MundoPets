@@ -363,7 +363,7 @@
   @media(max-width: 36em){
     .home .glider::-webkit-scrollbar {
       opacity: 1;
-      -webkit-appearance: none;
+      /* webkit-appearance: none; */
       width: 7px;
       height: 3px;
     }
