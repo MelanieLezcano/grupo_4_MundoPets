@@ -65,8 +65,31 @@ module.exports = {
             return res.redirect('/admin/crear')
         }
     },
-   /*  editar: (req, res) => { 
+    editar: (req, res) => {/* 
         db.Productos.findAll()
+        .then((marcas) => {
+            return res.send(marcas)
+       }).catch((err) => {
+        res.send(err)
+       }); */
+
+        let idParams = +req.params.id
+        let categorias = db.Categorias.findAll()
+        let subCategorias = db.SubCategorias.findAll()
+        let marcas = db.Marcas.findAll()
+        let producto = db.Productos.findOne({
+            where: {
+                id: idParams
+            },
+            include: [{
+                all: true
+            }]
+        })
+
+        Promise.all([categorias, subCategorias, marcas, producto])
+            .then(([categorias, subCategorias, marcas, producto]) => {
+
+                return res.render('admin/editarProducto', {
                     producto,
                     categorias,
                     subCategorias,
@@ -126,5 +149,5 @@ module.exports = {
     historial: (req, res) => {
     },
     restaurar: (req, res) => {
-    },*/
-} 
+    },
+}
