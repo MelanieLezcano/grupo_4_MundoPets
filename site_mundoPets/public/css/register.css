@@ -11,6 +11,19 @@
 .register main section.container-image{
     display: none;
 }
+.register main .container .contrasenia {
+    width: 100%;
+    position: relative;
+}
+
+.register main .container .contrasenia i {
+    position: absolute;
+    color: var(--colorAzulFrancia);
+    top: 4px;
+    right: 2px;
+    padding: 10px;
+}
+
 .register main button {
     padding: 9px;
     background-color: var(--colorAzulFrancia);
@@ -48,7 +61,6 @@
 }
 .register main p{
     color: var(--colorCeleste);
-    margin: 30px;
 }    
 .register main a{
 

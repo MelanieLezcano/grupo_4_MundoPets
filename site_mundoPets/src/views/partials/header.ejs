@@ -5,19 +5,19 @@
     </div>
   </div>
   <div class="carrito">
-    <% if (locals.userLogin) { %>
+    <% if (locals.usuarioLogin) { %>
     <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a>
     <% } %>
   </div>
   <div class="usuario">
-    <% if (locals.userLogin) { %>
-      <a href="/usuarios/perfil"> Bienvenid@ <%=locals.userLogin.nombre %></a>
+    <% if (locals.usuarioLogin) { %>
+      <a href="/usuarios/perfil"> Bienvenid@ <%=locals.usuarioLogin.nombre %></a>
     <% } else { %>
       <a href="/usuarios/login"><i class="fas fa-user"></i></a>
       <% } %>
   </div>
   <div class="register">
-    <% if (locals.userLogin) { %>
+    <% if (locals.usuarioLogin) { %>
       <% } else { %>
       <li><a href="/usuarios/register">Creá tu cuenta</a></li>
       <% } %>
@@ -32,7 +32,7 @@
   </div>
    
   <div class="admin">
-    <% if (locals.userLogin && locals.userLogin.rol == 2) { %>
+    <% if (locals.usuarioLogin && (locals.usuarioLogin.rol) === 1) { %>
       <li><a href="/admin/lista">ADMIN</a></li>  
     <% } %>
   </div>
@@ -42,22 +42,22 @@
     <nav>
       <div class="center">
         <ul class="menu">
-          <% if (locals.userLogin) { %>
+          <% if (locals.usuarioLogin) { %>
             <li><a href="/usuarios/perfil">Mi perfil</a></li> 
           <% } else { %>
             <li><a href="/usuarios/login">Ingresá</a></li>
             <% } %>
-            <% if (locals.userLogin) { %>
+            <% if (locals.usuarioLogin) { %>
             <li><a href="/productos/carrito">Carrito</a></li>
             <% } %>
-            <% if (locals.userLogin) { %>
+            <% if (locals.usuarioLogin) { %>
             <li><a href=" ">Mis compras</a></li>
             <% } %>
             <li><a href="/productos">Todos los productos</a></li>
             <li><a href="/vistaProductos/Perro">Categoría Perro</a></li>
             <li><a href="/vistaProductos/Gato">Categoría Gato</a></li>
             <li><a href="/contacto">Contacto</a></li>
-            <% if (locals.userLogin) { %>
+            <% if (locals.usuarioLogin) { %>
             <li><a href="/usuarios/cerrarSesion?_method=DELETE">Cerrar sesión</a></li>
             <% } %>
         </ul>

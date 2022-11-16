@@ -1,102 +1,98 @@
 window.addEventListener('load', () => {
-console.log('holassssssssssss')
-    /* Funciones para no declarar document */
     const $ = (tag) => document.querySelector(tag)
     const id = (tag) => document.getElementById(tag)
 
+    let titulo = $('#titulo')
+    let precio = $('#precio')
+    let descuento = $('#descuento')
+    let stock = $('#stock')
+    let imagen = $('#imagen')
+    let marcas = $('#marcas')
+    let categorias = $('#categorias')
+    let subcategorias = $('#subcategorias')
+    let descripcion = $('#descripcion')
+    let btn = $('#btn-submit')
+
+    
     const funcValidate = (obj) => {
         let arr = Object.values(obj)
         console.log(arr);
         if (!arr.includes(false)) {
             btn.disabled = false
-            btn.style.backgroundColor = '#1a78fd'
+            btn.style.backgroundColor = 'var(--colorAzulFrancia)'
         }else{
             btn.disabled = true
-            btn.style.backgroundColor = 'red'
+            btn.style.backgroundColor = 'var(--colorCeleste)'
         }
     }
 
+
     
+
 
     /* Elementos que se trabajan para validar */
-    let titulo = $('#titulo')
-    let price = $('#price')
-    let discount = $('#discount')
-    let categorias = $('#categorias')
-    let marcas = $('#brand')
-    let description = $('#description')
-    let Subcategoria = $('#Subcategoria')
+    /* let titulo = $('#titulo') */
 
-    let imagenes = $('#imagenes')
-    
+        /* validar elementos */
 
-    let btn = $('#btn-submit')
-    console.log(btn)
-
-    /* Expresiones regulares para utilizar */
-    let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
-    let regExNumber = /^[+]?([0-9][0-9]?|150)$/
-    const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
-
-    /* validar elementos */
         /* Titulo del producto */
-    titulo.addEventListener('blur', function() {
-        switch (true) {
-            case !this.value.trim():
-                $('#tituloError').innerHTML = "Debes ingresar el titulo de tu producto"
-                this.classList.add('is-invalid')
-                validate.titulo = false
-                break;
-            case !(this.value.trim().length > 2 && this.value.trim().length < 100):
-                $('#tituloError').innerHTML = "El titulo del producto debe tener 2 letras y maximo 10"
-                this.classList.add('is-invalid')
-                validate.titulo = false
-                break;
-            default:
-                $('#tituloError').innerHTML = null
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                validate.titulo = true
-                break;
-        }
-        funcValidate(validate)
-    })
+        titulo.addEventListener('blur', function() {
+            switch (true) {
+                case !this.value.trim():
+                    $('#tituloError').innerHTML = "Debes ingresar el titulo de tu producto"
+                    this.classList.add('is-invalid')
+                    validate.titulo = false
+                    break;
+                case !(this.value.trim().length > 2 && this.value.trim().length < 70):
+                    $('#tituloError').innerHTML = "El titulo del producto debe 2 letras y maximo 70"
+                    this.classList.add('is-invalid')
+                    validate.titulo = false
+                    break;
+                default:
+                    $('#tituloError').innerHTML = null
+                    this.classList.remove('is-invalid')
+                    this.classList.add('is-valid')
+                    validate.titulo = true
+                    break;
+            }
+            funcValidate(validate)
+        })
 
-        /* precio del producto */
-    price.addEventListener('blur', function() {
+                /* precio del producto */
+    precio.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
-                $('#priceError').innerHTML = "Debes ingresar un precio de tu producto"
+                $('#precioError').innerHTML = "Debes ingresar un precio a tu producto"
                 this.classList.add('is-invalid')
-                validate.price = false
+                validate.precio = false
                 break;
             case !(this.value.trim().length >= 2 && this.value.trim().length <= 16):
-                $('#priceError').innerHTML = "El precio del producto debe contener 2 caracteres y maximo 10"
+                $('#precioError').innerHTML = "El precio del producto debe contener 2 caracteres y maximo 16"
                 this.classList.add('is-invalid')
-                validate.price = false
+                validate.precio = false
                 break;
             default:
-                $('#priceError').innerHTML = null
+                $('#precioError').innerHTML = null
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
-                validate.price = true
+                validate.precio = true
                 break;
         }
         funcValidate(validate)
     })
 
-    discount.addEventListener('blur', function() {
+    descuento.addEventListener('blur', function() {
         switch (true) {
             case !(this.value.trim().length <= 2    ):
-                $('#discountError').innerHTML = "El descuento no debe ser mayor a 2 cifras"
+                $('#descuentoError').innerHTML = "El descuento no debe ser mayor a 2 cifras"
                 this.classList.add('is-invalid')
-                validate.discount = false
+                validate.descuento = false
                 break;
             default:
-                $('#discountError').innerHTML = null
+                $('#descuentoError').innerHTML = null
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
-                validate.discount = true
+                validate.descuento = true
                 break;
         }
         funcValidate(validate)
@@ -114,7 +110,7 @@ console.log('holassssssssssss')
                 validate.stock = false
                 break;
             case !(this.value.trim().length >= 1 && this.value.trim().length <= 16):
-                $('#stockError').innerHTML = "El stock del producto debe contener 1 caracteres y maximo 10"
+                $('#stockError').innerHTML = "El stock del producto debe contener 1 caracteres y maximo 16"
                 this.classList.add('is-invalid')
                 validate.stock = false
                 break;
@@ -144,6 +140,7 @@ console.log('holassssssssssss')
         }
         funcValidate(validate)
     })
+
     Subcategoria.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
@@ -157,6 +154,25 @@ console.log('holassssssssssss')
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
                 validate.Subcategoria = true
+                break;
+        }
+        funcValidate(validate)
+                 })
+
+    subcategorias.addEventListener('blur', function() {
+        switch (true) {
+            case !this.value.trim():
+                $('#subcategoriaError').innerHTML = "Debes ingresar una subcategoria"
+                this.classList.add('is-invalid')
+                validate.subcategorias = false
+                break;
+            
+            default:
+                $('#subcategoriaError').innerHTML = null
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                validate.subcategorias = true
+
                 break;
         }
         funcValidate(validate)
@@ -177,46 +193,48 @@ console.log('holassssssssssss')
         }
         funcValidate(validate)
     })
-    description.addEventListener('blur', function() {
+    descripcion.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
-                $('#descriptionError').innerHTML = "Debes ingresar una descripcion de tu producto"
+                $('#descripcionError').innerHTML = "Debes ingresar una descripcion a tu producto"
                 this.classList.add('is-invalid')
-                validate.description = false
+                validate.descripcion = false
                 break;
             case !(this.value.trim().length >= 10 && this.value.trim().length <= 255):
-                $('#descriptionError').innerHTML = "La descripcion del producto debe contener 10 caracteres y maximo 255"
+                $('#descripcionError').innerHTML = "La descripcion del producto debe contener 10 caracteres y maximo 255"
                 this.classList.add('is-invalid')
                 validate.stock = false
                 break;
             default:
-                $('#descriptionError').innerHTML = null
+                $('#descripcionError').innerHTML = null
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
-                validate.description = true
+                validate.descripcion = true
                 break;
         }
         funcValidate(validate)
     })
 
-    imagenes.addEventListener('change', function() {
+    imagen.addEventListener('change', function() {
         switch (true) {
-            case !regExExt.exec(img.value):
-                $('#imgError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
-                validate.img = false
+            case !regExExt.exec(imagen.value):
+                $('#imgError').innerHTML = "Solo se permite ingresar una imagen valida formato (jpg|jpeg|png|jfif|gif|webp)"
+                validate.imagen = false
                 break;
             default:
                 $('#imgError').innerHTML = null
-                validate.img = true
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                validate.imagen = true
                 break;
         }
         funcValidate(validate)
     })
-    
+
 
     /* Validacion */
-    console.log(validate)
-    const validate = {
+
+   /*  const validate = {
         titulo : false,
         price : false,
         discount : true ,
@@ -226,9 +244,25 @@ console.log('holassssssssssss')
         description : false ,
         imagenes : true ,
         Subcategoria : false,
-        
+    }   
+ */
+    const validate = {
+        titulo : false,
+        precio : false,
+        descuento : true,
+        stock : false,
+        marcas : false,
+        categorias : false,
+        subcategorias : false,
+        descripcion : false,
+        imagen : true,
+
     }
+    
+
 
    /*  funcValidate(validate) */
    
 })
+    
+

@@ -1,6 +1,6 @@
 'use strict';
 
-    let categoria = ['Perro','Gato']
+let categoria = ['Perro','Gato']
     
       let x = [ {
         nombre:'Perro',
@@ -23,5 +23,4 @@
 
   async down (queryInterface, Sequelize) {
      await queryInterface.bulkDelete('Categorias', null, {});
-  },
-};
+  }}
