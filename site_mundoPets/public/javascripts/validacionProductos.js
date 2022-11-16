@@ -28,10 +28,10 @@ window.addEventListener('load', () => {
 
 
     
-
-
-    /* Elementos que se trabajan para validar */
-    /* let titulo = $('#titulo') */
+    /* Expresiones regulares para utilizar */
+    let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
+    let regExNumber = /^[+]?([0-9][0-9]?|150)$/
+    const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
 
         /* validar elementos */
 
@@ -140,25 +140,6 @@ window.addEventListener('load', () => {
         }
         funcValidate(validate)
     })
-
-    Subcategoria.addEventListener('blur', function() {
-        switch (true) {
-            case !this.value.trim():
-                $('#SubcategoriaError').innerHTML = "Debes ingresar una Subcategoria"
-                this.classList.add('is-invalid')
-                validate.Subcategoria = false
-                break;
-            
-            default:
-                $('#SubcategoriaError').innerHTML = null
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                validate.Subcategoria = true
-                break;
-        }
-        funcValidate(validate)
-                 })
-
     subcategorias.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
@@ -172,7 +153,6 @@ window.addEventListener('load', () => {
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
                 validate.subcategorias = true
-
                 break;
         }
         funcValidate(validate)
@@ -231,21 +211,6 @@ window.addEventListener('load', () => {
         funcValidate(validate)
     })
 
-
-    /* Validacion */
-
-   /*  const validate = {
-        titulo : false,
-        price : false,
-        discount : true ,
-        stock : false ,
-        categorias : false ,
-        marcas : false ,
-        description : false ,
-        imagenes : true ,
-        Subcategoria : false,
-    }   
- */
     const validate = {
         titulo : false,
         precio : false,
@@ -256,13 +221,7 @@ window.addEventListener('load', () => {
         subcategorias : false,
         descripcion : false,
         imagen : true,
-
     }
     
 
-
-   /*  funcValidate(validate) */
-   
-})
-    
-
+    })
