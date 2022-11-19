@@ -15,6 +15,9 @@ router.get('/login',login)
 router.post('/login',loginValidaciones,processLogin);
 
 router.get('/perfil',perfil)
+/* editar perfil */
+router.get('/EditarPerfil',editarPerfil)
+router.put('/EditarPerfil/:id',upload.single('imagen'),nuevoPerfil)
 router.delete('/cerrarSesion',cerrarSesion)
 
 module.exports = router

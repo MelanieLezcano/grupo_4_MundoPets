@@ -156,6 +156,33 @@ module.exports = {
     perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+
+    /* editar perfil */
+    editarPerfil:(req, res) => {
+        return res.render('usuarios/editarPerfil')
+    },
+
+    nuevoPerfil: (req, res) => {
+        let id  = req.params.id
+        let{nombre, apellido} = req.body
+
+        db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                nombre,
+                apellido,
+                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
+            },{
+                where: {id:id}
+            })
+            .then(nuevo => {
+                return res.redirect('/')
+            })
+
+        })
+        .catch(error => res.status(500).send(error))
+
+    },
     cerrarSesion: (req, res) => {
 
         req.session.destroy();
