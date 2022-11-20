@@ -1,5 +1,5 @@
 const express = require('express') /*  */
-const {login,register, processRegister, processLogin,perfil,cerrarSesion} = require('../controllers/usuariosControllers')
+const {login,register, processRegister, processLogin,perfil,editarPerfil,nuevoPerfil,cerrarSesion} = require('../controllers/usuariosControllers')
 const router = express.Router()
 
 const upload = require('../middlewares/multerUsuarios')
