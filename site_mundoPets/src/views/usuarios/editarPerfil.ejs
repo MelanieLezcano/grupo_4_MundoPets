@@ -9,7 +9,7 @@
 
             <main>
                 <section>
-                    <h2>Edicion de Prefil</h2>
+                    <h2>Edicion de Perfil</h2>
 
                     <form action="/usuarios/EditarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
 
@@ -38,13 +38,17 @@
                                 </div>
                             </label>
                             <div class="form-admin__box activo">
-                                <input class="form-input" id="image" type="file" name="Imagenes"
+                                <input class="form-input" id="imagenes" type="file" name="imagenes"
                                     placeholder="Imagen del Producto" value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
 
                                    
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="col col-5">
+                            <label for="img">selecion de img</label>
+                            <input type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+                        </div> -->
                         <button type="submit">Editar</button>
                         <!-- <button type="reset">Cancelar</button> -->
                     </form>

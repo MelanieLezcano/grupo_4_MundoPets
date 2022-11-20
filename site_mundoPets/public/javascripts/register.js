@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         btn.style.backgroundColor = 'var(--colorCeleste)'
     }
 }
-
+    
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
     let inputContrasenia2 = $('#contrasenia2')
-    let image = $('#image')
+    let image = $('#imagenes')
 
     let errores = [{
         id: 1,
@@ -142,6 +142,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
         /* console.log(errores); */
     })
     apellido.addEventListener('blur', () => {
@@ -186,6 +187,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
     email.addEventListener('blur', () => {
         let error = {
@@ -229,6 +231,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
         /* console.log(errores); */
     })
     inputContrasenia.addEventListener('blur', () => {
@@ -273,6 +276,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
     inputContrasenia2.addEventListener('blur', () => {
         let error = {
@@ -321,6 +325,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
     image.addEventListener('change', function() {
         switch (true) {
@@ -340,8 +345,17 @@ window.addEventListener('load', () => {
 
     const validate = {
         image : true,
-    }
+        
+        
+       }
+   /*     formulario.addEventListener('submit',(e) => {
+        e.preventDefault();
 
+        console.log(formulario.elements);
+        if(errores.length > 0){
+            formulario.submit()
+        }
+    }) */
 
 
 });

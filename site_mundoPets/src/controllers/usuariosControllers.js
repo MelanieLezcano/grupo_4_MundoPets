@@ -45,7 +45,7 @@ module.exports = {
                 genero,
                 /* direccion, */
                 /* numeroTarjeta, */
-                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
                 roles_id: 2
              })
                 
@@ -75,6 +75,7 @@ module.exports = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     imagen: usuario.imagen,
+                    apellido:usuario.apellido,
                     rol: usuario.roles_id
                 }
                 return res.redirect('/')
@@ -83,10 +84,12 @@ module.exports = {
         } else {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+            if (req.file) {
+                if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+                }
             }
+            
 
 
 
@@ -125,6 +128,7 @@ module.exports = {
             req.session.usuarioLogin = {
                 id: usuario.id,
                 nombre: usuario.nombre,
+                apellido: usuario.apellido,
                 imagen: usuario.imagen,
                 rol: usuario.roles_id
             }
