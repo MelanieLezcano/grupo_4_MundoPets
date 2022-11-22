@@ -33,11 +33,11 @@ window.addEventListener('load', () => {
     let errores = [{
         id: 1,
         elemento: "nombre",
-        mensaje: "El Nombre es obligatorio"
+        mensaje: "Debe ingresar su nombre"
     }, {
         id: 2,
         elemento: "apellido",
-        mensaje: "El apellido es obligatorio"
+        mensaje: "Debe ingresar su apellido"
     }, {
 
         id: 3,
@@ -89,16 +89,16 @@ window.addEventListener('load', () => {
     nombre.addEventListener('blur', () => {
         let error = {
             id: 1,
-            mensaje: "El Nombre es obligatorio"
+            mensaje: "Debe ingresar su nombre"
         }
         let variable = true
         switch (true) {
             case !nombre.value:
-                $('#nameContainer').innerHTML = "<small>El Nombre es obligatorio</small>"
+                $('#nameContainer').innerHTML = "<small>Debe ingresar su nombre</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 1) {
-                        e.mensaje = "El Nombre es obligatorio"
+                        e.mensaje = "Debe ingresar su nombre"
                         variable = false
                     }
                 });
@@ -148,16 +148,16 @@ window.addEventListener('load', () => {
         let error = {
             id: 2,
             elemento: "apellido",
-            mensaje: "El apellido es obligatorio"
+            mensaje: "Debe ingresar su apellido"
         }
         let variable = true
         switch (true) {
             case !apellido.value:
-                $('#apellidoContainer').innerHTML = "<small>El apellido es obligatorio</small>"
+                $('#apellidoContainer').innerHTML = "<small>Debe ingresar su apellido</small>"
                 apellido.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 2) {
-                        e.mensaje = "El apellido es obligatorio"
+                        e.mensaje = "Debe ingresar su apellido"
                         variable = false
                     }
                 });

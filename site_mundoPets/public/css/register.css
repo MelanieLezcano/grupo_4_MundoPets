@@ -60,6 +60,7 @@
 
 }
 .register main p{
+    margin: 2px;
     color: var(--colorCeleste);
 }    
 .register main a{
@@ -100,8 +101,8 @@
 }
 .register .imagenPerfil label{
     background-color: var(--colorNaranja);
-    padding: 15px;
-    border-radius: 15px;
+    padding: 12px;
+    border-radius: 12px;
     border: 1px solid white;
     margin-bottom: 20px;
     color: white;
