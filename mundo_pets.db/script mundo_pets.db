@@ -1,0 +1,229 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema mundo_pets.db
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mundo_pets.db
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mundo_pets.db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `mundo_pets.db` ;
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Marcas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Marcas` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Categorias`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Categorias` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `banner` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Subcategorias`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Subcategorias` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `banner` VARCHAR(100) NOT NULL,
+  `categorias_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_subcategorias_categorias1_idx` (`categorias_id` ASC) VISIBLE,
+  CONSTRAINT `fk_subcategorias_categorias1`
+    FOREIGN KEY (`categorias_id`)
+    REFERENCES `mundo_pets.db`.`Categorias` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Productos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Productos` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(45) NOT NULL,
+  `precio` INT UNSIGNED NOT NULL,
+  `descuento` INT NOT NULL,
+  `descripcion` VARCHAR(700) NOT NULL,
+  `stock` INT NOT NULL,
+  `subcategorias_id` INT UNSIGNED NOT NULL,
+  `marcas_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_productos_subcategorias1_idx` (`subcategorias_id` ASC) VISIBLE,
+  INDEX `fk_productos_marcas1_idx` (`marcas_id` ASC) VISIBLE,
+  CONSTRAINT `fk_productos_marcas1`
+    FOREIGN KEY (`marcas_id`)
+    REFERENCES `mundo_pets.db`.`Marcas` (`id`),
+  CONSTRAINT `fk_productos_subcategorias1`
+    FOREIGN KEY (`subcategorias_id`)
+    REFERENCES `mundo_pets.db`.`Subcategorias` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Roles`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Usuarios` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `contraseña` VARCHAR(200) NOT NULL,
+  `contacto` INT NULL DEFAULT NULL,
+  `ciudad` VARCHAR(45) NOT NULL,
+  `genero` VARCHAR(45) NOT NULL,
+  `direccion` VARCHAR(45) NOT NULL,
+  `imagen` VARCHAR(100) NOT NULL,
+  `roles_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_usuarios_roles1_idx` (`roles_id` ASC) VISIBLE,
+  CONSTRAINT `fk_usuarios_roles1`
+    FOREIGN KEY (`roles_id`)
+    REFERENCES `mundo_pets.db`.`Roles` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Carritos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Carritos` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `productos_id` INT UNSIGNED NOT NULL,
+  `usuarios_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  INDEX `fk_carritos_productos1_idx` (`productos_id` ASC) VISIBLE,
+  INDEX `fk_carritos_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  CONSTRAINT `fk_carritos_productos1`
+    FOREIGN KEY (`productos_id`)
+    REFERENCES `mundo_pets.db`.`Productos` (`id`),
+  CONSTRAINT `fk_carritos_usuarios1`
+    FOREIGN KEY (`usuarios_id`)
+    REFERENCES `mundo_pets.db`.`Usuarios` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Direcciones`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Direcciones` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ciudad` VARCHAR(100) NULL DEFAULT NULL,
+  `provincia` VARCHAR(45) NULL DEFAULT NULL,
+  `cod_postal` VARCHAR(45) NULL DEFAULT NULL,
+  `numero` INT UNSIGNED NULL DEFAULT NULL,
+  `calle` VARCHAR(45) NULL DEFAULT NULL,
+  `usuarios_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_direcciones_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  CONSTRAINT `fk_direcciones_usuarios1`
+    FOREIGN KEY (`usuarios_id`)
+    REFERENCES `mundo_pets.db`.`Usuarios` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Imagenes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Imagenes` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `productos_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_imagenes_productos1_idx` (`productos_id` ASC) VISIBLE,
+  CONSTRAINT `fk_imagenes_productos1`
+    FOREIGN KEY (`productos_id`)
+    REFERENCES `mundo_pets.db`.`Productos` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Pedidos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Pedidos` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Usuarios_id` INT UNSIGNED NOT NULL,
+  `Carritos_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  INDEX `fk_Pedidos_Usuarios1_idx` (`Usuarios_id` ASC) VISIBLE,
+  INDEX `fk_Pedidos_Carritos1_idx` (`Carritos_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Pedidos_Carritos1`
+    FOREIGN KEY (`Carritos_id`)
+    REFERENCES `mundo_pets.db`.`Carritos` (`id`),
+  CONSTRAINT `fk_Pedidos_Usuarios1`
+    FOREIGN KEY (`Usuarios_id`)
+    REFERENCES `mundo_pets.db`.`Usuarios` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `mundo_pets.db`.`Tarjetas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mundo_pets.db`.`Tarjetas` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `numero_tarjeta` INT NULL DEFAULT NULL,
+  `Usuarios_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  INDEX `fk_Tarjetas_Usuarios1_idx` (`Usuarios_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Tarjetas_Usuarios1`
+    FOREIGN KEY (`Usuarios_id`)
+    REFERENCES `mundo_pets.db`.`Usuarios` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
