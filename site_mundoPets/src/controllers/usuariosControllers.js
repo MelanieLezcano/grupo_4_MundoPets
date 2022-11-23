@@ -84,7 +84,7 @@ module.exports = {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
 
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "foto_perfil_por_defecto.jpg")) {
+            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "default-image.png")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
