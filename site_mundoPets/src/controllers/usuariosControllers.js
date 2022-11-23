@@ -13,7 +13,7 @@ module.exports = {
     processRegister: (req, res) => {
        /*  return res.send (req.body)  */
         let errors = validationResult(req)
-        if (req.fileValidationError != undefined) {
+        if (req.fileValidationError /* != undefined */) {
             let imagen = {
                 param: 'imagen',
                 msg: req.fileValidationError,
