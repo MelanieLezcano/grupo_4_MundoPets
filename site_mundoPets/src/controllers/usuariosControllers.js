@@ -45,7 +45,7 @@ module.exports = {
                 /* genero, */
                 /* direccion, */
                 /* numeroTarjeta, */
-                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
                 roles_id: 2
              })
                 
@@ -84,7 +84,7 @@ module.exports = {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
 
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "foto_perfil_por_defecto.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
