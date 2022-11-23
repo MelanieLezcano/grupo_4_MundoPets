@@ -156,6 +156,10 @@ module.exports = {
     perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+    editarPerfil: (req, res) => {
+        return res.render('usuarios/editarPerfil')
+    }, 
+
     cerrarSesion: (req, res) => {
 
         req.session.destroy();
