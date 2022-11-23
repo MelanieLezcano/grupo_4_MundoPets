@@ -141,16 +141,17 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    background-color: var(--colorNaranja);
     border-radius: 8px;
     padding: 8px;
+    background-color: var(--colorNaranja);
 }
 
 .mainHome .perro div img {
     width: 70%;
 }
 
-.mainHome .perro a {
+.mainHome .perro  a {
+    text-align: left;
     width: 10%;
     font-size: 16px;
 }
@@ -463,13 +464,14 @@
         align-content: center;
     }
 
-    .mainHome .dog img {
+    .mainHome .perro div  img {
         width: 60%;
         height: 140px;
     }
 
     .mainHome .perro a {
-        width: 20%;
+        font-size: 20px;
+        width: 40%;
         height: 70px;
 
 
@@ -725,8 +727,8 @@
     }
 
     .mainHome .perro div img {
-        width: 231px;
-        height: 270px;
+        width: 182px;
+        height: 231px;
     }
 
     .mainHome .perro a {

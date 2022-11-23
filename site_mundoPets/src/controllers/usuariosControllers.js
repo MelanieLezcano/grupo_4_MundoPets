@@ -42,7 +42,7 @@ module.exports = {
                 contraseña: bcrypt.hashSync(contrasenia, 10),
                 /* contacto, */
                /*  ciudad, */
-                genero,
+                /* genero, */
                 /* direccion, */
                 /* numeroTarjeta, */
                 imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
