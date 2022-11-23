@@ -1,5 +1,5 @@
 const express = require('express') /*  */
-const {login,register, processRegister, processLogin,perfil,cerrarSesion, editarPerfil} = require('../controllers/usuariosControllers')
+const {login,register, processRegister, processLogin,perfil,cerrarSesion, editarPerfil,nuevoPerfil} = require('../controllers/usuariosControllers')
 const router = express.Router()
 
 const upload = require('../middlewares/multerUsuarios')
@@ -15,7 +15,10 @@ router.get('/login',login)
 router.post('/login',loginValidaciones,processLogin);
 
 router.get('/perfil',perfil)
+
 router.get('/editarPerfil',editarPerfil)
+router.put('/editarPerfil/:id',upload.single('imagenes'),nuevoPerfil)
+
 router.delete('/cerrarSesion',cerrarSesion)
 
 module.exports = router

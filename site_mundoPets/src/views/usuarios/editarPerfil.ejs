@@ -29,20 +29,21 @@
                             <div></div>
                         </div>
 
-                        <div div class="col col-5">
+                        <div class="col col-5">
+                               
                             <label class="form-label" for="imagenes">
                                 <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
                                     src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                <div class="imgHover">
+                               <!--  <div class="imgHover">
                                     <p class="text-center">Selecionar Imagen</p>
-                                </div>
+                                </div> -->
                             </label>
-                            <div class="form-admin__box activo">
+                            
                                 <input class="form-input" id="imagenes" type="file" name="imagenes"
-                                    placeholder="Imagen del Producto" value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+                                    value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
 
                                    
-                                </div>
+                                
                             </div>
                         </div>
                         <!-- <div class="col col-5">
