@@ -1,19 +1,19 @@
 window.addEventListener('load', () => {
 
     let $ = (elemento) => document.querySelector(elemento)
-   /*  console.log("Register vinculado"); */
+    /*  console.log("Register vinculado"); */
 
-   const funcValidate = (obj) => {
-    let arr = Object.values(obj)
-    console.log(arr);
-    if (!arr.includes(false)) {
-        btn.disabled = false
-        btn.style.backgroundColor = 'var(--colorAzulFrancia)'
-    }else{
-        btn.disabled = true
-        btn.style.backgroundColor = 'var(--colorCeleste)'
+    const funcValidate = (obj) => {
+        let arr = Object.values(obj)
+        console.log(arr);
+        if (!arr.includes(false)) {
+            btn.disabled = false
+            btn.style.backgroundColor = 'var(--colorAzulFrancia)'
+        } else {
+            btn.disabled = true
+            btn.style.backgroundColor = 'var(--colorCeleste)'
+        }
     }
-}
 
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
     }
     ]
 
-
+    /* eyes */
     let eye = $('#eye-contrasenia')
     let eye2 = $('#eye-contrasenia2')
 
@@ -82,10 +82,7 @@ window.addEventListener('load', () => {
     })
 
 
-
-
-
-
+    /* nombre */
     nombre.addEventListener('blur', () => {
         let error = {
             id: 1,
@@ -106,21 +103,7 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-
-            /* case !nombre.value:
-                $('#nameContainer').innerHTML = "<small>El Nombre debe contener al menos dos caracteres</small>"
-                nombre.style.border = "1px solid red"
-                errores.forEach(e => {
-                    if(e.id === 1 ){
-                        e.mensaje = "El Nombre debe contener al menos dos caracteres"
-                        variable = false
-                    }
-                });
-                if (variable) {
-                    errores.push(error)
-                }
-                break; */
-
+    
             case !regExLetter.test(nombre.value):
                 $('#nameContainer').innerHTML = "<small>El Nombre solo acepta letras</small>"
                 nombre.style.border = "1px solid red"
@@ -144,6 +127,9 @@ window.addEventListener('load', () => {
         }
         /* console.log(errores); */
     })
+
+
+    /* apellido */
     apellido.addEventListener('blur', () => {
         let error = {
             id: 2,
@@ -187,6 +173,8 @@ window.addEventListener('load', () => {
                 break;
         }
     })
+
+    /* email */
     email.addEventListener('blur', () => {
         let error = {
             id: 3,
@@ -231,6 +219,8 @@ window.addEventListener('load', () => {
         }
         /* console.log(errores); */
     })
+
+    /* contraseña */
     inputContrasenia.addEventListener('blur', () => {
         let error = {
             id: 4,
@@ -274,6 +264,9 @@ window.addEventListener('load', () => {
                 break;
         }
     })
+
+
+    /* contraseña 2 */
     inputContrasenia2.addEventListener('blur', () => {
         let error = {
             id: 5,
@@ -322,7 +315,9 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-    image.addEventListener('change', function() {
+
+    /* imagen */
+    image.addEventListener('change', function () {
         switch (true) {
             case !regExExt.exec(image.value):
                 $('#imgError').innerHTML = "Solo se permite ingresar una image valida formato (jpg|jpeg|png|jfif|gif|webp)"
@@ -339,7 +334,7 @@ window.addEventListener('load', () => {
     })
 
     const validate = {
-        image : true,
+        image: true,
     }
 
 
@@ -355,4 +350,4 @@ window.addEventListener('load', () => {
 
 
 
-   
+

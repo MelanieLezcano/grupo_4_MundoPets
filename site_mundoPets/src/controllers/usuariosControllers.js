@@ -3,8 +3,6 @@ const path = require('path')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 let db = require('../database/models')
-/* const usuarios = require('../data/usuarios.json') */ //viejo
-/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8') */ //viejo
 
 module.exports = {
     register: (req, res) => {
@@ -22,54 +20,18 @@ module.exports = {
         }
         if (errors.isEmpty()) {
 
-            let { nombre, email, contrasenia, apellido,contacto,ciudad,genero} = req.body
+            let { nombre, email, contrasenia, apellido } = req.body
 
-            /* {
-  "nombre": "Mercedes",
-  "apellido": "Alvarez",
-  "email": "mechychevy@gmail.com",
-  "contrasenia": "12345678",
-  "contrasenia2": "12345678",
-  "contacto": "1136370707",
-  "ciudad": "buenos aires",
-  "genero": "femenino"
-} */
-             db.Usuarios.create({
+              db.Usuarios.create({
               
                 nombre,
                 apellido,
                 email,
                 contraseña: bcrypt.hashSync(contrasenia, 10),
-                /* contacto, */
-               /*  ciudad, */
-                /* genero, */
-                /* direccion, */
-                /* numeroTarjeta, */
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
                 roles_id: 2
              })
-                
-/* 
-            let usuarioNuevo = {
-                id: usuarios[usuarios.length - 1].id + 1,
-                nombre,
-                apellido,
-                email,
-                contrasenia: bcrypt.hashSync(contrasenia, 10),
-                contacto: "",
-                ciudad: "",
-                genero: "",
-               
-                direccion: "",
-                numeroTarjeta: "",
-                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
-                rol: "usuario"
-
-            }
-            usuarios.push(usuarioNuevo)
-            guardar(usuarios)
- */
-
+            
             .then(usuario => {
                 req.session.usuarioLogin = {
                     id: usuario.id,
@@ -87,9 +49,6 @@ module.exports = {
             if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
-
-
-
 
             return res.render('usuarios/register', {
                 errors: errors.mapped(),
@@ -114,7 +73,6 @@ module.exports = {
         if (errors.isEmpty()) {
 
             const { email, recordarme } = req.body
-          /*   let usuario = usuarios.find(usuario => usuario.email === email) */
 
           db.Usuarios.findOne({
             where : {
