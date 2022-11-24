@@ -28,6 +28,17 @@
     height: 40px;
     color: var(--colorAzulFrancia);
     border-radius: 8px;
+    margin: 5px;
+    font-size: 31px;
+}
+.perfil main  a button {
+    border: none;
+    background-color: var(--colorNaranja);
+    height: 40px;
+    color: var(--colorAzulFrancia);
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 31px;
 }
 
 @media (min-width:768px){

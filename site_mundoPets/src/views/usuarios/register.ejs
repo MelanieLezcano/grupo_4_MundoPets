@@ -37,6 +37,7 @@
                                     <div></div>
                         </div>
                         <div class="container bottom">
+                           
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="Ingresa un email"
                                 value="<%= locals.old && old.email ? old.email : null %>">
@@ -75,25 +76,25 @@
                                 </small>
                                 <% } %>
                         </div>
-                        <div class="imagenPerfil">
+                        
                             <div class="col col-5">
+                               
                                 <label class="form-label" for="imagenes">
                                     <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
                                         src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                    <div class="imgHover">
+                                   <!--  <div class="imgHover">
                                         <p class="text-center">Seleciona una Imagen</p>
-                                    </div>
+                                    </div> -->
+                                    
                                 </label>
-                                <div class="form-admin__box activo">
-                                    <input class="form-input" id="image" type="file" name="Imagenes"
-                                        placeholder="Imagen de perfil" accept="img/*">
-
-                                    <p class="span text-danger" id="imgError" style="width: 500px;">
-                                        <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                    </p>
-                                </div>
+                                <input class="inputImagen" type="file" name="image" id="image">
+                                
+                               
+                                <p class="span text-danger" id="imgError" style="width: 500px;">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                </p>
                             </div>
-                        </div>
+                     
 
                         <button type="submit">Crear cuenta</button>
                         <!-- <button type="reset">Cancelar</button> -->

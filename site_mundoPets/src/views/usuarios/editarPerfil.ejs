@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head',{title: 'editarPerfil' }) %>
+
+    <body class="register">
+
+        <%- include('../partials/header') %>
+
+            <main>
+                <section>
+                    <h2>Edicion de Perfil</h2>
+
+                    <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+
+                        <div class="container bottom">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
+                                value="<%= locals.usuarioLogin ? locals.usuarioLogin.nombre : null %>">
+                                <div id="nameContainer"></div>
+                            
+                        </div>
+                        <div class="container bottom">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido"
+                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.apellido : null %>">
+                            <div id="apellidoContainer"></div>
+
+                            <div></div>
+                        </div>
+
+                        <div class="col col-5">
+                               
+                            <label class="form-label" for="imagenes">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
+                               <!--  <div class="imgHover">
+                                    <p class="text-center">Selecionar Imagen</p>
+                                </div> -->
+                            </label>
+                            
+                                <input class="form-input" id="imagenes" type="file" name="imagenes"
+                                    value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+
+                                   
+                                
+                            </div>
+                        </div>
+                        <!-- <div class="col col-5">
+                            <label for="img">selecion de img</label>
+                            <input type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+                        </div> -->
+                        <button type="submit">Editar</button>
+                        <!-- <button type="reset">Cancelar</button> -->
+                    </form>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

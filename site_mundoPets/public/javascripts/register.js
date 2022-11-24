@@ -105,11 +105,11 @@ window.addEventListener('load', () => {
                 break;
     
             case !regExLetter.test(nombre.value):
-                $('#nameContainer').innerHTML = "<small>El Nombre solo acepta letras</small>"
+                $('#nameContainer').innerHTML = "<small>El nombre no puede contener menos de 2 caracteres,ni caracteres especiales </small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 1) {
-                        e.mensaje = "El Nombre solo acepta letras"
+                        e.mensaje = "El nombre no puede contener menos de 2 caracteres,ni caracteres especiales "
                         variable = false
                     }
                 });
@@ -152,11 +152,11 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExLetter.test(apellido.value):
-                $('#apellidoContainer').innerHTML = "<small>El apellido no puede contener numeros ni caracteres especiales</small>"
+                $('#apellidoContainer').innerHTML = "<small>El apellido no puede contener menos de 2 caracteres,ni caracteres especiales</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 2) {
-                        e.mensaje = "El apellido no puede contener numeros ni caracteres especiales"
+                        e.mensaje = "El apellido no puede contener menos de 2 caracteres,ni caracteres especiales"
                         variable = false
                     }
                 });
@@ -336,6 +336,15 @@ window.addEventListener('load', () => {
     const validate = {
         image: true,
     }
+
+    formulario.addEventListener('submit',(e) => {
+        e.preventDefault();
+
+        console.log(formulario.elements);
+        if(errores.length > 0){
+            formulario.submit()
+        }
+    })
 
 
 

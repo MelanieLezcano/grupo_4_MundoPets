@@ -11,7 +11,7 @@ module.exports = {
     processRegister: (req, res) => {
        /*  return res.send (req.body)  */
         let errors = validationResult(req)
-        if (req.fileValidationError != undefined) {
+        if (req.fileValidationError /* != undefined */) {
             let imagen = {
                 param: 'imagen',
                 msg: req.fileValidationError,
@@ -28,7 +28,12 @@ module.exports = {
                 apellido,
                 email,
                 contraseña: bcrypt.hashSync(contrasenia, 10),
-                imagen: req.file && req.file.size > 1 ? req.file.filename : "avatar-1663535027596.jpg",
+                /* contacto, */
+               /*  ciudad, */
+                /* genero, */
+                /* direccion, */
+                /* numeroTarjeta, */
+                imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
                 roles_id: 2
              })
             
@@ -46,7 +51,7 @@ module.exports = {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
 
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "default-image.png")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
 
@@ -114,6 +119,35 @@ module.exports = {
     perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+    editarPerfil: (req, res) => {
+        return res.render('usuarios/editarPerfil')
+    }, 
+
+    nuevoPerfil: (req, res) => {
+        let id  = req.params.id
+        let{nombre, apellido} = req.body
+
+        db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                nombre,
+                apellido,
+                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
+            },{
+                where: {id:id}
+            })
+            .then(nuevo => {
+                return res.redirect('/')
+            })
+
+        })
+        .catch(error => res.status(500).send(error))
+
+    },
+
+
+ 
+
     cerrarSesion: (req, res) => {
 
         req.session.destroy();
