@@ -111,6 +111,12 @@
 .register .imagenPerfil input{
     display: none;
 }
+.register .inputImagen{
+  
+    border:solid 1px var(--colorNaranja);
+    margin-bottom: 15px;
+     
+}
 
 .register small{
     color: var(--colorNaranja)

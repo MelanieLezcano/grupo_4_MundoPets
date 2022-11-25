@@ -11,7 +11,7 @@
                 <section>
                     <h2>Edicion de Perfil</h2>
 
-                    <form action="/usuarios/EditarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+                    <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
 
                         <div class="container bottom">
                             <label for="nombre">Nombre</label>
@@ -28,7 +28,6 @@
 
                             <div></div>
                         </div>
-
                         <div div class="col col-5">
                             <label class="form-label" for="imagenes">
                                 <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
@@ -37,20 +36,14 @@
                                     <p class="text-center">Selecionar Imagen</p>
                                 </div>
                             </label>
-                            <div class="form-admin__box activo">
-                                <input class="form-input" id="imagenes" type="file" name="imagenes"
-                                    placeholder="Imagen del Producto" value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
-
-                                   
-                                </div>
-                            </div>
                         </div>
-                        <!-- <div class="col col-5">
-                            <label for="img">selecion de img</label>
-                            <input type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
-                        </div> -->
-                        <button type="submit">Editar</button>
-                        <!-- <button type="reset">Cancelar</button> -->
+                        <div>
+                         <div class="col col-5">
+                            <input  style="margin: 5px;" type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+                        </div>
+                        <button  style="margin: 5px;" type="submit">Editar</button>
+                        <button  style="margin: 5px;" type="reset">Cancelar</button>
+                    </div>
                     </form>
                 </section>
             </main>
