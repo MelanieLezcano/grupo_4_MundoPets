@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
         }
     }
 
+    
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
@@ -28,7 +29,7 @@ window.addEventListener('load', () => {
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
     let inputContrasenia2 = $('#contrasenia2')
-    let image = $('#image')
+    let image = $('#imagenes')
 
     let errores = [{
         id: 1,
@@ -137,6 +138,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
         /* console.log(errores); */
     })
 
@@ -182,6 +184,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
 
     email.addEventListener('blur', () => {
@@ -226,6 +229,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
         /* console.log(errores); */
     })
 
@@ -271,6 +275,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
 
     inputContrasenia2.addEventListener('blur', () => {
@@ -320,6 +325,7 @@ window.addEventListener('load', () => {
                 })
                 break;
         }
+        
     })
 
     image.addEventListener('change', function () {
