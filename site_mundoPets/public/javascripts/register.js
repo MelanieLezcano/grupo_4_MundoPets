@@ -82,10 +82,6 @@ window.addEventListener('load', () => {
     })
 
 
-<<<<<<< HEAD
-    /* nombre */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     nombre.addEventListener('blur', () => {
         let error = {
             id: 1,
@@ -132,11 +128,6 @@ window.addEventListener('load', () => {
         /* console.log(errores); */
     })
 
-<<<<<<< HEAD
-
-    /* apellido */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     apellido.addEventListener('blur', () => {
         let error = {
             id: 2,
@@ -182,10 +173,6 @@ window.addEventListener('load', () => {
         
     })
 
-<<<<<<< HEAD
-    /* email */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     email.addEventListener('blur', () => {
         let error = {
             id: 3,
@@ -232,10 +219,6 @@ window.addEventListener('load', () => {
         /* console.log(errores); */
     })
 
-<<<<<<< HEAD
-    /* contraseña */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     inputContrasenia.addEventListener('blur', () => {
         let error = {
             id: 4,
@@ -281,11 +264,6 @@ window.addEventListener('load', () => {
         
     })
 
-<<<<<<< HEAD
-
-    /* contraseña 2 */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     inputContrasenia2.addEventListener('blur', () => {
         let error = {
             id: 5,
@@ -336,10 +314,6 @@ window.addEventListener('load', () => {
         
     })
 
-<<<<<<< HEAD
-    /* imagen */
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
     image.addEventListener('change', function () {
         switch (true) {
             case !regExExt.exec(image.value):
@@ -355,12 +329,6 @@ window.addEventListener('load', () => {
         }
         funcValidate(validate)
 
-<<<<<<< HEAD
-    const validate = {
-        image: true,
-    }
-=======
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
 
         const validate = {
             image: true,
@@ -377,26 +345,3 @@ window.addEventListener('load', () => {
     })
 
 });
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
->>>>>>> d83d11369ffd25c54aefce7fbde322ecf0fa85b8
