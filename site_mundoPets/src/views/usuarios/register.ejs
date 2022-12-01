@@ -18,35 +18,44 @@
                             <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
                                 value="<%= locals.old && old.nombre ? old.nombre : null %>">
                             <div id="nameContainer"></div>
-                            <% if (locals.errors && errors.nombre) { %>
-                                <small>
-                                    <%= errors.nombre.msg%>
-                                </small>
-                                <% } %>
+                            <p class="span text-danger" id="nombreError" style="width: 500px;">
+                                <% if (locals.errors && errors.nombre) { %>
+                                    <small>
+                                        <%= errors.nombre.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+
                         </div>
                         <div class="container bottom">
                             <label for="apellido">Apellido</label>
                             <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido"
                                 value="<%= locals.old && old.apellido ? old.apellido : null%>">
                             <div id="apellidoContainer"></div>
-                            <% if (locals.errors && errors.apellido) { %>
-                                <small>
-                                    <%= errors.apellido.msg%>
-                                </small>
-                                <% } %>
-                                    <div></div>
+                            <p class="span text-danger" id="apellidoError" style="width: 500px;">
+                                <% if (locals.errors && errors.apellido) { %>
+                                    <small>
+                                        <%= errors.apellido.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+
+                            <div></div>
                         </div>
                         <div class="container bottom">
-                           
+
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="Ingresa un email"
                                 value="<%= locals.old && old.email ? old.email : null %>">
                             <div id="emailContainer"></div>
-                            <% if (locals.errors && errors.email) { %>
-                                <small>
-                                    <%= errors.email.msg%>
-                                </small>
-                                <% } %>
+                            <p class="span text-danger" id="emailError" style="width: 500px;">
+                                <% if (locals.errors && errors.email) { %>
+                                    <small>
+                                        <%= errors.email.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+
 
                         </div>
                         <div class="container bottom">
@@ -57,11 +66,14 @@
                                 <i class="fas fa-eye-slash" id="eye-contrasenia"></i>
                             </div>
                             <div id="contraseniaContainer"></div>
-                            <% if (locals.errors && errors.contrasenia) { %>
-                                <small>
-                                    <%= errors.contrasenia.msg%>
-                                </small>
-                                <% } %>
+                            <p class="span text-danger" id="contraseniaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contrasenia) { %>
+                                    <small>
+                                        <%= errors.contrasenia.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+
 
                         </div>
                         <div class="container bottom">
@@ -72,31 +84,35 @@
                                 <i class="fas fa-eye-slash" id="eye-contrasenia2"></i>
                             </div>
                             <div id="contraseniaContainer2"></div>
-                            <% if (locals.errors && errors.contrasenia2) { %>
-                                <small>
-                                    <%= errors.contrasenia2.msg%>
-                                </small>
-                                <% } %>
+                            <p class="span text-danger" id="contraseniaError2" style="width: 500px;">
+                                <% if (locals.errors && errors.contrasenia2) { %>
+                                    <small>
+                                        <%= errors.contrasenia2.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+
+                           
                         </div>
-                        
-                            <div class="col col-5">
-                               
-                                <label class="form-label" for="imagenes">
-                                    <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
-                                        src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                   <!--  <div class="imgHover">
+
+                        <div class="col col-5">
+
+                            <label class="form-label" for="imagenes">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                    src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
+                                <!--  <div class="imgHover">
                                         <p class="text-center">Seleciona una Imagen</p>
                                     </div> -->
-                                </label>
-                                <input class="inputImagen" type="file" name="imagen" id="image">
-                                <p class="span text-danger" id="imgError" style="width: 500px;">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
-                            </div>
-                                    
-                                
-                               
-                     
+                            </label>
+                            <input class="inputImagen" type="file" name="imagen" id="image">
+                            <p class="span text-danger" id="imgError" style="width: 500px;">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
+                        </div>
+
+
+
+
 
                         <button type="submit" id="btn">Crear cuenta</button>
 
