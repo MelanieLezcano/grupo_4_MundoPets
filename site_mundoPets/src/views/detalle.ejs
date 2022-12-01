@@ -3,75 +3,61 @@
 
 <%- include('./partials/head',{title: 'Detalle de Producto' }) %>
 
-    <body class="detalle">
+    <body>
 
         <%- include('./partials/header') %>
-
-            <main>
-                <section class="productoPrincipal">
-                    <div class="imagen-princ">
+    
+            <main class="detalle">
+                <section class="section1">
+                    <!-- imagen -->
+                    <div class="imagenProducto">
                         <img src="/img/<%= producto.imagen %> " alt=" ">
                     </div>
-                    <section>
-                        <div class="textoDerecha">
-                            <div>
-                                <h1>
+                        <article class="articleProducto">
+                            <div class="divColum">
+                                    <!-- titulo -->
+                                <div class="titulo">
                                     <%= producto.titulo %>
-                                </h1>
-                                <div class="prec-desc">
+                                </div>
+                                <!-- precio -->
+                                <div class="divRow">
+                                <div class="precioColum">
                                     <p class="precio">$ <%= producto.precio %></p>
-                                    <p class="descuento"><%= producto.descuento %> %</p>
+                                <div class="precioDescuento">
+                                <p class="precioFinal">$ <%= producto.precio - (producto.precio * producto.descuento/ 100) %></p>
+                                <p class="descuento"><%= producto.descuento %>% OFF</p>
+                            </div>
+                            </div>
+                                <div class="carrito">
+                                    <div class="agregar">
+                                        <!-- boton cantidad -->
+                                        <input value="<%= producto.stock %>" id="stockOculto" />
+                                        <button class="botonSacar" id="decrease"><i
+                                            class="fa-solid fa-circle-minus"></i></button>
+                                        <input type="agregarNum" id="contador" value="1">
+                                        <div class="botonAgregar" id="increase"><i class="fa-solid fa-circle-plus"></i></div>
+                                    </div>
+                                    <!-- boton agregar carrito -->
+                                    <a href="/productos/carrito"><button class="botonCarrito">Añadir al carrito</button></a>
                                 </div>
-                                <p class="card-discount">$ <%= producto.precio - (producto.precio * producto.descuento/ 100) %></p>
-                            
                             </div>
                             </div>
-                            <div>
-                                <div class="sumar-carrito">
-                                    <!-- boton de cantidad -->
-                                    <input value="<%= producto.stock %>" id="stockOculto" />
-                                    <div class="restar" id="decrease">-</div>
-                                    <input type="number" id="contador" value="1">
-                                    <div class="agregar" id="increase">+</div>
-                                </div>
-                                <!-- boton de agregar al carrito -->
-                                <a href="/productos/carrito"><button class="princip">Añadir al carrito</button></a>
-                            </div>
-                        </div>
+                        </article>
                     </section>
-                </section>
-                    <section class="detail">
-                        <h2>Detalle del producto</h2>
-                        <p><%= producto.descripcion %></p>
+                    <!-- descripcion -->
+                    <section class="descripcion">
+                        <h2 class="textoDescripcion">Descripción</h2>
+                        <p class="parrafo"><%= producto.descripcion %></p>
                     </section>
                     <section class="productosRelacionados">
                         <h2>Productos Relacionados</h2>
-                        <% for( let i=0; i < 4; i++ ) { %>
                     </section>
-                    <article>
-                            <div class="contenedor">
-                            <a href="/productos/detalle/<%=productos[i].id %>">
-                            </div>
-                            <div class="prod-rel">
-                                <img src="/img/<%= productos[i].imagen %>" alt="">
-                            </div>
-                            <div>
-                                <p class="pre">$<%= productos[i].precio %></p>
-                            </div>
-                            <div>
-                                <h4>
-                                <%= productos[i].titulo %>
-                                </h4>
-                            </div>
-                            <div>
-                                <button>añadir al carrito</button>
-                            </div>          
-                        </article>
-                        </a>
-                     <% } %>
             </main>
-            <%- include('./partials/footer') %>
             <script src="/javascripts/increase.js"></script>
+
+            
+    <%- include('./partials/footer') %>
+
     </body>
 
 </html>

@@ -1,160 +1,478 @@
 .detalle{
-    width: 100%; 
-  }
-  /* fuentes generales */
-  .detalle main h1,
-  h2,
-  h4,
-  p {
-      font-family: var(--fuenteTitulos);
-      color: black;
-  }
-  /* botones */
-  .detalle main .princip {
-  margin: 20px;
-  }
-  .detalle main button {
-      background-color: var(--colorAzulFrancia);
-      color: white;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      width: 20%;
-  }
-  /* producto principal */
-  .detalle main .productoPrincipal{
-      text-align: center;
-      margin: 20px;
-  }
-  .detalle main .productoPrincipal .imagen-princ img{
-      border-radius: 50px;
-      border: 1px solid var(--colorNaranja);
-      background-color: white;
-  }
-  .detalle main .prec-desc{
-    display: flex;
-    justify-content: center;
-    align-items: center
-  }
-  .detalle main .precio {
-    font-family: var(--fuenteTitulos);
-    color: grey;
-    font-size: 28px;
-    text-decoration:line-through;
+  width: 100vw;
 }
-.detalle main .descuento {
+
+.detalle .section1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1vw;
+
+  background-color: white;
+  border: 3px solid var(--colorAmarillo);
+  border-radius: 20px;
+}
+
+.detalle .imagenProducto img{
+  height: 30vw;
+  width: 23vw;
+  object-fit: contain;
+}
+
+.detalle .divColum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 53vw;
+  margin-top: 2%;
+}
+
+.detalle .titulo{
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--colorAzulFrancia);
+  font-family: var(--fuenteTitulos);
+  background-color: var(--colorGris);
+  padding-top: 18px;
+  border-radius: 45px;
+}
+
+.detalle .precioColum{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.detalle .precioDescuento{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.detalle .precio{
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--colorCeleste);
+  text-decoration: line-through;
+  font-family: var(--fuenteTitulos);
+  margin-bottom: -2%;
+}
+
+.detalle .precioFinal{
+  font-size: 55px;
+  font-weight: 400;
+  color: var(--colorAzulMarino);
+  font-family: var(--fuenteTitulos);
+  margin-right: 5%;
+}
+
+.detalle .descuento{
+  padding-top: 0.7vw;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--colorNaranja);
+  font-family: var(--fuenteTitulos);
+}
+
+.detalle .cantidad{
+  display: flex;
+  flex-direction: row;
+}
+
+.detalle .carrito{
+  display: flex;
+  flex-direction: column;
+}
+.detalle .articleProducto{
+  display: flex;
+  flex-direction: row;
+}
+
+.detalle .divColum{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  margin-top: 2%;
+}
+
+.detalle .divRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.detalle .agregar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.detalle #contador{
+  border: 3px solid var(--colorAmarillo);
+  border-radius: 30px;
+  width: 100px;
+  height: 44px;
+  text-align: center;
+  font-size: 33px;
+  font-family: var(--fuenteSubtitulos);
+  font-weight: 500;
+  color: var(--colorAzulMarino);
+  margin-top: 5%;
+}
+
+.detalle #decrease{
+  color: var(--colorAzulFrancia);
+  font-size: 40px;
+  background-color: transparent;
+}
+
+.detalle #increase{
+  color: var(--colorAzulFrancia);
+  font-size: 40px;
+  background-color: transparent;
+}
+
+.detalle .botonCarrito{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  background-color: var(--colorAzulFrancia);
+  border-radius: 20px;
   font-family: var(--fuenteTitulos);
   font-size: 20px;
-  color: var( --colorNaranja);
-  padding: 10px;
-  
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding-top: 14px;
 }
-  .detalle main .card-discount {
-      font-family: var(--fuenteTitulos);
-      font-size: 35px;
-      color: var(--colorAzulFrancia);
+
+
+.detalle .descripcion{
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+
+  background-color: rgba(255, 255, 255, 0.918);
+  border-radius: 20px;
+  padding: 4%;
 }
-  /* boton sumar - restar */
-  .detalle main .sumar-carrito {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  .detalle main .sumar-carrito div {
-      background-color: var(--colorAzulFrancia);
-      color: white;
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
-      margin: 2px; 
-  }
-  .detalle main .sumar-carrito input{
-      width: 50px;
-  }
-  /* texto detalle de producto */
-  .detalle main .detail {
-      text-align: center;
-      background-color: var(--colorCeleste);
-      opacity: 80%;
-      padding: 20px;
-      margin-bottom: 20px;
-  }
-  /*titulo productos relacionados  */
-  .detalle main .productosRelacionados {
-      font-size: 15px;
-      text-align: center;
-      margin: 30px;
-  }
-  .detalle main article{
-      text-align: center;
-  }
-  /* productos relacionados img */
-  .detalle main article .prod-rel img {
-      border-radius: 50px;
-      border: 1px solid var(--colorNaranja);
-      background-color: white;  
-  }
-  .detalle main article p{
-      font-size: 25px;
-      margin-top: 10px;
-  }
-  
+
+.detalle .textoDescripcion{
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--colorAzulMarino);
+  font-family: var(--fuenteTitulos);
+}
+
+.detalle .parrafo{
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(40, 40, 43);
+  font-family: var(--fuenteTitulos);
+}
   
   /* tablet */
   @media (min-width:426px) {
-  
-   /* botones */
-  .detalle main button {
-     width: 80px;
+
+    .detalle .section1{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 1vw;
+      margin: 40px;
+    }
+    .detalle .articleProducto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .detalle .imagenProducto img{
+      height: 35vw;
+      width: 25vw;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .detalle .divColum{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 49vw;
+      margin-top: 2%;
+    }
+
+    .detalle .titulo{
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-bottom: 2vw;
+      font-size: 20px;
+    }
+
+.detalle .precioColum {
+    width: 100%;
+}
+
+    .detalle .precio {
+      padding-left: 10vw;
+      font-size: 22px;
+      margin-bottom: -4%;
   }
+
+    .detalle .precioFinal {
+      font-size: 37px;
+      margin-right: 2%;
+  }
+
+  .detalle .descuento{
+    font-size: 17px;
+  }
+
+    .detalle .divRow{
+      flex-direction: column;
+    }
+
+    .detalle .precioDescuento{
+      display: flex;
+      justify-content: center;
+    }
+
+    .detalle .carrito{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 60vw;
+    }
+
+    .detalle .agregar{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+
+    .detalle #increase {
+      font-size: 31px;
+  }
+  
+  .detalle #decrease {
+    font-size: 31px;
+}
+
+.detalle #contador {
+  width: 72px;
+  height: 33px;
+  font-size: 22px;
+  margin-top: 6%;
+}
+
+.detalle .botonCarrito {
+  width: 100%;
+  padding: 6px;
+  font-size: 17px;
+  margin-top: 0.7vw;
+  padding-top: 15px;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+.detalle .textoDescripcion {
+  font-size: 27px;
+}
+
+.detalle .parrafo {
+    font-size: 18px;
+}
+  }
+  @media (min-width:600px){
+    .detalle .titulo{
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-bottom: 2vw;
+      font-size: 25px;
+    }
+
+    .detalle .divColum{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 60vw;
+      margin-top: 2%;
+    }
+
+    .detalle .precioFinal {
+      font-size: 45px;
+      margin-right: 2%;
+  }
+
+  .detalle .descuento{
+    font-size: 20px;
+  }
+
+  .detalle .precio{
+    padding-left: 20vw;
+    font-size: 25px;
+    margin-bottom: -2%;
+  }
+
+  .detalle #contador {
+    width: 100px;
+    height: 38px;
+    font-size: 26px;
+    margin-top: 5%;
+  }
+  
+  .detalle #increase {
+    font-size: 35px;
+}
+
+.detalle #decrease {
+  font-size: 35px;
+}
+
   }
   
   
   /* desktop */
-  @media (min-width:769px) {
+  @media (min-width:1024px){
+    
+    .detalle .section1{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 40px;
+      border-radius: 20px;
+    }
+
+    .detalle .imagenProducto img{
+      height: 30vw;
+      width: 23vw;
+      object-fit: contain;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .detalle .titulo{
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-bottom: 100px;
+      font-size: 40px;
+      padding-top: 18px;
+      border-radius: 45px;
+    }
+
+    .detalle .precio {
+      font-size: 25px;
+      margin-bottom: -2%;
+      padding-left: 4vw;
+  }
+
+    .detalle .precioFinal {
+      font-size: 47px;
+      margin-right: 5%;
+  }
+
+    .detalle .divRow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .detalle .precioDescuento{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .detalle .carrito{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    .detalle .agregar{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .detalle #increase {
+      font-size: 40px;
+  }
   
-       /* fuentes */
-       .detalle h1 {
-          font-size: 40px;
-      } 
-      .detalle h2 {
-          font-size: 30px;
-          margin-top: 30px;
-      }
-  
-      .detalle h4 {
-          font-size: 20px;
-      }
-  
-      .detalle p {
-          font-size: 20px;
-          margin-bottom: 0;
-  
-      }
-      /* producto principal */
-      .detalle main section .imagen-princ {
-          display: flex;
-          flex-direction: column;
-          width: 20%;
-          position: relative;
-          left: 20%;
-          margin: 80px;
-      }
-      .detalle main section .textoDerecha {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          left: 50%;
-          top: 15%;
-          margin: 60px;
-      }
-      .detalle main .contenedor{
-          width: 15%;
-      }
-      /* .detalle main .prod-rel img {
-          width: 15%;
-      } */
-      /* .detalle main article .prod-rel {
-          
-      }
-   */
+  .detalle #decrease {
+    font-size: 40px;
+}
+
+.detalle #contador {
+  border-radius: 30px;
+  width: 100px;
+  height: 44px;
+  font-size: 33px;
+  margin-top: 2%;
+}
+
+.detalle .botonCarrito {
+  width: 36%;
+  padding: 6px;
+  font-size: 17px;
+  margin-top: 0.7vw;
+  margin-left: 9.7vw;
+  padding-top: 15px;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+
+.detalle .textoDescripcion {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.detalle .parrafo {
+    font-size: 20px;
+}
+
+  }
+
+  @media (min-width:1127px){
+    .detalle .precioFinal {
+      font-size: 55px;
+      margin-right: 5%;
+  }
+  }
+
+  @media (min-width:1500px){
+    .detalle .imagenProducto img{
+      height: 23vw;
+      width: 18vw;
+      object-fit: contain;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .detalle .precio {
+      font-size: 25px;
+      margin-bottom: -2%;
+      padding-left: 5.1vw;
+  }
+
+
   }
