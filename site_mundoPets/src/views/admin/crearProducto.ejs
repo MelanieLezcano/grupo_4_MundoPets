@@ -13,12 +13,11 @@
                 <!-- Comienzo del Formulario -->
                 <form action="/admin/crear" method="POST" enctype="multipart/form-data">
 
-                    <!-- Contenedor de imagenes y Principales -->
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
 
-                            <!-- Principales -->
                             <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <!-- Titulo -->
                                 <div class="form-floating mb-2">
                                     <input type="text" class="form-control" name="Titulo"
                                         placeholder="Nombre del producto" id="titulo"
@@ -29,6 +28,7 @@
                                         <%= locals.errors && errors.Titulo ? errors.Titulo.msg : null %>
                                     </p>
                                 </div>
+                                <!-- Marcas -->
                                 <select class="form-select" name="Marca" id="marcas" floatingSelect"
                                     aria-label="Floating label select example">
                                     <option hidden value="">Selecciona una marca</option>
@@ -39,12 +39,11 @@
                                         </option>
 
                                         <% }); %>
-
-
                                 </select>
                                 <p class="span text-danger" id="marcaError">
                                     <%= locals.errors && errors.marca ? errors.marca.msg : null %>
                                 </p>
+                                <!-- Precio -->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" type="number" name="Precio"
                                         placeholder="Precio del producto" id="precio"
@@ -54,6 +53,7 @@
                                         <%= locals.errors && errors.Precio ? errors.Precio.msg : null %>
                                     </p>
                                 </div>
+                                <!-- Descuento -->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" type="number" name="Descuento"
                                         placeholder="Descuento del producto" id="descuento"
@@ -63,6 +63,7 @@
                                         <%= locals.errors && errors.Descuento ? errors.Descuento.msg : null %>
                                     </p>
                                 </div>
+                                <!-- Stock -->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" type="number" name="Stock"
                                         placeholder="Stock con el que cuenta el producto" id="stock"
@@ -73,6 +74,7 @@
                                     </p>
                                 </div>
                             </div>
+                            <!-- Imagen -->
                             <div class="col col-lg-7 col-md-12 col-sm-12">
                                 <section class="img-product">
                                     <div class="container">
@@ -98,9 +100,6 @@
                                     </p>
                                 </section>
                             </div>
-
-                            <!-- Fin del contenido principal -->
-
                         </div>
                     </div>
 
@@ -111,6 +110,7 @@
                             <!-- Selects  -->
                             <div class="container m-3">
                                 <div class="row justify-content-around align-items-center">
+                                    <!-- Categoria -->
                                     <div class="col col-4">
                                         <h3 class="text-center">Categoria</h3>
                                         <select class="form-select" name="Categoria" id="categorias" floatingSelect"
@@ -123,8 +123,6 @@
                                                 </option>
 
                                                 <% }); %>
-
-
                                         </select>
                                         <div style="display: flex; justify-content: center;">
                                             <p class="span text-danger" id="categoriaError">
@@ -132,6 +130,7 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <!-- Subcategoria -->
                                     <div class="container m-3">
                                         <div class="row justify-content-around align-items-center">
                                             <div class="col col-4">
@@ -156,10 +155,9 @@
                                                         null %>
                                                 </p>
                                             </div>
-
                                         </div>
                                     </div>
-
+                                    <!-- Descripcion -->
                                     <div class="row justify-content-around align-items-center">
                                         <div class="container m-3">
                                             <div class="row">

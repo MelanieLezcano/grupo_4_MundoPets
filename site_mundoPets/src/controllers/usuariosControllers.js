@@ -42,6 +42,7 @@ module.exports = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     imagen: usuario.imagen,
+                    apellido:usuario.apellido,
                     rol: usuario.roles_id
                 }
                 return res.redirect('/')
@@ -54,6 +55,7 @@ module.exports = {
             if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "default-image.png")) {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
             }
+            
 
             return res.render('usuarios/register', {
                 errors: errors.mapped(),
@@ -88,6 +90,7 @@ module.exports = {
             req.session.usuarioLogin = {
                 id: usuario.id,
                 nombre: usuario.nombre,
+                apellido: usuario.apellido,
                 imagen: usuario.imagen,
                 rol: usuario.roles_id
             }

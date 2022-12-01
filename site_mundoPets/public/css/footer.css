@@ -144,7 +144,7 @@ footer .foot{
 @media (min-width:1024px){
     footer{
         height: 45px;
-        margin-top: 500px;
+        margin-top: 400px;
     }
    footer .pie article{
     display: none;

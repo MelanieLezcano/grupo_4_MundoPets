@@ -4,73 +4,90 @@
  
     background-repeat: no-repeat;
     background-position: cover;
-    margin-top: 20px;
+    margin-top: 8vw;
 } 
 
+.home .banner img{
+    display: none;
+}
 
+.home .banner1500 img {
+    display: none;
+}
 
-.mainHome .banner h2 {
-    /* position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-family: var(--fuenteTitulos);
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    background-color: rgba(127, 164, 243, 0.452);
-    padding: 5px; */
+.home .bannerMobile img{
     position: absolute;
-    top: 68px;
-    height: 18px;
-    width: 50%;
-    font-family: var(--fuenteTitulos);
-    color: white;
-    font-size: 20px;
-    text-align: center;
+    width: 100vw;
+    object-fit: contain;
+  }
 
-    background-color: rgba(127, 164, 243, 0.452);
-    padding: 1px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    right: 6px;
+  .home .bannerFalsoMobile img{
+    width: 100vw;
+    object-fit: contain;
+    visibility: hidden;
+  }
 
-
-}
-
-
- .mainHome .banner {
-    position: relative;
-    z-index: auto;
-    
-} 
-
-.mainHome .banner img {
+  .mainHome .divTitulo{
     width: 100%;
+    margin-bottom: 6px;
 }
+
+.mainHome .spanTitulo{
+    top: 681px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 7px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+  .mainHome .section2{
+    display: none;
+  }
 
 .mainHome .section1 {
     width: 100%;
     margin-top: 8px;
-   
     padding: 8px;
     text-align: center;
     font-size: large;
+    margin-bottom: 33px;
    
 }
 
-.mainHome .marcas {
-    margin: 10px;
+.mainHome .spanAzul {
     font-family: var(--fuenteTitulos);
-    color: var(--colorAzulMarino);
+    color: var(--colorAzulFrancia);
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 30px;
-    
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mainHome .spanNaranja {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorNaranja);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mainHome .marcas{
+    position: absolute;
+    top: 680px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 7px;
+    padding-right: 22px;
+    padding-left: 22px;
+    border-radius: 20px;
 }
 
 .mainHome .destacadosP {
-    font-family: var(--fuenteTitulos);
-    color: var(--colorAzulMarino);
     text-align: center;
     margin-top: 6px;
 }
@@ -92,91 +109,79 @@
     /*  margin-top: 10px; */
 }
 
-  .mainHome .links {
-    text-align: center;
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-self: center;
-    align-items: center;
-    margin-top: 4px;
-    margin: 80px 20px 20px;
-}
-
-.mainHome .links section {
-    width: 40%;
-    height: 150px;
-    text-align: center;
-    justify-items: center;
-
-}
-
-.mainHome .img {
-    width: 100%;
-}
-
-.mainHome .image img {
-    width: 100%;
-}
-
-.mainHome .image img {
-    width: 80%;
-}
-
-
-.mainHome .links section .perro a,
-.gato a {
-    text-align: left;
-    color: var(--colorAzulMarino);
-}
-
-.mainHome .links section img {
-    width: 80%;
-}
-
 .mainHome .links .perro {
     margin: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: stretch;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 8px;
     background-color: var(--colorNaranja);
 }
 
-.mainHome .perro div img {
-    width: 70%;
+/* .mainHome .perrosTexto{
+    margin-top: 10px;
+    margin-left: 10px;
+} */
+
+/* .mainHome .gatosTexto{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 7px;
+} */
+
+.mainHome .perro a,
+.gato a,
+.contacto a,
+.nosotros a {
+    font-family: var(--fuenteTitulos);
+    font-weight: 700;
+    font-size: 20px;
 }
 
-.mainHome .perro  a {
-    text-align: left;
-    width: 10%;
-    font-size: 16px;
+.mainHome .patitas{
+    height: 17vw;
+    width: 13vw;
+    margin-left: 1vw;
+}
+
+.mainHome .imgMascotasP{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.mainHome .imgMascotas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.mainHome .imgPerro {
+    width: 19vw;
+    height: 24vw;
+    margin-top: 4vw;
+    margin-right: -4vw;
+}
+
+.mainHome .imgGato{
+    width: 16vw;
+    height: 19vw;
+    margin-top: 8vw;
+    margin-right: -4vw;
 }
 
 .mainHome .links .gato {
 
     margin: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: stretch;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 20px;
     background-color: var(--colorAmarillo);
 }
 
-.mainHome .gato div img {
-    width: 70%;
-}
 
-.mainHome .gato a {
-    text-align: left;
-    width: 10%;
-    font-size: 16px;
-}
 
 .mainHome .links .nosotros {
 
@@ -188,7 +193,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--colorCeleste);
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 8px;
 }
 
@@ -197,6 +202,8 @@
     color: white;
     margin-bottom: 2px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .mainHome .links .contacto {
@@ -204,26 +211,19 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     background-color: var(--colorAzulMarino);
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 8px;
 }
 
 .mainHome .links div i {
     width: 100%;
-    font-size: 75px;
+    font-size: 100px;
     color: white;
     text-align: center;
 
 }
 
-.mainHome  {
-    font-family: var(--fuenteSubtitulos);
-}
 .mainHome .quienSomos{
     display: none;
 }
@@ -385,7 +385,7 @@
     .home .glider::-webkit-scrollbar-thumb {
       opacity: 1;
       border-radius: 99px;
-      background-color: rgba(156, 156, 156, 0.25);
+      background-color: rgba(255, 255, 255, 0.918);
       box-shadow: 0 0 1px rgba(255,255,255,.25);
     }
   }  
@@ -393,24 +393,25 @@
 
 /* Tablet */
 @media (min-width:426px) {
-    .mainHome.banner h2{
 
-        position: absolute;
-        top: 134PX;
-        height: 23px;
-        width: 50%;
-        font-family: var(--fuenteTitulos);
-        color: white;
-        font-size: 30px;
-        text-align: center;
-
-        background-color: rgba(127, 164, 243, 0.452);
-        padding: 1px;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        right: 6px;
-
+    .home .banner img{
+        display: none;
     }
+
+    .home .bannerMobile img{
+        position: absolute;
+        width: 100vw;
+        object-fit: contain;
+      }   
+      
+      
+  .home .bannerFalsoMobile img{
+    width: 100vw;
+    margin-top: 3%;
+    object-fit: contain;
+    visibility: hidden;
+  }
+
     .mainHome .links {
         text-align: center;
         width: 90%;
@@ -424,8 +425,8 @@
     }
 
     .mainHome .links section {
-        width: 36%;
-        height: 180px;
+        width: 35vw;
+        height: 30vw;
         text-align: center;
         justify-items: center;
 
@@ -442,49 +443,47 @@
     .mainHome .links section .perro a,
     .gato a {
         font-size: 20px;
-        color: var(--colorAzulMarino);
+        color: var(--colorAzulFrancia);
     }
 
 
     .mainHome .links .perro {
         margin: 15px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         align-items: stretch;
         background-color: var(--colorNaranja);
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
     }
 
     .mainHome .dog {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         align-content: center;
     }
 
-    .mainHome .perro div  img {
-        width: 60%;
-        height: 140px;
+/*     .mainHome .perrosTexto{
+        margin-top: 10px;
+        margin-left: 10px;
+    } */
+
+    .mainHome .gatosTexto{
+        margin-top: 5px;
+        margin-bottom: 7px;
+        margin-left: -3vw;
     }
-
-    .mainHome .perro a {
-        font-size: 20px;
-        width: 40%;
-        height: 70px;
-
-
+    .mainHome .perrosTexto{
+        margin-top: 5px;
+        margin-bottom: 7px;
+        margin-left: -3vw;
     }
 
     .mainHome .links .gato {
 
         margin: 15px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         align-items: stretch;
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
         background-color: var(--colorAmarillo);
     }
@@ -492,22 +491,8 @@
     .mainHome .cat {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         align-content: center;
     }
-
-    .mainHome .gato div img {
-        width: 60%;
-        height: 140px;
-    }
-
-    .mainHome .gato a {
-        font-size: 20px;
-        width: 40%;
-        height: 70px;
-
-    }
-
 
     .mainHome .links .nosotros {
 
@@ -519,7 +504,7 @@
         justify-content: center;
         align-items: center;
         background-color: var(--colorCeleste);
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
     }
 
@@ -548,7 +533,7 @@
         align-items: center;
         align-content: center;
         background-color: var(--colorAzulMarino);
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
     }
 
@@ -559,7 +544,7 @@
 
     .mainHome .links div i {
         width: 100%;
-        font-size: 100px;
+        font-size: 4.5rem;
         color: white;
         text-align: center;
 
@@ -569,7 +554,8 @@
     .gato a,
     .contacto a,
     .nosotros a {
-        font-family: var(--fuenteSubtitulos);
+        font-family: var(--fuenteTitulos);
+        font-weight: 700;
         font-size: 20px;
     }
     .mainHome .quienSomos{
@@ -582,7 +568,7 @@
 
 /* Desktop */
 @media (min-width:1024px) {
-    main {
+    .mainHome {
 
         background-size: 100%;
         width: 100%;
@@ -590,45 +576,59 @@
         background-repeat: no-repeat;
       
         background-position: cover;
-        margin-top: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .mainHome .banner {
-        position: relative;
+        margin-top: -5vw;
     }
 
-    .mainHome .banner img {
-        width:100%;
-        height: 716px;
-        margin-bottom: 50px;
+    .home .bannerMobile img{
+        display: none;
     }
 
+    .home .bannerFalsoMobile img{
+        display: none;
+    }
 
-    .mainHome .banner h2 {
+    .home .banner1500 img {
+        display: none;
+    }
+
+    .home .banner img{
+        display: flex;
         position: absolute;
-        top: 230px;
-        height: 27px;
-        width: 50%;
-        font-family: var(--fuenteTitulos);
-        color: white;
-        font-size: 32px;
-        text-align: center;
-        
-        background-color: rgba(127, 164, 243, 0.452);
-        padding: 1px;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        right: 4px;
+        width: 100vw;
+        object-fit: contain;
+      }
 
+      .home .bannerFalso {
+        margin-top: 30%;
+        object-fit: contain;
+      }
 
+      .home .fondoFalso{
+        margin-top: 50%;
+      }
+
+      .mainHome .carrouselDestacados{
+        display: none;
+      }
+
+      .mainHome .section1 {
+        display: none;
+      }
+
+      .mainHome .destacadosP {
+        margin-top: 6px;
     }
+        
+  .mainHome .section2{
+    display: flex;
+    flex-direction: column;
+  }
 
-    .mainHome .section1 {
+    .mainHome .section2 {
         position: relative;
         width: 100%;
         height: 151px;
-        margin-top: 20px;
+        margin-top: 50px;
         margin-bottom: 20px;
         
         padding: 8px;
@@ -637,28 +637,52 @@
        
     }
    
+    .mainHome .divTitulo{
+        width: 100%;
+    }
 
-    .mainHome .marcas {
-        position: absolute;
-        padding: 10px;
-        left: 50px;
+    .mainHome .spanTitulo{
         top: 680px;
-        width: 90%;
         height: 48px;
-        font-size: 30px;
-      
-        margin-bottom: 10px;
-        font-family: var(--fuenteTitulos);
-        color: var(--colorAzulMarino);
+        background-color: rgba(255, 255, 255, 0.918);
+        padding: 11px;
+        padding-top: 21px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 40px;
         text-align: center;
-        background-color: white;
-        border-radius: 50px;
     }
     
-    
+.mainHome .spanAzul {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorAzulFrancia);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.mainHome .spanNaranja {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorNaranja);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.mainHome .marcas{
+    position: absolute;
+    top: 680px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 7px;
+    padding-right: 22px;
+    padding-left: 22px;
+    border-radius: 20px;
+}
 
     .mainHome .logos {
-        position: absolute;
         top: 783px;
         margin: 0 auto;
         width: 100%;
@@ -684,26 +708,43 @@
         text-align: center;
         width: 90%;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-self: center;
-        align-items: center;
-        margin-top: 40px;
+        margin-top: -19vw;
      
     }
-
-    .mainHome .links section {
-        width: 362px;
-        height: 347px;
-        text-align: center;
-        justify-items: center;
-
+    
+    .mainHome .perrosTexto{
+        margin-top: 10px;
+        margin-left: 10px;
     }
+
+    .mainHome .gatosTexto{
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-bottom: 7px;
+    }
+
+    .mainHome .patitas{
+        width: 115px;
+        height: 157px;
+        margin-left: 6px;
+    }
+
+    .mainHome .imgMascotasP{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    .mainHome .imgMascotas{
+        display: flex;
+        flex-direction: column;
+    }
+
     .mainHome .links section .perro a, .gato a {
         text-align: left;
-        color: var(--colorAzulMarino);
+        color: var(--colorAzulFrancia);
     }
-
 
     .mainHome .links .perro {
         position: absolute;
@@ -718,7 +759,7 @@
         justify-content: space-around;
         align-items: stretch;
         background-color: var(--colorNaranja);
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
     }
     .mainHome .dog{
@@ -726,15 +767,24 @@
         height: 285px;
     }
 
-    .mainHome .perro div img {
-        width: 182px;
-        height: 231px;
+    .mainHome .imgPerro {
+        width: 185px;
+        height: 236px;
+        margin-top: 35px;
+        margin-right: -28px;
     }
 
     .mainHome .perro a {
         text-align: center;
         width: 30%;
         font-size: 30px;
+    }
+
+    .mainHome .imgGato{
+        width: 153px;
+        height: 183px;
+        margin-top: 75px;
+        margin-right: -7px;
     }
 
     .mainHome .links .gato {
@@ -749,7 +799,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;
-        border-radius: 8px;
+        border-radius: 20px;
         padding: 8px;
         background-color: var(--colorAmarillo);
     }
@@ -758,14 +808,7 @@
         height: 285px;
     }
 
-    .mainHome .gato div img {
-        width: 182px;
-        height: 231px;
-    }
-
     .mainHome .gato a {
-        text-align: center;
-   
         width: 30%;
         font-size: 30px;
     }
@@ -795,40 +838,124 @@
 
     }
 
-    .mainHome a {
-        font-family: var(--fuenteSubtitulos);
-    }
-   
     .mainHome .quienSomos {
+        background-color: rgba(255, 255, 255, 0.918);
         position: relative;
-        bottom: -360px;
+        bottom: -335px;
         display: flex;
-        width:90%;
-        height: 234px;
+        flex-direction: row;
+        width: 100vw;
         text-align: center;
         display: flex;
-        right: -20px;
+        padding-top: 25px;
+        padding-bottom: 54px;
     }
-    .mainHome .quienSomos  a {
-        width: 60%;
+    .mainHome .quienSomos img {
+        width: 84%;
+        margin-top: 124px;
         
     }
-    .mainHome .quienSomos  a img {
+
+    .mainHome .textoColum{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .mainHome .spanQuienesSomos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mainHome .textoQuienes{
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorAzulFrancia);
+        margin-bottom: 5px;
+        margin-right: 15px;
+        font-size: 60px;
+        font-weight: 500;
+    }
+
+    .mainHome .textoSomos{
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorNaranja);
+        margin-bottom: 5px;
+        margin-left: 5px;
+        font-size: 60px;
+        font-weight: 500;
+    }
+
+    .mainHome .spanParrafo{
+        text-align: left;
+        color: black;
+        font-size: 22px;
+        font-family: var(--fuenteSubtitulos);
+        font-weight: 500;
+    }
+
+
+}
+
+@media (min-width:1500px) {
+
+    .mainHome {
+
+        background-size: 100%;
         width: 100%;
         
+        background-repeat: no-repeat;
+      
+        background-position: cover;
+        margin-top: -17vw;
     }
 
-    .mainHome .quienSomos p{
-        width: 40%;
-        font-size: 17px;
-        font-style: italic;
-        font-family: var(--fuenteTitulos);
-        color:black;
+    .home .banner {
+        display: none;
+    }
+    
+  .mainHome .section2{
+    display: flex;
+  }
+ 
+  .mainHome .section2 {
+    position: relative;
+    width: 100%;
+    height: 151px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+    padding: 8px;
+    text-align: center;
+    font-size: large;
+   
+}
 
+    .home .banner1500 img{
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        object-fit: contain;
+      }
+
+    .mainHome .links {
+        position: relative;
+        text-align: center;
+        width: 90%;
+        display: flex;
+        margin-top: -12vw;
     }
 
+    
+    .mainHome .quienSomos {
+        bottom: -270px;
+    }
 
-
+    .mainHome .quienSomos img {
+        width: 84%;
+        margin-top: 50px;
+        
+    }
 }
 
 

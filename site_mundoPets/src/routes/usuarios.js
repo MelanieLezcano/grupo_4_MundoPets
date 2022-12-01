@@ -9,7 +9,7 @@ const loginValidaciones = require('../validations/loginValidaciones')
 
 
 router.get('/register', register);
-router.post('/register',upload.single('imagen'),registerValidaciones,processRegister);
+router.post('/register',upload.single('imagenes'),registerValidaciones,processRegister);
 
 router.get('/login',login)
 router.post('/login',loginValidaciones,processLogin);
