@@ -5,17 +5,28 @@
 .detalle .section1{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   padding: 1vw;
+  margin: 12px;
 
   background-color: white;
   border: 3px solid var(--colorAmarillo);
   border-radius: 20px;
 }
 
+.detalle .imagenProducto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .detalle .imagenProducto img{
-  height: 30vw;
-  width: 23vw;
+  height: 35vw;
+  width: 25vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   object-fit: contain;
 }
 
@@ -23,56 +34,57 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 53vw;
+  width: 49vw;
   margin-top: 2%;
 }
 
 .detalle .titulo{
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-bottom: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 2vw;
   text-align: center;
-  font-size: 40px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--colorAzulFrancia);
   font-family: var(--fuenteTitulos);
   background-color: var(--colorGris);
-  padding-top: 18px;
+  padding-top: 10px;
   border-radius: 45px;
 }
 
 .detalle .precioColum{
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
 }
 
 .detalle .precioDescuento{
   display: flex;
   flex-direction: row;
-
+  justify-content: center;
 }
 
 .detalle .precio{
-  font-size: 25px;
+  font-size: 19px;
   font-weight: 300;
   color: var(--colorCeleste);
   text-decoration: line-through;
   font-family: var(--fuenteTitulos);
-  margin-bottom: -2%;
+  margin-bottom: -4%;
+  padding-left: 10vw;
 }
 
 .detalle .precioFinal{
-  font-size: 55px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--colorAzulMarino);
   font-family: var(--fuenteTitulos);
-  margin-right: 5%;
+  margin-right: 2%;
 }
 
 .detalle .descuento{
   padding-top: 0.7vw;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--colorNaranja);
   font-family: var(--fuenteTitulos);
@@ -85,7 +97,9 @@
 
 .detalle .carrito{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 53vw;
 }
 .detalle .articleProducto{
   display: flex;
@@ -96,13 +110,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60vw;
+  width: 49vw;
   margin-top: 2%;
 }
 
 .detalle .divRow{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
 }
@@ -117,25 +131,25 @@
 .detalle #contador{
   border: 3px solid var(--colorAmarillo);
   border-radius: 30px;
-  width: 100px;
-  height: 44px;
+  width: 72px;
+  height: 33px;
   text-align: center;
-  font-size: 33px;
+  font-size: 22px;
   font-family: var(--fuenteSubtitulos);
   font-weight: 500;
   color: var(--colorAzulMarino);
-  margin-top: 5%;
+  margin-top: 6%;
 }
 
 .detalle #decrease{
   color: var(--colorAzulFrancia);
-  font-size: 40px;
+  font-size: 31px;
   background-color: transparent;
 }
 
 .detalle #increase{
   color: var(--colorAzulFrancia);
-  font-size: 40px;
+  font-size: 31px;
   background-color: transparent;
 }
 
@@ -143,24 +157,28 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 84%;
   border: none;
-  padding: 5px;
+  padding: 2px;
   background-color: var(--colorAzulFrancia);
   border-radius: 20px;
   font-family: var(--fuenteTitulos);
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 600;
   color: white;
   text-align: center;
-  padding-top: 14px;
+  padding-top: 1.3px;
+  margin-top: 0.7000000000000002vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  margin-left: -1vw;
 }
 
 
 .detalle .descripcion{
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 12px;
 
   background-color: rgba(255, 255, 255, 0.918);
   border-radius: 20px;
@@ -169,14 +187,14 @@
 
 .detalle .textoDescripcion{
   margin-bottom: 15px;
-  font-size: 35px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--colorAzulMarino);
   font-family: var(--fuenteTitulos);
 }
 
 .detalle .parrafo{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   color: rgb(40, 40, 43);
   font-family: var(--fuenteTitulos);
@@ -253,7 +271,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      width: 60vw;
+      width: 53vw;
     }
 
     .detalle .agregar{
@@ -279,21 +297,30 @@
 }
 
 .detalle .botonCarrito {
-  width: 100%;
-  padding: 6px;
-  font-size: 17px;
-  margin-top: 0.7vw;
-  padding-top: 15px;
+  width: 84%;
+  padding: 2px;
+  font-size: 13px;
+  margin-top: 0.7000000000000002vw;
   padding-right: 2vw;
   padding-left: 2vw;
+  padding-top: 1.3vw;
+  margin-left: -1vw;
+}
+
+.detalle .descripcion {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  border-radius: 20px;
+  padding: 4%;
 }
 
 .detalle .textoDescripcion {
-  font-size: 27px;
+  font-size: 22px;
 }
 
 .detalle .parrafo {
-    font-size: 18px;
+    font-size: 15px;
 }
   }
   @media (min-width:600px){
@@ -340,6 +367,40 @@
 
 .detalle #decrease {
   font-size: 35px;
+}
+
+.detalle .botonCarrito {
+  width: 100%;
+  padding: 6px;
+  font-size: 17px;
+  margin-top: 0.7vw;
+  padding-top: 15px;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+.detalle .descripcion {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  border-radius: 20px;
+  padding: 4%;
+}
+
+.detalle .textoDescripcion {
+  font-size: 27px;
+}
+
+
+.detalle .parrafo {
+  font-size: 18px;
+}
+
+.detalle .carrito{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60vw;
 }
 
   }
@@ -439,6 +500,13 @@
   padding-left: 2vw;
 }
 
+.detalle .descripcion {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  border-radius: 20px;
+  padding: 4%;
+}
 
 .detalle .textoDescripcion {
   font-size: 35px;
