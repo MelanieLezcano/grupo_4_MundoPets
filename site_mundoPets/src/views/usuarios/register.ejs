@@ -103,16 +103,17 @@
                                 <!--  <div class="imgHover">
                                         <p class="text-center">Seleciona una Imagen</p>
                                     </div> -->
-                            </label>
-                            <input class="inputImagen" type="file" name="imagen" id="image">
-                            <p class="span text-danger" id="imgError" style="width: 500px;">
-                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                            </p>
-                        </div>
-
-
-
-
+                                    
+                                </label>
+                                <input class="form-input" id="imagenes" type="file" name="imagenes"
+                                    placeholder="Imagen del Producto" accept="img/*">
+                                
+                               
+                                <p class="span text-danger" id="imgError" style="width: 500px;">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                </p>
+                            </div>
+                     
 
                         <button type="submit" id="btn">Crear cuenta</button>
 
