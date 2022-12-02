@@ -15,7 +15,7 @@ router.get('/login',login)
 router.post('/login',loginValidaciones,processLogin);
 
 router.get('/perfil',perfil)
-
+/* editar perfil */
 router.get('/editarPerfil',editarPerfil)
 router.put('/editarPerfil/:id',upload.single('imagenes'),nuevoPerfil)
 

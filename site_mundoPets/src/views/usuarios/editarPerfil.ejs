@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head',{title: 'editarPerfil' }) %>
+<%- include('../partials/head',{title: 'editarPerfil'}) %>
 
-    <body class="register">
+<body class ="register">
 
-        <%- include('../partials/header') %>
+    <%- include('../partials/header') %>
 
-            <main>
-                <section>
-                    <h2>Edicion de Perfil</h2>
+        <main>
+            <section>
+                <h2>Edicion de Perfil</h2>
 
-                    <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+                <form action="/usuarios/EditarPerfil/<%- locals.usuarioLogin.id %>?_method=PUT"method="POST" enctype="multipart/form-data" id="formulario"> 
 
-                        <div class="container bottom">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"
-                                value="<%= locals.usuarioLogin ? locals.usuarioLogin.nombre : null %>">
-                                <div id="nameContainer"></div>
-                            
-                        </div>
-                        <div class="container bottom">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido"
-                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.apellido : null %>">
-                            <div id="apellidoContainer"></div>
+                    <div class="container bottom">
+                        <label for="nombre">Nombre</label>
+                        <imput type="text" name="nombre" id="nombre"placeholder="Ingresa tu nombre"
+                            value="<%= locals.usuarioLogin ? locals.usuarioLogin.nombre : null %>">
+                        <div id="nameContainer"></div>
 
-                            <div></div>
-                        </div>
-                        <div div class="col col-5">
-                            <label class="form-label" for="imagenes">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                <div class="imgHover">
-                                    <p class="text-center">Selecionar Imagen</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div>
-                         <div class="col col-5">
-                            <input  style="margin: 5px;" type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
-                        </div>
-                        <button  style="margin: 5px;" type="submit">Editar</button>
-                        <button  style="margin: 5px;" type="reset">Cancelar</button>
                     </div>
-                    </form>
-                </section>
-            </main>
-            <%- include('../partials/footer') %>
-    </body>
+                    <div class="container bottom">
+                        <label for="apellido">Apellido</label>
+                        <imput type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
+                            value="<%= locals.usuarioLogin ? locals.usuarioLogin.apellido : null %>">
+                        <div id="apellidoContainer"></div>
 
+                                <div></div>
+                    </div>
+                    <div class="col col-5">
+                        <label class="form-label" form="imagenes">
+                            <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
+                                src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
+                            <div class="imgHover">
+                                <p class="text-center">Seleccionar Imagen</p>
+                            </div>
+                        </label>
+                        <div class="form-admin__box activo">
+                            <input class="form-input" id="imagenes" type="file" name="imagenes"
+                            placeholder="Imagen del Producto" value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null %> ">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit">Editar</button>
+                    <!-- <button type="reset">Cancelar</button> -->
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/footer') %> 
+
+</body>
 </html>

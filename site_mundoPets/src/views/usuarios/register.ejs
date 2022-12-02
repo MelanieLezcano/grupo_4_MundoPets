@@ -36,8 +36,7 @@
                                 <% } %>
                                     <div></div>
                         </div>
-                        <div class="container bottom">
-                           
+                        <div class="container bottom">                           
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="Ingresa un email"
                                 value="<%= locals.old && old.email ? old.email : null %>">
@@ -77,20 +76,22 @@
                                     <%= errors.contrasenia2.msg%>
                                 </small>
                                 <% } %>
-                        </div>
-                        
-                            <div class="col col-5">
-                               
+
+                        </div> 
+
+
+                            <div class="imagenPerfil">
+                              <div class="col col-5">
                                 <label class="form-label" for="imagenes">
                                     <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
                                         src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                   <!--  <div class="imgHover">
-                                        <p class="text-center">Seleciona una Imagen</p>
-                                    </div> -->
-                                    
+                                    <div class="imgHover">
+                                        <p class="text-center">Seleccioná una Imagen</p>
+                                    </div> 
                                 </label>
-                                <input class="inputImagen" type="file" name="image" id="image">
-                                
+                                <div class="form-admin__box activo">
+                                    <input class="form-input" id="imagenes" type="file" name="imagenes" placeholder="Imagen de Perfil" accept="img/*">
+                                    <!-- <input class="form-input" id="image" type="file" name="Imagenes" placeholder="Imagen de Perfil" accept="img/*"> -->
                                
                                 <p class="span text-danger" id="imgError" style="width: 500px;">
                                     <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>

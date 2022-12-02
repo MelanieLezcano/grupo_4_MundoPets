@@ -345,7 +345,7 @@ window.addEventListener('load', () => {
 
     const validate = {
         image : true,
-    }
+     }/*
 
     formulario.addEventListener('submit',(e) => {
         e.preventDefault();
@@ -354,7 +354,7 @@ window.addEventListener('load', () => {
         if(errores.length > 0){
             formulario.submit()
         }
-    })
+    }) */
 
 
 

@@ -45,7 +45,7 @@ module.exports = {
                 /* genero, */
                 /* direccion, */
                 /* numeroTarjeta, */
-                imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
+                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
                 roles_id: 2
              })
                 
@@ -84,11 +84,11 @@ module.exports = {
         } else {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
-
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+            if (req.file) {
+                if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "avatar-1663535027596.jpg")) {
+                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+                }
             }
-            
 
 
 
@@ -144,10 +144,7 @@ module.exports = {
 
           .catch(errores => res.send(errores))
 
-            
-
-          
-           
+              
         } else {
             /* return res.send(errors.mapped()) */
             return res.render('usuarios/login', {
@@ -156,9 +153,11 @@ module.exports = {
             })
         }
     },
-    perfil: (req, res) => {
+perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+
+    /* editar perfil */
     editarPerfil: (req, res) => {
         return res.render('usuarios/editarPerfil')
     }, 
@@ -184,10 +183,6 @@ module.exports = {
         .catch(error => res.status(500).send(error))
 
     },
-
-
- 
-
     cerrarSesion: (req, res) => {
 
         req.session.destroy();
