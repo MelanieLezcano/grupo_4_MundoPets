@@ -110,7 +110,8 @@
 }
 
 .mainHome .links .perro {
-    margin: 10px;
+    height: 160px;
+    margin: 32px;
     display: flex;
     align-items: stretch;
     border-radius: 20px;
@@ -139,42 +140,49 @@
 }
 
 .mainHome .patitas{
-    height: 17vw;
-    width: 13vw;
-    margin-left: 1vw;
+    height: 26vw;
+    width: 22vw;
 }
 
 .mainHome .imgMascotasP{
     display: flex;
     flex-direction: column;
-    margin-top: 3px;
-    margin-left: 5px;
+    margin-right: 14vw;
 }
 
 .mainHome .imgMascotas{
     display: flex;
     flex-direction: column;
-    margin-top: 3px;
-    margin-left: 5px;
+    margin-top: 7px;
+    margin-right: 17vw;
 }
 
 .mainHome .imgPerro {
-    width: 19vw;
-    height: 24vw;
-    margin-top: 4vw;
-    margin-right: -4vw;
+    width: 28vw;
+    height: 34vw;
+    margin-top: 0vw;
+}
+.mainHome .dog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mainHome .imgGato{
-    width: 16vw;
-    height: 19vw;
-    margin-top: 8vw;
-    margin-right: -4vw;
+    width: 27vw;
+    height: 32vw;
+    margin-top: 3vw;
+}
+
+.mainHome .cat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mainHome .links .gato {
-
-    margin: 10px;
+    height: 160px;
+    margin: 32px;
     display: flex;
     align-items: stretch;
     border-radius: 20px;
@@ -184,8 +192,8 @@
 
 
 .mainHome .links .nosotros {
-
-    margin: 10px;
+    height: 160px;
+    margin: 32px;
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
@@ -207,8 +215,8 @@
 }
 
 .mainHome .links .contacto {
-
-    margin: 10px;
+    height: 160px;
+    margin: 32px;
     display: flex;
     flex-direction: column;
     background-color: var(--colorAzulMarino);
@@ -432,6 +440,45 @@
 
     }
 
+    .mainHome .links .gato {
+        height: 30vw;
+    }
+
+    .mainHome .imgPerro {
+        width: 19vw;
+        height: 24vw;
+        margin-top: 4vw;
+        margin-right: -4vw;
+    }
+
+    
+.mainHome .imgGato{
+    width: 16vw;
+    height: 19vw;
+    margin-top: 8vw;
+    margin-right: 0vw;
+}
+
+.mainHome .patitas {
+    height: 17vw;
+    width: 13vw;
+    margin-left: 1vw;
+}
+
+.mainHome .imgMascotasP{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.mainHome .imgMascotas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
     .mainHome .dog,
     .cat,
     .paw,
@@ -448,6 +495,7 @@
 
 
     .mainHome .links .perro {
+        height: 30vw;
         margin: 15px;
         display: flex;
         align-items: stretch;
@@ -479,7 +527,7 @@
     }
 
     .mainHome .links .gato {
-
+        height: 30vw;
         margin: 15px;
         display: flex;
         align-items: stretch;
@@ -495,7 +543,7 @@
     }
 
     .mainHome .links .nosotros {
-
+        height: 30vw;
         margin: 15px;
         font-size: 16px;
         display: flex;
@@ -523,7 +571,7 @@
     }
 
     .mainHome .links .contacto {
-
+        height: 30vw;
         margin: 15px;
         font-size: 16px;
         display: flex;
@@ -849,6 +897,7 @@
         display: flex;
         padding-top: 25px;
         padding-bottom: 54px;
+        margin-bottom: 38%;
     }
     .mainHome .quienSomos img {
         width: 84%;
