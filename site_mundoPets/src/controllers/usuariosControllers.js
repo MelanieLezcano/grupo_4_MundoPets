@@ -9,7 +9,7 @@ module.exports = {
         return res.render('usuarios/register')
     },
     processRegister: (req, res) => {
-       /*  return res.send (req.body)  */
+       /*  return res.send (req.file)  */
         let errors = validationResult(req)
         if (req.fileValidationError /* != undefined */) {
             let imagen = {
@@ -52,9 +52,14 @@ module.exports = {
 
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', dato))
 
-            if (ruta(req.file.filename) && (req.file.filename != undefined) && (req.file.filename !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+            if ((req.file)) {
+              
+                if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
+                    fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'usuarios', req.file.filename))
+                }
+                
             }
+            
             
 
             return res.render('usuarios/register', {

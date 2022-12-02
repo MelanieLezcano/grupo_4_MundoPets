@@ -71,13 +71,16 @@ window.addEventListener('load', () => {
     })
 
     eye2.addEventListener('click', (e) => {
+        /* console.log(eye2.classList);
+        console.log(eye2.classList.contains("fa-eye-slash")); */
         inputContrasenia2.type === 'password' ? inputContrasenia2.type = 'text' : inputContrasenia2.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
         if (eye2.classList.contains('fa-eye-slash')) {
-            eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
+            eye2.classList.toggle('fa-eye-slash')
         } else {
-            eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
+            eye2.classList.toggle('fa-eye-slash')
         }
     })
 

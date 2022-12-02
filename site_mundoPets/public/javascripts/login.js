@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
 
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
+    let inputContrasenia2 = $('#contrasenia2')
 
     let errores = [{
         id: 1,
@@ -24,6 +25,7 @@ window.addEventListener('load', () => {
 
     /* eyes */
     let eye = $('#eye-contrasenia')
+    let eye2 = $('#eye-contrasenia2')
 
     eye.addEventListener('click', (e) => {
         inputContrasenia.type === 'password' ? inputContrasenia.type = 'text' : inputContrasenia.type = 'password'
@@ -34,6 +36,17 @@ window.addEventListener('load', () => {
         } else {
             eye.classList.toggle('fa-eye-slash')
             eye.classList.toggle('fa-eye')
+        }
+    })
+    eye2.addEventListener('click', (e) => {
+        inputContrasenia2.type === 'password' ? inputContrasenia2.type = 'text' : inputContrasenia2.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
+        if (eye2.classList.contains('fa-eye-slash')) {
+            eye2.classList.toggle('fa-eye-slash')
+            eye2.classList.toggle('fa-eye')
+        } else {
+            eye2.classList.toggle('fa-eye-slash')
+            eye2.classList.toggle('fa-eye')
         }
     })
     
