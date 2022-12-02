@@ -1,19 +1,20 @@
 window.addEventListener('load', () => {
 
     let $ = (elemento) => document.querySelector(elemento)
-   /*  console.log("Register vinculado"); */
+    /*  console.log("Register vinculado"); */
 
-   const funcValidate = (obj) => {
-    let arr = Object.values(obj)
-    console.log(arr);
-    if (!arr.includes(false)) {
-        btn.disabled = false
-        btn.style.backgroundColor = 'var(--colorAzulFrancia)'
-    }else{
-        btn.disabled = true
-        btn.style.backgroundColor = 'var(--colorCeleste)'
+    const funcValidate = (obj) => {
+        let arr = Object.values(obj)
+        console.log(arr);
+        if (!arr.includes(false)) {
+            btn.disabled = false
+            btn.style.backgroundColor = 'var(--colorAzulFrancia)'
+        } else {
+            btn.disabled = true
+            btn.style.backgroundColor = 'var(--colorCeleste)'
+        }
     }
-}
+
     
     const regExLetter = /^[A-Za-z]+$/i;
     /* /^[A-Z]+$/ */
@@ -51,8 +52,7 @@ window.addEventListener('load', () => {
         id: 5,
         elemento: "inputContrasenia2",
         mensaje: "Debe confirmar su contraseña"
-    }
-    ]
+    }]
 
 
     let eye = $('#eye-contrasenia')
@@ -80,10 +80,6 @@ window.addEventListener('load', () => {
             eye2.classList.toggle('fa-eye')
         }
     })
-
-
-
-
 
 
     nombre.addEventListener('blur', () => {
@@ -145,6 +141,7 @@ window.addEventListener('load', () => {
         
         /* console.log(errores); */
     })
+
     apellido.addEventListener('blur', () => {
         let error = {
             id: 2,
@@ -189,6 +186,7 @@ window.addEventListener('load', () => {
         }
         
     })
+
     email.addEventListener('blur', () => {
         let error = {
             id: 3,
@@ -234,6 +232,7 @@ window.addEventListener('load', () => {
         
         /* console.log(errores); */
     })
+
     inputContrasenia.addEventListener('blur', () => {
         let error = {
             id: 4,
@@ -278,6 +277,7 @@ window.addEventListener('load', () => {
         }
         
     })
+
     inputContrasenia2.addEventListener('blur', () => {
         let error = {
             id: 5,
@@ -327,7 +327,8 @@ window.addEventListener('load', () => {
         }
         
     })
-    image.addEventListener('change', function() {
+
+    image.addEventListener('change', function () {
         switch (true) {
             case !regExExt.exec(image.value):
                 $('#imgError').innerHTML = "Solo se permite ingresar una image valida formato (jpg|jpeg|png|jfif|gif|webp)"
@@ -341,22 +342,21 @@ window.addEventListener('load', () => {
                 break;
         }
         funcValidate(validate)
-    })
 
-    const validate = {
-        image : true,
-    }
 
-    formulario.addEventListener('submit',(e) => {
-        e.preventDefault();
-
-        console.log(formulario.elements);
-        if(errores.length > 0){
-            formulario.submit()
+        const validate = {
+            image: true,
         }
     })
 
+    formulario.addEventListener('submit', (e) => {
+        e.preventDefault();
 
+        console.log(formulario.elements);
+        if (errores.length > 0) {
+            formulario.submit()
+        }
+    })
 
 });
 
@@ -369,4 +369,13 @@ window.addEventListener('load', () => {
 
 
 
-   
+
+
+
+
+
+
+
+
+
+

@@ -47,10 +47,10 @@ module.exports = {
             let { Categoria, Subcategoria, Marca, Titulo, Precio, Descuento, Descripcion, Stock } = req.body
 
             db.Productos.create({
-                categorias_id: Categoria,
-                subcategorias_id: Subcategoria,
+                categorias_id: +Categoria,
+                subcategorias_id: +Subcategoria,
                 titulo: Titulo,
-                marcas_id: Marca,
+                marcas_id: +Marca,
                 precio: +Precio,
                 descuento: +Descuento,
                 descripcion: Descripcion,
@@ -112,21 +112,22 @@ module.exports = {
             const { Marca, Titulo, Categoria, Subcategoria, Precio, Descuento, Stock, Descripcion } = req.body
 
             db.Productos.update({
-                categorias_id: Categoria,
-                subcategorias_id: Subcategoria,
+                categorias_id: +Categoria,
+                subcategorias_id: +Subcategoria,
                 titulo: Titulo,
-                marcas_id: Marca,
+                marcas_id: +Marca,
                 precio: +Precio,
                 descuento: +Descuento,
                 descripcion: Descripcion,
                 stock: +Stock,
+                imagen: req.file ? req.file.filename : 'default-image.png',
             }, {
                 where: {
                     id: idParams
                 }
             })
                 .then((producto) => {
-                    return res.redirect('/admin/editar/' + idParams)
+                    return res.redirect('/productos/detalle/' + idParams)
                 })
                 .catch(error => res.send(error))
         } else {
