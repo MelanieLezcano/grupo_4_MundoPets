@@ -11,6 +11,32 @@
 .login main section.container-image{
     display: none;
 }
+.login main .container .contrasenia {
+    width: 100%;
+    position: relative;
+}
+
+.login main .container .contrasenia i {
+    position: absolute;
+    color: var(--colorAzulFrancia);
+    top: 4px;
+    right: 2px;
+    padding: 10px;
+}
+
+.login main button {
+    padding: 9px;
+    background-color: var(--colorAzulFrancia);
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+
+
+
 .login main small{
     color: red;
 }

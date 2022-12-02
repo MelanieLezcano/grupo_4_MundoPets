@@ -2,6 +2,7 @@ const { check, body } = require('express-validator');
 const usuarios = require('../data/usuarios.json')
 const db = require('../database/models')
 const bcryptjs = require('bcryptjs')
+
 module.exports = [
     /* email */
     check('email').trim()

@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
         mensaje: "Debe confirmar su contraseña"
     }]
 
-
+    /* eyes */
     let eye = $('#eye-contrasenia')
     let eye2 = $('#eye-contrasenia2')
 
@@ -71,13 +71,16 @@ window.addEventListener('load', () => {
     })
 
     eye2.addEventListener('click', (e) => {
+        /* console.log(eye2.classList);
+        console.log(eye2.classList.contains("fa-eye-slash")); */
         inputContrasenia2.type === 'password' ? inputContrasenia2.type = 'text' : inputContrasenia2.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
         if (eye2.classList.contains('fa-eye-slash')) {
-            eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
+            eye2.classList.toggle('fa-eye-slash')
         } else {
-            eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
+            eye2.classList.toggle('fa-eye-slash')
         }
     })
 
@@ -102,21 +105,7 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-
-            /* case !nombre.value:
-                $('#nameContainer').innerHTML = "<small>El Nombre debe contener al menos dos caracteres</small>"
-                nombre.style.border = "1px solid red"
-                errores.forEach(e => {
-                    if(e.id === 1 ){
-                        e.mensaje = "El Nombre debe contener al menos dos caracteres"
-                        variable = false
-                    }
-                });
-                if (variable) {
-                    errores.push(error)
-                }
-                break; */
-
+    
             case !regExLetter.test(nombre.value):
                 $('#nameContainer').innerHTML = "<small>El nombre no puede contener menos de 2 caracteres,ni caracteres especiales </small>"
                 nombre.style.border = "1px solid red"
@@ -359,23 +348,3 @@ window.addEventListener('load', () => {
     })
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
