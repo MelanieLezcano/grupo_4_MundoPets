@@ -120,11 +120,11 @@ window.addEventListener('load', () => {
 
                 /* esta validacion deberia ir en el register */
             case !regExPass.test(inputContrasenia.value):
-                $('#contraseniaContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
+                $('#contraseniaContainer').innerHTML = "<small>La contraseña es invalida </small>"
                 inputContrasenia.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 4) {
-                        e.mensaje = "Debe contener al menos 8 caracteres"
+                        e.mensaje = "La contraseña es invalida"
                         variable = false
                     }
                 });

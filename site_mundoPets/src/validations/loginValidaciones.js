@@ -13,7 +13,7 @@ module.exports = [
     /* contraseña */
     check('contrasenia').trim()
         .notEmpty().withMessage('Debe ingresar su contraseña').bail()
-        .isLength({ min: 8 }).withMessage('Debe contener al menos 8 caracteres'),
+        .isLength({ min: 8 }).withMessage('La contraseña es invalida'),
 
     body('contrasenia')
         /* value es lo que estamos recibiendo por valor de email */
