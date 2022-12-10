@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
-    let inputContrasenia2 = $('#contrasenia2')
+    /* let inputContrasenia2 = $('#contrasenia2') */
 
     let errores = [{
         id: 1,
