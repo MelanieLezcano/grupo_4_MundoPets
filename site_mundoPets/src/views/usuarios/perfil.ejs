@@ -11,7 +11,9 @@
                     <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
                 </div>
             </div>
+            <div class="fondoSaludo">
                 <div class="saludo">Bienvenid@ <%= `${locals.usuarioLogin.rol == 1 ? 'Administrador' : 'Usuario' } ${locals.usuarioLogin.nombre}` %>!</div>
+            </div>
             </article>
             <article class="article2">
                 <ul>
