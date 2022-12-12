@@ -1,72 +1,88 @@
-.perfil main{
-    height: 70vh;
+.perfil{
+    padding: 6vw;
+}
+
+.perfil .fondoCeleste{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--colorCeleste);
+    height: 80vh;
+    border-radius: 25px;
+}
+
+.perfil .article1{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
-.perfil main h1 {
-    text-transform: capitalize;
-    font-family: var(--fuenteSubtitulos);
-    color: var(--colorAzulMarino);
-}
-.perfil main .imgPerfil{
-    width:50%;
-    height: 185px;
+
+.perfil .imgPosicion{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 4vw;
+}
+
+.perfil .imgPerfil{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     
-}
-.perfil main .imgPerfil img{
-    width: 75%;
-    height: 183px
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 50%;
+    border: 3px solid white;
+    
 }
 
-.perfil main button {
-    border: none;
-    background-color: var(--colorNaranja);
-    height: 40px;
+.perfil .imgPerfil img{
+    height: auto;
+    width: auto;
+}
+
+.perfil .fondoSaludo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.perfil .saludo{
+    background-color: white;
+    padding: 1% 10% 1% 10%;
+    border-radius: 25px;
+
+    font-family: var(--fuenteSubtitulos);
     color: var(--colorAzulFrancia);
-    border-radius: 8px;
-    margin: 5px;
-    font-size: 31px;
+    font-size: 20px;
 }
-.perfil main  a button {
+
+.perfil .article2{
+    margin-top: 7%;
+
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+    font-size: 22px;
+}
+
+.perfil .article2 ul li a{
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+    font-size: 22px;
+}
+
+.perfil .article2 button{
+    font-family: var(--fuenteSubtitulos);
+    font-size: 22px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
-    background-color: var(--colorNaranja);
-    height: 40px;
-    color: var(--colorAzulFrancia);
-    border-radius: 8px;
-    margin: 5px;
-    font-size: 31px;
-}
-
-@media (min-width:768px){
-    .perfil main .imgPerfil{
-        width: 47%;
-        height: 236px;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .perfil main .imgPerfil img{
-        width: 76%;
-        height: 236px;
-    }
-}
-
-@media (min-width:1024px){
-   
-    .perfil main .imgPerfil{
-        width:60%;
-        height: 370px;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-    .perfil main .imgPerfil img{
-        width: 68%;
-        height: 370px;
-        
-    }
 }
