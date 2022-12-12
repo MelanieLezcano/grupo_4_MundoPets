@@ -221,6 +221,14 @@
     visibility: hidden;
 }
 
+.carritoUno .th1{
+    border-radius: 15px 0 0 0;
+}
+
+.carritoUno .th4{
+    border-radius: 0 15px 0 0;
+}
+
 @media (min-width:426px){
     .carritoUno .precioListaMovil{
         display: none;

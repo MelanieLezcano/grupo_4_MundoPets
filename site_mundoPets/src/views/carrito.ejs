@@ -17,7 +17,7 @@
                     <thead>
                         <tr class="titulosTabla">
                             <div class="marcoAmarillo"></div>
-                            <th>producto</th><th>precio</th><th>cantidad</th><th></th>
+                            <th class="th1">producto</th><th>precio</th><th>cantidad</th><th class="th4"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                                     <div  class="img">
                                         <img src="/img/<%= producto.imagen %>" alt="Imagen principal"  class="img">
                                     </div> 
-                                    <a href="/detalle" class="a"><%= producto.titulo %> </a>
+                                    <a href="/productos/detalle/2" class="a"><%= producto.titulo %> </a>
                                 </div>
                             </td>
                             <td>
@@ -74,9 +74,9 @@
                             <div>Total</div>
                         </div>
                         <div class="filaPrecios">
-                            <div>$13.280</div>
+                            <div><%= "$"+producto.precio %></div>
                             <div>$0</div>
-                            <div class="precioFinal">$13.280</div>
+                            <div class="precioFinal"><%= "$"+producto.precio %></div>
                         </div>
                     </div>
                     <div class="divFinalizar"><button class="finalizar">Finalizar Compra</button></div>
