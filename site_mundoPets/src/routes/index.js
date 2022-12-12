@@ -6,7 +6,6 @@ const router = express.Router()
 
 router.get('/', home);
 router.get('/busqueda', search);
-router.get('/productos/:categoria', productos);
 router.get('/contacto',contacto);
 router.get('/nosotros',nosotros);
 
