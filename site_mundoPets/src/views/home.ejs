@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('./partials/head',{title: 'MundoPets'}) %> 
-    
+<%- include('./partials/head',{title: 'MundoPets' }) %>
+
     <body class="home">
         <section class="banner1500">
             <img src="img/bannerHome1500.png" alt="">
@@ -15,125 +15,126 @@
         </section>
 
         <%- include('./partials/header') %>
-    
-        <main class="mainHome">
-            <div class="bannerFalso"></div>
 
-            <section class="bannerFalsoMobile">
-                <img src="img/bannerHome.png" alt="">
-            </section>
-        
-        <section class="section1">
-            <div class="divTitulo">
-            <span class="spanTitulo">
-            <span class="spanAzul">NUESTRAS </span>
-            <span class="spanNaranja">MARCAS</span>
-        </span>
-    </div>
-            <div class="logos">
-                <img src="img/proplan_logo.png" alt="logo proplan">
-                <img src="img/royalcanin_logo.png" alt=" logo royal canin">
-                <img src="img/infinity_logo.png" alt="logo infinity ">
-            </div>
-        </section>
+            <main class="mainHome">
+                <div class="bannerFalso"></div>
 
+                <section class="bannerFalsoMobile">
+                    <img src="img/bannerHome.png" alt="">
+                </section>
 
-        
-        <section class="destacadosP">
-            <div class="fondoFalso"></div>
-            <span class="spanTitulo">
-                <span class="spanAzul">LOS MÁS </span>
-                <span class="spanNaranja">DESTACADOS</span>
-            </span>
-           </section> 
-           <section class="carrouselProductos">
-            <div class="glider-contain">
-                <div class="glider">
-                    <% productos.forEach(producto => { %>
-                        <%- include('./partials/cards',{
-                            id:producto.id,
-                            imagenes:producto.imagen,
-                            nombre:producto.titulo,
-                            descuento:producto.descuento,
-                            precio:producto.precio
-                        }) %> 
-                    <% }) %>
-                </div>             
-                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
-                <div role="tablist" class="dots"></div>
-              </div>
-        </section>
-
-        <section class="section2">
-            <div class="divTitulo">
-            <span class="spanTitulo">
-            <span class="spanAzul">NUESTRAS </span>
-            <span class="spanNaranja">MARCAS</span>
-        </span>
-    </div>
-            <div class="logos">
-                <img src="img/proplan_logo.png" alt="logo proplan">
-                <img src="img/royalcanin_logo.png" alt=" logo royal canin">
-                <img src="img/infinity_logo.png" alt="logo infinity ">
-            </div>
-        </section>
-
-        
-        <div class="links">
-            <section class="perro">
-                <div class="dog">
-                    <div class="imgMascotasP">
-                        <a class="perrosTexto" href="/productos/Perro ">Perros</a>
-                        <img class="patitas" src="img/patitasAmarillas.png" alt="">
+                <section class="section1">
+                    <div class="divTitulo">
+                        <span class="spanTitulo">
+                            <span class="spanAzul">NUESTRAS </span>
+                            <span class="spanNaranja">MARCAS</span>
+                        </span>
                     </div>
-                    <img class="imgPerro" src="img/perro1.png" alt="">
-                </div>
-              
-              
-            </section>
-            <section class="gato">
-               
-                <div class="cat">
-                    <div class="imgMascotas">
-                    <a class="gatosTexto" href="/productos/Gato ">Gatos</a>
-                    <img class="patitas" src="img/patitasNaranjas.png" alt="">
-                </div>
-                    <img class="imgGato" src="img/gato1.png" alt="">
-                </div>
-            </section>
-            <section class="nosotros">
-                <div class="paw">
-                    <div class="patita"><i class="fas fa-paw"></i></div>
-                    <a href="/nosotros">Sobre Nosotros</a>
-                </div>
-            </section>
-            
-            <section class="contacto">
-                <div class="envelop">
-                    <i class="fas fa-envelope"></i>
-                    <a href="/contacto">Contacto</a>
-                </div>
-            </section>
-        </div>
-        <section class="quienSomos">
-            <a href="/nosotros"> <img src="/img/quienes.somos.png" alt=""></a>
-            <span class="textoColum">
-           <span class="spanQuienesSomos">
-            <span class="textoQuienes">QUIENES </span>
-            <span class="textoSomos"> SOMOS</span>
-        </span>
-                <span class="spanParrafo"> Somos una empresa dedicada a la nutrición y venta de alimentos para mascotas. <br>
-                     Te ofrecemos las mejores marcas de balanceado para perros y gatos. <br>
-                      Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas. <br>
-                       Brindamos  asesoramiento para elegir la mejor opción según las necesidades de  tu mascota. <br>
-                        Tenemos amplia variedad de productos y contamos con el mejor precio del mercado.</span>
-            </span>
-        </section>
+                    <div class="logos">
+                        <img src="img/proplan_logo.png" alt="logo proplan">
+                        <img src="img/royalcanin_logo.png" alt=" logo royal canin">
+                        <img src="img/infinity_logo.png" alt="logo infinity ">
+                    </div>
+                </section>
 
-    </main>
 
-    <%- include('./partials/footer') %>
 
-    
-</body>
+                <section class="destacadosP">
+                    <div class="fondoFalso"></div>
+                    <span class="spanTitulo">
+                        <span class="spanAzul">LOS MÁS </span>
+                        <span class="spanNaranja">DESTACADOS</span>
+                    </span>
+                </section>
+                <section class="carrouselProductos">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <% productos.forEach(producto=> { %>
+                                <%- include('./partials/cards',{ id:producto.id, imagenes:producto.imagen,
+                                    nombre:producto.titulo, descuento:producto.descuento, precio:producto.precio }) %>
+                                    <% }) %>
+                        </div>
+                        <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                        <div role="tablist" class="dots"></div>
+                    </div>
+                </section>
+
+                <section class="section2">
+                    <div class="divTitulo">
+                        <span class="spanTitulo">
+                            <span class="spanAzul">NUESTRAS </span>
+                            <span class="spanNaranja">MARCAS</span>
+                        </span>
+                    </div>
+                    <div class="logos">
+                        <img src="img/proplan_logo.png" alt="logo proplan">
+                        <img src="img/royalcanin_logo.png" alt=" logo royal canin">
+                        <img src="img/infinity_logo.png" alt="logo infinity ">
+                    </div>
+                </section>
+
+
+                <div class="links">
+                    <section class="perro">
+                        <div class="dog">
+                            <div class="imgMascotasP">
+                                <a class="perrosTexto" href="/productos/Perro ">Perros</a>
+                                <img class="patitas" src="img/patitasAmarillas.png" alt="">
+                            </div>
+
+                            <img class="imgPerro" src="img/perro1.png" alt="">
+                        </div>
+                    </section>
+
+
+
+
+
+                    <section class="gato">
+
+                        <div class="cat">
+                            <div class="imgMascotas">
+                                <a class="gatosTexto" href="/productos/Gato ">Gatos</a>
+                                <img class="patitas" src="img/patitasNaranjas.png" alt="">
+                            </div>
+                            <img class="imgGato" src="img/gato1.png" alt="">
+                        </div>
+                    </section>
+                    <section class="nosotros">
+                        <div class="paw">
+                            <div class="patita"><i class="fas fa-paw"></i></div>
+                            <a href="/nosotros">Sobre Nosotros</a>
+                        </div>
+                    </section>
+
+                    <section class="contacto">
+                        <div class="envelop">
+                            <i class="fas fa-envelope"></i>
+                            <a href="/contacto">Contacto</a>
+                        </div>
+                    </section>
+                </div>
+                <section class="quienSomos">
+                    <a href="/nosotros"> <img src="/img/quienes.somos.png" alt=""></a>
+                    <span class="textoColum">
+                        <span class="spanQuienesSomos">
+                            <span class="textoQuienes">QUIENES </span>
+                            <span class="textoSomos"> SOMOS</span>
+                        </span>
+                        <span class="spanParrafo"> Somos una empresa dedicada a la nutrición y venta de alimentos para
+                            mascotas. <br>
+                            Te ofrecemos las mejores marcas de balanceado para perros y gatos. <br>
+                            Siempre pensando en lo mejor para ellos,nuestros amigos de 4 patas. <br>
+                            Brindamos asesoramiento para elegir la mejor opción según las necesidades de tu mascota.
+                            <br>
+                            Tenemos amplia variedad de productos y contamos con el mejor precio del mercado.</span>
+                    </span>
+                </section>
+
+            </main>
+
+            <%- include('./partials/footer') %>
+
+
+    </body>

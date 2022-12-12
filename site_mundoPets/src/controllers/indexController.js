@@ -85,5 +85,21 @@ module.exports = {
 
 
 
-    }
+    },
+
+    nuestrosProductos: (req, res) => {
+        db.Productos.findAll({
+            include: [{all:true}]
+        })
+        
+        .then(productos => {
+            /* return res.send(productos) */
+            return res.render('nuestrosProductos',{
+                
+                productos
+            });
+        })
+        .catch(error => res.status(500).send(error))
+    },
+   
 }

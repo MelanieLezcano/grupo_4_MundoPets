@@ -22,6 +22,9 @@
       <li><a href="/usuarios/register">Creá tu cuenta</a></li>
       <% } %>
   </div>
+  <div class="nuestrosProductos">
+   <li><a href="/nuestrosProductos">Nuestros Productos</a></li> 
+  </div>
 <div class="buscador">
     <form action="/busqueda" method="get" target="_blank">
       <input type="text" name= "search" id="search" class="barrabusqueda" maxlength="100" placeholder="Buscar">
@@ -54,11 +57,12 @@
             <li><a href=" ">Mis compras</a></li>
             <% } %>
             
+            <li><a href="/nuestrosProductos ">Nuestros Productos</a></li>
             <li><a href="/productos/Perro ">Categoría Perro</a></li>
             <li><a href="/productos/Gato ">Categoría Gato</a></li>
             <li><a href="/contacto">Contacto</a></li>
             <% if (locals.usuarioLogin) { %>
-            <li><a href="/usuarios/cerrarSesion?_method=DELETE">Cerrar sesión</a></li>
+            <li><a href="">Cerrar sesión</a></li>
             <% } %>
         </ul>
       </div>
