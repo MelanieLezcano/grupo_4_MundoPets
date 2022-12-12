@@ -21,12 +21,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% products.forEach(producto => { %>
                         <tr>
                             <td>
                                 <div class="productoDetalle">
                                     <div  class="img">
-                                        <img id="imgMain" src="/img/<%= producto.imagenes[0] %>" alt="Imagen principal"  class="img">
+                                        <img src="/img/<%= producto.imagen %>" alt="Imagen principal"  class="img">
                                     </div> 
                                     <a href="/detalle" class="a"><%= producto.titulo %> </a>
                                 </div>
@@ -52,7 +51,6 @@
                                 </div>
                             </td>
                             <td><button class="eliminar"><i class="fa-solid fa-circle-xmark"></i></button></td>
-                            <% }) %>
                         </tbody>
                 </table>
                 <div class="borde"></div>

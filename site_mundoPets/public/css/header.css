@@ -1,12 +1,24 @@
-header {
+.home header {
    width: 100%;
    position: relative;
    margin: auto 0;
    height: 70px;
    z-index: 10;
-   background-color: rgba(127, 164, 243, 0.452);
+   background-color: rgba(127, 164, 243, 0.562);
    border-bottom-right-radius: 25px;
    border-bottom-left-radius: 25px;
+}
+
+header{
+   width: 100%;
+   position: relative;
+   margin-bottom: auto 0;
+   
+   height: 70px;
+   z-index: 10;
+   background-color: var(--colorAzulFrancia);
+   border-bottom-right-radius: 25px;
+   border-bottom-left-radius: 25px; 
 }
 
 header .top {
