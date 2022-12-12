@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
     <%- include('../partials/head',{title: locals.usuarioLogin.nombre}) %> 
-<body class="perfil">
+<body>
     <%- include('../partials/header') %>
-    <main>
-        <div class="imgPerfil">
-            <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
-        </div>
-       
-        <h1>Hola <%= `${locals.usuarioLogin.rol == 1 ? 'Administrador' : 'Usuario' } ${locals.usuarioLogin.nombre}` %></h1>
-        <a href="/usuarios/editarPerfil"><button>Editar perfil</button></a>
-        <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
-            <button type="submit">Cerrar Sesion</button>
-        </form>
-    </main>
+    <main  class="perfil">
+        <section class="fondoCeleste">
+            <article class="article1">
+                <div class="imgPosicion">
+                <div class="imgPerfil">
+                    <img src="/img/usuarios/<%= locals.usuarioLogin.imagen %>  " alt="">
+                </div>
+            </div>
+                <div class="saludo">Bienvenid@ <%= `${locals.usuarioLogin.rol == 1 ? 'Administrador' : 'Usuario' } ${locals.usuarioLogin.nombre}` %>!</div>
+            </article>
+            <article class="article2">
+                <ul>
+                    <li>
+                <a href="/usuarios/datosPerfil">Perfil</a>
+            </li>
+            <li>
+                <a href="/usuarios/editarPerfil">Editar perfil</a>
+            </li>
+            <li>
+                <a href="">Usuarios</a>
+            </li>
+            <li>Productos</li>
+            <ul>
+                    <li><a href="/admin/lista">Listado</a></li>
+                    <li><a href="/admin/crear">Crear producto</a></li>
+                </ul>
+                <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
+                    <button type="submit">Cerrar sesión</button>
+                </form>
+            </ul>
+            </main>
+            </article>
+        </section>
+
+
+
+
+
     
 </body>
 </html>

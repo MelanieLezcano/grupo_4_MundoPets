@@ -127,6 +127,9 @@ module.exports = {
     perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+    datosPerfil: (req, res) => {
+        return res.render('usuarios/datosPerfil')
+    },
     editarPerfil: (req, res) => {
         return res.render('usuarios/editarPerfil')
     }, 
