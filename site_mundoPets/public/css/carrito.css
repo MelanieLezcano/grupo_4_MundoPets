@@ -75,12 +75,14 @@
     border: none;
     color: var(--colorAzulFrancia);
     font-size: 20px;
+    background-color: white;
 }
 
 .carritoUno .eliminar{
     border: none;
     color: var(--colorNaranja);
     font-size: 30px;
+    background-color: white;
     
     display: flex;
     align-items: center;
@@ -109,7 +111,7 @@
 }
 
 .carritoUno .actualizar{
-    color: var(--colorHueso);
+    color: white;
     font-size: 18px;
     font-weight: 600;
     
