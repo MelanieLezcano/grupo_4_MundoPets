@@ -20,7 +20,7 @@ module.exports = {
         }
         if (errors.isEmpty()) {
 
-            let { nombre, email, contrasenia, apellido } = req.body
+            let { nombre, email, contrasenia, apellido, contacto, ciudad, genero } = req.body
 
               db.Usuarios.create({
               
@@ -28,9 +28,9 @@ module.exports = {
                 apellido,
                 email,
                 contraseña: bcrypt.hashSync(contrasenia, 10),
-                /* contacto, */
-               /*  ciudad, */
-                /* genero, */
+                contacto: null,
+                ciudad: null,
+                genero: null,
                 /* direccion, */
                 /* numeroTarjeta, */
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
@@ -42,6 +42,11 @@ module.exports = {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     apellido:usuario.apellido,
+                    email: usuario.email,
+                    contraseña: usuario.contrasenia,
+                    contacto: usuario.contacto,
+                    ciudad: usuario.ciudad,
+                    genero: usuario.genero,
 
                     imagen: usuario.imagen,
                     rol: usuario.roles_id
@@ -141,13 +146,14 @@ module.exports = {
 
     nuevoPerfil: (req, res) => {
         let id  = req.params.id
-        let{nombre, apellido} = req.body
+        let{nombre, apellido, email} = req.body
 
         db.Usuarios.findOne({where: {id: id}})
         .then(usuario => {
             db.Usuarios.update({
                 nombre,
                 apellido,
+                email,
                 imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
             },{
                 where: {id:id}

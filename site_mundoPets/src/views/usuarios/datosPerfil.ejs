@@ -64,7 +64,11 @@
             <div class="subtitulo">Usuario</div>
             <div class="dato"><%= locals.usuarioLogin.nombre +" "+ locals.usuarioLogin.apellido%> </div>
             <div class="subtitulo">E-mail</div>
-            <div class="dato"><%= locals.usuarioLogin.email %> </div>
+            <div class="dato"><% if (locals.usuarioLogin.contacto === null) { %>
+                <%- "-" %> 
+              <% } else { %>
+                <%- locals.usuarioLogin.contacto %> 
+                <% } %></div>
         </article>
         <article  class="fondoBlanco2">
             <div class="tituloDatos">Datos personales</div>
