@@ -24,7 +24,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 4vw;
+    padding: 20px;
 }
 
 .perfil .imgPerfil{
@@ -56,8 +56,9 @@
 }
 
 .perfil .saludo{
+    width: 90%;
     background-color: white;
-    padding: 1% 10% 1% 10%;
+    padding: 5px 20px 5px 20px;
     border-radius: 25px;
 
     font-family: var(--fuenteSubtitulos);
@@ -101,48 +102,59 @@
     .perfil{
         display: flex;
         flex-direction: row;
+        height: 80vh;
+    }
+
+    .perfil .section1{
         height: 100%;
     }
     
     .perfil .fondoCeleste{
         width: 50%;
-        height: 100vh;
+
     }
 
     .perfil .section2{
         width: 50%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         margin-left: 3vw;
 
     }
 
+    .perfil .fondoTitulo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;    
+    }
+
     .perfil .titulo{
-        width: 50%;
+        background-color: white;
+        padding: 0 15px 0 15px;
+        border-radius: 25px;
         font-family: var(--fuenteSubtitulos);
         color: var(--colorNaranja);
-        font-size: 30px;
-
-        background-color: white;
-        border-radius: 25px;
-        padding-left: 5%;
+        font-size: 35px;
+        font-weight: 500;
+        text-align: center;
     }
 
     .perfil .fondoBlanco1{
         background-color: rgba(255, 255, 255, 0.918);
-        margin-top: 3vw;
+        margin-top: 15px;
         border-radius: 25px;
-        padding: 5%;
+        padding: 17px;
         height: 30%;
     }
 
     .perfil .fondoBlanco2{
         background-color: rgba(255, 255, 255, 0.918);
-        margin-top: 3vw;
+        margin-top: 15px;
         border-radius: 25px;
-        padding: 5%;
-        height: 70%;
+        padding: 17px;
+        height: 60%;
     }
 
     .perfil .tituloDatos{
@@ -191,4 +203,14 @@
         margin-left: 3vw;
 
     }
+
+    .perfil .fondoBlanco1{
+        margin-left: 3vw;
+    }
+
+    .perfil .fondoBlanco2{
+        margin-left: 3vw;
+    }
+
+    .perfil
 }
