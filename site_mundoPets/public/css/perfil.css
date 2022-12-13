@@ -1,5 +1,5 @@
 .perfil{
-    padding: 6vw;
+    margin: 40px;
 }
 
 .perfil .fondoCeleste{
@@ -62,7 +62,8 @@
 
     font-family: var(--fuenteSubtitulos);
     color: var(--colorAzulFrancia);
-    font-size: 20px;
+    font-size: 23px;
+    text-align: center;
 }
 
 .perfil .article2{
@@ -85,4 +86,109 @@
     color: white;
     background-color: rgba(255, 255, 255, 0);
     border: none;
+}
+
+.perfil .article2 i{
+    padding: 8px;
+}
+
+.perfil .section2{
+    display: none;
+}
+
+@media (min-width:700px){
+
+    .perfil{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+    
+    .perfil .fondoCeleste{
+        width: 50%;
+        height: 100vh;
+    }
+
+    .perfil .section2{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+
+    }
+
+    .perfil .titulo{
+        width: 50%;
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorNaranja);
+        font-size: 30px;
+
+        background-color: white;
+        border-radius: 25px;
+        padding-left: 5%;
+    }
+
+    .perfil .fondoBlanco1{
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-top: 3vw;
+        border-radius: 25px;
+        padding: 5%;
+        height: 30%;
+    }
+
+    .perfil .fondoBlanco2{
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-top: 3vw;
+        border-radius: 25px;
+        padding: 5%;
+        height: 70%;
+    }
+
+    .perfil .tituloDatos{
+        margin-left: 2px;
+
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorAzulMarino);
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .perfil .subtitulo{
+        margin-left: 15px;
+        
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorAzulMarino);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .perfil .dato{
+        margin-left: 25px;
+        
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorCeleste);
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width:1024px){
+
+    .perfil{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .perfil .fondoCeleste{
+        width: 30%;
+    }
+
+    .perfil .section2{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+
+    }
 }

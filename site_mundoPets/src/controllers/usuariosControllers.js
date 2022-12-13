@@ -41,8 +41,9 @@ module.exports = {
                 req.session.usuarioLogin = {
                     id: usuario.id,
                     nombre: usuario.nombre,
-                    imagen: usuario.imagen,
                     apellido:usuario.apellido,
+
+                    imagen: usuario.imagen,
                     rol: usuario.roles_id
                 }
                 return res.redirect('/')
@@ -96,6 +97,10 @@ module.exports = {
                 id: usuario.id,
                 nombre: usuario.nombre,
                 apellido: usuario.apellido,
+                email: usuario.email,
+                contacto: usuario.contacto,
+                ciudad: usuario.ciudad,
+                genero: usuario.genero,
                 imagen: usuario.imagen,
                 rol: usuario.roles_id
             }
