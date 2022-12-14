@@ -20,10 +20,8 @@
      background-repeat: no-repeat;
      display: block;
      background-position: cover;
-     background-size: 180%;
-     background-repeat: no-repeat;
-
-
+     background-size: 120vw;
+     background-repeat: repeat;
  }
  .admin a{
     color: black;

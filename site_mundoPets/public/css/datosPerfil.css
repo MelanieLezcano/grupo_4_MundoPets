@@ -1,8 +1,95 @@
-.perfil{
+
+    .datosPerfil{
+        display: flex;
+        flex-direction: row;
+        height: 80vh;
+    }
+
+    .datosPerfil .section1{
+        height: 100%;
+    }
+    
+    .datosPerfil .fondoCeleste{
+        width: 50%;
+
+    }
+
+    .datosPerfil .section2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+
+    }
+
+    .datosPerfil .fondoTitulo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;    
+    }
+
+    .datosPerfil .titulo{
+        background-color: white;
+        padding: 0 15px 0 15px;
+        border-radius: 25px;
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorNaranja);
+        font-size: 35px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .datosPerfil .fondoBlanco1{
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-top: 15px;
+        border-radius: 25px;
+        padding: 17px;
+        height: 30%;
+    }
+
+    .datosPerfil .fondoBlanco2{
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-top: 15px;
+        border-radius: 25px;
+        padding: 17px;
+        height: 60%;
+    }
+
+    .datosPerfil .tituloDatos{
+        margin-left: 2px;
+
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorAzulMarino);
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .datosPerfil .subtitulo{
+        margin-left: 15px;
+        
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorAzulMarino);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .datosPerfil .dato{
+        margin-left: 25px;
+        
+        font-family: var(--fuenteSubtitulos);
+        color: var(--colorCeleste);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+.datosPerfil{
     margin: 40px;
 }
 
-.perfil .fondoCeleste{
+.datosPerfil .fondoCeleste{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,14 +99,14 @@
     border-radius: 25px;
 }
 
-.perfil .article1{
+.datosPerfil .article1{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.perfil .imgPosicion{
+.datosPerfil .imgPosicion{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +114,7 @@
     padding: 20px;
 }
 
-.perfil .imgPerfil{
+.datosPerfil .imgPerfil{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -43,19 +130,19 @@
     
 }
 
-.perfil .imgPerfil img{
+.datosPerfil .imgPerfil img{
     height: auto;
     width: auto;
 }
 
-.perfil .fondoSaludo{
+.datosPerfil .fondoSaludo{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.perfil .saludo{
+.datosPerfil .saludo{
     width: 90%;
     background-color: white;
     padding: 5px 20px 5px 20px;
@@ -67,7 +154,7 @@
     text-align: center;
 }
 
-.perfil .article2{
+.datosPerfil .article2{
     margin-top: 7%;
 
     font-family: var(--fuenteSubtitulos);
@@ -75,13 +162,13 @@
     font-size: 22px;
 }
 
-.perfil .article2 ul li a{
+.datosPerfil .article2 ul li a{
     font-family: var(--fuenteSubtitulos);
     color: white;
     font-size: 22px;
 }
 
-.perfil .article2 button{
+.datosPerfil .article2 button{
     font-family: var(--fuenteSubtitulos);
     font-size: 22px;
     color: white;
@@ -89,32 +176,59 @@
     border: none;
 }
 
-.perfil .article2 i{
+.datosPerfil .article2 i{
     padding: 8px;
 }
 
-.perfil .section2{
+.datosPerfil .fondoCeleste{
     display: none;
 }
 
+.datosPerfil .buttonEditar{
+
+    background-color: var(--colorAzulFrancia);
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+    margin-top: 15px;
+}
+
+.datosPerfil .buttonEditar .aFont{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 @media (min-width:700px){
 
-    .perfil{
+    .datosPerfil .buttonEditar{
+        display: none;
+    }
+
+    .datosPerfil .fondoCeleste{
+        display: flex;
+    }
+    
+
+    .datosPerfil{
         display: flex;
         flex-direction: row;
         height: 80vh;
     }
 
-    .perfil .section1{
+    .datosPerfil .section1{
         height: 100%;
     }
     
-    .perfil .fondoCeleste{
+    .datosPerfil .fondoCeleste{
         width: 50%;
 
     }
 
-    .perfil .section2{
+    .datosPerfil .section2{
         width: 50%;
         height: 100%;
         display: flex;
@@ -123,14 +237,14 @@
 
     }
 
-    .perfil .fondoTitulo{
+    .datosPerfil .fondoTitulo{
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content:flex-start;    
     }
 
-    .perfil .titulo{
+    .datosPerfil .titulo{
         background-color: white;
         padding: 0 15px 0 15px;
         border-radius: 25px;
@@ -141,7 +255,7 @@
         text-align: center;
     }
 
-    .perfil .fondoBlanco1{
+    .datosPerfil .fondoBlanco1{
         background-color: rgba(255, 255, 255, 0.918);
         margin-top: 15px;
         border-radius: 25px;
@@ -149,7 +263,7 @@
         height: 30%;
     }
 
-    .perfil .fondoBlanco2{
+    .datosPerfil .fondoBlanco2{
         background-color: rgba(255, 255, 255, 0.918);
         margin-top: 15px;
         border-radius: 25px;
@@ -157,7 +271,7 @@
         height: 60%;
     }
 
-    .perfil .tituloDatos{
+    .datosPerfil .tituloDatos{
         margin-left: 2px;
 
         font-family: var(--fuenteSubtitulos);
@@ -166,7 +280,7 @@
         font-weight: 500;
     }
 
-    .perfil .subtitulo{
+    .datosPerfil .subtitulo{
         margin-left: 15px;
         
         font-family: var(--fuenteSubtitulos);
@@ -175,7 +289,7 @@
         font-weight: 500;
     }
 
-    .perfil .dato{
+    .datosPerfil .dato{
         margin-left: 25px;
         
         font-family: var(--fuenteSubtitulos);
@@ -187,16 +301,16 @@
 
 @media (min-width:1024px){
 
-    .perfil{
+    .datosPerfil{
         display: flex;
         flex-direction: row;
     }
     
-    .perfil .fondoCeleste{
+    .datosPerfil .fondoCeleste{
         width: 30%;
     }
 
-    .perfil .section2{
+    .datosPerfil .section2{
         width: 70%;
         display: flex;
         flex-direction: column;
@@ -204,13 +318,12 @@
 
     }
 
-    .perfil .fondoBlanco1{
+    .datosPerfil .fondoBlanco1{
         margin-left: 3vw;
     }
 
-    .perfil .fondoBlanco2{
+    .datosPerfil .fondoBlanco2{
         margin-left: 3vw;
     }
 
-    
 }

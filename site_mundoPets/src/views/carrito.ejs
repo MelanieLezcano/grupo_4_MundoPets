@@ -17,18 +17,21 @@
                     <thead>
                         <tr class="titulosTabla">
                             <div class="marcoAmarillo"></div>
-                            <th>producto</th><th>precio</th><th>cantidad</th><th></th>
+                            <th class="th1">producto</th><th>precio</th><th>cantidad</th><th class="th4"></th>
                         </tr>
                     </thead>
                     <tbody>
+<<<<<<< HEAD
                         <% productos.forEach(producto => { %>
+=======
+>>>>>>> 4282c9a564deea971936496a25d2647a01e9a7be
                         <tr>
                             <td>
                                 <div class="productoDetalle">
                                     <div  class="img">
-                                        <img id="imgMain" src="/img/<%= producto.imagenes[0] %>" alt="Imagen principal"  class="img">
+                                        <img src="/img/<%= producto.imagen %>" alt="Imagen principal"  class="img">
                                     </div> 
-                                    <a href="/detalle" class="a"><%= producto.titulo %> </a>
+                                    <a href="/productos/detalle/2" class="a"><%= producto.titulo %> </a>
                                 </div>
                             </td>
                             <td>
@@ -52,7 +55,6 @@
                                 </div>
                             </td>
                             <td><button class="eliminar"><i class="fa-solid fa-circle-xmark"></i></button></td>
-                            <% }) %>
                         </tbody>
                 </table>
                 <div class="borde"></div>
@@ -76,9 +78,9 @@
                             <div>Total</div>
                         </div>
                         <div class="filaPrecios">
-                            <div>$13.280</div>
+                            <div><%= "$"+producto.precio %></div>
                             <div>$0</div>
-                            <div class="precioFinal">$13.280</div>
+                            <div class="precioFinal"><%= "$"+producto.precio %></div>
                         </div>
                     </div>
                     <div class="divFinalizar"><button class="finalizar">Finalizar Compra</button></div>

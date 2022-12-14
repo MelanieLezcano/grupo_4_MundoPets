@@ -25,21 +25,24 @@
                             <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu  apellido"
                                 value="<%=  locals.usuarioLogin ? locals.usuarioLogin.apellido : null %>">
                             <div id="apellidoContainer"></div>
-
-                            <div></div>
                         </div>
+
                         <div div class="col col-5">
                             <label class="form-label" for="imagenes">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded"
-                                    src="/img/usuarios/foto_perfil_por_defecto.jpg" alt="">
-                                <div class="imgHover">
+                                <img id="img-preview"
+                                class="img-fluid img-thumbnail imagen-height rounded"
+                                src="/img/usuarios/<%=locals.usuarioLogin.imagen%>" alt="">
+<!--                                 <div class="imgHover">
                                     <p class="text-center">Selecionar Imagen</p>
-                                </div>
+                                </div> -->
                             </label>
-                        </div>
-                        <div>
-                         <div class="col col-5">
-                            <input  style="margin: 5px;" type="file" id="imagenes" name="imagenes"  value="<%-  locals.usuarioLogin ? locals.usuarioLogin.imagen : null  %> ">
+                            <input class="form-input" id="imagenes" type="file" name="imagenes"
+                            placeholder="Imagen del Producto" accept="img/*">
+                        
+                       
+                        <p class="span text-danger" id="imgError" style="width: 500px;">
+                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                        </p>
                         </div>
                         <button  style="margin: 5px;" type="submit">Editar</button>
                         <button  style="margin: 5px;" type="reset">Cancelar</button>
