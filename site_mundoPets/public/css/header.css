@@ -386,7 +386,7 @@ header .burger button{
    }
 
    header .usuario {
-      display: flex;
+    
       position: absolute;
       top: 7px;
       left: 184px;
