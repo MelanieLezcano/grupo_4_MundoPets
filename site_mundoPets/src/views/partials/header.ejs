@@ -11,15 +11,28 @@
   </div>
   <div class="usuario">
     <% if (locals.usuarioLogin) { %>
-      <a href="/usuarios/perfil"> Bienvenid@ <%=locals.usuarioLogin.nombre %></a>
+      <div class="bienvenido"><a  href="/usuarios/perfil"> Bienvenid@ <%=locals.usuarioLogin.nombre %></a>
+        <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
+          <button type="submit">Cerrar Sesion</button>
+        </form>
+      </div>
+     
     <% } else { %>
-      <a href="/usuarios/login"><i class="fas fa-user"></i></a>
+      <div  class="sesion"> <a  href="/usuarios/login">Inicia Sesión
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+     
+     
       <% } %>
   </div>
+   
+    
+    
   <div class="register">
     <% if (locals.usuarioLogin) { %>
       <% } else { %>
-      <li><a href="/usuarios/register">Creá tu cuenta</a></li>
+      <li><a href="/usuarios/register">Registrate</a></li>
       <% } %>
   </div>
   <div class="nuestrosProductos">
@@ -56,16 +69,18 @@
             <% if (locals.usuarioLogin) { %>
             <li><a href=" ">Mis compras</a></li>
             <% } %>
-            
             <li><a href="/nuestrosProductos ">Nuestros Productos</a></li>
             <li><a href="/productos/Perro ">Categoría Perro</a></li>
             <li><a href="/productos/Gato ">Categoría Gato</a></li>
             <li><a href="/contacto">Contacto</a></li>
             <% if (locals.usuarioLogin) { %>
-            <li><a href="">Cerrar sesión</a></li>
+            <li> <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
+              <button type="submit">Cerrar Sesion</button>
+          </form></li>
             <% } %>
         </ul>
       </div>
     </nav>
   </div>
 </header>    
+            
