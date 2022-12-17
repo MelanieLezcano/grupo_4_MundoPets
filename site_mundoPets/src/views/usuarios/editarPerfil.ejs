@@ -28,14 +28,101 @@
                         </div>
 
                         <div class="container bottom">
+                            <label for="contrasenia">Cambiar Contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contrasenia" id="contrasenia"
+                                    placeholder="Ingresa contraseña actual">
+                                <i class="fas fa-eye-slash" id="eye-contrasenia"></i>
+                            </div>
+                            <div id="contraseniaContainer"></div>
+                            <p class="span text-danger" id="contraseniaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contrasenia) { %>
+                                    <small>
+                                        <%= errors.contrasenia.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+                        </div>
+
+                        <div class="container bottom">
+                            <label for="contraseniaNueva">Nueva contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contraseniaNueva" id="contraseniaNueva"
+                                    placeholder="Ingresa una nueva Contraseña">
+                                <i class="fas fa-eye-slash" id="eye-contraseniaNueva"></i>
+                            </div>
+                            <div id="contraseniaNuevaContainer"></div>
+                            <p class="span text-danger" id="contraseniaNuevaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contraseniaNueva) { %>
+                                    <small>
+                                        <%= errors.contraseniaNueva.msg%>
+                                    </small>
+                                    <% } %>
+                             </p>
+
+                        </div>
+                        <div class="container bottom">
+                            <label for="contraseniaNueva2">Confirma tu nueva contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contraseniaNueva2" id="contraseniaNueva2"
+                                    placeholder="Confirma tu nueva Contraseña">
+                                <i class="fas fa-eye-slash" id="eye-contraseniaNueva2"></i>
+                            </div>
+                            <div id="contraseniaNueva2Container"></div>
+                            <p class="span text-danger" id="contraseniaNuevaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contraseniaNueva2) { %>
+                                    <small>
+                                        <%= errors.contraseniaNueva2.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+                        </div>
+
+                        <div class="container bottom">
                             <label for="contacto">Contacto</label>
                             <input type="text" name="contacto" id="contacto" placeholder="Ingresa tu  contacto"
                                 value="<%=  locals.usuarioLogin ? locals.usuarioLogin.contacto : null %>">
                             <div id="contactoContainer"></div>
                         </div>
 
+                        <div class="container bottom">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu  ciudad"
+                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.ciudad : null %>">
+                            <div id="ciudadContainer"></div>
+                        </div>
+                        
+                        <label for="floatingSelect">Género</label>
+                        <select class="form-select" name="genero" id="genero" aria-label="Floating label select example">
+                            <% if (locals.usuarioLogin.genero == 'Femenino' ) { %>
+                                <option value="<%=locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                                  <% }%>
+                                  
+                                  <% if (locals.usuarioLogin.genero == 'Masculino' ) { %>
+                                    <option value="<%= locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Otro">Otro</option>
+                                      <% }%>
+                                      
+                                      <% if (locals.usuarioLogin.genero == 'Otro' ) { %>
+                                        <option value="<%=  locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                          <% }%>
+
+                                          <% if (locals.usuarioLogin.genero == '' ) { %>
+                                            <option hidden value="">Seleccionar género</option>
+                                            <option value="Otro">Otro</option>
+                                            <option value="Femenino">Femenino</option>
+                                            <option value="Masculino">Masculino</option>
+                                              <% }%>
+                         </select> 
+
+
                         <div div class="col col-5">
-                            <label class="form-label" for="imagenes">
+                            <label class="form-label" for="image">
                                 <img id="img-preview"
                                 class="img-fluid img-thumbnail imagen-height rounded"
                                 src="/img/usuarios/<%=usuarioLogin.imagen%>" alt="">
@@ -43,12 +130,12 @@
                                     <p class="text-center">Selecionar Imagen</p>
                                 </div> -->
                             </label>
-                            <input class="form-input" id="imagen" type="file" name="imagenes"
+                            <input class="form-input" id="imagenes" type="file" name="image"
                             placeholder="Imagen del Producto" accept="img/*">
                         
                        
                         <p class="span text-danger" id="imgError" style="width: 500px;">
-                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            <%= locals.errors && errors.image ? errors.image.msg : null %>
                         </p>
                         </div>
                         <button  style="margin: 5px;" type="submit">Editar</button>
@@ -59,6 +146,7 @@
             </main>
             <%- include('../partials/footer') %>
             <script src="/javascripts/imagenes.js"></script>
+            <script src="/javascripts/editarPerfil.js"></script>
     </body>
 
 </html>

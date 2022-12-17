@@ -132,7 +132,12 @@ module.exports = {
                 .catch(error => res.send(error))
         } else {
 
-            return res.render('admin/editar' + idParams)
+            return res.render('admin/editarProducto', {
+                producto,
+                categorias,
+                subCategorias,
+                marcas
+            })
         }
     },
     eliminar: (req, res) => {

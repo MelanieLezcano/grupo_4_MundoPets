@@ -73,19 +73,19 @@
             <div class="subtitulo">Apellido</div>
             <div class="dato"><%= locals.usuarioLogin.apellido %> </div>
             <div class="subtitulo">Contacto</div>
-            <div class="dato"><% if (locals.usuarioLogin.contacto === null) { %>
+            <div class="dato"><% if (locals.usuarioLogin.contacto === '') { %>
                 <%- "-" %> 
               <% } else { %>
                 <%- locals.usuarioLogin.contacto %> 
                 <% } %></div>
             <div class="subtitulo">Ciudad</div>
-            <div class="dato"><% if (locals.usuarioLogin.ciudad === null) { %>
+            <div class="dato"><% if (locals.usuarioLogin.ciudad === '') { %>
                 <%- "-" %> 
               <% } else { %>
                 <%- locals.usuarioLogin.ciudad %> 
                 <% } %></div>
             <div class="subtitulo">Género</div>
-            <div class="dato"><% if (locals.usuarioLogin.genero === null) { %>
+            <div class="dato"><% if (locals.usuarioLogin.genero === '') { %>
                 <%- "-" %> 
               <% } else { %>
                 <%- locals.usuarioLogin.genero %> 

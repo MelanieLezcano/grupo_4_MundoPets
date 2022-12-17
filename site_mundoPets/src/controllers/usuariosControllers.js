@@ -28,9 +28,9 @@ module.exports = {
                 apellido,
                 email,
                 contraseña: bcrypt.hashSync(contrasenia, 10),
-                contacto: null,
-                ciudad: null,
-                genero: null,
+                contacto: '',
+                ciudad: '',
+                genero: '',
                 /* direccion, */
                 /* numeroTarjeta, */
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
@@ -154,6 +154,7 @@ module.exports = {
                 nombre: nombre,
                 apellido: apellido,
                 email: usuario.email,
+                contraseña: bcrypt.hashSync(contrasenia, 10),
                 contacto: contacto,
                 ciudad: ciudad,
                 genero: genero,
@@ -164,6 +165,11 @@ module.exports = {
             })
             .then(nuevo => {
                 
+                if (req.file){
+                    if((fs.existsSync('./public/img/usuarios/', usuario.imagen)) && usuario.imagen !== "foto_perfil_por_defecto.jpg"){
+                    fs.unlinkSync(`./public/img/usuarios/${usuario.imagen}`)}}
+                
+
 /*                 return res.redirect('/usuarios/perfil') */
                 db.Usuarios.findOne({where: {id: id}})
                 .then(data =>{
@@ -173,15 +179,12 @@ module.exports = {
                         nombre: data.nombre,
                         apellido: data.apellido,
                         email: data.email,
+                        contraseña: data.contrasenia,
                         contacto: data.contacto,
                         ciudad: data.ciudad,
                         genero: data.genero,
                         imagen: data.imagen,
                         rol: data.roles_id
-                    }
-                    if (req.file){
-                        if((fs.existsSync('./public/img/usuarios/', usuario.imagen)) && usuario.imagen !==
-                        fs.unlinkSync(`./public/img/usuarios/${usuario.imagen}`))
                     }
 
 
