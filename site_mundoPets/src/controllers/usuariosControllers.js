@@ -146,24 +146,88 @@ module.exports = {
 
     nuevoPerfil: (req, res) => {
         let id  = req.params.id
-        let{nombre, apellido, email} = req.body
+        let{nombre, apellido, email, contrasenia, contacto, ciudad, genero} = req.body
 
         db.Usuarios.findOne({where: {id: id}})
         .then(usuario => {
             db.Usuarios.update({
-                nombre,
-                apellido,
-                email,
-                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
+                nombre: nombre,
+                apellido: apellido,
+                email: usuario.email,
+                contacto: contacto,
+                ciudad: ciudad,
+                genero: genero,
+                imagen: req.file ? req.file.filename : usuario.imagen,
+            }
+            ,{
+                where: {id:id}
+            })
+            .then(nuevo => {
+                
+/*                 return res.redirect('/usuarios/perfil') */
+                db.Usuarios.findOne({where: {id: id}})
+                .then(data =>{
+                    console.log(data);
+                    req.session.usuarioLogin = {
+                        id: data.id,
+                        nombre: data.nombre,
+                        apellido: data.apellido,
+                        email: data.email,
+                        contacto: data.contacto,
+                        ciudad: data.ciudad,
+                        genero: data.genero,
+                        imagen: data.imagen,
+                        rol: data.roles_id
+                    }
+                    if (req.file){
+                        if((fs.existsSync('./public/img/usuarios/', usuario.imagen)) && usuario.imagen !==
+                        fs.unlinkSync(`./public/img/usuarios/${usuario.imagen}`))
+                    }
+
+
+                    if (req.cookies.MundoPets) {
+                        res.cookie('MundoPets', '', { maxAge: -1 })
+                        res.cookie('MundoPets', req.session.usuarioLogin, {
+                            maxAge: 1000 * 60 * 60 * 24
+                        })
+                        
+                    }
+                    
+                    req.session.save( (err) => {
+                        req.session.reload((err) => {
+                            return res.redirect('/usuarios/perfil')
+        
+                        });
+                     });
+
+
+                 })
+                 
+            })
+            .catch(error => res.status(500).send(error))
+
+        })
+        .catch(error => res.status(500).send(error))
+
+        /* db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                nombre: usuario.nombre,
+                apellido: usuario.apellido,
+                email: usuario.email,
+                contacto: usuario.contacto,
+                ciudad: usuario.ciudad,
+                genero: usuario.genero,
+                imagen: usuario.imagen,
             },{
                 where: {id:id}
             })
             .then(nuevo => {
-                return res.redirect('/')
+                return res.redirect('/usuarios/perfil')
             })
 
         })
-        .catch(error => res.status(500).send(error))
+        .catch(error => res.status(500).send(error)) */
 
     },
 

@@ -27,16 +27,23 @@
                             <div id="apellidoContainer"></div>
                         </div>
 
+                        <div class="container bottom">
+                            <label for="contacto">Contacto</label>
+                            <input type="text" name="contacto" id="contacto" placeholder="Ingresa tu  contacto"
+                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.contacto : null %>">
+                            <div id="contactoContainer"></div>
+                        </div>
+
                         <div div class="col col-5">
                             <label class="form-label" for="imagenes">
                                 <img id="img-preview"
                                 class="img-fluid img-thumbnail imagen-height rounded"
-                                src="/img/usuarios/<%=locals.usuarioLogin.imagen%>" alt="">
+                                src="/img/usuarios/<%=usuarioLogin.imagen%>" alt="">
 <!--                                 <div class="imgHover">
                                     <p class="text-center">Selecionar Imagen</p>
                                 </div> -->
                             </label>
-                            <input class="form-input" id="imagenes" type="file" name="imagenes"
+                            <input class="form-input" id="imagen" type="file" name="imagenes"
                             placeholder="Imagen del Producto" accept="img/*">
                         
                        
@@ -51,6 +58,7 @@
                 </section>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/javascripts/imagenes.js"></script>
     </body>
 
 </html>

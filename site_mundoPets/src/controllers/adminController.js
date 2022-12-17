@@ -132,7 +132,7 @@ module.exports = {
                 .catch(error => res.send(error))
         } else {
 
-            return res.redirect('/admin/editar/' + idParams)
+            return res.render('admin/editar' + idParams)
         }
     },
     eliminar: (req, res) => {
