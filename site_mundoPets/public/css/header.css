@@ -9,16 +9,16 @@
    border-bottom-left-radius: 25px;
 }
 
-header{
+header {
    width: 100%;
    position: relative;
    margin-bottom: auto 0;
-   
+
    height: 70px;
    z-index: 10;
    background-color: var(--colorAzulFrancia);
    border-bottom-right-radius: 25px;
-   border-bottom-left-radius: 25px; 
+   border-bottom-left-radius: 25px;
 }
 
 header .top {
@@ -49,27 +49,27 @@ header .carrito {
 
    display: none;
 }
+
 header .usuario {
-  display: none;
-   
+   display: none;
+
 }
-header .usuario i{
+
+header .usuario i {
    display: none;
 }
 
 
 
-header .usuario form  {
+header .usuario form {
    display: none;
 }
 
 
 
- 
+
 header .register {
-   position: absolute;
-   top: 20px;
-   left: 66px
+   display: none;
 }
 
 header .register li a {
@@ -90,11 +90,15 @@ header .buscador {
    justify-content: space-evenly;
    align-items: center;
    padding: 4px;
-   width: 55%;
+   width: 59%;
    height: 65px;
    top: 0;
-   left: 129px;
+   left: 87px;
 
+}
+
+header .buscador form {
+   width: 100%;
 }
 
 header .buscador input {
@@ -116,7 +120,7 @@ header .buscador button {
    border: 0;
    position: absolute;
    height: 21px;
-   left: 190px;
+   left: 220px;
    top: 22px;
    padding: 2px;
 }
@@ -152,14 +156,15 @@ header .burger {
 
 header .burger label.burger-label {
    position: absolute;
-   top: -1px;
+   text-align: center;
+   top: 5px;
    right: 7px;
    left: 344px;
    font-size: 30px;
-   padding: 11px 30px;
+   padding: 5px 6px;
    color: white;
    display: inline-block;
-   height: 65px;
+   height: 56px
 }
 
 header .burger input.burger-menu {
@@ -199,7 +204,8 @@ header .burger nav a {
    font-size: 18px;
    font-family: var(--fuenteTitulos);
 }
-header .burger button{
+
+header .burger button {
    text-align: center;
    font-size: 18px;
    font-family: var(--fuenteTitulos);
@@ -209,7 +215,7 @@ header .burger button{
    text-transform: uppercase;
 }
 
-@media (min-width:470px){
+@media (min-width:470px) {
    header .buscador button {
       color: white;
       border-color: white;
@@ -221,58 +227,79 @@ header .burger button{
       top: 22px;
       padding: 2px;
    }
+
    header .burger label.burger-label {
       position: absolute;
-      top: -1px;
+      text-align: center;
+      top: 5px;
       right: 7px;
-      left: 358px;
+      left: 344px;
       font-size: 30px;
-      padding: 11px 30px;
+      padding: 5px 6px;
       color: white;
       display: inline-block;
-      height: 65px;
+      height: 56px
    }
-   @media (min-width:544px){
-      header .buscador button{
+
+   @media (min-width:506px) {
+      header .buscador button {
          left: 227px;
       }
-      header .burger label.burger-label{
-         left: 453px;
-         width: 60%;
+
+      header .burger label.burger-label {
+         left: 408px;
+         width: 14%;
       }
-      header .register{
-         left: 84px
+   }
+
+   @media (min-width:544px) {
+      header .buscador button {
+         left: 227px;
       }
+
+      header .burger label.burger-label {
+         left: 437px;
+         width: 14%;
+      }
+
 
    }
 }
-@media (min-width:606px){
-   header .buscador{
+
+@media (min-width:606px) {
+   header .buscador {
       width: 60%;
       left: 161px;
    }
-   header .buscador button{
+
+   header .buscador button {
       left: 331px;
    }
-   header .buscador form{
+
+   header .buscador form {
       width: 100%;
    }
-   header .burger label.burger-label{
+
+   header .burger label.burger-label {
       left: 514px;
    }
 }
-@media (min-width:664px){
-   header .buscador{
+
+@media (min-width:664px) {
+   header .buscador {
       width: 60%;
       left: 161px;
    }
-   header .buscador button{
+
+   header .buscador button {
       left: 331px;
    }
-   header .buscador form{
+
+   header .buscador form {
       width: 100%;
    }
-   header .burger label.burger-label{
+
+   header .burger label.burger-label {
       left: 565px;
    }
 }
@@ -307,17 +334,20 @@ header .burger button{
    }
 
    header .register {
+      display: block;
       position: absolute;
-      left: 108px;
+      top: 20px;
+      left: 102px
    }
 
    header .register li a {
       font-size: 18px;
    }
+
    header .usuario {
       position: absolute;
       top: 7px;
-      left: 80px;
+      left: 102px;
       width: 19%;
       height: 65px;
       display: flex;
@@ -326,28 +356,30 @@ header .burger button{
       align-content: space-around;
       align-items: center;
       justify-content: center;
-      
+
    }
-   header .usuario i{
+
+   header .usuario i {
       display: none;
    }
 
-   header  .bienvenido a {
+   header .bienvenido a {
       text-align: center;
       font-size: 16px;
       font-family: var(--fuenteTitulos);
       color: white;
    }
-   header .sesion{
+
+   header .sesion {
       display: none;
    }
 
-   header .usuario form{
+   header .usuario form {
       background-color: none;
    }
 
-   header .usuario button{
-     display: none;
+   header .usuario button {
+      display: none;
    }
 
    header .buscador {
@@ -355,7 +387,8 @@ header .burger button{
       left: 210px;
       width: 56%;
    }
-   header .buscador form{
+
+   header .buscador form {
       width: 100%;
    }
 
@@ -373,11 +406,13 @@ header .burger button{
 
    header .admin {
       position: absolute;
-      left:619px
+      left: 619px
    }
-   header .admin li{
+
+   header .admin li {
       width: 100%;
    }
+
    header .admin a {
       font-size: 18px;
    }
@@ -385,15 +420,15 @@ header .burger button{
    header .burger {
       position: absolute;
       top: 5px;
-      left: 234px;
-      width: 50%;
+      left: 14px;
+      width: 96%;
 
    }
 
    header .burger label.burger-label,
    input.burger-menu {
-      left: 422px;
-      top: -6px
+      left: 645px;
+      top: 0px
    }
 
    header .burger nav {
@@ -404,19 +439,23 @@ header .burger button{
    }
 
 }
-@media (min-width:848px){
-   header .buscador{
-      width: 60%;
-      left: 240px;
+
+@media (min-width:848px) {
+   header .buscador {
+      width: 58%;
+      left: 266px;
    }
-   header .buscador button{
+
+   header .buscador button {
       left: 372px;
    }
-   header .buscador form{
+
+   header .buscador form {
       width: 100%;
    }
-   header .burger label.burger-label{
-      left: 565px;
+
+   header .burger label.burger-label {
+      left: 724px;
    }
 }
 
@@ -460,7 +499,7 @@ header .burger button{
       align-content: center;
       justify-content: space-around;
       top: 3px;
-      left: 96px;
+      left: 101px;
 
    }
 
@@ -475,41 +514,48 @@ header .burger button{
       position: absolute;
       top: 10px;
       left: 231px;
-      width: 19%;
+      width: 17%;
       height: 58px;
       flex-wrap: wrap;
-      flex-direction: row;
+      flex-direction: column;
       align-content: center;
       align-items: center;
       justify-content: space-evenly;
       text-align: center;
+  }
+
+   header .usuario li,
+   form {
+      width: 100%;
    }
 
-   header .bienvenido a, .sesion a{
-    
+   header .bienvenido a,
+   .sesion a, button{
+
       text-align: center;
       font-size: 25px;
       font-family: var(--fuenteSubtitulos);
       color: white;
    }
-   header .sesion{
+
+   header .sesion {
       display: block;
    }
 
-    header .usuario i {
+   header .usuario i {
       display: block;
       width: 100%;
       font-size: 21px;
       text-align: center;
       font-family: var(--fuenteTitulos);
-       position: absolute;
-       top: 24px;
-       left: 66px;
+      position: absolute;
+      top: 24px;
+      left: 66px;
       color: white;
-   } 
- 
- 
-   header .usuario button{
+   }
+
+
+   header .usuario button {
       display: block;
       text-align: center;
       font-size: 21px;
@@ -518,16 +564,18 @@ header .burger button{
       background: none;
       border: none;
    }
-   header .usuario form  {
+
+   header .usuario form {
       display: block;
    }
-   
+
 
    header .register {
       position: absolute;
       left: 115px;
    }
-   header .register li{
+
+   header .register li {
       width: 100%;
    }
 
@@ -543,7 +591,7 @@ header .burger button{
       display: block;
       position: absolute;
       top: 20px;
-      left: 866px
+      left: 909px
    }
 
    header .nuestrosProductos li a {
@@ -555,12 +603,13 @@ header .burger button{
    header .buscador {
       position: absolute;
       left: 461px;
-      width: 35%;
+      width: 43%;
    }
-   header .buscador form{
+
+   header .buscador form {
       width: 100%
    }
-   
+
    header .buscador button {
       color: white;
       border-color: white;
@@ -568,7 +617,7 @@ header .burger button{
       border: 0;
       position: absolute;
       height: 21px;
-      left: 278px;
+      left: 404px;
       top: 22px;
       padding: 4px;
    }
@@ -577,6 +626,7 @@ header .burger button{
       position: absolute;
       left: 930px
    }
+
    header .admin li a {
       font-size: 19px;
       color: white;
@@ -588,42 +638,92 @@ header .burger button{
    }
 
 }
+@media (min-width:1044px) {
+   header .carrito {
+      position: absolute;
+      width: 4%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      top: 3px;
+      left: 120px;
+  }
+  header .usuario {
+   display: flex;
+   position: absolute;
+   top: 10px;
+   left: 246px;
+   width: 13%;
+   height: 57px;
+   flex-direction: column;
+   align-content: space-around;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+header .buscador form {
+   width: 100%
+}
 
-@media (min-width:1163px){
-   header .nuestrosProductos{
+}
+
+@media (min-width:1163px) {
+   header .nuestrosProductos {
       left: 1028px
    }
-   header .buscador{
+
+   header .buscador {
       width: 42%;
       left: 478px;
    }
-   header .buscador button{
+   header .buscador form {
+      width: 100%
+   }
+   header .buscador button {
       left: 452px;
    }
-   header .usuario i{
+
+   header .usuario i {
       position: absolute;
       left: 46px;
    }
+
+   header .usuario li,
+   form {
+      width: 100%;
+   }
 }
 
-@media (min-width:1300px){
+@media (min-width:1300px) {
    header .nuestrosProductos {
       display: block;
       position: absolute;
       top: 20px;
       left: 1091px
    }
+
    header .buscador {
       position: absolute;
       left: 484px;
       width: 40%;
    }
+   header .buscador form {
+      width: 100%
+   }
    header .register {
       position: absolute;
       left: 126px;
    }
-    header .buscador button{
+
+   header .buscador button {
       left: 410px;
+   }
+
+   header .usuario li,
+   form {
+      width: 100%;
    }
 }
 
@@ -632,11 +732,12 @@ header .burger button{
 
 /* Notebook */
 @media (min-width:1366px) {
-   header .carrito{
+   header .carrito {
       width: 4%;
       position: absolute;
       left: 130px;
    }
+
    header .usuario {
       position: absolute;
       top: 11px;
@@ -663,6 +764,11 @@ header .burger button{
       font-size: 25px;
    }
 
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+
    header .register {
       position: absolute;
       left: 145px;
@@ -675,12 +781,12 @@ header .burger button{
 
    header .buscador {
       position: absolute;
-      left: 355px;
-      width: 50%;
-   }
+      left: 523px;
+      width: 28%;
+  }
 
    header .buscador form {
-      width: 50%;
+      width: 100%
    }
 
    header .buscador input {
@@ -694,7 +800,7 @@ header .burger button{
       border: 0;
       position: absolute;
       height: 21px;
-      left: 694px;
+      left: 592px;
       top: 22px;
       padding: 4px;
    }
@@ -702,7 +808,7 @@ header .burger button{
    header .nuestrosProductos {
       position: absolute;
       top: 18px;
-      left: 1142px
+      left: 1206px
    }
 
    header .nuestrosProductos li a {
@@ -715,6 +821,7 @@ header .burger button{
       position: absolute;
       left: 1260px
    }
+
    header .admin li a {
       font-size: 25px;
       color: white;
@@ -726,27 +833,40 @@ header .burger button{
       display: none
    }
 }
-@media (min-width:1400px){
+
+@media (min-width:1400px) {
    header .nuestrosProductos {
       position: absolute;
       top: 18px;
       left: 1172px
    }
+
    header .nuestrosProductos li a {
       font-size: 25px;
    }
+
    header .usuario {
       left: 277px;
    }
+
    header .usuario i {
       width: 100%;
       font-size: 25px;
       left: 76px;
-      
+
    }
+
    header .register li a {
       font-size: 25px;
 
+   }
+
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+   header .buscador form {
+      width: 100%
    }
 }
 
@@ -822,6 +942,11 @@ header .burger button{
       font-size: 25px;
    }
 
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+
    header .register {
       position: absolute;
       left: 153px;
@@ -834,12 +959,13 @@ header .burger button{
 
    header .buscador {
       position: absolute;
-      left: 367px;
-      width: 50%;
-   }
+      left: 509px;
+      width: 29%;
+  }
+   
 
    header .buscador form {
-      width: 50%;
+      width: 100%
    }
 
    header .buscador input {
@@ -853,7 +979,7 @@ header .burger button{
       border: 0;
       position: absolute;
       height: 21px;
-      left: 738px;
+      left: 657px;
       top: 22px;
       padding: 4px;
    }
@@ -861,7 +987,7 @@ header .burger button{
    header .nuestrosProductos {
       position: absolute;
       top: 20px;
-      left: 1197px
+      left: 1253px
    }
 
    header .nuestrosProductos li a {
@@ -874,6 +1000,7 @@ header .burger button{
       position: absolute;
       left: 1260px
    }
+
    header .admin li a {
       font-size: 25px;
       color: white;
@@ -886,11 +1013,205 @@ header .burger button{
    }
 
 }
-@media (min-width:1530px){
+
+@media (min-width:1500px) {
    header .nuestrosProductos {
       position: absolute;
       top: 20px;
-      left: 1290px
+      left: 1344px;
+   }
+   header .buscador button {
+      left: 872;
    }
 
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+   header .buscador form {
+      width: 100%
+   }
+   header .buscador {
+      position: absolute;
+      left: 552px;
+      width: 29%;
+  }
+  
+
+}
+
+@media (min-width:1544px){
+   header .usuario {
+      position: absolute;
+      top: 13px;
+      left: 299px;
+      width: 12%;
+      height: 65px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-around;
+      align-items: center;
+      justify-content: center;
+  }
+  header .buscador {
+   position: absolute;
+   left: 524px;
+   width: 31%;
+}
+header .buscador form {
+   width: 100%
+}
+header .buscador button {
+   left: 756px;
+}
+}
+
+@media (min-width:1622px) {
+   header .nuestrosProductos {
+      position: absolute;
+      top: 20px;
+      left: 1480px
+   }
+
+   header .buscador {
+      position: absolute;
+      left: 539px;
+      width: 33%;
+  }
+   header .buscador button {
+      left: 852px;
+   }
+
+   header .usuario {
+      left: 279;
+   }
+   header .buscador form {
+      width: 100%
+   }
+
+   header .register {
+      position: absolute;
+      left: 166px;
+   }
+
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+}
+
+@media (min-width:1800px) {
+   header .nuestrosProductos {
+      position: absolute;
+      top: 20px;
+      left: 1566px
+   }
+
+   header .buscador {
+      position: absolute;
+      left: 531px;
+      width: 33%;
+  }
+   header .buscador form {
+      width: 100%
+   }
+   header .buscador button {
+      left: 955px;
+   }
+
+   header .usuario {
+      left: 279;
+   }
+
+   header .register {
+      position: absolute;
+      left: 166px;
+   }
+
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+}
+
+@media (min-width:1860px) {
+   header .nuestrosProductos {
+      position: absolute;
+      top: 20px;
+      left: 1619px
+   }
+
+   header .buscador {
+      position: absolute;
+    left: 559px;
+    width: 33%;
+}
+
+   header .buscador button {
+      left: 986px;
+   }
+
+   header .usuario {
+      left: 279;
+   }
+   header .buscador form {
+      width: 100%
+   }
+
+   header .register {
+      position: absolute;
+      left: 166px;
+   }
+
+   header .usuario li,
+   form {
+      width: 100%;
+   }
+}
+
+@media (min-width:1920px) {
+   header .nuestrosProductos {
+      position: absolute;
+      top: 20px;
+      left: 1684px
+   }
+
+   header .buscador {
+      position: absolute;
+      left: 537px;
+    width: 35%;
+   }
+   header .buscador form {
+      width: 100%
+   }
+
+   header .buscador button {
+      left: 1091px;
+   }
+
+   header .usuario {
+      left: 279;
+   }
+
+
+
+   header .register {
+      position: absolute;
+      left: 166px;
+   }
+   header .usuario {
+      display: flex;
+      position: absolute;
+      top: 14px;
+      left: 278px;
+      width: 12%;
+      height: 60px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+  }
 }

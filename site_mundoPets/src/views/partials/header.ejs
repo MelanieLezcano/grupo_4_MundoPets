@@ -17,7 +17,7 @@
         </form>
         <% } else { %>
           <li  class="sesion"> <a  href="/usuarios/login">Inicia Sesión</a></li>
-          <!-- <li class="iconLogin"><i class="fas fa-user-circle"></i></li> -->
+          <!-- <li class="iconLogin"><i class="fas fa-user-circle"></i></i></li> -->
         <% } %>
     </div>
     <div class="register">
@@ -35,11 +35,7 @@
         <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
-    <div class="admin">
-      <% if (locals.usuarioLogin && (locals.usuarioLogin.rol) === 1) { %>
-        <li><a href="/admin/lista">Admin</a></li>  
-      <% } %>
-    </div>
+  
     <div class="burger">
       <input type="checkbox" name="burger" id="burger" class="burger-menu" checked>
       <label for="burger" class="burger-label"><i class="fas fa-bars"></i></label>
@@ -49,6 +45,7 @@
             <% if (locals.usuarioLogin) { %>
               <li><a href="/usuarios/perfil">Mi perfil</a></li> 
             <% } else { %>
+              <li><a href="/usuarios/register">Registrate</a></li>
               <li><a href="/usuarios/login">Ingresá</a></li>
               <% } %>
               <% if (locals.usuarioLogin) { %>
