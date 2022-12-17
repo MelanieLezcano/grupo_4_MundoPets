@@ -24,10 +24,10 @@ window.addEventListener('load', () => {
 
     /* eyes */
     //van a quedar comentados para preguntar, este es el ojito.
-    /* let eye = $('#eye-contrasenia')
-    let eye2 = $('#eye-contrasenia2') */
+    let eye = $('#eye-contrasenia') 
+    /* let eye2 = $('#eye-contrasenia2') */ 
 
-   /*  eye.addEventListener('click', (e) => {
+    eye.addEventListener('click', (e) => {
         inputContrasenia.type === 'password' ? inputContrasenia.type = 'text' : inputContrasenia.type = 'password'
         // console.log(eye.classList.contains('fa-eye-slash')) 
         if (eye.classList.contains('fa-eye-slash')) {
@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
             eye.classList.toggle('fa-eye')
         }
     })
-     eye2.addEventListener('click', (e) => {
+    /*  eye2.addEventListener('click', (e) => {
         inputContrasenia2.type === 'password' ? inputContrasenia2.type = 'text' : inputContrasenia2.type = 'password'
         if (eye2.classList.contains('fa-eye-slash')) {
             eye2.classList.toggle('fa-eye-slash')
