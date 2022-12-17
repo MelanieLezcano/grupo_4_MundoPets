@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head',{title: 'Cambiar contraseña' }) %>
+
+    <body class="register">
+
+        <%- include('../partials/header') %>
+
+            <main>
+                <section>
+                    <h2>Cambiar contraseña</h2>
+
+                    <form action="/usuarios/cambiarContrasenia/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+
+                        <div class="container bottom">
+                            <label for="contrasenia">Cambiar Contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contrasenia" id="contrasenia"
+                                    placeholder="Ingresa contraseña actual">
+                                <i class="fas fa-eye-slash" id="eye-contrasenia"></i>
+                            </div>
+                            <div id="contraseniaContainer"></div>
+                            <p class="span text-danger" id="contraseniaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contrasenia) { %>
+                                    <small>
+                                        <%= errors.contrasenia.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+                        </div>
+
+                        <div class="container bottom">
+                            <label for="contraseniaNueva">Nueva contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contraseniaNueva" id="contraseniaNueva"
+                                    placeholder="Ingresa una nueva Contraseña">
+                                <i class="fas fa-eye-slash" id="eye-contraseniaNueva"></i>
+                            </div>
+                            <div id="contraseniaNuevaContainer"></div>
+                            <p class="span text-danger" id="contraseniaNuevaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contraseniaNueva) { %>
+                                    <small>
+                                        <%= errors.contraseniaNueva.msg%>
+                                    </small>
+                                    <% } %>
+                             </p>
+
+                        </div>
+                        <div class="container bottom">
+                            <label for="contraseniaNueva2">Confirma tu nueva contraseña</label>
+                            <div class="contrasenia">
+                                <input type="password" name="contraseniaNueva2" id="contraseniaNueva2"
+                                    placeholder="Confirma tu nueva Contraseña">
+                                <i class="fas fa-eye-slash" id="eye-contraseniaNueva2"></i>
+                            </div>
+                            <div id="contraseniaNueva2Container"></div>
+                            <p class="span text-danger" id="contraseniaNuevaError" style="width: 500px;">
+                                <% if (locals.errors && errors.contraseniaNueva2) { %>
+                                    <small>
+                                        <%= errors.contraseniaNueva2.msg%>
+                                    </small>
+                                    <% } %>
+                            </p>
+                        </div>
+
+                        <button  style="margin: 5px;" type="submit">Editar</button>
+                        <button  style="margin: 5px;" type="reset">Cancelar</button>
+                    </div>
+                    </form>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+            <script src="/javascripts/imagenes.js"></script>
+            <script src="/javascripts/cambiarContrasenia.js"></script>
+    </body>
+
+</html>

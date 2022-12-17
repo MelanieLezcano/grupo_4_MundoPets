@@ -25,6 +25,9 @@ window.addEventListener('load', () => {
     let formulario = $('#formulario')
     let nombre = $('#nombre')
     let apellido = $('#apellido')
+    let inputContrasenia = $('#contrasenia')
+    let inputContraseniaNueva = $('#contraseniaNueva')
+    let inputContraseniaNueva2 = $('#contraseniaNueva2')
     let contacto = $('#contacto')
     let ciudad = $('#ciudad')
     let genero = $('#genero')
@@ -39,18 +42,82 @@ window.addEventListener('load', () => {
         elemento: "apellido",
         mensaje: "Debe ingresar su apellido"
     }, {
+
         id: 3,
+        elemento: "email",
+        mensaje: "Debe ingresar su email"
+    }, {
+        id: 4,
+        elemento: "inputContrasenia",
+        mensaje: "Debe ingresar contraseña actual"
+    }, {
+        id: 5,
+        elemento: "inputContraseniaNueva",
+        mensaje: "Debe ingresar una nueva contraseña"
+    }
+    , {
+        id: 6,
+        elemento: "inputContraseniaNueva2",
+        mensaje: "Debe confirmar su nueva contraseña"
+    }, {
+        id: 7,
         elemento: "contacto",
         mensaje: "Debe ingresar un contacto"
     }, {
-        id: 4,
+        id: 8,
         elemento: "ciudad",
         mensaje: "Debe ingresar una ciudad"
     }, {
-        id: 5,
+        id: 9,
         elemento: "genero",
         mensaje: "Debe ingresar un genero"
     }]
+
+    /* eyes */
+    let eye = $('#eye-contrasenia')
+    let eyeNueva = $('#eye-contraseniaNueva')
+    let eyeNueva2 = $('#eye-contraseniaNueva2')
+
+    eye.addEventListener('click', (e) => {
+        inputContrasenia.type === 'password' ? inputContrasenia.type = 'text' : inputContrasenia.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
+        if (eye.classList.contains('fa-eye-slash')) {
+            eye.classList.toggle('fa-eye-slash')
+            eye.classList.toggle('fa-eye')
+        } else {
+            eye.classList.toggle('fa-eye-slash')
+            eye.classList.toggle('fa-eye')
+        }
+    })
+
+    eyeNueva.addEventListener('click', (e) => {
+        /* console.log(eye2.classList);
+        console.log(eye2.classList.contains("fa-eye-slash")); */
+        inputContraseniaNueva.type === 'password' ? inputContraseniaNueva.type = 'text' : inputContraseniaNueva.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
+        if (eyeNueva.classList.contains('fa-eye-slash')) {
+            eyeNueva.classList.toggle('fa-eye')
+            eyeNueva.classList.toggle('fa-eye-slash')
+        } else {
+            eyeNueva.classList.toggle('fa-eye')
+            eyeNueva.classList.toggle('fa-eye-slash')
+        }
+    })
+
+    eyeNueva2.addEventListener('click', (e) => {
+        /* console.log(eye2.classList);
+        console.log(eye2.classList.contains("fa-eye-slash")); */
+        inputContraseniaNueva2.type === 'password' ? inputContraseniaNueva2.type = 'text' : inputContraseniaNueva2.type = 'password'
+        /* console.log(eye.classList.contains('fa-eye-slash')) */
+        if (eyeNueva2.classList.contains('fa-eye-slash')) {
+            eyeNueva2.classList.toggle('fa-eye')
+            eyeNueva2.classList.toggle('fa-eye-slash')
+        } else {
+            eyeNueva2.classList.toggle('fa-eye')
+            eyeNueva2.classList.toggle('fa-eye-slash')
+        }
+    })
+
 
     nombre.addEventListener('blur', () => {
         let error = {
@@ -143,9 +210,156 @@ window.addEventListener('load', () => {
         
     })
 
+
+    inputContrasenia.addEventListener('blur', () => {
+        let error = {
+            id: 4,
+            elemento: "inputContrasenia",
+            mensaje: "Debe ingresar contraseña actual"
+        }
+        let variable = true
+        switch (true) {
+            case !inputContrasenia.value:
+                $('#contraseniaContainer').innerHTML = "<small>Debe ingresar contraseña actual</small>"
+                inputContrasenia.style.border = "1px solid red"
+                errores.forEach(e => {
+                    if (e.id === 4) {
+                        e.mensaje = "Debe ingresar contraseña actual"
+                        variable = false
+                    }
+                });
+                if (variable) {
+                    errores.push(error)
+                }
+                break;
+                case inputContrasenia.value == inputContrasenia.value:
+                    $('#contraseniaContainer').innerHTML = "<small>Las contraseñas no coinciden</small>"
+                    error.mensaje = "Las contraseñas no coinciden"
+                    inputContrasenia.style.border = "1px solid red"
+                    errores.forEach(e => {
+                        if (e.id === 5) {
+                            variable = false
+                        }
+                    });
+    
+                    if (variable) {
+                        errores.push(error)
+                    }
+    
+                    break;
+
+            default:
+                $('#contraseniaContainer').innerHTML = ""
+                inputContrasenia.style.border = "1px solid green"
+                errores = errores.filter(error => {
+                    return error.id !== 4
+                })
+                break;
+        }
+        
+    })
+
+    inputContraseniaNueva.addEventListener('blur', () => {
+        let error = {
+            id: 5,
+            elemento: "inputContraseniaNueva",
+            mensaje: "Debe ingresar una nueva contraseña"
+        }
+        let variable = true
+
+        switch (true) {
+            case !inputContraseniaNueva.value:
+                $('#contraseniaNuevaContainer').innerHTML = "<small>Debe ingresar una nueva contraseña</small>"
+                inputContraseniaNueva.style.border = "1px solid red"
+                error.mensaje = "Debe ingresar una nueva contraseña"
+                errores.forEach(e => {
+                    if (e.id === 5) {
+                        e.mensaje = "Debe ingresar una nueva contraseña"
+                        variable = false
+                    }
+                });
+                if (variable) {
+                    errores.push(error)
+                }
+
+                break;
+                case !regExPass.test(inputContraseniaNueva.value):
+                    $('#contraseniaContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
+                    inputContraseniaNueva.style.border = "1px solid red"
+                    errores.forEach(e => {
+                        if (e.id === 4) {
+                            e.mensaje = "Debe contener al menos 8 caracteres"
+                            variable = false
+                        }
+                    });
+                    if (variable) {
+                        errores.push(error)
+                    }
+                    break;
+            default:
+                $('#contraseniaNuevaContainer').innerHTML = ""
+                inputContrasenia2.style.border = "1px solid green"
+                errores = errores.filter(error => {
+                    return error.id !== 5
+                })
+                break;
+        }
+        
+    })
+
+    inputContraseniaNueva2.addEventListener('blur', () => {
+        let error = {
+            id: 6,
+            elemento: "inputContraseniaNueva2",
+            mensaje: "Debe confirmar su nueva contraseña"
+        }
+        let variable = true
+
+        switch (true) {
+            case !inputContraseniaNueva2.value:
+                $('#contraseniaNueva2Container').innerHTML = "<small>Debe confirmar su nueva contraseña</small>"
+                inputContraseniaNueva2.style.border = "1px solid red"
+                error.mensaje = "Debe confirmar su nueva contraseña"
+                errores.forEach(e => {
+                    if (e.id === 5) {
+                        e.mensaje = "Debe confirmar su nueva contraseña"
+                        variable = false
+                    }
+                });
+                if (variable) {
+                    errores.push(error)
+                }
+
+                break;
+            case inputContraseniaNueva2.value != inputContraseniaNueva.value:
+                $('#contraseniaNueva2Container').innerHTML = "<small>Las contraseñas no coinciden</small>"
+                error.mensaje = "Las contraseñas no coinciden"
+                inputContraseniaNueva2.style.border = "1px solid red"
+                errores.forEach(e => {
+                    if (e.id === 5) {
+                        variable = false
+                    }
+                });
+
+                if (variable) {
+                    errores.push(error)
+                }
+
+                break;
+            default:
+                $('#contraseniaNueva2Container').innerHTML = ""
+                inputContraseniaNueva2.style.border = "1px solid green"
+                errores = errores.filter(error => {
+                    return error.id !== 5
+                })
+                break;
+        }
+        
+    })
+
     contacto.addEventListener('blur', () => {
         let error = {
-            id: 3,
+            id: 7,
             elemento: "contacto",
             mensaje: "Debe ingresar un contacto"
         }
@@ -190,7 +404,7 @@ window.addEventListener('load', () => {
 
     ciudad.addEventListener('blur', () => {
         let error = {
-            id: 4,
+            id: 8,
             elemento: "ciudad",
             mensaje: "Debe ingresar una ciudad"
         }
@@ -235,7 +449,7 @@ window.addEventListener('load', () => {
 
     genero.addEventListener('blur', () => {
         let error = {
-            id: 5,
+            id: 9,
             elemento: "genero",
             mensaje: "Debe ingresar su apellido"
         }

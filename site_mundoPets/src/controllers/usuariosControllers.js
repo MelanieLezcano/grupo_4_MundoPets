@@ -146,7 +146,7 @@ module.exports = {
 
     nuevoPerfil: (req, res) => {
         let id  = req.params.id
-        let{nombre, apellido, email, contrasenia, contacto, ciudad, genero} = req.body
+        let{nombre, apellido, email, contacto, ciudad, genero} = req.body
 
         db.Usuarios.findOne({where: {id: id}})
         .then(usuario => {
@@ -154,7 +154,6 @@ module.exports = {
                 nombre: nombre,
                 apellido: apellido,
                 email: usuario.email,
-                contraseña: bcrypt.hashSync(contrasenia, 10),
                 contacto: contacto,
                 ciudad: ciudad,
                 genero: genero,
@@ -179,7 +178,6 @@ module.exports = {
                         nombre: data.nombre,
                         apellido: data.apellido,
                         email: data.email,
-                        contraseña: data.contrasenia,
                         contacto: data.contacto,
                         ciudad: data.ciudad,
                         genero: data.genero,
@@ -234,6 +232,43 @@ module.exports = {
 
     },
 
+    cambiarContrasenia: (req, res) => {
+
+        res.render('usuarios/cambiarContrasenia',{
+            title:"Cambiar Contrasenia",
+            session: req.session
+        })
+    },
+
+    actualizarContrasenia: (req, res) => {
+        let errors = validationResult(req)
+        if(errors.isEmpty()) {
+            db.Usuarios.findOne({
+                where: {
+                    id: +req.params.id
+                }
+            })
+            .then(usuario => {
+                if(usuario && bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)){
+                    db.Usuarios.update({
+                        contraseña: bcrypt.hashSync(contraseniaNueva2, 10)
+                    },{
+                        where : { id: req.params.id}
+                    })
+                    .then(() => {
+                        res.redirect("usuarios/perfil");
+                    })
+                    .catch((err) => console.log(err))
+                } else{
+                    res.render("usuarios/cambiarContraseña", {
+                        title: "Cambiar contraseña",
+                        session: req.session,
+                        errPassword : "Debes ingresar tu contraseña actual"
+                    })
+                }
+            })
+        }
+    },
 
  
 

@@ -1,5 +1,5 @@
 const express = require('express') /*  */
-const {login,register, processRegister, processLogin,perfil,datosPerfil,cerrarSesion, editarPerfil,nuevoPerfil} = require('../controllers/usuariosControllers')
+const {login,register, processRegister, processLogin,perfil,datosPerfil,cerrarSesion, editarPerfil,nuevoPerfil, cambiarContrasenia, actualizarContrasenia} = require('../controllers/usuariosControllers')
 const router = express.Router()
 
 const upload = require('../middlewares/multerUsuarios')
@@ -19,6 +19,9 @@ router.get('/datosPerfil',datosPerfil)
 
 router.get('/editarPerfil',editarPerfil)
 router.put('/editarPerfil/:id',upload.single('imagenes'),nuevoPerfil)
+
+router.get('/cambiarContrasenia', cambiarContrasenia)
+router.put('/cambiarContrasenia/:id', actualizarContrasenia)
 
 router.delete('/cerrarSesion',cerrarSesion)
 
