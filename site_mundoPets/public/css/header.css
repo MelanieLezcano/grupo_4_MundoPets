@@ -907,7 +907,7 @@ header .buscador form {
       align-content: center;
       justify-content: space-around;
       top: 3px;
-      left: 147px;
+      left: 166px;
 
    }
 
@@ -1174,20 +1174,20 @@ header .buscador button {
    header .nuestrosProductos {
       position: absolute;
       top: 20px;
-      left: 1684px
+      left: 1693px
    }
 
    header .buscador {
       position: absolute;
-      left: 537px;
-    width: 35%;
+      left: 609px;
+    width: 32%;
    }
    header .buscador form {
       width: 100%
    }
 
    header .buscador button {
-      left: 1091px;
+      left: 985px
    }
 
    header .usuario {
@@ -1204,7 +1204,7 @@ header .buscador button {
       display: flex;
       position: absolute;
       top: 14px;
-      left: 278px;
+      left: 332px;
       width: 12%;
       height: 60px;
       flex-wrap: wrap;
