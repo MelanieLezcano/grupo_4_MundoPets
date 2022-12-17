@@ -9,15 +9,13 @@
       <h1>Resultado de la busqueda: <%= busqueda %></h1>
       <section class="resultados">
         <% resultados.forEach(producto => { %>
-            <%- include('./partials/cards',{
-              id:producto.id,
-              imagen:producto.imagenes[0],
-              titulo : producto.titulo,
-              marca:producto.marca,
-              descuento:producto.descuento,
-              precio:producto.precio 
-            }) %> 
-        <% }) %>
+          <%- include('./partials/cards',{ 
+            id:producto.id, 
+            imagenes:producto.imagen,
+            nombre:producto.titulo, 
+            descuento:producto.descuento, 
+            precio:producto.precio }) %>
+            <% }) %>
       </section>
       <% }else { %>
       <h1>

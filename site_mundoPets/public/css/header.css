@@ -591,7 +591,7 @@ header .burger button {
       display: block;
       position: absolute;
       top: 20px;
-      left: 909px
+      left: 903px
    }
 
    header .nuestrosProductos li a {
@@ -602,7 +602,7 @@ header .burger button {
 
    header .buscador {
       position: absolute;
-      left: 461px;
+      left: 443px;
       width: 43%;
    }
 

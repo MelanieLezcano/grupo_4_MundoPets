@@ -50,8 +50,12 @@
                     <div class="glider-contain">
                         <div class="glider">
                             <% productos.forEach(producto=> { %>
-                                <%- include('./partials/cards',{ id:producto.id, imagenes:producto.imagen,
-                                    nombre:producto.titulo, descuento:producto.descuento, precio:producto.precio }) %>
+                                <%- include('./partials/cards',{ 
+                                    id:producto.id, 
+                                    imagenes:producto.imagen,
+                                    nombre:producto.titulo, 
+                                    descuento:producto.descuento, 
+                                    precio:producto.precio }) %>
                                     <% }) %>
                         </div>
                         <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>

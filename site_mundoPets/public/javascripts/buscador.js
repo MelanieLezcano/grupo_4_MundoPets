@@ -21,9 +21,9 @@ window.addEventListener('load', () => {
 
 
         console.log(barraBusqueda.elementos);
-       /*  if () {
+        /*  if () {
             barraBusqueda.submit()
-        }   */
+        }    */
     })
 
 
