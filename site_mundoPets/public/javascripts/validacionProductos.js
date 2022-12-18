@@ -31,6 +31,7 @@ window.addEventListener('load', () => {
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
     let regExNumber = /^[+]?([0-9][0-9]?|150)$/
+    let regExNumber2 = /^\d+$/ 
     const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
 
         /* validar elementos */
@@ -71,6 +72,11 @@ window.addEventListener('load', () => {
                 this.classList.add('is-invalid')
                 validate.precio = false
                 break;
+            case !regExNumber2.test(this.value.trim()):
+                $('#precioError').innerHTML = "Debes ingresar un numero mayor a cero"
+                this.classList.add('is-invalid')
+                validate.precio = true
+                break;
             default:
                 $('#precioError').innerHTML = null
                 this.classList.remove('is-invalid')
@@ -88,6 +94,16 @@ window.addEventListener('load', () => {
                 this.classList.add('is-invalid')
                 validate.descuento = false
                 break;
+            case !regExNumber2.test(this.value.trim()):
+                $('#descuentoError').innerHTML = "Debes ingresar un numero mayor o igual a cero"
+                this.classList.add('is-invalid')
+                validate.descuento = true
+                break;
+            /* case !(this.value.trim().length <= 0    ):
+                $('#descuentoError').innerHTML = "El descuento no puede ser negativo"
+                this.classList.add('is-invalid')
+                validate.descuento = false
+                break; */
             default:
                 $('#descuentoError').innerHTML = null
                 this.classList.remove('is-invalid')
@@ -99,6 +115,11 @@ window.addEventListener('load', () => {
     })
     stock.addEventListener('blur', function() {
         switch (true) {
+            case !regExNumber2.test(this.value.trim()):
+                $('#stockError').innerHTML = "El stock no puede ser negativo"
+                this.classList.add('is-invalid')
+                validate.stock = false
+                break;
             case !this.value.trim():
                 $('#stockError').innerHTML = "Debes ingresar el stock de tu producto"
                 this.classList.add('is-invalid')
