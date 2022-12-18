@@ -18,12 +18,16 @@ window.addEventListener('load', () => {
 
     barraBusqueda.addEventListener('submit', (e) => {
         e.preventDefault();
-
-
-        console.log(barraBusqueda.elementos);
-        /*  if () {
+        console.log('palabra');
+        let value = $('#search').value
+         
+        if (value.trim().length > 0) {
             barraBusqueda.submit()
-        }    */
+        }
+
+
+       /*  console.log(barraBusqueda.elementos); */
+       
     })
 
 
