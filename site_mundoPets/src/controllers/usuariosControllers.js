@@ -242,16 +242,19 @@ module.exports = {
 
     actualizarContrasenia: (req, res) => {
         let errors = validationResult(req)
-        if(errors.isEmpty()) {
+        console.log(errors.mapped());
+        console.log(req.body); 
+       /*  if(errors.isEmpty()) {
             db.Usuarios.findOne({
                 where: {
                     id: +req.params.id
                 }
             })
             .then(usuario => {
-                if(usuario && bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)){
+
+                if(usuario && bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)) {
                     db.Usuarios.update({
-                        contraseña: bcrypt.hashSync(contraseniaNueva2, 10)
+                        contraseña: bcrypt.hashSync(contraseniaNueva, 10),
                     },{
                         where : { id: req.params.id}
                     })
@@ -267,7 +270,7 @@ module.exports = {
                     })
                 }
             })
-        }
+        } */
     },
 
  

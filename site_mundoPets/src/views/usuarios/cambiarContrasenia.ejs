@@ -11,7 +11,7 @@
                 <section>
                     <h2>Cambiar contraseña</h2>
 
-                    <form action="/usuarios/cambiarContrasenia/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+                    <form action="/usuarios/cambiarContrasenia/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" id="formulario">
 
                         <div class="container bottom">
                             <label for="contrasenia">Cambiar Contraseña</label>
@@ -71,8 +71,7 @@
                 </section>
             </main>
             <%- include('../partials/footer') %>
-            <script src="/javascripts/imagenes.js"></script>
-            <script src="/javascripts/cambiarContrasenia.js"></script>
+<!--             <script src="/javascripts/cambiarContrasenia.js"></script> -->
     </body>
 
 </html>
