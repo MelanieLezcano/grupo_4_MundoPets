@@ -241,43 +241,54 @@ module.exports = {
     },
 
     actualizarContrasenia: (req, res) => {
+        let id  = req.params.id
         let errors = validationResult(req)
         console.log(errors.mapped());
         console.log(req.body); 
+
+        let{contrasenia, contraseniaNueva, contraseniaNueva2} = req.body
+
+        db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                contraseña: bcrypt.hashSync(contraseniaNueva, 10),
+            },{
+                where: {id:id}
+            })
  
             db.Usuarios.findOne({
-                where: {
-                    id: +req.params.id
-                }
+                where: {id:id}
             })
-            .then(usuario => {
-                    db.Usuarios.update({
-                        contraseña: bcrypt.hashSync(contraseniaNueva, 10),
-                    },{
-                        where : { id: req.params.id}
-                    })
-                    .then(() => {
-                        res.redirect("usuarios/perfil");
-                    })
+            db.Usuarios.findOne({where: {id: id}})
+                .then(data =>{
+                    console.log(data);
+                    req.session.usuarioLogin = {
+                        contraseña: data.contrasenia,
+                    }
+
+
+                    if (req.cookies.MundoPets) {
+                        res.cookie('MundoPets', '', { maxAge: -1 })
+                        res.cookie('MundoPets', req.session.usuarioLogin, {
+                            maxAge: 1000 * 60 * 60 * 24
+                        })
+                        
+                    }
                     
-                
-                     if (req.cookies.MundoPets) {
-                    res.cookie('MundoPets', '', { maxAge: -1 })
-                    res.cookie('MundoPets', req.session.usuarioLogin, {
-                        maxAge: 1000 * 60 * 60 * 24
-                    })
-                    
-                }
-                
-                req.session.save( (err) => {
-                    req.session.reload((err) => {
-                        return res.redirect('/usuarios/perfil')
-    
+                    req.session.save( (err) => {
+                        req.session.reload((err) => {
+                            return res.redirect('/usuarios/perfil')
+        
                         });
-                    });
-                })
-            .catch((err) => console.log(err))
-    },
+                     });
+                 
+            })
+            .catch(error => res.status(500).send(error))
+
+        })
+        .catch(error => res.status(500).send(error))
+        },
+        
 
  
 
