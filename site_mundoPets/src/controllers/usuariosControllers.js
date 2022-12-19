@@ -244,15 +244,13 @@ module.exports = {
         let errors = validationResult(req)
         console.log(errors.mapped());
         console.log(req.body); 
-       /*  if(errors.isEmpty()) {
+ 
             db.Usuarios.findOne({
                 where: {
                     id: +req.params.id
                 }
             })
             .then(usuario => {
-
-                if(usuario && bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)) {
                     db.Usuarios.update({
                         contraseña: bcrypt.hashSync(contraseniaNueva, 10),
                     },{
@@ -261,16 +259,24 @@ module.exports = {
                     .then(() => {
                         res.redirect("usuarios/perfil");
                     })
-                    .catch((err) => console.log(err))
-                } else{
-                    res.render("usuarios/cambiarContraseña", {
-                        title: "Cambiar contraseña",
-                        session: req.session,
-                        errPassword : "Debes ingresar tu contraseña actual"
+                    
+                
+                     if (req.cookies.MundoPets) {
+                    res.cookie('MundoPets', '', { maxAge: -1 })
+                    res.cookie('MundoPets', req.session.usuarioLogin, {
+                        maxAge: 1000 * 60 * 60 * 24
                     })
+                    
                 }
-            })
-        } */
+                
+                req.session.save( (err) => {
+                    req.session.reload((err) => {
+                        return res.redirect('/usuarios/perfil')
+    
+                        });
+                    });
+                })
+            .catch((err) => console.log(err))
     },
 
  
