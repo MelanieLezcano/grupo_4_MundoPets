@@ -1,16 +1,15 @@
 window.addEventListener('load', () => {
 
     let $ = (elemento) => document.querySelector(elemento)
-    /*  console.log("Register vinculado"); */
+    /*  console.log("login vinculado"); */
 
     const regExLetter = /^[A-Za-z]+$/i;
-    /* /^[A-Z]+$/ */
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
     let email = $('#email')
     let inputContrasenia = $('#contrasenia')
-    /* let inputContrasenia2 = $('#contrasenia2') */
+    /* let inputContrasenia2 = $('#contrasenia2') */ 
 
     let errores = [{
         id: 1,
@@ -24,12 +23,13 @@ window.addEventListener('load', () => {
     ]
 
     /* eyes */
-    let eye = $('#eye-contrasenia')
-    let eye2 = $('#eye-contrasenia2')
+    //van a quedar comentados para preguntar, este es el ojito.
+    let eye = $('#eye-contrasenia') 
+    /* let eye2 = $('#eye-contrasenia2') */ 
 
     eye.addEventListener('click', (e) => {
         inputContrasenia.type === 'password' ? inputContrasenia.type = 'text' : inputContrasenia.type = 'password'
-        /* console.log(eye.classList.contains('fa-eye-slash')) */
+        // console.log(eye.classList.contains('fa-eye-slash')) 
         if (eye.classList.contains('fa-eye-slash')) {
             eye.classList.toggle('fa-eye-slash')
             eye.classList.toggle('fa-eye')
@@ -38,9 +38,8 @@ window.addEventListener('load', () => {
             eye.classList.toggle('fa-eye')
         }
     })
-    eye2.addEventListener('click', (e) => {
+    /*  eye2.addEventListener('click', (e) => {
         inputContrasenia2.type === 'password' ? inputContrasenia2.type = 'text' : inputContrasenia2.type = 'password'
-        /* console.log(eye.classList.contains('fa-eye-slash')) */
         if (eye2.classList.contains('fa-eye-slash')) {
             eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
@@ -48,7 +47,7 @@ window.addEventListener('load', () => {
             eye2.classList.toggle('fa-eye-slash')
             eye2.classList.toggle('fa-eye')
         }
-    })
+    })  */
     
 
     /* email */

@@ -4,20 +4,18 @@
 
   <body class="busqueda">
     <%- include('./partials/header') %>
-    <main>
+    <main class="buscador">
       <% if (resultados.length != 0) { %>
       <h1>Resultado de la busqueda: <%= busqueda %></h1>
       <section class="resultados">
         <% resultados.forEach(producto => { %>
-            <%- include('./partials/cards',{
-              id:producto.id,
-              imagen:producto.imagenes[0],
-              titulo : producto.titulo,
-              marca:producto.marca,
-              descuento:producto.descuento,
-              precio:producto.precio 
-            }) %> 
-        <% }) %>
+          <%- include('./partials/cards',{ 
+            id:producto.id, 
+            imagenes:producto.imagen,
+            nombre:producto.titulo, 
+            descuento:producto.descuento, 
+            precio:producto.precio }) %>
+            <% }) %>
       </section>
       <% }else { %>
       <h1>
@@ -29,7 +27,7 @@
             <img src="/img/searchNotFound.png" alt="producto no encontrado" />
           </div>
           <div class="card-text-box">
-            <h3 class="card-name">No se entraron productos</h3>
+            <h3 class="card-name">No se encontro lo que buscas</h3>
           </div>
         </div>
       </section>

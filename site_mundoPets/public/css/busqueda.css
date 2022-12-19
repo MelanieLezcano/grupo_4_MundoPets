@@ -1,13 +1,198 @@
-.busqueda h1{
-    text-align: center;
-}
-.busqueda .resultados{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.busqueda .card-img img{
+.busqueda{
     width: 100%;
-}
+    margin: auto 0;
+  }
+  .busqueda h1{
+    font-family: var(--fuenteTitulos);
+    color: var(--colorAzulFrancia);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .busqueda .resultados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .busqueda .card{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .busqueda .card-img img{
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .busqueda .glider-contain {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .busqueda .glider {
+    margin: 0 auto;
+    position: relative;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    transform: translateZ(0);
+  }
+  .busqueda  .glider-track {
+    transform: translateZ(0);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1;
+  }
+  .busqueda  .glider.draggable {
+    user-select: none;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  .busqueda .glider.draggable .glider-slide img {
+    user-select: none;
+    pointer-events: none;
+  }
+  .busqueda .glider.drag {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  .busqueda .glider-slide {
+    user-select: none;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+  .busqueda .glider-slide img {
+    max-width: 100%;
+  }
+  .busqueda .glider::-webkit-scrollbar {
+    opacity: 0;
+    height: 0;
+  }
+  .busqueda .glider-prev,.glider-next {
+    user-select: none;
+    position: absolute;
+    outline: none;
+    background: none;
+    padding: 0;
+    z-index: 2;
+    font-size: 70px;
+    text-decoration: none;
+    left: 15px;
+    border: 0;
+    top: 30%;
+    cursor: pointer;
+    color: var(--colorNaranja);
+    opacity: 1;
+    line-height: 1;
+    transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
+                color .5s cubic-bezier(.17,.67,.83,.67);
+  }
+  
+  .busqueda .glider-next{
+    font-size: 70px;
+  }
+  
+  .busqueda .glider-prev:hover,
+  .glider-next:hover,
+  .glider-prev:focus,
+  .glider-next:focus {
+    color: var(--colorNaranja);
+  }
+  .busqueda .glider-next {
+    right: 20px;
+    left: auto;
+  }
+  .busqueda .glider-next.disabled,
+  .glider-prev.disabled {
+    opacity: .25;
+    color: var(--colorNaranja);
+    cursor: default;
+  }
+  
+  .fa-chevron-right:before{
+    color: var(--colorNaranja);
+  }
+  
+  .fa-chevron-left:before{
+    color: var(--colorNaranja);
+  }
+  
+  .busqueda .glider-slide {
+    min-width: 150px;
+  }
+  .busqueda .glider-hide {
+    opacity: 0;
+  }
+  .busqueda .glider-dots {
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .busqueda .glider-dot {
+    border: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    color: var(--colorCeleste);
+    border-radius: 999px;
+    background: var(--colorCeleste);
+    width: 12px;
+    height: 12px;
+    margin: 7px;
+  }
+  .busqueda .glider-dot:hover,
+  .glider-dot:focus,
+  .glider-dot.active {
+    background: var(--colorAzulFrancia);
+  }
+  
+  .busqueda .glider-dot.active{
+    background: var(--colorAzulFrancia);
+  }
+  
+  
+  @media(max-width: 36em){
+    .busqueda .glider::-webkit-scrollbar {
+      opacity: 1;
+      -webkit-appearance: none;
+      width: 7px;
+      height: 3px;
+    }
+    .busqueda .glider::-webkit-scrollbar-thumb {
+      opacity: 1;
+      border-radius: 99px;
+      background-color: rgba(156, 156, 156, 0.25);
+      box-shadow: 0 0 1px rgba(255,255,255,.25);
+    }
+  }  
+
+  @media(min-width: 1024px){
+    .busqueda .resultados {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: center;
+      align-items: center
+  }
+  }
+  
