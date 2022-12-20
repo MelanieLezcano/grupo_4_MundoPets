@@ -28,9 +28,9 @@ module.exports = {
                 apellido,
                 email,
                 contraseña: bcrypt.hashSync(contrasenia, 10),
-                contacto: null,
-                ciudad: null,
-                genero: null,
+                contacto: '',
+                ciudad: '',
+                genero: '',
                 /* direccion, */
                 /* numeroTarjeta, */
                 imagen: req.file && req.file.size > 1 ? req.file.filename : "foto_perfil_por_defecto.jpg",
@@ -146,27 +146,149 @@ module.exports = {
 
     nuevoPerfil: (req, res) => {
         let id  = req.params.id
-        let{nombre, apellido, email} = req.body
+        let{nombre, apellido, email, contacto, ciudad, genero} = req.body
 
         db.Usuarios.findOne({where: {id: id}})
         .then(usuario => {
             db.Usuarios.update({
-                nombre,
-                apellido,
-                email,
-                imagen: req.file ? req.file.filename : "avatar-1663535027596.jpg",
-            },{
+                nombre: nombre,
+                apellido: apellido,
+                email: usuario.email,
+                contacto: contacto,
+                ciudad: ciudad,
+                genero: genero,
+                imagen: req.file ? req.file.filename : usuario.imagen,
+            }
+            ,{
                 where: {id:id}
             })
             .then(nuevo => {
-                return res.redirect('/')
+                
+                if (req.file){
+                    if((fs.existsSync('./public/img/usuarios/', usuario.imagen)) && usuario.imagen !== "foto_perfil_por_defecto.jpg"){
+                    fs.unlinkSync(`./public/img/usuarios/${usuario.imagen}`)}}
+                
+
+/*                 return res.redirect('/usuarios/perfil') */
+                db.Usuarios.findOne({where: {id: id}})
+                .then(data =>{
+                    console.log(data);
+                    req.session.usuarioLogin = {
+                        id: data.id,
+                        nombre: data.nombre,
+                        apellido: data.apellido,
+                        email: data.email,
+                        contacto: data.contacto,
+                        ciudad: data.ciudad,
+                        genero: data.genero,
+                        imagen: data.imagen,
+                        rol: data.roles_id
+                    }
+
+
+                    if (req.cookies.MundoPets) {
+                        res.cookie('MundoPets', '', { maxAge: -1 })
+                        res.cookie('MundoPets', req.session.usuarioLogin, {
+                            maxAge: 1000 * 60 * 60 * 24
+                        })
+                        
+                    }
+                    
+                    req.session.save( (err) => {
+                        req.session.reload((err) => {
+                            return res.redirect('/usuarios/perfil')
+        
+                        });
+                     });
+
+
+                 })
+                 
             })
+            .catch(error => res.status(500).send(error))
 
         })
         .catch(error => res.status(500).send(error))
 
+        /* db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                nombre: usuario.nombre,
+                apellido: usuario.apellido,
+                email: usuario.email,
+                contacto: usuario.contacto,
+                ciudad: usuario.ciudad,
+                genero: usuario.genero,
+                imagen: usuario.imagen,
+            },{
+                where: {id:id}
+            })
+            .then(nuevo => {
+                return res.redirect('/usuarios/perfil')
+            })
+
+        })
+        .catch(error => res.status(500).send(error)) */
+
     },
 
+    cambiarContrasenia: (req, res) => {
+
+        res.render('usuarios/cambiarContrasenia',{
+            title:"Cambiar Contrasenia",
+            session: req.session
+        })
+    },
+
+    actualizarContrasenia: (req, res) => {
+        let id  = req.params.id
+        let errors = validationResult(req)
+        console.log(errors.mapped());
+        console.log(req.body); 
+
+        let{contrasenia, contraseniaNueva, contraseniaNueva2} = req.body
+
+        db.Usuarios.findOne({where: {id: id}})
+        .then(usuario => {
+            db.Usuarios.update({
+                contraseña: bcrypt.hashSync(contraseniaNueva, 10),
+            },{
+                where: {id:id}
+            })
+ 
+            db.Usuarios.findOne({
+                where: {id:id}
+            })
+            db.Usuarios.findOne({where: {id: id}})
+                .then(data =>{
+                    console.log(data);
+                    req.session.usuarioLogin = {
+                        contraseña: data.contrasenia,
+                    }
+
+
+                    if (req.cookies.MundoPets) {
+                        res.cookie('MundoPets', '', { maxAge: -1 })
+                        res.cookie('MundoPets', req.session.usuarioLogin, {
+                            maxAge: 1000 * 60 * 60 * 24
+                        })
+                        
+                    }
+                    
+                    req.session.save( (err) => {
+                        req.session.reload((err) => {
+                            return res.redirect('/usuarios/perfil')
+        
+                        });
+                     });
+                 
+            })
+            .catch(error => res.status(500).send(error))
+
+        })
+        .catch(error => res.status(500).send(error))
+        },
+        
 
  
 

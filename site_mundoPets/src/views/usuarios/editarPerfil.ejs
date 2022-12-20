@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head',{title: 'editarPerfil' }) %>
+<%- include('../partials/head',{title: 'Editar perfil' }) %>
 
     <body class="register">
 
@@ -10,7 +10,6 @@
             <main>
                 <section>
                     <h2>Edicion de Perfil</h2>
-
                     <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
 
                         <div class="container bottom">
@@ -27,16 +26,59 @@
                             <div id="apellidoContainer"></div>
                         </div>
 
+                        <div class="container bottom">
+                            <label for="contacto">Contacto</label>
+                            <input type="text" name="contacto" id="contacto" placeholder="Ingresa tu  contacto"
+                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.contacto : null %>">
+                            <div id="contactoContainer"></div>
+                        </div>
+
+                        <div class="container bottom">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu  ciudad"
+                                value="<%=  locals.usuarioLogin ? locals.usuarioLogin.ciudad : null %>">
+                            <div id="ciudadContainer"></div>
+                        </div>
+                        
+                        <label for="floatingSelect">Género</label>
+                        <select class="form-select" name="genero" id="genero" aria-label="Floating label select example">
+                            <% if (locals.usuarioLogin.genero == 'Femenino' ) { %>
+                                <option value="<%=locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                                  <% }%>
+                                  
+                                  <% if (locals.usuarioLogin.genero == 'Masculino' ) { %>
+                                    <option value="<%= locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Otro">Otro</option>
+                                      <% }%>
+                                      
+                                      <% if (locals.usuarioLogin.genero == 'Otro' ) { %>
+                                        <option value="<%=  locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                          <% }%>
+
+                                          <% if (locals.usuarioLogin.genero == '' ) { %>
+                                            <option hidden value="">Seleccionar género</option>
+                                            <option value="Otro">Otro</option>
+                                            <option value="Femenino">Femenino</option>
+                                            <option value="Masculino">Masculino</option>
+                                              <% }%>
+                         </select> 
+
+
                         <div div class="col col-5">
                             <label class="form-label" for="imagenes">
                                 <img id="img-preview"
                                 class="img-fluid img-thumbnail imagen-height rounded"
-                                src="/img/usuarios/<%=locals.usuarioLogin.imagen%>" alt="">
+                                src="/img/usuarios/<%=usuarioLogin.imagen%>" alt="">
 <!--                                 <div class="imgHover">
                                     <p class="text-center">Selecionar Imagen</p>
                                 </div> -->
                             </label>
-                            <input class="form-input" id="imagenes" type="file" name="imagenes"
+                            <input class="form-input" id="imagen" type="file" name="imagenes"
                             placeholder="Imagen del Producto" accept="img/*">
                         
                        
@@ -51,6 +93,8 @@
                 </section>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/javascripts/imagenes.js"></script>
+           <!--  <script src="/javascripts/editarPerfil.js"></script> -->
     </body>
 
 </html>

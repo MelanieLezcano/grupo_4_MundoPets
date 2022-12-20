@@ -25,7 +25,7 @@ module.exports = {
     nosotros: (req, res) => {
         return res.render('nosotros')
     },
-    categoria: (req, res) => {
+/*     categoria: (req, res) => {
         let categoriaSeleccionada = req.params.categorias
 
         db.Categorias.findOne({
@@ -42,14 +42,13 @@ module.exports = {
             ]
         })
             .then(categorias => {
-                /* return res.send(categorias) */
 
                 return res.render('productos', {
                     categorias,
                 })
             })
             .catch(error => res.send(error))
-    },
+    }, */
     search: (req, res) => {
 
         let elemento = req.query.search

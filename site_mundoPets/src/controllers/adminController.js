@@ -132,7 +132,12 @@ module.exports = {
                 .catch(error => res.send(error))
         } else {
 
-            return res.redirect('/admin/editar/' + idParams)
+            return res.render('admin/editarProducto', {
+                producto,
+                categorias,
+                subCategorias,
+                marcas
+            })
         }
     },
     eliminar: (req, res) => {
@@ -145,6 +150,36 @@ module.exports = {
             .then(producto => {
                 return res.redirect('/admin/lista')
             })
+    },
+
+    listaUsuarios: (req, res) => {
+        let rol = db.Roles.findAll()
+        db.Usuarios.findAll({
+            include: [{
+                all: true
+            }]
+        })
+            .then(usuarios => {
+                return res.render('admin/listaUsuarios', {
+                    usuarios,
+                    rol
+                })
+            })
+    },
+
+    rolUsuarios: (req, res) => {
+        let id = req.params.id
+        let rol = req.body.rol
+
+        db.Usuarios.update({
+            roles_id: rol
+        }, {
+            where: { id }
+        })
+            .then((usuario) => {
+                return res.redirect('/admin/listaUsuarios')
+            })
+            .catch(error => res.send(error))
     },
 
     historial: (req, res) => {

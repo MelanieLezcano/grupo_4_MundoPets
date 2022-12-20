@@ -1,4 +1,4 @@
-const {crear,editar,lista,nuevo,historial,actualizar,eliminar,restaurar} = require('../controllers/adminController')
+const {crear,editar,lista,nuevo,historial,actualizar,eliminar,restaurar,listaUsuarios,rolUsuarios} = require('../controllers/adminController')
 const express = require('express') 
 const router = express.Router()
 
@@ -27,6 +27,10 @@ router.put('/editar/:id',upload.single('Imagenes'),productosValidaciones,actuali
 /* Eliminando un producto */
 router.delete('/eliminar/:id', eliminar);
 router.delete('/restaurar/:id', restaurar);
+
+/* Lista usuarios */
+router.get('/listaUsuarios',adminCheck, listaUsuarios);
+router.put('/rolUsuarios/:id', rolUsuarios);
 
 
 module.exports = router;
