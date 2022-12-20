@@ -1,22 +1,32 @@
-* 
-.login main{
-    width: 100%;
+
+.login .section1{
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 25px;
+    padding-bottom: 45px;
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 50px;
+}
+
+.login .article1{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 400px;
-    width: 90%;
+    
+    width: 100%;
     margin: 0 auto;
+    max-width: 500px;
 }
-.login main section.container-image{
+
+.login section.container-image{
     display: none;
 }
-.login main .container .contrasenia {
+.login .container .contrasenia {
     width: 100%;
     position: relative;
 }
 
-.login main .container .contrasenia i {
+.login  .container .contrasenia i {
     position: absolute;
     color: var(--colorAzulFrancia);
     top: 4px;
@@ -24,8 +34,8 @@
     padding: 10px;
 }
 
-.login main button {
-    padding: 9px;
+.login .cuenta {
+    padding: 13px;
     background-color: var(--colorAzulFrancia);
     color: white;
     font-weight: 400;
@@ -34,65 +44,68 @@
     font-size: 18px;
     width: 100%;
 }
-
-
-
-.login main small{
-    color: red;
-}
-.login main .recordame{
-    font-family: var(--fuenteSubtitulos);
-    color: var(--colorAzulFrancia);
-}
-.login main button {
-    padding: 9px;
-    background-color: var(--colorAzulFrancia);
+.login h2{
     color: white;
-    font-weight: 400;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    width: 100%;
-}
-.login main h2{
-    color: var(--colorAzulFrancia);
+    background-color: var(--colorNaranja);
+    width: 300px;
     font-weight: bold ;
-    /* text-align: center; */
+    text-align: center;
+    padding: 5px;
+    
+    border-radius: 25px;
     font-family: var(--fuenteSubtitulos);
     /* font-size: 50px; */
+    margin: 20px 0;
 }
-.login main .container input {
+
+.login .subtitulo{
+    margin-left: 270px;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: -15px;
+}
+
+.login input {
     width: 100%;
     padding: 10px;
+
     background-color: var(--colorGris);
     font-size: x-small;
+    border-radius: 25px;
     /* margin-bottom: 50px; */
     font: message-box;
-    border:solid 1px var(--colorNaranja);
-
+    border:solid 3px var(--colorAmarillo);
 }
 
-.login main h4{
-    margin: 63px 73px;
+.login #nombre #apellido #email #contrasenia #contrasenia{
     color: var(--colorCeleste);
+    font-family: var(--fuenteSubtitulos);
+}
+
+.login h4{
+    margin: 44px 73px;
+    color: var(--colorCeleste);
+    text-align: center;
 
 }
-.login main p{
+.login p{
+    margin: 2px;
     color: var(--colorCeleste);
 }    
-.login main a{
+.login a{
 
     color: var(--colorAzulFrancia);
 }
-.login main section{
+.login section{
     width: 100%;
     max-width: 800px;
     font-family: var(--fuenteTitulos);
 }
-.login main section form{
+.login section form{
     width: 100%;
 }
-.login main section form .container{
+.login section form .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -100,10 +113,10 @@
     justify-content: center;
     font-weight: bold;
 }
-.login main label{
+.login label{
     color: var(--colorAzulFrancia);
 }    
-.login main section{
+.login section{
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -112,6 +125,27 @@
     justify-content: center;
 
 }
-.login main section form .container{
+.login section form .container{
     margin-bottom: 15px;
+}
+
+.login small{
+    color: var(--colorNaranja)
+}
+
+.login .recordarme-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    margin-right: 40px;
+}
+
+.login .recordarmecheck{
+    width: 5%;
+}
+
+.login .textRecordarme{
+    margin-top: 5px;
+    margin-right: 5px;
 }

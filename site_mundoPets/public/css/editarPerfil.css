@@ -1,5 +1,5 @@
 
-.register .section1{
+.editarPerfil .section1{
     background-color: rgba(255, 255, 255, 0.918);
     border-radius: 25px;
     padding-bottom: 45px;
@@ -9,7 +9,7 @@
     margin-top: 50px;
 }
 
-.register .article1{
+.editarPerfil .article1{
     display: flex;
     flex-direction: column;
     
@@ -18,15 +18,15 @@
     max-width: 500px;
 }
 
-.register section.container-image{
+.editarPerfil section.container-image{
     display: none;
 }
-.register .container .contrasenia {
+.editarPerfil .container .contrasenia {
     width: 100%;
     position: relative;
 }
 
-.register  .container .contrasenia i {
+.editarPerfil  .container .contrasenia i {
     position: absolute;
     color: var(--colorAzulFrancia);
     top: 4px;
@@ -34,7 +34,7 @@
     padding: 10px;
 }
 
-.register .cuenta {
+.editarPerfil .cuenta {
     padding: 13px;
     background-color: var(--colorAzulFrancia);
     color: white;
@@ -44,7 +44,7 @@
     font-size: 18px;
     width: 100%;
 }
-.register h2{
+.editarPerfil h2{
     color: white;
     background-color: var(--colorNaranja);
     width: 300px;
@@ -58,7 +58,7 @@
     margin: 20px 0;
 }
 
-.register .subtitulo{
+.editarPerfil .subtitulo{
     margin-left: 270px;
     width: 100%;
     font-size: 20px;
@@ -66,7 +66,7 @@
     margin-bottom: -15px;
 }
 
-.register input {
+.editarPerfil input {
     width: 100%;
     padding: 10px;
 
@@ -78,34 +78,32 @@
     border:solid 3px var(--colorAmarillo);
 }
 
-.register #nombre #apellido #email #contrasenia #contrasenia{
+.editarPerfil #nombre #apellido #email #contrasenia #contrasenia{
     color: var(--colorCeleste);
     font-family: var(--fuenteSubtitulos);
 }
 
-.register h4{
+.editarPerfil h4{
     margin: 44px 73px;
     color: var(--colorCeleste);
     text-align: center;
 
 }
-.register p{
+.editarPerfil p{
     margin: 2px;
     color: var(--colorCeleste);
 }    
-.register a{
+.editarPerfil a{
 
     color: var(--colorAzulFrancia);
 }
-.register section{
-    width: 100%;
-    max-width: 800px;
+.editarPerfil{
     font-family: var(--fuenteTitulos);
 }
-.register section form{
+.editarPerfil{
     width: 100%;
 }
-.register section form .container{
+.editarPerfil .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -113,10 +111,11 @@
     justify-content: center;
     font-weight: bold;
 }
-.register label{
+.editarPerfil label{
     color: var(--colorAzulFrancia);
+    font-weight: 600;
 }    
-.register section{
+.editarPerfil section{
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -125,34 +124,17 @@
     justify-content: center;
 
 }
-.register section form .container{
+.editarPerfil .container{
     margin-bottom: 15px;
 }
-.register .imagenPerfil label{
-    background-color: var(--colorNaranja);
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid white;
-    margin-bottom: 20px;
-    color: white;
-}
 
-.register .imagenPerfil input{
-    display: none;
-}
-.register .inputImagen{
-  
-    border:solid 1px var(--colorNaranja);
-    margin-bottom: 15px;
-     
-}
-
-.register small{
+.editarPerfil small{
     color: var(--colorNaranja)
 }
 
 
-.register .imgPosicion{
+
+.editarPerfil .imgPosicion{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -160,7 +142,7 @@
     padding: 20px;
 }
 
-.register .imgPerfil{
+.editarPerfil .imgPerfil{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -176,11 +158,12 @@
     
 }
 
-.register .imgPerfil img{
+.editarPerfil .imgPerfil img{
     height: auto;
     width: auto;
 }
-.img-thumbnail {
+
+.editarPerfil .img-thumbnail {
     padding: 0;
     background-color: none;
     border: none;
@@ -189,8 +172,38 @@
     height: auto;
 }
 
+.form-select {
+    margin-left: 15px;
+    margin-bottom: 29px;
+    display: block;
+    width: 94%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fuenteSubtitulos);
+    line-height: 1.5;
+    color: var(--colorAzulMarino);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 3px solid var(--colorAmarillo);
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.editarPerfil .genero{
+    margin-left: 12px;
+}
+
+
+
 /* 
-.register .inputPosicion{
+.editarPerfil .inputPosicion{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -198,7 +211,7 @@
 }
 
 
-  .register .input{
+  .editarPerfil .input{
 width: 50%;
     position: relative;
     display: inline-block;
@@ -264,6 +277,6 @@ width: 50%;
 
   }
 
-  .register .imagentext{
+  .editarPerfil .imagentext{
     color: white;
   }

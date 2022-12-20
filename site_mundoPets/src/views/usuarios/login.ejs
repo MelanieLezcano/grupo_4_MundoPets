@@ -3,18 +3,13 @@
 
     <%- include('../partials/head',{title: 'Login'}) %> 
 
-<body class="login">
+<body>
         
     <%- include('../partials/header') %>
 
-    <main>
-        <section class="container-image">
-            <div>
-                <img src="/img/imagen_para_header.jpg" alt="">
-            </div>
-        </section>
-        <section>
-            <h2>Inicia sesión</h2>
+    <main class="login">
+        <div class="centrar">
+        <section class="section1">
             <h4>
                 <p>Inicia sesión a <a href="">MundoPets</a> </p>
             </h4>
@@ -43,16 +38,16 @@
                         </small>
                         <% } %>
                 </div>
-                <div class="recordarme bottom">
-                    <input type="checkbox" name="recordarme" id="recordarme">
-                    <label for="recordarme">Recordarme</label>
+                <div class="recordarme-bottom">
+                    <label class="textRecordarme" for="recordarme">Recordarme</label>
+                    <input class="recordarmecheck" type="checkbox" name="recordarme" id="recordarme">
                 </div>
-                <button type="submit">Inicia sesion</button>
+                <button class="cuenta" type="submit">Inicia sesion</button>
                 <!-- <button type="reset">Cancelar</button> -->
             </form>
+            <h4>¿No tenés una cuenta? <a href="/usuarios/register">Registrate</a></h4>
         </section>
-        <h4>¿No tenés una cuenta? <a href="/usuarios/register">Registrate</a></h4>
-
+    </div>
     </main>
 
     <%- include('../partials/footer') %>

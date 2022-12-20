@@ -1,5 +1,6 @@
 .lista{
     padding: 30px;
+    padding-top: 0;
 }
 
 .table>:not(caption)>*>* {

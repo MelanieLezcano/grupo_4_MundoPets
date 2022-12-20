@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !nombre.value:
                 $('#nameContainer').innerHTML = "<small>Debe ingresar su nombre</small>"
-                nombre.style.border = "1px solid red"
+                nombre.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 1) {
                         e.mensaje = "Debe ingresar su nombre"
@@ -108,7 +108,7 @@ window.addEventListener('load', () => {
     
             case !regExLetter.test(nombre.value):
                 $('#nameContainer').innerHTML = "<small>El nombre no puede contener menos de 2 caracteres,ni caracteres especiales </small>"
-                nombre.style.border = "1px solid red"
+                nombre.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 1) {
                         e.mensaje = "El nombre no puede contener menos de 2 caracteres,ni caracteres especiales "
@@ -121,7 +121,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#nameContainer').innerHTML = ""
-                nombre.style.border = "1px solid green"
+                nombre.style.border = "3px solid var(--colorCeleste)"
                 errores = errores.filter(error => {
                     return error.id !== 1
                 })
@@ -141,7 +141,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !apellido.value:
                 $('#apellidoContainer').innerHTML = "<small>Debe ingresar su apellido</small>"
-                apellido.style.border = "1px solid red"
+                apellido.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 2) {
                         e.mensaje = "Debe ingresar su apellido"
@@ -154,7 +154,7 @@ window.addEventListener('load', () => {
                 break;
             case !regExLetter.test(apellido.value):
                 $('#apellidoContainer').innerHTML = "<small>El apellido no puede contener menos de 2 caracteres,ni caracteres especiales</small>"
-                nombre.style.border = "1px solid red"
+                nombre.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 2) {
                         e.mensaje = "El apellido no puede contener menos de 2 caracteres,ni caracteres especiales"
@@ -167,7 +167,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#apellidoContainer').innerHTML = ""
-                apellido.style.border = "1px solid green"
+                apellido.style.border = "3px solid var(--colorCeleste)"
                 errores = errores.filter(error => {
                     return error.id !== 2
                 })
@@ -186,7 +186,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !email.value:
                 $('#emailContainer').innerHTML = "<small>Debe ingresar su email</small>"
-                email.style.border = "1px solid red"
+                email.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 3) {
                         e.mensaje = "Debe ingresar un email"
@@ -199,7 +199,7 @@ window.addEventListener('load', () => {
                 break;
             case !regExEmail.test(email.value):
                 $('#emailContainer').innerHTML = "<small>El email no coincide con un email valido</small>"
-                email.style.border = "1px solid red"
+                email.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 3) {
                         e.mensaje = "El email no coincide con un email valido"
@@ -212,7 +212,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#emailContainer').innerHTML = ""
-                email.style.border = "1px solid green"
+                email.style.border = "3px solid var(--colorCeleste)"
                 errores = errores.filter(error => {
                     return error.id !== 3
                 })
@@ -232,7 +232,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !inputContrasenia.value:
                 $('#contraseniaContainer').innerHTML = "<small>Debe ingresar una contraseña</small>"
-                inputContrasenia.style.border = "1px solid red"
+                inputContrasenia.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 4) {
                         e.mensaje = "Debe ingresar una contraseña"
@@ -245,7 +245,7 @@ window.addEventListener('load', () => {
                 break;
             case !regExPass.test(inputContrasenia.value):
                 $('#contraseniaContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
-                inputContrasenia.style.border = "1px solid red"
+                inputContrasenia.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 4) {
                         e.mensaje = "Debe contener al menos 8 caracteres"
@@ -258,7 +258,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#contraseniaContainer').innerHTML = ""
-                inputContrasenia.style.border = "1px solid green"
+                inputContrasenia.style.border = "3px solid var(--colorCeleste)"
                 errores = errores.filter(error => {
                     return error.id !== 4
                 })
@@ -278,7 +278,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !inputContrasenia2.value:
                 $('#contraseniaContainer2').innerHTML = "<small>Debe confirmar su contraseña</small>"
-                inputContrasenia2.style.border = "1px solid red"
+                inputContrasenia2.style.border = "3px solid var(--colorNaranja)"
                 error.mensaje = "Debe confirmar su contraseña"
                 errores.forEach(e => {
                     if (e.id === 5) {
@@ -294,7 +294,7 @@ window.addEventListener('load', () => {
             case inputContrasenia2.value != inputContrasenia.value:
                 $('#contraseniaContainer2').innerHTML = "<small>Las contraseñas no coinciden</small>"
                 error.mensaje = "Las contraseñas no coinciden"
-                inputContrasenia2.style.border = "1px solid red"
+                inputContrasenia2.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 5) {
                         variable = false
@@ -308,7 +308,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#contraseniaContainer2').innerHTML = ""
-                inputContrasenia2.style.border = "1px solid green"
+                inputContrasenia2.style.border = "3px solid var(--colorCeleste)"
                 errores = errores.filter(error => {
                     return error.id !== 5
                 })
