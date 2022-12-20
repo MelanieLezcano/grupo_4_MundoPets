@@ -139,6 +139,7 @@
     justify-content: flex-end;
     margin-bottom: 25px;
     margin-right: 40px;
+    margin-top: 17px;
 }
 
 .login .recordarmecheck{
@@ -148,4 +149,16 @@
 .login .textRecordarme{
     margin-top: 5px;
     margin-right: 5px;
+}
+
+.login .titulo{
+    font-size: 35px;
+}
+
+.login .titulo1{
+    color: var(--colorAzulFrancia);
+}
+
+.login .titulo2{
+    color: var(--colorNaranja);
 }
