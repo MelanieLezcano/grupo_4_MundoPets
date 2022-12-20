@@ -314,7 +314,7 @@ header .burger button {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      width: 15%;
+      width: 12%;
    }
 
    header .top .logo {
@@ -347,20 +347,23 @@ header .burger button {
    header .usuario {
       position: absolute;
       top: 7px;
-      left: 102px;
+      left: 81px;
       width: 19%;
       height: 65px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      align-content: space-around;
       align-items: center;
       justify-content: center;
+      align-content: center;
 
    }
 
    header .usuario i {
       display: none;
+   }
+   header .bienvenido{
+      text-align: center;
    }
 
    header .bienvenido a {
@@ -384,8 +387,8 @@ header .burger button {
 
    header .buscador {
       position: absolute;
-      left: 210px;
-      width: 56%;
+      left: 233px;
+      width: 55%
    }
 
    header .buscador form {
@@ -522,7 +525,7 @@ header .burger button {
       align-items: center;
       justify-content: space-evenly;
       text-align: center;
-  }
+   }
 
    header .usuario li,
    form {
@@ -530,7 +533,8 @@ header .burger button {
    }
 
    header .bienvenido a,
-   .sesion a, button{
+   .sesion a,
+   button {
 
       text-align: center;
       font-size: 25px;
@@ -638,6 +642,7 @@ header .burger button {
    }
 
 }
+
 @media (min-width:1044px) {
    header .carrito {
       position: absolute;
@@ -649,38 +654,42 @@ header .burger button {
       justify-content: space-around;
       top: 3px;
       left: 120px;
-  }
-  header .usuario {
-   display: flex;
-   position: absolute;
-   top: 10px;
-   left: 246px;
-   width: 13%;
-   height: 57px;
-   flex-direction: column;
-   align-content: space-around;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-}
-header .buscador form {
-   width: 100%
-}
+   }
+
+   header .usuario {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 246px;
+      width: 13%;
+      height: 57px;
+      flex-direction: column;
+      align-content: space-around;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   }
+
+   header .buscador form {
+      width: 100%
+   }
 
 }
 
 @media (min-width:1163px) {
    header .nuestrosProductos {
-      left: 1028px
+      left: 1024px
    }
 
    header .buscador {
       width: 42%;
       left: 478px;
    }
+
    header .buscador form {
       width: 100%
    }
+
    header .buscador button {
       left: 452px;
    }
@@ -696,6 +705,11 @@ header .buscador form {
    }
 }
 
+@media (min-width:1163px){
+   header .nuestrosProductos {
+      left: 1054px;
+  }
+}
 @media (min-width:1300px) {
    header .nuestrosProductos {
       display: block;
@@ -709,9 +723,11 @@ header .buscador form {
       left: 484px;
       width: 40%;
    }
+
    header .buscador form {
       width: 100%
    }
+
    header .register {
       position: absolute;
       left: 126px;
@@ -742,7 +758,7 @@ header .buscador form {
       position: absolute;
       top: 11px;
       left: 264px;
-      width: 16%;
+      width: 13%;
       height: 65px;
       display: flex;
       flex-wrap: wrap;
@@ -768,6 +784,9 @@ header .buscador form {
    form {
       width: 100%;
    }
+   header .usuario button{
+      width: 100%;
+   }
 
    header .register {
       position: absolute;
@@ -783,7 +802,7 @@ header .buscador form {
       position: absolute;
       left: 523px;
       width: 28%;
-  }
+   }
 
    header .buscador form {
       width: 100%
@@ -835,6 +854,9 @@ header .buscador form {
 }
 
 @media (min-width:1400px) {
+   header .carrito{
+      left: 147px;
+   }
    header .nuestrosProductos {
       position: absolute;
       top: 18px;
@@ -865,6 +887,7 @@ header .buscador form {
    form {
       width: 100%;
    }
+
    header .buscador form {
       width: 100%
    }
@@ -907,7 +930,7 @@ header .buscador form {
       align-content: center;
       justify-content: space-around;
       top: 3px;
-      left: 166px;
+      left: 142px;
 
    }
 
@@ -919,8 +942,8 @@ header .buscador form {
    header .usuario {
       position: absolute;
       top: 13px;
-      left: 267px;
-      width: 16%;
+      left: 272px;
+      width: 10%;
       height: 65px;
       display: flex;
       flex-wrap: wrap;
@@ -961,8 +984,8 @@ header .buscador form {
       position: absolute;
       left: 509px;
       width: 29%;
-  }
-   
+   }
+
 
    header .buscador form {
       width: 100%
@@ -1020,6 +1043,7 @@ header .buscador form {
       top: 20px;
       left: 1344px;
    }
+
    header .buscador button {
       left: 872;
    }
@@ -1028,19 +1052,21 @@ header .buscador form {
    form {
       width: 100%;
    }
+
    header .buscador form {
       width: 100%
    }
+
    header .buscador {
       position: absolute;
       left: 552px;
       width: 29%;
-  }
-  
+   }
+
 
 }
 
-@media (min-width:1544px){
+@media (min-width:1544px) {
    header .usuario {
       position: absolute;
       top: 13px;
@@ -1053,21 +1079,27 @@ header .buscador form {
       align-content: space-around;
       align-items: center;
       justify-content: center;
-  }
-  header .buscador {
-   position: absolute;
-   left: 524px;
-   width: 31%;
-}
-header .buscador form {
-   width: 100%
-}
-header .buscador button {
-   left: 756px;
-}
+   }
+
+   header .buscador {
+      position: absolute;
+      left: 524px;
+      width: 31%;
+   }
+
+   header .buscador form {
+      width: 100%
+   }
+
+   header .buscador button {
+      left: 756px;
+   }
 }
 
 @media (min-width:1622px) {
+   header .carrito{
+      left: 153px;
+   }
    header .nuestrosProductos {
       position: absolute;
       top: 20px;
@@ -1078,14 +1110,16 @@ header .buscador button {
       position: absolute;
       left: 539px;
       width: 33%;
-  }
+   }
+
    header .buscador button {
       left: 852px;
    }
 
    header .usuario {
-      left: 279;
+      left: 267px;
    }
+
    header .buscador form {
       width: 100%
    }
@@ -1112,10 +1146,12 @@ header .buscador button {
       position: absolute;
       left: 531px;
       width: 33%;
-  }
+   }
+
    header .buscador form {
       width: 100%
    }
+
    header .buscador button {
       left: 955px;
    }
@@ -1144,9 +1180,9 @@ header .buscador button {
 
    header .buscador {
       position: absolute;
-    left: 559px;
-    width: 33%;
-}
+      left: 559px;
+      width: 33%;
+   }
 
    header .buscador button {
       left: 986px;
@@ -1155,6 +1191,7 @@ header .buscador button {
    header .usuario {
       left: 279;
    }
+
    header .buscador form {
       width: 100%
    }
@@ -1171,6 +1208,9 @@ header .buscador button {
 }
 
 @media (min-width:1920px) {
+   header .carrito{
+      left: 174px;
+   }
    header .nuestrosProductos {
       position: absolute;
       top: 20px;
@@ -1180,8 +1220,9 @@ header .buscador button {
    header .buscador {
       position: absolute;
       left: 609px;
-    width: 32%;
+      width: 32%;
    }
+
    header .buscador form {
       width: 100%
    }
@@ -1200,18 +1241,19 @@ header .buscador button {
       position: absolute;
       left: 166px;
    }
+
    header .usuario {
       display: flex;
-      position: absolute;
-      top: 14px;
-      left: 332px;
-      width: 12%;
-      height: 60px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-      justify-content: space-evenly;
-      text-align: center;
-  }
+    position: absolute;
+    top: 14px;
+    left: 288px;
+    width: 14%;
+    height: 60px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+   }
 }
