@@ -5,9 +5,9 @@ const bcrypt = require('bcryptjs')
 module.exports = [
 
     check('contrasenia')
-    .notEmpty().withMessage('Debe ingresar su contraseña actual').bail()
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(.{8,12})$/)
-    .withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener entre 8 y 12 caracteres'),
+    .notEmpty().withMessage('Debe ingresar su contraseña actual').bail(),
+    /* .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(.{8,12})$/)
+    .withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener entre 8 y 12 caracteres'), */
 /*     body('contrasenia').custom((value,{req}) => value !== req.body.usuario.contraseña ? false : true)
     .withMessage('Las contraseñas no coinciden'), */
     

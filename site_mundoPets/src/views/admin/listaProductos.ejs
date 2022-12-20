@@ -4,10 +4,10 @@
 <body>
 
   <%- include('../partials/header') %> 
-    <main class="admin">
+    <main class="lista">
         <h1>Admin</h1>
         <a href="/admin/crear">
-            <button type="button" class="btn btn-primary">Crear Producto</button>
+            <button type="button" class="btnbtn-primary">Crear Producto</button>
         </a>
 
         <div class="table-responsive">
@@ -41,10 +41,10 @@
                           <div>
                            
                               <a href="/admin/editar/<%= producto.id%>">
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                <button type="button" class="btnbtn-success"><i class="fas fa-edit"></i></button>
                               </a>
                                 <form action="/admin/eliminar/<%= producto.id%>?_method=DELETE" method="post">
-                                  <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                  <button type="submit" class="btnbtn-danger"><i class="fas fa-trash"></i></button>
                                 </form>
                           
                                

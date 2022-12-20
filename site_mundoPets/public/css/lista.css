@@ -1,0 +1,90 @@
+.lista{
+    padding: 30px;
+}
+
+.table>:not(caption)>*>* {
+    box-shadow: none;
+}
+
+.lista .table-responsive{
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 25px;
+
+}
+
+.lista th{
+    text-align: center;
+    color: var(--colorNaranja);
+    font-family: var(--fuenteSubtitulos);
+}
+
+.lista{
+    top: 44px;
+    position: relative;
+    text-align: center;
+
+
+}
+
+.lista a{
+    color: var(--colorAzulMarino);
+    font-family: var(--fuenteSubtitulos);
+}
+
+.lista .id{
+    top: 44px;
+    position: relative;
+    text-align: center;
+}
+
+.lista .form-select{
+    color: var(--colorAzulMarino);
+    font-family: var(--fuenteSubtitulos);
+}
+
+.lista h1{
+    color: var(--colorAzulFrancia);
+    font-family: var(--fuenteSubtitulos);
+    background-color: white;
+    border-radius: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lista .btnbtn-success{
+    color: white;
+    background-color: var(--colorAzulFrancia);
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+}
+
+.lista .btnbtn-danger{
+    margin-top: 5px;
+    color: white;
+    background-color: var(--colorNaranja);
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+}
+
+.lista .btnbtn-primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    
+    background-color: var(--colorAzulFrancia);
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+
+    margin-bottom: 10px;
+    text-align: left;
+}
