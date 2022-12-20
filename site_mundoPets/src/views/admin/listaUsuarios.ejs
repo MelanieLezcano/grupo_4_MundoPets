@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head',{title:"Usuarios"}) %>
+
+  <body>
+
+    <%- include('../partials/header') %>
+      <main class="listaUsuarios">
+        <h1>Usuarios</h1>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Avatar</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Rol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% usuarios.forEach(usuarios=> { %>
+                <tr>
+
+                  <th class="id">
+                    <%= usuarios.id %>
+                  </th>
+                  <td class="imgPosicion">
+                    <div class="imgPerfil">
+                      <img src="/img/usuarios/<%= usuarios.imagen %>" alt="Imagen perfil" class="img">
+                    </div>
+                  </td>
+                  <td class="td">
+                    <%=usuarios.nombre%>
+                  </td>
+                  <td class="td">
+                    <%= usuarios.apellido %>
+                  </td>
+                  <td class="td">
+                    <%= usuarios.email %>
+                  </td>
+
+                  <form action="/admin/rolUsuarios/<%= usuarios.id %>?_method=PUT" method="POST">
+
+                    <td class="td">
+                      <select class="form-select" name="rol" id="rol" aria-label="Floating label select example">
+                        <% if (usuarios.roles_id==1 ) { %>
+                          <option value="<%=usuarios.roles_id %>">Administrador</option>
+                          <option value="2">Usuario</option>
+                          <% }%>
+
+                            <% if (usuarios.roles_id==2 ) { %>
+                              <option value="<%=usuarios.roles_id %>">Usuario</option>
+                              <option value="1">Administrador</option>
+                              <% }%>
+
+                      </select>
+                    </td>
+
+                    <td class="td">
+                      <button type="submit" class="btn btn-danger"><i class="fa-solid fa-circle-check"></i></button>
+                    </td>
+                  </form>
+
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <script src="/javascripts/sweetAlert.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>
