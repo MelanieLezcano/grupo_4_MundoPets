@@ -1,6 +1,6 @@
 .productos .carrouselProductos{
   width: 98%;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .productos .carrouselProductos .card{
   width: 350px;
