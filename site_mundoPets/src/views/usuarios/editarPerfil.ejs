@@ -3,14 +3,34 @@
 
 <%- include('../partials/head',{title: 'Editar perfil' }) %>
 
-    <body class="register">
+    <body>
 
         <%- include('../partials/header') %>
 
-            <main>
-                <section>
-                    <h2>Edicion de Perfil</h2>
-                    <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+        <main class="editarPerfil">
+            <div class="centrar"></div>
+            <section class="section1">
+                <h2>Edicion de Perfil</h2>
+                <form action="/usuarios/editarPerfil/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
+                    <article class="article1">
+
+                        <label for="imagenes">
+                                <div class="imgPosicion">
+                                <div class="imgPerfil">
+                                <img id="img-preview"
+                                src="/img/usuarios/<%=usuarioLogin.imagen%>" alt="">
+                            </div>
+                        </div>
+                            </label>
+                            <div class="custom-input-file">
+                            <p class="imagentext">Imagen perfil</p>
+                            <input id="imagen" type="file" name="imagenes" class="input-file"
+                            placeholder="Imagen del Producto" accept="img/*">
+                        </div>
+                        <p class="span text-danger" id="imgError" style="width: 500px;">
+                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                        </p>
+                        </div>
 
                         <div class="container bottom">
                             <label for="nombre">Nombre</label>
@@ -40,7 +60,7 @@
                             <div id="ciudadContainer"></div>
                         </div>
                         
-                        <label for="floatingSelect">Género</label>
+                        <label class="genero">Género</label>
                         <select class="form-select" name="genero" id="genero" aria-label="Floating label select example">
                             <% if (locals.usuarioLogin.genero == 'Femenino' ) { %>
                                 <option value="<%=locals.usuarioLogin.genero %>"><%=locals.usuarioLogin.genero %></option>
@@ -69,28 +89,12 @@
                          </select> 
 
 
-                        <div div class="col col-5">
-                            <label class="form-label" for="imagenes">
-                                <img id="img-preview"
-                                class="img-fluid img-thumbnail imagen-height rounded"
-                                src="/img/usuarios/<%=usuarioLogin.imagen%>" alt="">
-<!--                                 <div class="imgHover">
-                                    <p class="text-center">Selecionar Imagen</p>
-                                </div> -->
-                            </label>
-                            <input class="form-input" id="imagen" type="file" name="imagenes"
-                            placeholder="Imagen del Producto" accept="img/*">
-                        
-                       
-                        <p class="span text-danger" id="imgError" style="width: 500px;">
-                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                        </p>
-                        </div>
-                        <button  style="margin: 5px;" type="submit">Editar</button>
-                        <button  style="margin: 5px;" type="reset">Cancelar</button>
-                    </div>
-                    </form>
-                </section>
+                        <button class="cuenta" style="margin: 5px;" type="submit">Editar</button>
+                        <button class="cuenta" style="margin: 5px;" type="reset">Cancelar</button>
+                    </article>
+                </form>
+            </section>
+        </div>
             </main>
             <%- include('../partials/footer') %>
             <script src="/javascripts/imagenes.js"></script>

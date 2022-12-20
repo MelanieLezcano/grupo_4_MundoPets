@@ -1,0 +1,282 @@
+
+.editarPerfil .section1{
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 25px;
+    padding-bottom: 45px;
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 50px;
+}
+
+.editarPerfil .article1{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.editarPerfil section.container-image{
+    display: none;
+}
+.editarPerfil .container .contrasenia {
+    width: 100%;
+    position: relative;
+}
+
+.editarPerfil  .container .contrasenia i {
+    position: absolute;
+    color: var(--colorAzulFrancia);
+    top: 4px;
+    right: 2px;
+    padding: 10px;
+}
+
+.editarPerfil .cuenta {
+    padding: 13px;
+    background-color: var(--colorAzulFrancia);
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+.editarPerfil h2{
+    color: white;
+    background-color: var(--colorNaranja);
+    width: 300px;
+    font-weight: bold ;
+    text-align: center;
+    padding: 5px;
+    
+    border-radius: 25px;
+    font-family: var(--fuenteSubtitulos);
+    /* font-size: 50px; */
+    margin: 20px 0;
+}
+
+.editarPerfil .subtitulo{
+    margin-left: 270px;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: -15px;
+}
+
+.editarPerfil input {
+    width: 100%;
+    padding: 10px;
+
+    background-color: var(--colorGris);
+    font-size: x-small;
+    border-radius: 25px;
+    /* margin-bottom: 50px; */
+    font: message-box;
+    border:solid 3px var(--colorAmarillo);
+}
+
+.editarPerfil #nombre #apellido #email #contrasenia #contrasenia{
+    color: var(--colorCeleste);
+    font-family: var(--fuenteSubtitulos);
+}
+
+.editarPerfil h4{
+    margin: 44px 73px;
+    color: var(--colorCeleste);
+    text-align: center;
+
+}
+.editarPerfil p{
+    margin: 2px;
+    color: var(--colorCeleste);
+}    
+.editarPerfil a{
+
+    color: var(--colorAzulFrancia);
+}
+.editarPerfil{
+    font-family: var(--fuenteTitulos);
+}
+.editarPerfil{
+    width: 100%;
+}
+.editarPerfil .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    font-weight: bold;
+}
+.editarPerfil label{
+    color: var(--colorAzulFrancia);
+    font-weight: 600;
+}    
+.editarPerfil section{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.editarPerfil .container{
+    margin-bottom: 15px;
+}
+
+.editarPerfil small{
+    color: var(--colorNaranja)
+}
+
+
+
+.editarPerfil .imgPosicion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.editarPerfil .imgPerfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 50%;
+    border: 3px solid white;
+    
+}
+
+.editarPerfil .imgPerfil img{
+    height: auto;
+    width: auto;
+}
+
+.editarPerfil .img-thumbnail {
+    padding: 0;
+    background-color: none;
+    border: none;
+    border-radius: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.form-select {
+    margin-left: 15px;
+    margin-bottom: 29px;
+    display: block;
+    width: 94%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fuenteSubtitulos);
+    line-height: 1.5;
+    color: var(--colorAzulMarino);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 3px solid var(--colorAmarillo);
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.editarPerfil .genero{
+    margin-left: 12px;
+}
+
+
+
+/* 
+.editarPerfil .inputPosicion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+  .editarPerfil .input{
+width: 50%;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+ }
+
+ .input {
+    background-color: var(--colorAzulFrancia);
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    content: 'Imagen perfil';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }  
+  .input input[type="file"] {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+  }
+  
+  #input {
+    background-color: aqua;
+    border: none;
+  }
+   */
+
+   .custom-input-file {
+    background-color: var(--colorAzulFrancia);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 auto 0;
+    min-height: 15px;
+    overflow: hidden;
+    padding: 5px;
+    padding-bottom: 0px;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .custom-input-file .input-file {
+   border: 10000px solid transparent;
+   cursor: pointer;
+   font-size: 10000px;
+   margin: 0;
+   opacity: 0;
+   outline: 0 none;
+   padding: 0;
+   position: absolute;
+   right: -1000px;
+   top: -1000px;
+
+  }
+
+  .editarPerfil .imagentext{
+    color: white;
+  }
