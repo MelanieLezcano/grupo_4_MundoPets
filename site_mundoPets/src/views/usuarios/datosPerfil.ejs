@@ -23,9 +23,12 @@
             <li>
                 <a href="/usuarios/editarPerfil"><i class="fa-regular fa-user"></i>  Editar perfil</a>
             </li>
+            <li>
+              <a href="/usuarios/cambiarContrasenia"><i class="fa-solid fa-lock"></i>  Contraseña</a>
+          </li>
             <% if (locals.usuarioLogin && (locals.usuarioLogin.rol) === 1) { %>
                 <li>
-                    <a href=""><i class="fa-solid fa-users-gear"></i>  Usuarios</a>
+                    <a href="/admin/listaUsuarios"><i class="fa-solid fa-users-gear"></i>  Usuarios</a>
                 </li> 
               <% } %>
               <% if (locals.usuarioLogin && (locals.usuarioLogin.rol) === 1) { %>
@@ -64,11 +67,7 @@
             <div class="subtitulo">Usuario</div>
             <div class="dato"><%= locals.usuarioLogin.nombre +" "+ locals.usuarioLogin.apellido%> </div>
             <div class="subtitulo">E-mail</div>
-            <div class="dato"><% if (locals.usuarioLogin.contacto === null) { %>
-                <%- "-" %> 
-              <% } else { %>
-                <%- locals.usuarioLogin.contacto %> 
-                <% } %></div>
+            <div class="dato"><%= locals.usuarioLogin.email %> </div>
         </article>
         <article  class="fondoBlanco2">
             <div class="tituloDatos">Datos personales</div>

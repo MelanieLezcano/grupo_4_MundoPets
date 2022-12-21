@@ -44,6 +44,11 @@
     font-size: 18px;
     width: 100%;
 }
+
+.editarPerfil .cuenta:hover {
+    background-color: var(--colorAzulMarino);
+}
+
 .editarPerfil h2{
     color: white;
     background-color: var(--colorNaranja);

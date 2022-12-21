@@ -44,6 +44,11 @@
     font-size: 18px;
     width: 100%;
 }
+
+.login .cuenta:hover {
+    background-color: var(--colorAzulMarino);
+}
+
 .login h2{
     color: white;
     background-color: var(--colorNaranja);
