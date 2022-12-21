@@ -7,8 +7,9 @@
     <%- include('./partials/header') %> 
     <main> 
         
-       
-        <h1> Productos para <%= categorias.nombre %></h1>
+       <div class="titulo">
+        <span class="textProductos"> Productos para </span><span class="textCategoria"><%= categorias.nombre %></span>
+    </div>
         <% if (categorias.nombre === 'Gato') { %>
             <%- include('./partials/bannerGatos') %> 
           <% } else { %>
