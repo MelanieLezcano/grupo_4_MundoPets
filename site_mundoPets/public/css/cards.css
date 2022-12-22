@@ -46,21 +46,27 @@
 
 .card .card-value{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
+    height: 62px;
 }
 .card .card-discount{
     font-family: var(--fuenteSubtitulos);
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     color: var(--colorNaranja);
+    height: 62px;
 }
 .card .card-price{
     font-size: 25px;
     font-weight: 600;
     color: var(--colorAzulFrancia);
+    height: 62px;
+    padding-right: 13px;
+    top: 9px;
+    position: relative;
 }
 .card .card-button{
     text-align: center;
