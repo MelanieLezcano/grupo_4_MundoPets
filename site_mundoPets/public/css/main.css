@@ -10,12 +10,18 @@
     object-fit: contain;
 }
 
+
+.mainDesktop{
+    display: none;
+}
+
 .mainMobile{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 
 .mainMobile .bannerMobile img{
     position: relative;
@@ -203,145 +209,14 @@
     display: none;
 }
 
-.mainMobile .banner{
+.home .banner{
     display: none;
 }
 
-.mainMobile .banner1500{
+.home .banner1500{
     display: none;
 }
 
-/* .mainHome {
-    background-size: 100%;
-    width: 100%;
- 
-    background-repeat: no-repeat;
-    background-position: cover;
-    margin-top: 8vw;
-} 
-
-.home .banner img{
-    display: none;
-}
-
-.home .banner1500 img {
-    display: none;
-}
-
-.home .bannerMobile img{
-    position: absolute;
-    width: 100vw;
-    object-fit: contain;
-  }
-
-  .home .bannerFalsoMobile img{
-    width: 100vw;
-    object-fit: contain;
-    visibility: hidden;
-  }
-
- 
-
-  .mainHome .section2{
-    display: none;
-  }
-
-
-.mainHome .marcas{
-    position: absolute;
-    top: 680px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.918);
-    padding: 7px;
-    padding-right: 22px;
-    padding-left: 22px;
-    border-radius: 20px;
-}
-
-.mainHome .destacadosP {
-    text-align: center;
-    margin-top: 6px;
-}
-
-
-
-
-
-.mainHome .imgMascotasP{
-    display: flex;
-    flex-direction: column;
-    margin-right: 14vw;
-}
-
-.mainHome .imgMascotas{
-    display: flex;
-    flex-direction: column;
-    margin-top: 7px;
-    margin-right: 17vw;
-}
-
-.mainHome .imgPerro {
-    width: 28vw;
-    height: 34vw;
-    margin-top: 0vw;
-}
-.mainHome .dog {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.mainHome .imgGato{
-    width: 27vw;
-    height: 32vw;
-    margin-top: 3vw;
-}
-
-.mainHome .links .nosotros {
-    height: 160px;
-    margin: 32px;
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--colorCeleste);
-    border-radius: 20px;
-    padding: 8px;
-}
-
-.mainHome .nosotros a,
-.contacto a {
-    color: white;
-    margin-bottom: 2px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.mainHome .links .contacto {
-    height: 160px;
-    margin: 32px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--colorAzulMarino);
-    border-radius: 20px;
-    padding: 8px;
-}
-
-.mainHome .links div i {
-    width: 100%;
-    font-size: 100px;
-    color: white;
-    text-align: center;
-
-}
-
-.mainHome .quienSomos{
-    display: none;
-}
-*/
 .home .carrouselProductos{
     width: 98%;
     margin: 0 auto;
@@ -616,21 +491,384 @@
   }
 
   @media (min-width:1024px) {
+
     .mainMobile .bannerMobile{
-        display: none;
+      display: none;
     }
     
     .home .banner1500{
-        display: none;
+      display: none;
     }
-
+    
     .home .banner{
-        display: flex;
+      display: flex;
+    }
+    
+    .mainMobile{
+      display: none;
     }
 
-    .mainMobile{
-        display: none;
+
+    
+    .mainDesktop{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      top: -125px;
+      position: relative;
     }
+    
+
+.mainDesktop .perroGato{
+width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: -562px;
+}
+
+.mainDesktop .gato img{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 75px 0 75px;
+}
+
+.mainDesktop .
+
+.mainDesktop .gato{
+    position: relative;
+    display: inline-block;
+
+}
+
+.mainDesktop .destacadosP{
+    top: -487px;
+    position: relative;
+    text-align: center;
+}
+
+.mainDesktop .mTexto{
+    position: absolute;
+    top: 86px;
+    left: 19%;
+
+    font-size: 68px;
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorAzulFrancia);
+}
+
+.mainDesktop .perro{
+    position: relative;
+    display: inline-block;
+}
+
+.mainDesktop .perro img{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 75px 0 75px;
+}
+
+.mainDesktop .divTitulo{
+    width: 100%;
+    text-align: center;
+}
+
+.mainDesktop .spanTitulo{
+    top: 680px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 11px;
+    padding-top: 21px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.mainDesktop .spanAzul {
+font-family: var(--fuenteTitulos);
+color: var(--colorAzulFrancia);
+text-align: center;
+margin-bottom: 30px;
+font-size: 40px;
+font-weight: 500;
+}
+
+.mainDesktop .spanNaranja {
+font-family: var(--fuenteTitulos);
+color: var(--colorNaranja);
+text-align: center;
+margin-bottom: 30px;
+font-size: 40px;
+font-weight: 500;
+}
+
+.mainDesktop .marcas{
+position: absolute;
+top: 680px;
+height: 48px;
+background-color: rgba(255, 255, 255, 0.918);
+padding: 7px;
+padding-right: 22px;
+padding-left: 22px;
+border-radius: 20px;
+}
+
+.mainDesktop .logos {
+    top: 783px;
+    margin: 0 auto;
+    width: 100%;
+    height: 161px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.mainDesktop .logos img {
+    
+    width: 23%;
+    padding: 10px;
+    height:  140px
+} 
+
+.home .carrouselProductos{
+    width: 98%;
+    margin: 0 auto;
+    position: relative;
+    top: 241px;
+}
+  
+}
+.home .carrouselProductos .card{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home .glider-contain {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.home .glider {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  transform: translateZ(0);
+}
+.home  .glider-track {
+  transform: translateZ(0);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1;
+}
+.home  .glider.draggable {
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.home .glider.draggable .glider-slide img {
+  user-select: none;
+  pointer-events: none;
+}
+.home .glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.home .glider-slide {
+  user-select: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.home .glider-slide img {
+  max-width: 100%;
+}
+.home .glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0;
+}
+.home .glider-prev,.glider-next {
+  user-select: none;
+  position: absolute;
+  outline: none;
+  background: none;
+  padding: 0;
+  z-index: 2;
+  font-size: 70px;
+  text-decoration: none;
+  left: 15px;
+  border: 0;
+  top: 30%;
+  cursor: pointer;
+  color: var(--colorNaranja);
+  opacity: 1;
+  line-height: 1;
+  transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
+              color .5s cubic-bezier(.17,.67,.83,.67);
+}
+
+.home .glider-next{
+  font-size: 70px;
+}
+
+.home .glider-prev:hover,
+.glider-next:hover,
+.glider-prev:focus,
+.glider-next:focus {
+  color: var(--colorNaranja);
+}
+.home .glider-next {
+  right: 20px;
+  left: auto;
+}
+.home .glider-next.disabled,
+.glider-prev.disabled {
+  opacity: .25;
+  color: var(--colorNaranja);
+  cursor: default;
+}
+
+.fa-chevron-right:before{
+  color: var(--colorNaranja);
+}
+
+.fa-chevron-left:before{
+  color: var(--colorNaranja);
+}
+
+.home .glider-slide {
+  min-width: 150px;
+}
+.home .glider-hide {
+  opacity: 0;
+}
+.home .glider-dots {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.home .glider-dot {
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: var(--colorCeleste);
+  border-radius: 999px;
+  background: var(--colorCeleste);
+  width: 12px;
+  height: 12px;
+  margin: 7px;
+}
+.home .glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+  background: var(--colorAzulFrancia);
+}
+
+.home .glider-dot.active{
+  background: var(--colorAzulFrancia);
+}
+
+
+@media(max-width: 36em){
+  .home .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none; 
+    width: 7px;
+    height: 3px;
+  }
+  .home  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.918);
+    box-shadow: 0 0 1px rgba(255,255,255,.25);
+  }
+}  
+
+.mainDesktop .section1{
+    top: 58px;
+    position: relative;
+}
+
+  .mainDesktop .quienSomos {
+    background-color: rgba(255, 255, 255, 0.918);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 54px;
+    top: 142px;
+}
+.mainDesktop .quienSomos img {
+    width: 84%;
+    margin-top: 124px;
+    
+}
+
+.mainDesktop .textoColum{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.mainDesktop .spanQuienesSomos{
+    display: flex;
+    flex-direction: row;
+}
+
+.mainDesktop .textoQuienes{
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorAzulFrancia);
+    margin-bottom: 5px;
+    margin-right: 15px;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.mainDesktop .textoSomos{
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorNaranja);
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.mainDesktop .spanParrafo{
+    text-align: left;
+    color: black;
+    font-size: 22px;
+    font-family: var(--fuenteSubtitulos);
+    font-weight: 500;
+}
+
+
+
+
   }
 
 /*
@@ -855,69 +1093,6 @@
        
     }
    
-    .mainHome .divTitulo{
-        width: 100%;
-    }
-
-    .mainHome .spanTitulo{
-        top: 680px;
-        height: 48px;
-        background-color: rgba(255, 255, 255, 0.918);
-        padding: 11px;
-        padding-top: 21px;
-        padding-right: 30px;
-        padding-left: 30px;
-        border-radius: 40px;
-        text-align: center;
-    }
-    
-.mainHome .spanAzul {
-    font-family: var(--fuenteTitulos);
-    color: var(--colorAzulFrancia);
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.mainHome .spanNaranja {
-    font-family: var(--fuenteTitulos);
-    color: var(--colorNaranja);
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.mainHome .marcas{
-    position: absolute;
-    top: 680px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.918);
-    padding: 7px;
-    padding-right: 22px;
-    padding-left: 22px;
-    border-radius: 20px;
-}
-
-    .mainHome .logos {
-        top: 783px;
-        margin: 0 auto;
-        width: 100%;
-        height: 161px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: white;
-    }
-
-    .mainHome .logos img {
-        
-        width: 23%;
-        padding: 10px;
-        height:  140px
-    }
 
     .mainHome .perroGato{
         width: 100%;
