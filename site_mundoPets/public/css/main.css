@@ -530,16 +530,25 @@ width: 100%;
 }
 
 .mainDesktop .gato img{
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 15px 75px 0 75px;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+
 }
 
-.mainDesktop .
+.mainDesktop .gato:hover img{
+  transform: scale(1.1)
+            rotate(7deg);
+}
 
 .mainDesktop .gato{
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  margin: 15px 75px 0 75px;
+  overflow: hidden;
     position: relative;
     display: inline-block;
 
@@ -559,20 +568,33 @@ width: 100%;
     font-size: 68px;
     font-family: var(--fuenteSubtitulos);
     color: var(--colorAzulFrancia);
+    z-index: 1;
+
 }
 
 .mainDesktop .perro{
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  margin: 15px 75px 0 75px;
+  overflow: hidden;
     position: relative;
     display: inline-block;
 }
 
 .mainDesktop .perro img{
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 15px 75px 0 75px;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
 }
+
+.mainDesktop .perro:hover img{
+  transform: scale(1.1)
+            rotate(7deg);
+}
+
 
 .mainDesktop .divTitulo{
     width: 100%;
