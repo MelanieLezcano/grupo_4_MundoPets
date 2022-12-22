@@ -16,7 +16,8 @@ module.exports = [
     /* contraseña */
     check('contrasenia')
     .notEmpty().withMessage('Debe ingresar una contraseña').bail()
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/)
+    .withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener 8 a 12 caracteres'),
     check('contrasenia2')
     .notEmpty().withMessage('Debe confirmar su contraseña').bail(),
     /* .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(), */
