@@ -3,10 +3,11 @@
 
 <%- include('./partials/head',{title: 'Mundo Pets' }) %>
 
-    <body class="productos">
+    <body>
         <%- include('./partials/header') %>
-            <main>
+            <main class="productos">
                 <h1>NUESTROS PRODUCTOS</h1>
+                <div class="posicion1">
                 <section class="allProductos">
                     <%productos.forEach(producto=> { %>
                         <%- include('./partials/cards',{ id:producto.id, imagenes:producto.imagen,
@@ -14,7 +15,7 @@
                             <% }) %>
 
                 </section>
-
+            </div>
             </main>
             <%- include('./partials/footer') %>
     </body>

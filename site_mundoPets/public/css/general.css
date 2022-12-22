@@ -11,6 +11,12 @@
      text-decoration: none;
  }
 
+ button{
+    transition: backgroud-color, 0.5s,
+    color, 0.5s,
+    border, 0.5s;
+ }
+
  body{
      margin: 0 auto;
      background-image: url('../img/fondoPaws.png');

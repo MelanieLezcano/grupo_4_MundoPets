@@ -6,35 +6,67 @@
     display: flex;
     flex-direction: row;
 }
+
+.card .card-img{
+    height: 250px;
+    overflow: hidden;
+}
+
 .card .card-img .card-img-background{
     height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
 }
+
+.card:hover .card-img .card-img-background{
+    transition: 0.3s all ease-in-out;
+    height: 270px;
+}
+
 .card .card-name{
     text-align: center;
     font-size: 25px;
     font-family: var(--fuenteTitulos);
     font-weight: 700;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 75px;
+    transition: 0.3s all ease-in-out;
 }
+
+.card:hover .card-name{
+    transition: 0.3s all ease-in-out;
+    font-size: 30px;
+    color: var(--colorAzulMarino);
+}
+
 .card .card-value{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
+    height: 62px;
 }
 .card .card-discount{
     font-family: var(--fuenteSubtitulos);
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     color: var(--colorNaranja);
+    height: 62px;
 }
 .card .card-price{
     font-size: 25px;
     font-weight: 600;
     color: var(--colorAzulFrancia);
+    height: 62px;
+    padding-right: 13px;
+    top: 9px;
+    position: relative;
 }
 .card .card-button{
     text-align: center;
@@ -55,4 +87,8 @@
     padding-top: 15px;
     padding-left: 14px;
     padding-right: 14px;
+}
+
+.card .card-button button:hover{
+    background-color: var(--colorAzulMarino);
 }

@@ -3,16 +3,17 @@
 
 <%- include('../partials/head',{title: 'Cambiar contraseña' }) %>
 
-    <body class="register">
+    <body>
 
         <%- include('../partials/header') %>
 
-            <main>
-                <section>
+            <main class="register">
+                <div class="centrar">
+                <section class="section1">
                     <h2>Cambiar contraseña</h2>
 
                     <form action="/usuarios/cambiarContrasenia/<%= locals.usuarioLogin.id %>?_method=PUT" method="POST" id="formulario">
-
+                        <article class="article1">
                         <div class="container bottom">
                             <label for="contrasenia">Cambiar Contraseña</label>
                             <div class="contrasenia">
@@ -21,13 +22,6 @@
                                 <i class="fas fa-eye-slash" id="eye-contrasenia"></i>
                             </div>
                             <div id="contraseniaContainer"></div>
-                            <p class="span text-danger" id="contraseniaError" style="width: 500px;">
-                                <% if (locals.errors && errors.contrasenia) { %>
-                                    <small>
-                                        <%= errors.contrasenia.msg%>
-                                    </small>
-                                    <% } %>
-                            </p>
                         </div>
 
                         <div class="container bottom">
@@ -64,14 +58,16 @@
                             </p>
                         </div>
 
-                        <button  style="margin: 5px;" type="submit">Editar</button>
-                        <button  style="margin: 5px;" type="reset">Cancelar</button>
+                        <button class="cuenta" style="margin: 5px;" type="submit">Editar</button>
+                        <button class="cuenta"  style="margin: 5px;" type="reset">Cancelar</button>
                     </div>
+                </article>
                     </form>
                 </section>
+            </div>
             </main>
             <%- include('../partials/footer') %>
-<!--             <script src="/javascripts/cambiarContrasenia.js"></script> -->
+            <script src="/javascripts/cambiarContrasenia.js"></script>
     </body>
 
 </html>

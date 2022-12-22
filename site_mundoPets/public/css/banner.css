@@ -1,0 +1,38 @@
+/* .gatosbanner .carousel slide{
+   
+   display: flex;
+   flex-wrap: wrap;
+   width: 1440px;
+    height: 500px;
+}
+
+.gatosbanner .carousel slide .carousel-inner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.gatosbanner .carousel slide .carousel-inner .carousel-item active, .carousel-item img{
+    width: 100%;
+    
+   
+} */
+.banner{
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+}
+
+@media (min-width: 1289px){
+    .banner{
+        overflow: hidden;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 0 25px 25px;
+    }
+
+}
+

@@ -11,6 +11,11 @@ header {
    border-bottom-left-radius: 25px;
 }
 
+.home header{
+   position: absolute;
+   top: 0;
+}
+
 header .top {
    height: 68px;
    display: flex;
