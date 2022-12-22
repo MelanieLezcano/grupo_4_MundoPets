@@ -244,7 +244,7 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExPass.test(inputContrasenia.value):
-                $('#contraseniaContainer').innerHTML = "<small>Debe contener al menos 8 caracteres </small>"
+                $('#contraseniaContainer').innerHTML = "<small>La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener 8 a 12 caracteres</small>"
                 inputContrasenia.style.border = "3px solid var(--colorNaranja)"
                 errores.forEach(e => {
                     if (e.id === 4) {
