@@ -1,4 +1,217 @@
-.mainHome {
+.home .banner img{
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+}
+
+.home .banner1500 img{
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+}
+
+.mainMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainMobile .bannerMobile img{
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+}
+
+.mainMobile .section1 {
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 33px;
+}
+
+.mainMobile .spanAzul {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorAzulFrancia);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mainMobile .spanNaranja {
+    font-family: var(--fuenteTitulos);
+    color: var(--colorNaranja);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mainMobile .divTitulo{
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.mainMobile .spanTitulo{
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 7px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.mainMobile .logos {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white
+}
+
+.mainMobile .logos img {
+    width: 20%;
+    padding: 10px;
+}
+
+.mainMobile .destacadosP{
+    text-align: center;
+}
+
+.mainMobile .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainMobile .perroGato{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainMobile a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.mainMobile .gato img{
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.mainMobile .gato{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.mainMobile .mTexto{
+    position: absolute;
+    top: 52px;
+    left: 18%;
+
+    font-size: 68px;
+    font-family: var(--fuenteSubtitulos);
+    color: var(--colorAzulFrancia);
+}
+
+.mainMobile .perro{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.mainMobile .perro img{
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.mainMobile .centrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+
+.mainMobile .nosotros{
+
+    width: 85%;
+    height: 180px;
+    margin: 15px;
+
+    background-color: var(--colorAzulMarino);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.mainMobile .contacto{
+
+    width: 85%;
+    height: 180px;
+    margin: 15px;
+
+    background-color: var(--colorCeleste);
+    border-radius: 20px;
+    padding: 8px;
+    margin-bottom: 50px;
+}
+
+.mainMobile .paw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainMobile .patita{
+    font-size: 75px;
+    text-align: center;
+    color: white;
+    padding: 0%;
+}
+
+.mainMobile .nosotrosText{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family: var(--fuenteSubtitulos);
+}
+
+.mainMobile .imgPerroT{
+    display: none;
+}
+
+.mainMobile .imgGatoT{
+    display: none;
+}
+
+.mainMobile .banner{
+    display: none;
+}
+
+.mainMobile .banner1500{
+    display: none;
+}
+
+/* .mainHome {
     background-size: 100%;
     width: 100%;
  
@@ -27,54 +240,12 @@
     visibility: hidden;
   }
 
-  .mainHome .divTitulo{
-    width: 100%;
-    margin-bottom: 6px;
-}
-
-.mainHome .spanTitulo{
-    top: 681px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.918);
-    padding: 7px;
-    padding-top: 12px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 25px;
-    text-align: center;
-}
+ 
 
   .mainHome .section2{
     display: none;
   }
 
-.mainHome .section1 {
-    width: 100%;
-    margin-top: 8px;
-    padding: 8px;
-    text-align: center;
-    font-size: large;
-    margin-bottom: 33px;
-   
-}
-
-.mainHome .spanAzul {
-    font-family: var(--fuenteTitulos);
-    color: var(--colorAzulFrancia);
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.mainHome .spanNaranja {
-    font-family: var(--fuenteTitulos);
-    color: var(--colorNaranja);
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 500;
-}
 
 .mainHome .marcas{
     position: absolute;
@@ -93,56 +264,8 @@
 }
 
 
-.mainHome .logos {
-    
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: white
-}
 
-.mainHome .logos img {
-    width: 20%;
-    padding: 10px;
-    /*  margin-top: 10px; */
-}
 
-.mainHome .links .perro {
-    height: 160px;
-    margin: 32px;
-    display: flex;
-    align-items: stretch;
-    border-radius: 20px;
-    padding: 8px;
-    background-color: var(--colorNaranja);
-}
-
-/* .mainHome .perrosTexto{
-    margin-top: 10px;
-    margin-left: 10px;
-} */
-
-/* .mainHome .gatosTexto{
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 7px;
-} */
-
-.mainHome .perro a,
-.gato a,
-.contacto a,
-.nosotros a {
-    font-family: var(--fuenteTitulos);
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.mainHome .patitas{
-    height: 26vw;
-    width: 22vw;
-}
 
 .mainHome .imgMascotasP{
     display: flex;
@@ -173,23 +296,6 @@
     height: 32vw;
     margin-top: 3vw;
 }
-
-.mainHome .cat {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.mainHome .links .gato {
-    height: 160px;
-    margin: 32px;
-    display: flex;
-    align-items: stretch;
-    border-radius: 20px;
-    background-color: var(--colorAmarillo);
-}
-
-
 
 .mainHome .links .nosotros {
     height: 160px;
@@ -235,7 +341,7 @@
 .mainHome .quienSomos{
     display: none;
 }
-
+*/
 .home .carrouselProductos{
     width: 98%;
     margin: 0 auto;
@@ -398,8 +504,136 @@
     }
   }  
 
+  @media (min-width:426px){
+    .mainMobile .perroGato{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-/* Tablet */
+    .mainMobile .imgGato{
+        display: none;
+    }
+    
+    .mainMobile .imgPerro{
+        display: none;
+    }
+
+    .mainMobile .imgPerroT{
+        display: flex;
+    }
+
+    .mainMobile .imgGatoT{
+        display: flex;
+    }
+
+    .mainMobile .perro img {
+        width: 84%;
+    }
+    .mainMobile .gato img {
+        width: 84%;
+    }
+
+    .mainMobile .mTexto {
+
+        top: 58px;
+        left: 12%;
+        font-size: 46px;
+    
+    }
+
+    .mainMobile .nosotros {
+        width: 84%;
+        height: 188px;
+    }
+
+    .mainMobile .contacto {
+        width: 84%;
+        height: 188px;
+    }
+    
+    .mainMobile .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mainMobile a {
+        display:block;
+        /* flex-direction: row; */
+        /* justify-content: center; */
+        width: 100%;
+    }
+
+    .mainMobile .nosotrosText {
+        font-size: 22px;
+    }
+  }
+
+  @media (min-width:700px){
+
+    .mainMobile .perro img {
+        width: 60%;
+    }
+
+    .mainMobile .gato img {
+        width: 60%;
+    }
+
+    .mainMobile .mTexto {
+        top: 66px;
+        left: 22%;
+        font-size: 53px;
+    }
+
+    .mainMobile .nosotros {
+        width: 61%;
+        height: 200px;
+    }
+
+    .mainMobile .contacto {
+        width: 61%;
+        height: 200px;
+    }
+
+    .mainMobile .spanTitulo {
+        padding: 9px;
+        padding-top: 18px;
+    }
+
+    .mainMobile .spanAzul {
+        font-size: 39px;
+    }
+
+    .mainMobile .spanNaranja {
+        font-size: 39px;
+    }
+
+    .mainMobile .links {
+        margin-top: 35px;
+    }
+    
+  }
+
+  @media (min-width:1024px) {
+    .mainMobile .bannerMobile{
+        display: none;
+    }
+    
+    .home .banner1500{
+        display: none;
+    }
+
+    .home .banner{
+        display: flex;
+    }
+
+    .mainMobile{
+        display: none;
+    }
+  }
+
+/*
 @media (min-width:426px) {
 
     .home .banner img{
@@ -440,10 +674,6 @@
 
     }
 
-    .mainHome .links .gato {
-        height: 30vw;
-    }
-
     .mainHome .imgPerro {
         width: 19vw;
         height: 24vw;
@@ -459,11 +689,6 @@
     margin-right: 0vw;
 }
 
-.mainHome .patitas {
-    height: 17vw;
-    width: 13vw;
-    margin-left: 1vw;
-}
 
 .mainHome .imgMascotasP{
     display: flex;
@@ -481,67 +706,19 @@
     margin-right: 0;
 }
 
-    .mainHome .dog,
-    .cat,
-    .paw,
-    .envelop {
-        width: 90%;
-        height: 160px;
-    }
-
-    .mainHome .links section .perro a,
-    .gato a {
-        font-size: 20px;
-        color: var(--colorAzulFrancia);
-    }
-
-
-    .mainHome .links .perro {
-        height: 30vw;
-        margin: 15px;
-        display: flex;
-        align-items: stretch;
-        background-color: var(--colorNaranja);
-        border-radius: 20px;
-        padding: 8px;
-    }
-
     .mainHome .dog {
         display: flex;
         justify-content: space-between;
         align-content: center;
     }
 
-/*     .mainHome .perrosTexto{
-        margin-top: 10px;
-        margin-left: 10px;
-    } */
-
-    .mainHome .gatosTexto{
-        margin-top: 5px;
-        margin-bottom: 7px;
-        margin-left: -3vw;
-    }
-    .mainHome .perrosTexto{
-        margin-top: 5px;
-        margin-bottom: 7px;
-        margin-left: -3vw;
-    }
-
-    .mainHome .links .gato {
+    .mainHome .links .perro {
         height: 30vw;
         margin: 15px;
         display: flex;
         align-items: stretch;
         border-radius: 20px;
         padding: 8px;
-        background-color: var(--colorAmarillo);
-    }
-
-    .mainHome .cat {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
     }
 
     .mainHome .links .nosotros {
@@ -600,14 +777,6 @@
 
     }
 
-    .mainHome .perro a,
-    .gato a,
-    .contacto a,
-    .nosotros a {
-        font-family: var(--fuenteTitulos);
-        font-weight: 700;
-        font-size: 20px;
-    }
     .mainHome .quienSomos{
         display: none;
     }
@@ -616,7 +785,6 @@
 
 }
 
-/* Desktop */
 @media (min-width:1024px) {
     .mainHome {
 
@@ -749,121 +917,46 @@
         width: 23%;
         padding: 10px;
         height:  140px
-        /*  margin-top: 10px; */
     }
 
- 
-    .mainHome .links {
-        position: relative;
-        text-align: center;
-        width: 90%;
+    .mainHome .perroGato{
+        width: 100%;
         display: flex;
-        margin-top: -19vw;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mainHome .perro img{
+        position: absolute;
+        top: -147px;
+        margin-right: 5%;
+        width: 300px;
+        height: 285px;
      
+        border-radius: 20px;
+        padding: 8px;
+
+        overflow: hidden;
     }
+
     
-    .mainHome .perrosTexto{
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    .mainHome .gatosTexto{
-        margin-top: 5px;
-        margin-left: 10px;
-        margin-bottom: 7px;
-    }
-
-    .mainHome .patitas{
-        width: 115px;
-        height: 157px;
-        margin-left: 6px;
-    }
-
-    .mainHome .imgMascotasP{
-        display: flex;
-        flex-direction: column;
-        margin-top: 3px;
-        margin-left: 5px;
-        margin-right: 0;
-    }
-
-    .mainHome .imgMascotas{
-        display: flex;
-        flex-direction: column;
-        margin-right: 0;
-    }
-
-    .mainHome .links section .perro a, .gato a {
-        text-align: left;
-        color: var(--colorAzulFrancia);
-    }
-
-    .mainHome .links .perro {
+    .mainHome .gato img{
         position: absolute;
         top: -900px;
-        margin-right: 390px;
-        text-align: left;
+        margin-left: 5%;
         width: 300px;
         height: 285px;
-      
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
-        background-color: var(--colorNaranja);
+     
         border-radius: 20px;
         padding: 8px;
-    }
-    .mainHome .dog{
-        width: 300px;
-        height: 285px;
+
+        overflow: hidden;
     }
 
-    .mainHome .imgPerro {
-        width: 185px;
-        height: 236px;
-        margin-top: 35px;
-        margin-right: -28px;
+    .mainHome .destacadosP{
+
     }
 
-    .mainHome .perro a {
-        text-align: center;
-        width: 30%;
-        font-size: 30px;
-    }
-
-    .mainHome .imgGato{
-        width: 153px;
-        height: 183px;
-        margin-top: 75px;
-        margin-right: -7px;
-    }
-
-    .mainHome .links .gato {
-        position: absolute;
-        text-align: right;
-        margin-left: 526px;
-        top: -900px;
-        width: 300px;
-        height: 285px;
-   
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
-        border-radius: 20px;
-        padding: 8px;
-        background-color: var(--colorAmarillo);
-    }
-    .mainHome .cat{
-        width: 300px;
-        height: 285px;
-    }
-
-    .mainHome .gato a {
-        width: 30%;
-        font-size: 30px;
-    }
 
     .mainHome .links .nosotros {
         display: none;
@@ -986,7 +1079,6 @@
 
     .home .banner1500 img{
         display: flex;
-        position: absolute;
         width: 100vw;
         object-fit: contain;
       }
@@ -1013,3 +1105,4 @@
 
 
 
+ */

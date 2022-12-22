@@ -10,115 +10,171 @@
         <section class="banner">
             <img src="img/bannerHome.png" alt="">
         </section>
-        <section class="bannerMobile">
-            <img src="img/bannerHomeMobile.png" alt="">
-        </section>
+
 
         <%- include('./partials/header') %>
-
-            <main class="mainHome">
-                <div class="bannerFalso"></div>
-
-                <section class="bannerFalsoMobile">
-                    <img src="img/bannerHome.png" alt="">
-                </section>
-
-                <section class="section1">
-                    <div class="divTitulo">
-                        <span class="spanTitulo">
-                            <span class="spanAzul">NUESTRAS </span>
-                            <span class="spanNaranja">MARCAS</span>
-                        </span>
-                    </div>
-                    <div class="logos">
-                        <img src="img/proplan_logo.png" alt="logo proplan">
-                        <img src="img/royalcanin_logo.png" alt=" logo royal canin">
-                        <img src="img/infinity_logo.png" alt="logo infinity ">
-                    </div>
-                </section>
-
-
-
-                <section class="destacadosP">
-                    <div class="fondoFalso"></div>
+        <main class="mainMobile">
+            <section class="bannerMobile">
+                <img src="img/bannerHomeMobile.png" alt="">
+            </section>
+            <section class="section1">
+                <div class="divTitulo">
                     <span class="spanTitulo">
-                        <span class="spanAzul">LOS MÁS </span>
-                        <span class="spanNaranja">DESTACADOS</span>
+                        <span class="spanAzul">NUESTRAS </span>
+                        <span class="spanNaranja">MARCAS</span>
                     </span>
-                </section>
-                <section class="carrouselProductos">
-                    <div class="glider-contain">
-                        <div class="glider">
-                            <% productos.forEach(producto=> { %>
-                                <%- include('./partials/cards',{ 
-                                    id:producto.id, 
-                                    imagenes:producto.imagen,
-                                    nombre:producto.titulo, 
-                                    descuento:producto.descuento, 
-                                    precio:producto.precio }) %>
-                                    <% }) %>
-                        </div>
-                        <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-                        <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
-                        <div role="tablist" class="dots"></div>
-                    </div>
-                </section>
-
-                <section class="section2">
-                    <div class="divTitulo">
-                        <span class="spanTitulo">
-                            <span class="spanAzul">NUESTRAS </span>
-                            <span class="spanNaranja">MARCAS</span>
-                        </span>
-                    </div>
-                    <div class="logos">
-                        <img src="img/proplan_logo.png" alt="logo proplan">
-                        <img src="img/royalcanin_logo.png" alt=" logo royal canin">
-                        <img src="img/infinity_logo.png" alt="logo infinity ">
-                    </div>
-                </section>
-
-
-                <div class="links">
-                    <section class="perro">
-                        <div class="dog">
-                            <div class="imgMascotasP">
-                                <a class="perrosTexto" href="/productos/Perro ">Perros</a>
-                                <img class="patitas" src="img/patitasAmarillas.png" alt="">
-                            </div>
-
-                            <img class="imgPerro" src="img/perro1.png" alt="">
-                        </div>
-                    </section>
-
-
-
-
-
-                    <section class="gato">
-
-                        <div class="cat">
-                            <div class="imgMascotas">
-                                <a class="gatosTexto" href="/productos/Gato ">Gatos</a>
-                                <img class="patitas" src="img/patitasNaranjas.png" alt="">
-                            </div>
-                            <img class="imgGato" src="img/gato1.png" alt="">
-                        </div>
-                    </section>
-                    <section class="nosotros">
-                        <div class="paw">
-                            <div class="patita"><i class="fas fa-paw"></i></div>
-                            <a href="/nosotros">Sobre Nosotros</a>
-                        </div>
-                    </section>
-
-                    <section class="contacto">
-                        <div class="envelop">
-                            <i class="fas fa-envelope"></i>
-                            <a href="/contacto">Contacto</a>
-                        </div>
-                    </section>
                 </div>
+                <div class="logos">
+                    <img src="img/proplan_logo.png" alt="logo proplan">
+                    <img src="img/royalcanin_logo.png" alt=" logo royal canin">
+                    <img src="img/infinity_logo.png" alt="logo infinity ">
+                </div>
+            </section>
+            <section class="destacadosP">
+                <span class="spanTitulo">
+                    <span class="spanAzul">LOS MÁS </span>
+                    <span class="spanNaranja">DESTACADOS</span>
+                </span>
+            </section>
+            <section class="carrouselProductos">
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% productos.forEach(producto=> { %>
+                            <%- include('./partials/cards',{ 
+                                id:producto.id, 
+                                imagenes:producto.imagen,
+                                nombre:producto.titulo, 
+                                descuento:producto.descuento, 
+                                precio:producto.precio }) %>
+                                <% }) %>
+                            </div>
+                            <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                            <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                            <div role="tablist" class="dots"></div>
+                        </div>
+                    </section>
+                    <div class="links">
+                        <div class="perroGato">
+                            <section class="perro">
+                                <div class="mTexto" >Perros</div>
+                                <a  class="centrar" href="/productos/Perro ">
+                                    <img class="imgPerro" src="img/categoriaPerroAncho.png" alt="">
+                                    <img class="imgPerroT" src="img/categoriaPerro.png" alt="">
+                                </a>
+                            </section>
+                            
+                            
+                            <section class="gato">
+                                <div class="mTexto">Gatos</div>
+                                <a class="centrar"  href="/productos/Gato ">
+                                    <img class="imgGato" src="img/categoriaGatoAncho.png" alt="">
+                                    <img class="imgGatoT" src="img/categoriaGato.png" alt="">
+                                </a>
+                                
+                            </section>
+                        
+                        </div>
+                        
+                        <div class="perroGato">
+                            <a class="centrar" href="/nosotros">
+                        <section class="nosotros">
+                            <div class="nosotrosText">Sobre Nosotros</div>
+                            <div class="paw">
+                                <div class="patita"><i class="fas fa-paw"></i></div>
+                            </div>
+                        </section>
+                    </a>
+                        
+                    <a class="centrar" href="/contacto">
+                        <section class="contacto">
+                            <div class="nosotrosText">Contacto</div>
+                                <div class="paw">
+                                    <div class="patita"><i class="fas fa-envelope"></i></div>
+                                </div>
+                            </section>
+                        </a>
+                    </div>
+                            
+                </main>
+                
+                <main class="mainDesktop">
+                    <section class="section1">
+                        <div class="divTitulo">
+                            <span class="spanTitulo">
+                                <span class="spanAzul">NUESTRAS </span>
+                                <span class="spanNaranja">MARCAS</span>
+                            </span>
+                        </div>
+                        <div class="logos">
+                            <img src="img/proplan_logo.png" alt="logo proplan">
+                            <img src="img/royalcanin_logo.png" alt=" logo royal canin">
+                            <img src="img/infinity_logo.png" alt="logo infinity ">
+                        </div>
+                    </section>
+                    <section class="destacadosP">
+                        <span class="spanTitulo">
+                            <span class="spanAzul">LOS MÁS </span>
+                            <span class="spanNaranja">DESTACADOS</span>
+                        </span>
+                    </section>
+                    <section class="carrouselProductos">
+                        <div class="glider-contain">
+                            <div class="glider">
+                                <% productos.forEach(producto=> { %>
+                                    <%- include('./partials/cards',{ 
+                                        id:producto.id, 
+                                        imagenes:producto.imagen,
+                                        nombre:producto.titulo, 
+                                        descuento:producto.descuento, 
+                                        precio:producto.precio }) %>
+                                        <% }) %>
+                                    </div>
+                                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                                    <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                                    <div role="tablist" class="dots"></div>
+                                </div>
+                            </section>
+                            <div class="links">
+                                <div class="perroGato">
+                                    <section class="perro">
+                                        <div class="mTexto" >Perros</div>
+                                        <a  class="centrar" href="/productos/Perro ">
+                                            <img class="imgPerro" src="img/categoriaPerroAncho.png" alt="">
+                                            <img class="imgPerroT" src="img/categoriaPerro.png" alt="">
+                                        </a>
+                                    </section>
+                                    
+                                    
+                                    <section class="gato">
+                                        <div class="mTexto">Gatos</div>
+                                        <a class="centrar"  href="/productos/Gato ">
+                                            <img class="imgGato" src="img/categoriaGatoAncho.png" alt="">
+                                            <img class="imgGatoT" src="img/categoriaGato.png" alt="">
+                                        </a>
+                                        
+                                    </section>
+                                
+                                </div>
+                                
+                                <div class="perroGato">
+                                    <a class="centrar" href="/nosotros">
+                                <section class="nosotros">
+                                    <div class="nosotrosText">Sobre Nosotros</div>
+                                    <div class="paw">
+                                        <div class="patita"><i class="fas fa-paw"></i></div>
+                                    </div>
+                                </section>
+                            </a>
+                                
+                            <a class="centrar" href="/contacto">
+                                <section class="contacto">
+                                    <div class="nosotrosText">Contacto</div>
+                                        <div class="paw">
+                                            <div class="patita"><i class="fas fa-envelope"></i></div>
+                                        </div>
+                                    </section>
+                                </a>
+                            </div>
                 <section class="quienSomos">
                     <a href="/nosotros"> <img src="/img/quienes.somos.png" alt=""></a>
                     <span class="textoColum">
