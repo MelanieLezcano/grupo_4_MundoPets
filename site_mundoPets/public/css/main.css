@@ -126,13 +126,13 @@
 }
 
 .mainMobile .mTexto{
-    position: absolute;
-    top: 52px;
-    left: 18%;
-
-    font-size: 68px;
-    font-family: var(--fuenteSubtitulos);
-    color: var(--colorAzulFrancia);
+  position: absolute;
+  top: 52px;
+  left: 15%;
+  font-size: 68px;
+  font-family: var(--fuenteTitulos);
+  color: var(--colorAzulFrancia);
+  font-weight: 500;
 }
 
 .mainMobile .perro{
@@ -456,9 +456,10 @@
     }
 
     .mainMobile .mTexto {
-        top: 66px;
-        left: 22%;
-        font-size: 53px;
+      top: 85px;
+      left: 22%;
+      font-size: 59px;
+  }
     }
 
     .mainMobile .nosotros {
@@ -488,7 +489,6 @@
         margin-top: 35px;
     }
     
-  }
 
   @media (min-width:1024px) {
 
@@ -561,12 +561,12 @@ width: 100%;
 }
 
 .mainDesktop .mTexto{
-    position: absolute;
-    top: 86px;
-    left: 19%;
-
-    font-size: 68px;
-    font-family: var(--fuenteSubtitulos);
+  position: absolute;
+  top: 68px;
+  left: 3%;
+  font-size: 71px;
+  font-family: var(--fuenteSubtitulos);
+  font-weight: 500;
     color: var(--colorAzulFrancia);
     z-index: 1;
 
@@ -887,4 +887,15 @@ border-radius: 20px;
     font-size: 22px;
     font-family: var(--fuenteSubtitulos);
     font-weight: 500;
+}
+
+@media (min-width:1500px){
+
+  .home .banner{
+    display: none;
+  }
+
+  .home .banner1500{
+    display: flex;
+  }
 }
