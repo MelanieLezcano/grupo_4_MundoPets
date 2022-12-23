@@ -83,6 +83,10 @@
     border:solid 3px var(--colorAmarillo);
 }
 
+.login input:focus{
+    outline: 3px solid var(--colorAmarillo);
+}
+
 .login #nombre #apellido #email #contrasenia #contrasenia{
     color: var(--colorCeleste);
     font-family: var(--fuenteSubtitulos);

@@ -83,6 +83,10 @@
     border:solid 3px var(--colorAmarillo);
 }
 
+.editarPerfil input:focus-visible{
+    outline: 3px solid var(--colorAmarillo);
+}
+
 .editarPerfil #nombre #apellido #email #contrasenia #contrasenia{
     color: var(--colorCeleste);
     font-family: var(--fuenteSubtitulos);
