@@ -331,7 +331,7 @@ header .burger button {
    header .register {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 18px;
       left: 102px
    }
 
@@ -701,6 +701,9 @@ header .burger button {
    header .nuestrosProductos {
       left: 1024px
    }
+   header .register li a{
+      font-size: 19px;
+    }
    header .buscador {
       position: absolute;
       left: 464px;
@@ -740,18 +743,25 @@ header .burger button {
       font-family: var(--fuenteSubtitulos);
       color: white;
    }
+   header .register {
+      position: absolute;
+      left: 126px;
+      top: 18px;
+   }
+    
 }
-
+/* 
 @media (min-width:1163px){
    header .nuestrosProductos {
       left: 1054px;
   }
-}
+ 
+} */
 @media (min-width:1300px) {
    header .nuestrosProductos {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 23px;
       left: 1091px
    }
 
@@ -768,7 +778,7 @@ header .burger button {
    header .register {
       position: absolute;
       left: 126px;
-      top: 25px;
+      top: 19px;
    }
 
    header .buscador button {
@@ -978,6 +988,8 @@ header .burger button {
 
    header .register li a {
       font-size: 25px;
+      left: 145px;
+    top: 18px;
 
    }
 
@@ -1047,6 +1059,12 @@ header .burger button {
       justify-content: space-around;
       text-align: center;
   }
+  header .usuario .sesion a {
+   position: absolute;
+   font-size: 25px;
+   top: 10px;
+   left: 149px;
+}
 
    header .usuario li,
    form {
