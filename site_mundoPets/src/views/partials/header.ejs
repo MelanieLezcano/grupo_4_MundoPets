@@ -11,7 +11,7 @@
   </div>
   <div class="usuario">
     <% if (locals.usuarioLogin) { %>
-      <li class="bienvenido"><a  href="/usuarios/perfil"> Bienvenid@ <%=locals.usuarioLogin.nombre %></a></li>
+      <li class="bienvenido"><a  href="/usuarios/perfil"> Hola <%=locals.usuarioLogin.nombre %> !</a></li>
         <form action="/usuarios/cerrarSesion?_method=DELETE" method="post">
           <button type="submit">Cerrar Sesion</button>
         </form>
