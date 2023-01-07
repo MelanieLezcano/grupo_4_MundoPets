@@ -7,10 +7,12 @@ const path = require ('path');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const session =require('express-session')
+const cors =require('cors')
 
 const testConection = require('./utils/dbConnection')
 
 testConection()
+app.use(cors())
 
 /* implementar locals dentro de la app*/
 const usuarioLogin = require('./middlewares/usuarioLoginCheck')
@@ -20,6 +22,7 @@ let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin')
 let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
+let apiRouter = require('./routes/api/api')
 
 
 
@@ -52,6 +55,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuariosRouter);
 app.use("/productos", productosRouter);
 app.use("/admin", adminRouter);
+app.use("/api", apiRouter);
 
 app.listen (port,() => console.log("servidor levantado")
 );
