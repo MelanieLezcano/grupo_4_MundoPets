@@ -16,7 +16,6 @@ module.exports = {
                     where: {
                         categorias_id: producto.categorias_id
                     },
-                    limit: 4,
                     order: [[Sequelize.literal("RAND()")]],
                     include: [{
                         all: true
