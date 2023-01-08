@@ -85,3 +85,28 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.listaUsuarios .form-select {
+    margin-left: 15px;
+    margin-bottom: 29px;
+    display: block;
+    width: 94%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fuenteSubtitulos);
+    line-height: 1.5;
+    color: var(--colorAzulMarino);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 3px solid var(--colorAmarillo);
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
