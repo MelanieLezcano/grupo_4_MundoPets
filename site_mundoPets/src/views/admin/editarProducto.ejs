@@ -10,7 +10,7 @@
     <main>
         <h1>Editando el producto</h1>
 
-        <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
+        <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"  style="width: 100%;"> <!--  toda la informacion sera enviada por metodo PUT a la vista, con method modificamos la query con el metodo PUT-->
             <!--  -->
             <div class="form-floating m-2">
                 <input class="form-control" name="Titulo" placeholder="Por favor inserte el titulo del producto"

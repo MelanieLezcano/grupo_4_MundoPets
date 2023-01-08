@@ -521,11 +521,6 @@ header .burger button {
       justify-content: space-around;
       text-align: center;
    }
-
-   header .usuario li,
-   form {
-      width: 50%;
-   }
    header .usuario li a{
       font-size: 19px;
       top: 6px;
@@ -702,9 +697,7 @@ header .burger button {
    header .nuestrosProductos {
       left: 1024px
    }
-   header .register li a{
-      font-size: 19px;
-    }
+
    header .buscador {
       position: absolute;
       left: 464px;
@@ -726,10 +719,6 @@ header .burger button {
       text-align: center;
    }
 
-   header .usuario li,
-   form {
-      width: 50%;
-   }
    header .usuario li a{
       font-size: 19px;
    }
@@ -848,15 +837,6 @@ header .burger button {
       text-align: center;
    }
 
-   header .usuario li,
-   form {
-      width: 50%;
-   }
-   header .usuario .sesion a{
-      font-size: 25px;
-      left: 180px;
-      position: absolute;
-   }
    header .usuario button{
       width: 100%;
    }
@@ -875,10 +855,7 @@ header .burger button {
       left: 145px;
    }
 
-   header .register li a {
-      font-size: 25px;
 
-   }
 
    header .buscador {
       position: absolute;
@@ -912,12 +889,6 @@ header .burger button {
       left: 1206px
    }
 
-   header .nuestrosProductos li a {
-      font-size: 25px;
-      font-family: var(--fuenteSubtitulos);
-      color: white;
-   }
-
    header .admin {
       position: absolute;
       left: 1260px
@@ -945,10 +916,6 @@ header .burger button {
       left: 1203px
    }
 
-   header .nuestrosProductos li a {
-      font-size: 25px;
-   }
-
    header .usuario {
       display: flex;
       position: absolute;
@@ -970,7 +937,6 @@ header .burger button {
    }
    header .usuario .sesion a{
       position: absolute;
-      font-size: 25px;
       top: 8px;
     left: 149px;
 }
@@ -987,12 +953,6 @@ header .burger button {
       color: white;
    }
 
-   header .register li a {
-     
-      left: 145px;
-    top: 18px;
-
-   }
 
    header .buscador form {
       width: 100%
@@ -1062,15 +1022,10 @@ header .burger button {
   }
   header .usuario .sesion a {
    position: absolute;
-   font-size: 25px;
    top: 10px;
    left: 149px;
 }
 
-   header .usuario li,
-   form {
-      width: 50%;
-   }
    header .usuario li a{
       font-size: 19px;
    }
@@ -1090,10 +1045,6 @@ header .burger button {
       left: 153px;
    }
 
-   header .register li a {
-      font-size: 25px;
-
-   }
 
    header .buscador {
       position: absolute;
@@ -1126,12 +1077,6 @@ header .burger button {
       position: absolute;
       top: 20px;
       left: 1253px
-   }
-
-   header .nuestrosProductos li a {
-      font-size: 25px;
-      font-family: var(--fuenteSubtitulos);
-      color: white;
    }
 
    header .admin {
@@ -1369,13 +1314,11 @@ header .burger button {
    }
    
    header .usuario .sesion a {
-    font-size: 25px;
     width: 100%;
    }
 
    header .usuario .sesion a {
       position: absolute;
-      font-size: 25px;
       top: 10px;
       left: 29px;
    }
