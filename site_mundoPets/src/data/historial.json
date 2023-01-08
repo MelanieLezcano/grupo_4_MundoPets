@@ -27,6 +27,29 @@
         "descripcion": "alimento balanceado para perro",
         "stock": 3,
         "imagenes": "img-1662236201708.png"
+    },
+    {
+        "id": 23,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "titulo": "Producto de Prueba",
+        "marca": "Old Prince",
+        "precio": 4500,
+        "descuento": 2,
+        "descripcion": "ghtwkjhtjwehj",
+        "stock": 26,
+        "imagenes": "default-image.png"
+    },
+    {
+        "id": 23,
+        "categoria": "Perro",
+        "subcategoria": "cachorro",
+        "titulo": "Producto de Prueba",
+        "marca": "Old Prince",
+        "precio": 4500,
+        "descuento": 2,
+        "descripcion": "ijgledjglj",
+        "stock": 26,
+        "imagenes": "default-image.png"
     }
-   
 ]

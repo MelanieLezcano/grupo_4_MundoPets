@@ -348,5 +348,17 @@
             "",
             ""
         ]
+    },
+    {
+        "id": 22,
+        "categoria": "Perro",
+        "subcategoria": "adulto",
+        "titulo": "Producto de Prueba",
+        "marca": "Old Prince",
+        "precio": 4500,
+        "descuento": 2,
+        "descripcion": "Lorem ipsum dolor sit amet",
+        "stock": 26,
+        "imagenes": "default-image.png"
     }
 ]
