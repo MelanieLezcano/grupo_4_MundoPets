@@ -149,6 +149,7 @@
   color: var(--colorAzulFrancia);
   font-size: 24px;
   background-color: transparent;
+  border: none;
 }
 
 .detalle .botonCarrito{
@@ -243,12 +244,11 @@
 }
 
 .detalle .carrouselProductos{
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
 }
-
 .detalle .carrouselProductos .card{
-  width: 30vw;
+  width: 350px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -256,7 +256,7 @@
 }
 
 .detalle .glider-contain {
-  width: 97vw;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -404,6 +404,21 @@
     box-shadow: 0 0 1px rgba(255,255,255,.25);
   }
 }  
+
+@media(max-width: 36em){
+  .detalle .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none; 
+    width: 7px;
+    height: 3px;
+  }
+  .detalle .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.918);
+    box-shadow: 0 0 1px rgba(255,255,255,.25);
+  }
+}  
   
   /* tablet */
   @media (min-width:426px) {
@@ -489,7 +504,6 @@
 
     .detalle #increase {
       font-size: 23px;
-      margin-top: 1vw;
   }
   
   .detalle #decrease {
@@ -500,7 +514,7 @@
   width: 59px;
   height: 26px;
   font-size: 18px;
-  margin-top: 9%;
+  margin-top: 5%;
 }
 
 .detalle .botonCarrito {
@@ -576,7 +590,7 @@
     width: 100px;
     height: 38px;
     font-size: 26px;
-    margin-top: 9%;
+    margin-top: 8%;
   }
   
   .detalle #increase {
@@ -625,14 +639,7 @@
   width: 60vw;
   margin-top: 5vw;
 }
-
-.detalle .glider-contain {
-  width: 91vw;
 }
-
-
-  }
-  
   
   /* desktop */
   @media (min-width:1024px){
@@ -710,7 +717,6 @@
 
     .detalle #increase {
       font-size: 40px;
-      margin-bottom: 0.8vw;
   }
   
   .detalle #decrease {
@@ -722,7 +728,7 @@
   width: 100px;
   height: 44px;
   font-size: 33px;
-  margin-top: 5.8%;
+  margin-top: -0.2%;
 }
 
 .detalle .botonCarrito {
@@ -798,14 +804,9 @@
     .detalle .precioFinal {
       font-size: 55px;
       margin-right: 5%;
-  }
-
-  .detalle .glider-contain {
-    width: 94vw;
+    }
   }
   
-  }
-
   @media (min-width:1500px){
     .detalle .imagenProducto img{
       height: 23vw;
@@ -821,11 +822,4 @@
       margin-bottom: -2%;
       padding-left: 5.1vw;
   }
-
-  .detalle .glider-contain {
-    width: 95vw;
-  }
-  
-
-
-  }
+} 

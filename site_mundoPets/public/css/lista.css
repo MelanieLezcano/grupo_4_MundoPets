@@ -43,6 +43,10 @@
     font-family: var(--fuenteSubtitulos);
 }
 
+.lista form{
+    width: 100%;
+}
+
 .lista h1{
     color: var(--colorAzulFrancia);
     font-family: var(--fuenteSubtitulos);

@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !email.value:
                 $('#emailContainer').innerHTML = "<small>Debe ingresar su email</small>"
-                email.style.border = "3px solid var(--colorNaranja)"
+                email.style.border = "3px solid red"
                 errores.forEach(e => {
                     if (e.id === 3) {
                         e.mensaje = "Debe ingresar un email"
@@ -74,7 +74,7 @@ window.addEventListener('load', () => {
                 break;
             case !regExEmail.test(email.value):
                 $('#emailContainer').innerHTML = "<small>El email no coincide con un email valido</small>"
-                email.style.border = "3px solid var(--colorNaranja)"
+                email.style.border = "3px solid red"
                 errores.forEach(e => {
                     if (e.id === 3) {
                         e.mensaje = "El email no coincide con un email valido"
@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#emailContainer').innerHTML = ""
-                email.style.border = "3px solid var(--colorCeleste)"
+                email.style.border = "3px solid #1fb257"
                 errores = errores.filter(error => {
                     return error.id !== 3
                 })
@@ -105,7 +105,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !inputContrasenia.value:
                 $('#contraseniaContainer').innerHTML = "<small>Debe ingresar su contraseña</small>"
-                inputContrasenia.style.border = "3px solid var(--colorNaranja)"
+                inputContrasenia.style.border = "3px solid red"
                 errores.forEach(e => {
                     if (e.id === 4) {
                         e.mensaje = "Debe ingresar su contraseña"
@@ -120,7 +120,7 @@ window.addEventListener('load', () => {
                 /* esta validacion deberia ir en el register */
             case !regExPass.test(inputContrasenia.value):
                 $('#contraseniaContainer').innerHTML = "<small>La contraseña es invalida </small>"
-                inputContrasenia.style.border = "3px solid var(--colorNaranja)"
+                inputContrasenia.style.border = "3px solid red"
                 errores.forEach(e => {
                     if (e.id === 4) {
                         e.mensaje = "La contraseña es invalida"
@@ -133,7 +133,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#contraseniaContainer').innerHTML = ""
-                inputContrasenia.style.border = "3px solid var(--colorCeleste)"
+                inputContrasenia.style.border = "3px solid #1fb257"
                 errores = errores.filter(error => {
                     return error.id !== 4
                 })

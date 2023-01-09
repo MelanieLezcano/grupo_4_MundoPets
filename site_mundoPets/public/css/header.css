@@ -309,7 +309,7 @@ header .burger button {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      width: 12%;
+      width: 9%;
    }
 
    header .top .logo {
@@ -331,7 +331,7 @@ header .burger button {
    header .register {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 24px;
       left: 102px
    }
 
@@ -342,14 +342,14 @@ header .burger button {
    header .usuario {
       position: absolute;
       top: 7px;
-      left: 81px;
-      width: 19%;
+      left: 70px;
+      width: 21%;
       height: 65px;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
       align-content: center;
 
    }
@@ -511,28 +511,28 @@ header .burger button {
       display: flex;
       position: absolute;
       top: 10px;
-      left: 231px;
-      width: 17%;
+      left: 174px;
+      width: 26%;
       height: 58px;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       align-content: center;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-around;
       text-align: center;
    }
-
-   header .usuario li,
-   form {
+   header .usuario li a{
+      font-size: 19px;
+      top: 6px;
+   }
+   header .usuario button{
       width: 100%;
    }
 
-   header .bienvenido a,
-   .sesion a,
-   button {
+   header .bienvenido a, .sesion a, button {
 
       text-align: center;
-      font-size: 25px;
+      font-size: 17px;
       font-family: var(--fuenteSubtitulos);
       color: white;
    }
@@ -540,8 +540,11 @@ header .burger button {
    header .sesion {
       display: block;
    }
+   header .usuario .sesion a{
+      font-size: 19px;
+   }
 
-   header .usuario i {
+   /* header .usuario i {
       display: block;
       width: 100%;
       font-size: 21px;
@@ -551,27 +554,29 @@ header .burger button {
       top: 24px;
       left: 66px;
       color: white;
+   } */
+   
+   header .usuario form {
+      display: block;
+      text-align: center;
    }
-
 
    header .usuario button {
       display: block;
       text-align: center;
-      font-size: 21px;
+      font-size: 18px;
       font-family: var(--fuenteSubtitulos);
       color: white;
       background: none;
       border: none;
    }
 
-   header .usuario form {
-      display: block;
-   }
 
 
    header .register {
       position: absolute;
       left: 115px;
+      top: 25px;
    }
 
    header .register li {
@@ -582,19 +587,20 @@ header .burger button {
 
 
    header .register li a {
-      font-size: 25px;
-
-   }
+      font-size: 19px;
+      left: 145px;
+      top: 18px;
+  }
 
    header .nuestrosProductos {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 24px;
       left: 903px
    }
 
    header .nuestrosProductos li a {
-      font-size: 25px;
+      font-size: 19px;
       font-family: var(--fuenteSubtitulos);
       color: white;
    }
@@ -655,18 +661,34 @@ header .burger button {
       display: flex;
       position: absolute;
       top: 10px;
-      left: 246px;
-      width: 13%;
-      height: 57px;
-      flex-direction: column;
-      align-content: space-around;
+      left: 174px;
+      width: 26%;
+      height: 58px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       text-align: center;
    }
 
-   header .buscador form {
-      width: 100%
+   header .usuario li,
+   form {
+      width: 50%;
+   }
+   header .usuario li a{
+      font-size: 19px;
+   }
+   header .usuario button{
+      width: 100%;
+   }
+
+   header .bienvenido a, button {
+
+      text-align: center;
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
    }
 
 }
@@ -677,39 +699,59 @@ header .burger button {
    }
 
    header .buscador {
-      width: 42%;
-      left: 478px;
-   }
-
-   header .buscador form {
-      width: 100%
-   }
-
-   header .buscador button {
-      left: 452px;
-   }
-
-   header .usuario i {
       position: absolute;
-      left: 46px;
+      left: 464px;
+      width: 44%;
+  }
+
+   header .usuario {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 174px;
+      width: 26%;
+      height: 58px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
    }
 
-   header .usuario li,
-   form {
+   header .usuario li a{
+      font-size: 19px;
+   }
+   header .usuario button{
       width: 100%;
    }
-}
 
+   header .bienvenido a, button {
+
+      text-align: center;
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
+   }
+   header .register {
+      position: absolute;
+      left: 126px;
+      top: 18px;
+   }
+    
+}
+/* 
 @media (min-width:1163px){
    header .nuestrosProductos {
       left: 1054px;
   }
-}
+ 
+} */
 @media (min-width:1300px) {
    header .nuestrosProductos {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 23px;
       left: 1091px
    }
 
@@ -726,16 +768,47 @@ header .burger button {
    header .register {
       position: absolute;
       left: 126px;
+      top: 19px;
    }
 
    header .buscador button {
       left: 410px;
    }
 
+   header .usuario {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 174px;
+      width: 24%;
+      height: 58px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+   }
+
    header .usuario li,
    form {
+      width: 50%;
+   }
+   header .usuario li a{
+      font-size: 19px;
+   }
+   header .usuario button{
       width: 100%;
    }
+
+   header .bienvenido a, button {
+
+      text-align: center;
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
+   }
+
 }
 
 
@@ -750,48 +823,39 @@ header .burger button {
    }
 
    header .usuario {
-      position: absolute;
-      top: 11px;
-      left: 264px;
-      width: 13%;
-      height: 65px;
       display: flex;
+      position: absolute;
+      top: 10px;
+      left: 174px;
+      width: 24%;
+      height: 58px;
       flex-wrap: wrap;
-      flex-direction: column;
-      align-content: space-around;
+      flex-direction: row;
+      align-content: center;
       align-items: center;
-      justify-content: center;
-   }
-
-   header .usuario a {
+      justify-content: space-around;
       text-align: center;
-      font-size: 25px;
-      font-family: var(--fuenteTitulos);
-      color: white;
    }
 
-   header .usuario i {
-      width: 100%;
-      font-size: 25px;
-   }
-
-   header .usuario li,
-   form {
-      width: 100%;
-   }
    header .usuario button{
       width: 100%;
    }
+
+   header .bienvenido a, button {
+
+      text-align: center;
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
+   }
+
 
    header .register {
       position: absolute;
       left: 145px;
    }
 
-   header .register li a {
-      font-size: 25px;
 
-   }
 
    header .buscador {
       position: absolute;
@@ -825,12 +889,6 @@ header .burger button {
       left: 1206px
    }
 
-   header .nuestrosProductos li a {
-      font-size: 25px;
-      font-family: var(--fuenteSubtitulos);
-      color: white;
-   }
-
    header .admin {
       position: absolute;
       left: 1260px
@@ -850,43 +908,56 @@ header .burger button {
 
 @media (min-width:1400px) {
    header .carrito{
-      left: 147px;
+      left: 137px;
    }
    header .nuestrosProductos {
       position: absolute;
       top: 18px;
-      left: 1172px
-   }
-
-   header .nuestrosProductos li a {
-      font-size: 25px;
+      left: 1203px
    }
 
    header .usuario {
-      left: 277px;
-   }
-
-   header .usuario i {
-      width: 100%;
-      font-size: 25px;
-      left: 76px;
-
-   }
-
-   header .register li a {
-      font-size: 25px;
-
-   }
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 189px;
+      width: 23%;
+      height: 58px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+  }
 
    header .usuario li,
    form {
+      width: 50%;
+   }
+   header .usuario .sesion a{
+      position: absolute;
+      top: 8px;
+    left: 149px;
+}
+   }
+   header .usuario button{
       width: 100%;
    }
+
+   header .bienvenido a, button {
+
+      text-align: center;
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
+   }
+
 
    header .buscador form {
       width: 100%
    }
-}
+
 
 /* Desktop L */
 @media (min-width:1440px) {
@@ -934,46 +1005,46 @@ header .burger button {
       font-size: 25px;
    }
 
+   
    header .usuario {
-      position: absolute;
-      top: 13px;
-      left: 272px;
-      width: 10%;
-      height: 65px;
       display: flex;
+      position: absolute;
+      top: 10px;
+      left: 189px;
+      width: 22%;
+      height: 58px;
       flex-wrap: wrap;
-      flex-direction: column;
-      align-content: space-around;
+      flex-direction: row;
+      align-content: center;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
+      text-align: center;
+  }
+  header .usuario .sesion a {
+   position: absolute;
+   top: 10px;
+   left: 149px;
+}
+
+   header .usuario li a{
+      font-size: 19px;
+   }
+   header .usuario button{
+      width: 100%;
    }
 
-   header .usuario a {
+   header .bienvenido a, button {
+
       text-align: center;
-      font-size: 25px;
-      font-family: var(--fuenteTitulos);
+      font-size: 17px;
+      font-family: var(--fuenteSubtitulos);
       color: white;
    }
-
-   header .usuario i {
-      width: 100%;
-      font-size: 25px;
-   }
-
-   header .usuario li,
-   form {
-      width: 100%;
-   }
-
    header .register {
       position: absolute;
       left: 153px;
    }
 
-   header .register li a {
-      font-size: 25px;
-
-   }
 
    header .buscador {
       position: absolute;
@@ -1008,12 +1079,6 @@ header .burger button {
       left: 1253px
    }
 
-   header .nuestrosProductos li a {
-      font-size: 25px;
-      font-family: var(--fuenteSubtitulos);
-      color: white;
-   }
-
    header .admin {
       position: absolute;
       left: 1260px
@@ -1039,14 +1104,14 @@ header .burger button {
       left: 1344px;
    }
 
-   header .buscador button {
+  /*  header .buscador button {
       left: 872;
    }
 
    header .usuario li,
    form {
       width: 100%;
-   }
+   } */
 
    header .buscador form {
       width: 100%
@@ -1062,7 +1127,7 @@ header .burger button {
 }
 
 @media (min-width:1544px) {
-   header .usuario {
+  /*  header .usuario {
       position: absolute;
       top: 13px;
       left: 299px;
@@ -1074,7 +1139,7 @@ header .burger button {
       align-content: space-around;
       align-items: center;
       justify-content: center;
-   }
+   } */
 
    header .buscador {
       position: absolute;
@@ -1111,7 +1176,7 @@ header .burger button {
       left: 852px;
    }
 
-   header .usuario {
+  /*  header .usuario {
       left: 267px;
    }
 
@@ -1119,14 +1184,14 @@ header .burger button {
       width: 100%
    }
 
-   header .register {
-      position: absolute;
-      left: 166px;
-   }
-
+   
    header .usuario li,
    form {
       width: 100%;
+   } */
+   header .register {
+      position: absolute;
+      left: 166px;
    }
 }
 
@@ -1150,20 +1215,20 @@ header .burger button {
    header .buscador button {
       left: 955px;
    }
-
-   header .usuario {
-      left: 279;
-   }
-
    header .register {
       position: absolute;
       left: 166px;
    }
 
-   header .usuario li,
+   header .usuario {
+      width: 19%;
+   }
+
+
+ /*  header .usuario li,
    form {
       width: 100%;
-   }
+   } */
 }
 
 @media (min-width:1860px) {
@@ -1183,9 +1248,10 @@ header .burger button {
       left: 986px;
    }
 
-   header .usuario {
-      left: 279;
-   }
+  header .usuario {
+   width: 17%;
+   left: 207px;
+}
 
    header .buscador form {
       width: 100%
@@ -1196,10 +1262,10 @@ header .burger button {
       left: 166px;
    }
 
-   header .usuario li,
+   /* header .usuario li,
    form {
       width: 100%;
-   }
+   } */
 }
 
 @media (min-width:1920px) {
@@ -1226,29 +1292,35 @@ header .burger button {
       left: 985px
    }
 
-   header .usuario {
-      left: 279;
-   }
-
-
-
+  
    header .register {
       position: absolute;
-      left: 166px;
+      left: 175px;
    }
 
    header .usuario {
-      display: flex;
+   display: flex;
     position: absolute;
-    top: 14px;
+    top: 10px;
     left: 288px;
     width: 14%;
     height: 60px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     align-content: center;
    }
+   
+   header .usuario .sesion a {
+    width: 100%;
+   }
+
+   header .usuario .sesion a {
+      position: absolute;
+      top: 10px;
+      left: 29px;
+   }
+
 }
