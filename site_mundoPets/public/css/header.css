@@ -1296,6 +1296,7 @@ header .burger button {
    header .register {
       position: absolute;
       left: 175px;
+      top:22px
    }
 
    header .usuario {
